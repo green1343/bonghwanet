@@ -14,9 +14,9 @@ import java.util.HashMap;
 
 public class Packet_Grouplist extends Packet_Command {
 
-    public HashMap<Long, Manager.GroupInfo> groups;
+    public HashMap<Long, Manager.GroupInfo> groups = new HashMap<>();
 
-    protected Packet_Grouplist(){
+    public Packet_Grouplist(){
         setCommand((short) PACKET.PACKET_GROUPLIST);
     }
 
@@ -24,8 +24,6 @@ public class Packet_Grouplist extends Packet_Command {
     {
         super(data);
         setCommand((short) PACKET.PACKET_GROUPLIST);
-
-        groups = new HashMap<>();
 
         int place = 2;
 

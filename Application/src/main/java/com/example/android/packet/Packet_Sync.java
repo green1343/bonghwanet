@@ -14,9 +14,9 @@ import java.util.ArrayList;
 public class Packet_Sync extends Packet_Command {
 
     public long group;
-    public ArrayList<Manager.File> files;
+    public ArrayList<Manager.File> files = new ArrayList<>();
 
-    protected Packet_Sync(){
+    public Packet_Sync(){
         setCommand((short) PACKET.PACKET_SYNC);
     }
 
@@ -24,8 +24,6 @@ public class Packet_Sync extends Packet_Command {
     {
         super(data);
         setCommand((short) PACKET.PACKET_SYNC);
-
-        files = new ArrayList<>();
 
         int place = 2;
         group = BigEndianByteHandler.byteToLong(data, place);

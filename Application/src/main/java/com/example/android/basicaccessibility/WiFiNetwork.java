@@ -20,6 +20,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.lang.reflect.Array;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
@@ -93,7 +94,14 @@ public enum WiFiNetwork {
         m_client.start();
     }
 
-    public void write(Packet_Command p)
+    public void write(Packet_Command p, int index)
+    {
+        Message msg = Message.obtain(m_handler, 0 , 1 , 0);
+        msg.obj = new Pair<Integer, Packet_Command>(index, p);
+        m_handler.sendMessage(msg);
+    }
+
+    public void writeAll(Packet_Command p)
     {
         for(Integer index : m_threads.keySet()){
             Message msg = Message.obtain(m_handler, 0 , 1 , 0);
@@ -136,6 +144,10 @@ public enum WiFiNetwork {
                     m_threads.put(m_index, new Pair<>(speaker, listener));
                     ++m_index;
                     listener.start();
+
+                    Packet_Grouplist p = new Packet_Grouplist();
+                    p.groups = (HashMap<Long, Manager.GroupInfo>)Manager.INSTANCE.getAllGroups().clone();
+                    WiFiNetwork.INSTANCE.write(p, m_index-1);
 
                 } catch(IOException e){
                 }
@@ -187,6 +199,10 @@ public enum WiFiNetwork {
                     m_threads.put(m_index, new Pair<>(speaker, listener));
                     ++m_index;
                     listener.start();
+
+                    Packet_Grouplist p = new Packet_Grouplist();
+                    p.groups = (HashMap<Long, Manager.GroupInfo>)Manager.INSTANCE.getAllGroups().clone();
+                    WiFiNetwork.INSTANCE.write(p, m_index - 1);
 
                 } catch(IOException e){
                 }
