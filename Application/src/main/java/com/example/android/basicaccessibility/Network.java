@@ -1,9 +1,7 @@
 package com.example.android.basicaccessibility;
 
 import com.example.android.packet.PACKET;
-import com.example.android.packet.Packet_Client;
 import com.example.android.packet.Packet_Command;
-import com.example.android.packet.Packet_Login_Request_Return;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -119,10 +117,7 @@ public enum Network {
 
                     switch (cmd.getCommand())
                     {
-                        case PACKET.PACKET_LOGIN_REQUEST_RETURN: {
-                            Packet_Login_Request_Return p = new Packet_Login_Request_Return(stream);
-                            Packet_Client.s_id = p.id;
-                            Packet_Client.s_auth = p.auth;
+                        case PACKET.PACKET_GROUPLIST: {
 
                             break;
                         }

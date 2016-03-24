@@ -1,49 +1,36 @@
 package com.example.android.packet;
 
-import android.util.Log;
-
-import com.example.android.needclass.BigEndianByteHandler;
-
 /**
  * Created by Kim on 2015-04-03.
  */
-public class Packet_Share_File_Request extends Packet_Share
+public class Packet_Share_File_Request extends Packet_Command
 {
+    public long group;
+    public long uploader;
+    public long time;
     public String filename;
 
     public Packet_Share_File_Request(){
         setCommand((short) PACKET.PACKET_SHARE_FILE_REQUEST);
     }
 
-    public Packet_Share_File_Request(byte[] data){
+    public Packet_Share_File_Request(byte[] buf){
 
-        super(data);
+        super(buf);
 
-        setCommand((short) PACKET.PACKET_SHARE_FILE_REQUEST);
-
-        int place = Packet_Share.SIZE;
-        int size = BigEndianByteHandler.byteToInt(data, place);
-        place += 4;
-        try {
-            filename = new String(data, place, size, "UTF-8");
-        }catch (Exception e){
-            Log.e("Encoding", "Not possible encoding");
-        }
+        group = unpackLong(buf);
+        uploader = unpackLong(buf);
+        time = unpackLong(buf);
+        filename = unpackString(buf);
     }
 
-    public int GetBytes(byte[] data){
+    public void GetBytes(byte[] buf){
 
-        int place = super.GetBytes(data);
+        super.GetBytes(buf);
 
-        try{
-            System.arraycopy(BigEndianByteHandler.intToByte(filename.length()), 0, data, place, 4);
-            place += 4;
-            System.arraycopy(filename.getBytes("UTF-8"), 0, data, place, filename.length());
-            place += filename.length();
-
-        }catch (Exception e){
-            Log.e("Encoding", "Not possible encoding");
-        }
-        return place;
+        pack(group, buf);
+        pack(uploader, buf);
+        pack(time, buf);
+        pack(filename, buf);
     }
 }

@@ -20,7 +20,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.lang.reflect.Array;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
@@ -271,9 +270,9 @@ public enum WiFiNetwork {
                 BufferedInputStream bis = new BufferedInputStream(fis);
 
                 int len;
-                byte[] data = new byte[BUFFERSIZE];
-                while ((len = bis.read(data)) != -1) {
-                    m_outStream.write(data, 0, len);
+                byte[] buf = new byte[BUFFERSIZE];
+                while ((len = bis.read(buf)) != -1) {
+                    m_outStream.write(buf, 0, len);
                 }
 
                 m_outStream.flush();
@@ -372,9 +371,9 @@ public enum WiFiNetwork {
 
                                 // 바이트 데이터를 전송받으면서 기록
                                 int len;
-                                byte[] data = new byte[BUFFERSIZE];
-                                while ((len = m_inStream.read(data)) != -1) {
-                                    bos.write(data, 0, len);
+                                byte[] buf = new byte[BUFFERSIZE];
+                                while ((len = m_inStream.read(buf)) != -1) {
+                                    bos.write(buf, 0, len);
                                 }
 
                                 bos.flush();

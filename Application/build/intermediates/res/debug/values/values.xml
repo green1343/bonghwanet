@@ -32,7 +32,7 @@
     <dimen name="vertical_page_margin">@dimen/margin_medium</dimen>
     <!-- From: file:/C:/wifi/Application/src/main/res/values/base-strings.xml -->
     <eat-comment/>
-    <string name="app_name">wifi</string>
+    <string name="app_name">bonghwanet</string>
     <!-- From: file:/C:/wifi/Application/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="buttonLabel1">StoC</string>
