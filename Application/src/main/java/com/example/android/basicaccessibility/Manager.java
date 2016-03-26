@@ -1,16 +1,25 @@
 package com.example.android.basicaccessibility;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.net.Uri;
+import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.telephony.TelephonyManager;
+import android.text.format.Time;
+
+import com.example.android.packet.Packet_Sync;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 /**
  * Created by 초록 on 2015-06-12.
@@ -50,9 +59,9 @@ public enum Manager {
 
     Context m_context;
     long m_myNumber;
+    long m_curGroup = 106423876801L; // TODO : delete
 
-    String m_networkSSID = "wifitest";
-    String m_networkPass = "pass";
+    String m_networkPass = "dafsglokvogzsuiwhbejfgr";
 
     WifiConfiguration m_configuration;
     WifiApManager m_wifiApManager;
@@ -90,30 +99,54 @@ public enum Manager {
             m_myNumber = Long.valueOf(telManager.getLine1Number());
 
         WifiConfiguration conf = new WifiConfiguration();
-        conf.SSID = m_networkSSID;
-        conf.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+
+        /*conf.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
         conf.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
         conf.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
         conf.allowedAuthAlgorithms.clear();
         conf.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
-
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
-        conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
-        /*conf.wepKeys[0] = "\"" + m_networkPass + "\"";
-        conf.wepTxKeyIndex = 0;
-        conf.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
-        conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+        conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);*/
+
+
+        //conf.SSID = "\"" + m_networkSSID + "\"";
         conf.preSharedKey = "\"" + m_networkPass + "\"";
-        conf.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);*/
+        conf.status = WifiConfiguration.Status.ENABLED;
+        conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+        conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+        conf.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
+        conf.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+        conf.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+        conf.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+
+        conf.wepKeys[0] = "\"" + m_networkPass + "\"";
+        conf.wepTxKeyIndex = 0;
+        conf.preSharedKey = "\"" + m_networkPass + "\"";
+
         m_configuration = conf;
 
         m_wifiApManager = new WifiApManager(m_context);
         m_wifiManager = (WifiManager)m_context.getSystemService(Context.WIFI_SERVICE);
 
+        // TODO : delete
+        GroupInfo g = new GroupInfo();
+        g.name = "test";
+        g.mode = GroupInfo.MODE_OPEN;
+        m_groups.put(m_curGroup, g);
+        checkDirectories();
+
         if(setClient() == false)
             setServer();
+    }
+
+    public void setCurGroup(long group){
+        m_curGroup = group;
+    }
+
+    public long getCurGroup(){
+        return m_curGroup;
     }
 
     private void getFileList(ArrayList<File> arr, String path) {
@@ -213,6 +246,22 @@ public enum Manager {
         return new GroupInfo();
     }
 
+    public void checkDirectories(){
+        String storage = Environment.getExternalStorageState();
+        if ( storage.equals(Environment.MEDIA_MOUNTED)) {
+            for(Long id : m_groups.keySet()) {
+                String dir = getRealGroupPath(id);
+                java.io.File file = new java.io.File(dir);
+                if (!file.exists())  // 원하는 경로에 폴더가 있는지 확인
+                    file.mkdirs();
+
+                ArrayList<File> arr = new ArrayList<File>();
+                arr.add(new File(true, file.lastModified(), getGroupPath(id)));
+                m_files.put(id, arr);
+            }
+        }
+    }
+
     public void createGroup(String name, int mode){
         long max = 0;
         for(Long id : m_groups.keySet()){
@@ -229,17 +278,7 @@ public enum Manager {
         g.mode = mode;
         m_groups.put(id, g);
 
-        String storage = Environment.getExternalStorageState();
-        if ( storage.equals(Environment.MEDIA_MOUNTED)) {
-            String dir = getRealGroupPath(id);
-            java.io.File file = new java.io.File(dir);
-            if( !file.exists() )  // 원하는 경로에 폴더가 있는지 확인
-                file.mkdirs();
-
-            ArrayList<File> arr = new ArrayList<File>();
-            arr.add(new File(true, file.lastModified(), getGroupPath(id)));
-            m_files.put(id, arr);
-        }
+        checkDirectories();
     }
 
     public String getRoot(){
@@ -271,6 +310,10 @@ public enum Manager {
     }
 
     public void setServer(){
+        String ssid = m_context.getString(R.string.app_name);
+        ssid += String.valueOf(m_curGroup);
+        m_configuration.SSID = ssid;
+
         m_wifiApManager.setWifiApEnabled(m_configuration, true);
         WiFiNetwork.INSTANCE.initServer();
     }
@@ -279,6 +322,25 @@ public enum Manager {
         if (!m_wifiManager.isWifiEnabled())
             m_wifiManager.setWifiEnabled(true);
 
+        List<ScanResult> results = m_wifiManager.getScanResults();
+        String appname = m_context.getString(R.string.app_name);
+        String ssid = null;
+
+        for(ScanResult r : results){
+            if(r.BSSID.startsWith(appname)){
+                long group = Long.valueOf(r.BSSID.substring(appname.length()));
+                if(group == m_curGroup){
+                    ssid = r.BSSID;
+                    break;
+                }
+            }
+        }
+
+        if(ssid == null)
+            return false;
+
+        m_configuration.SSID = ssid;
+
         int id = m_wifiManager.addNetwork(m_configuration);
         boolean result = m_wifiManager.enableNetwork(id, true);
         WiFiNetwork.INSTANCE.initClient();
@@ -286,5 +348,39 @@ public enum Manager {
         return result;
     }
 
+    public void uploadFile(String path){
 
+        StringTokenizer st = new StringTokenizer(path, "/");
+        String filename = null;
+        while(st.hasMoreTokens())
+            filename = st.nextToken();
+
+        String newPath = getRealGroupPath(getCurGroup()) + "/" + filename;
+        copyFile(path, newPath);
+        sendSync(newPath);
+    }
+
+    private void copyFile(String from , String to){
+        try {
+            FileInputStream fis = new FileInputStream(from);
+            FileOutputStream newfos = new FileOutputStream(to);
+            int readcount=0;
+            byte[] buffer = new byte[1024];
+            while((readcount = fis.read(buffer,0,1024))!= -1){
+                newfos.write(buffer,0,readcount);
+            }
+            newfos.close();
+            fis.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void sendSync(String file){
+        Packet_Sync p = new Packet_Sync();
+        p.group = getCurGroup();
+        java.io.File ioFile = new java.io.File(getRoot() + "/" + file);
+        p.files.add(new File(false, ioFile.lastModified(), file));
+        WiFiNetwork.INSTANCE.writeAll(p);
+    }
 }

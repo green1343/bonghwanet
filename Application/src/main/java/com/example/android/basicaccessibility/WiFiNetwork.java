@@ -93,7 +93,14 @@ public enum WiFiNetwork {
         m_client.start();
     }
 
-    public void write(Packet_Command p)
+    public void write(Packet_Command p, int index)
+    {
+        Message msg = Message.obtain(m_handler, 0 , 1 , 0);
+        msg.obj = new Pair<Integer, Packet_Command>(index, p);
+        m_handler.sendMessage(msg);
+    }
+
+    public void writeAll(Packet_Command p)
     {
         for(Integer index : m_threads.keySet()){
             Message msg = Message.obtain(m_handler, 0 , 1 , 0);
@@ -136,6 +143,10 @@ public enum WiFiNetwork {
                     m_threads.put(m_index, new Pair<>(speaker, listener));
                     ++m_index;
                     listener.start();
+
+                    Packet_Grouplist p = new Packet_Grouplist();
+                    p.groups = (HashMap<Long, Manager.GroupInfo>)Manager.INSTANCE.getAllGroups().clone();
+                    WiFiNetwork.INSTANCE.write(p, m_index-1);
 
                 } catch(IOException e){
                 }
@@ -187,6 +198,10 @@ public enum WiFiNetwork {
                     m_threads.put(m_index, new Pair<>(speaker, listener));
                     ++m_index;
                     listener.start();
+
+                    Packet_Grouplist p = new Packet_Grouplist();
+                    p.groups = (HashMap<Long, Manager.GroupInfo>)Manager.INSTANCE.getAllGroups().clone();
+                    WiFiNetwork.INSTANCE.write(p, m_index - 1);
 
                 } catch(IOException e){
                 }
@@ -255,9 +270,9 @@ public enum WiFiNetwork {
                 BufferedInputStream bis = new BufferedInputStream(fis);
 
                 int len;
-                byte[] data = new byte[BUFFERSIZE];
-                while ((len = bis.read(data)) != -1) {
-                    m_outStream.write(data, 0, len);
+                byte[] buf = new byte[BUFFERSIZE];
+                while ((len = bis.read(buf)) != -1) {
+                    m_outStream.write(buf, 0, len);
                 }
 
                 m_outStream.flush();
@@ -356,9 +371,9 @@ public enum WiFiNetwork {
 
                                 // 바이트 데이터를 전송받으면서 기록
                                 int len;
-                                byte[] data = new byte[BUFFERSIZE];
-                                while ((len = m_inStream.read(data)) != -1) {
-                                    bos.write(data, 0, len);
+                                byte[] buf = new byte[BUFFERSIZE];
+                                while ((len = m_inStream.read(buf)) != -1) {
+                                    bos.write(buf, 0, len);
                                 }
 
                                 bos.flush();
