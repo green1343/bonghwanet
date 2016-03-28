@@ -1,9 +1,6 @@
 package com.example.android.packet;
 
-import android.util.Log;
-
 import com.example.android.basicaccessibility.Manager;
-import com.example.android.needclass.BigEndianByteHandler;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,7 +28,6 @@ public class Packet_Grouplist extends Packet_Command {
             Manager.GroupInfo g = Manager.INSTANCE.getNewGroupInfo();
 
             g.name = unpackString(buf);
-            g.mode = unpackInt(buf);
             g.deletedFiles = new ArrayList<>();
 
             int size3 = unpackInt(buf);
@@ -58,7 +54,6 @@ public class Packet_Grouplist extends Packet_Command {
 
             pack(id, buf);
             pack(g.name, buf);
-            pack(g.mode, buf);
             pack(g.deletedFiles.size(), buf);
 
             for(Manager.File df : g.deletedFiles){

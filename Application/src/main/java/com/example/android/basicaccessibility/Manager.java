@@ -1,15 +1,11 @@
 package com.example.android.basicaccessibility;
 
 import android.content.Context;
-import android.database.Cursor;
-import android.net.Uri;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Environment;
-import android.provider.MediaStore;
 import android.telephony.TelephonyManager;
-import android.text.format.Time;
 
 import com.example.android.packet.Packet_Sync;
 
@@ -26,6 +22,8 @@ import java.util.StringTokenizer;
  */
 public enum Manager {
     INSTANCE;
+
+    public final static String RESERVED_SSID = "bhn";
 
     public class File {
 
@@ -53,7 +51,6 @@ public enum Manager {
         public final static int MODE_CLOSED = 2;
 
         public String name;
-        public int mode;
         public ArrayList<File> deletedFiles = new ArrayList<>();
     }
 
@@ -130,15 +127,8 @@ public enum Manager {
         m_wifiApManager = new WifiApManager(m_context);
         m_wifiManager = (WifiManager)m_context.getSystemService(Context.WIFI_SERVICE);
 
-        // TODO : delete
-        GroupInfo g = new GroupInfo();
-        g.name = "test";
-        g.mode = GroupInfo.MODE_OPEN;
-        m_groups.put(m_curGroup, g);
-        checkDirectories();
-
-        if(setClient() == false)
-            setServer();
+        if (!m_wifiManager.isWifiEnabled())
+            m_wifiManager.setWifiEnabled(true);
     }
 
     public void setCurGroup(long group){
@@ -178,7 +168,6 @@ public enum Manager {
                 long id = s.nextLong();
                 GroupInfo g = new GroupInfo();
                 g.name = s.next();
-                g.mode = s.nextInt();
                 for(int j=0; j<s.nextInt(); ++j){
                     File df = new File();
                     df.time = s.nextLong();
@@ -215,8 +204,6 @@ public enum Manager {
                 outputStream.write(Long.toString(id).getBytes());
                 outputStream.write(s.getBytes());
                 outputStream.write(g.name.getBytes());
-                outputStream.write(s.getBytes());
-                outputStream.write(Integer.toString(g.mode).getBytes());
                 outputStream.write(s.getBytes());
                 outputStream.write(Integer.toString(g.deletedFiles.size()).getBytes());
                 outputStream.write(s.getBytes());
@@ -262,7 +249,7 @@ public enum Manager {
         }
     }
 
-    public void createGroup(String name, int mode){
+    public void createGroup(String name){
         long max = 0;
         for(Long id : m_groups.keySet()){
             if(id / 100 == m_myNumber){
@@ -275,7 +262,6 @@ public enum Manager {
         long id = (m_myNumber * 100) + max + 1;
         GroupInfo g = new GroupInfo();
         g.name = name;
-        g.mode = mode;
         m_groups.put(id, g);
 
         checkDirectories();
@@ -310,8 +296,11 @@ public enum Manager {
     }
 
     public void setServer(){
-        String ssid = m_context.getString(R.string.app_name);
+        String ssid = RESERVED_SSID;
+        ssid += "_";
         ssid += String.valueOf(m_curGroup);
+        ssid += "_";
+        ssid += m_groups.get(m_curGroup).name;
         m_configuration.SSID = ssid;
 
         m_wifiApManager.setWifiApEnabled(m_configuration, true);
@@ -319,16 +308,22 @@ public enum Manager {
     }
 
     public boolean setClient(){
-        if (!m_wifiManager.isWifiEnabled())
-            m_wifiManager.setWifiEnabled(true);
-
         List<ScanResult> results = m_wifiManager.getScanResults();
-        String appname = m_context.getString(R.string.app_name);
         String ssid = null;
 
         for(ScanResult r : results){
-            if(r.BSSID.startsWith(appname)){
-                long group = Long.valueOf(r.BSSID.substring(appname.length()));
+            if(r.BSSID.startsWith(RESERVED_SSID)){
+                StringTokenizer t = new StringTokenizer(r.BSSID, "_");
+                String idStr = null;
+                String nameStr = null;
+                if(t.hasMoreTokens()) t.nextToken();
+                if(t.hasMoreTokens()) idStr = t.nextToken();
+                if(t.hasMoreTokens()) nameStr = t.nextToken();
+
+                if(nameStr == null)
+                    continue;
+
+                long group = Long.valueOf(idStr);
                 if(group == m_curGroup){
                     ssid = r.BSSID;
                     break;
@@ -346,6 +341,14 @@ public enum Manager {
         WiFiNetwork.INSTANCE.initClient();
 
         return result;
+    }
+
+    public void connect(int group){
+
+        setCurGroup(group);
+
+        if(setClient() == false)
+            setServer();
     }
 
     public void uploadFile(String path){

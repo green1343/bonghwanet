@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--
  Copyright 2013 The Android Open Source Project
 
@@ -14,16 +14,10 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-
-
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.basicaccessibility"
     android:versionCode="1"
-    android:versionName="1.0">
-
-    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
-
+    android:versionName="1.0" > <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="17" />
@@ -37,19 +31,24 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+
+        <activity android:name=".Main"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".GrouplistActivity"></activity>
+        <activity android:name=".NewGrouplistActivity"></activity>
+        <activity android:name=".SettingsActivity"></activity>
     </application>
 
 </manifest>
