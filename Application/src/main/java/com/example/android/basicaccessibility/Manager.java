@@ -11,7 +11,6 @@ import com.example.android.packet.Packet_Sync;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
@@ -24,38 +23,50 @@ public enum Manager {
     INSTANCE;
 
     public final static String RESERVED_SSID = "bhn";
+    public final static String DEFAULT_USERNAME = "User";
 
-    public class File {
+    public class FileInfo {
 
         public boolean isDirectory;
         public long time;
-        public String filename;
 
-        public File(){
+        public FileInfo(){
         }
 
-        public File(boolean isDirectory, long time, String filename){
+        public FileInfo(boolean isDirectory, long time){
             this.isDirectory = isDirectory;
             this.time = time;
-            this.filename = filename;
         }
     }
 
-    public File getNewFile(boolean isDirectory, long time, String filename){
-        return new File(isDirectory, time, filename);
+    public FileInfo getNewFileInfo(boolean isDirectory, long time){
+        return new FileInfo(isDirectory, time);
+    }
+
+    public class UserInfo{
+        public String name;
+    }
+
+    public UserInfo getNewUserInfo(){
+        return new UserInfo();
     }
 
     public class GroupInfo{
-        public final static int MODE_OPEN = 0;
-        public final static int MODE_INVITE = 1;
-        public final static int MODE_CLOSED = 2;
-
         public String name;
-        public ArrayList<File> deletedFiles = new ArrayList<>();
+        public HashMap<Long, UserInfo> members = new HashMap<>();
+        public HashMap<String, FileInfo> deletedFiles = new HashMap<>();
+
+        public GroupInfo(){}
+        public GroupInfo(GroupInfo g){
+            name = g.name;
+            members = (HashMap<Long, UserInfo>)g.members.clone();
+            deletedFiles = (HashMap<String, FileInfo>)g.deletedFiles.clone();
+        }
     }
 
     Context m_context;
     long m_myNumber;
+    UserInfo m_myUserInfo = new UserInfo();
     long m_curGroup = 106423876801L; // TODO : delete
 
     String m_networkPass = "dafsglokvogzsuiwhbejfgr";
@@ -64,13 +75,20 @@ public enum Manager {
     WifiApManager m_wifiApManager;
     WifiManager m_wifiManager;
 
-    // save file
     HashMap<Long, GroupInfo> m_groups = new HashMap<>(); // id, name
-    HashMap<Long, ArrayList<File>> m_files = new HashMap<>(); // id, files
+    HashMap<Long, HashMap<String, FileInfo>> m_files = new HashMap<>(); // id, files
+
+    Object m_tempObject;
+
+    // join
+    boolean m_bWatingJoin = false;
+    GroupInfo m_joinGroup = null;
 
     public void init(Context context)
     {
         m_context = context;
+
+        m_myUserInfo.name = DEFAULT_USERNAME;
 
         //writeUserData();
         readUserData();
@@ -97,7 +115,7 @@ public enum Manager {
 
         WifiConfiguration conf = new WifiConfiguration();
 
-        /*conf.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+        conf.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
         conf.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
         conf.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
         conf.allowedAuthAlgorithms.clear();
@@ -105,23 +123,21 @@ public enum Manager {
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
-        conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);*/
+        conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
 
-
-        //conf.SSID = "\"" + m_networkSSID + "\"";
-        conf.preSharedKey = "\"" + m_networkPass + "\"";
+        /*conf.preSharedKey = "\"" + m_networkPass + "\"";
         conf.status = WifiConfiguration.Status.ENABLED;
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
         conf.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
         conf.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
         conf.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
-        conf.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
-
+        conf.allowedProtocols.set(WifiConfiguration.Protocol.RSN);*/
+/*
         conf.wepKeys[0] = "\"" + m_networkPass + "\"";
         conf.wepTxKeyIndex = 0;
         conf.preSharedKey = "\"" + m_networkPass + "\"";
-
+*/
         m_configuration = conf;
 
         m_wifiApManager = new WifiApManager(m_context);
@@ -129,6 +145,35 @@ public enum Manager {
 
         if (!m_wifiManager.isWifiEnabled())
             m_wifiManager.setWifiEnabled(true);
+    }
+
+    public Context getContext(){
+        return m_context;
+    }
+
+    public Object getTempObject(){
+        return m_tempObject;
+    }
+
+    public void setTempObject(Object obj){
+        m_tempObject = obj;
+    }
+
+    public boolean isWatingJoin(){
+        return m_bWatingJoin;
+    }
+
+    public void setWatingJoin(boolean b){
+        m_bWatingJoin = b;
+    }
+
+    public void setJoinGroup(GroupInfo g){
+        m_joinGroup = new GroupInfo(g);
+        setWatingJoin(false);
+    }
+
+    public void joinGranted(long id){
+        m_groups.put(id, m_joinGroup);
     }
 
     public void setCurGroup(long group){
@@ -139,9 +184,27 @@ public enum Manager {
         return m_curGroup;
     }
 
-    private void getFileList(ArrayList<File> arr, String path) {
+    public void addUser(long group, long userID, UserInfo info){
+        m_groups.get(group).members.put(userID, info);
+    }
+
+    public long getMyNumber(){
+        return m_myNumber;
+    }
+
+    public UserInfo getMyUserInfo(){
+        UserInfo u = new UserInfo();
+        u.name = m_myUserInfo.name;
+        return u;
+    }
+
+    public WifiManager getWifiManager(){
+        return m_wifiManager;
+    }
+
+    private void getFileList(HashMap<String, FileInfo> arr, String path) {
         java.io.File fileRoot = new java.io.File(getRoot() + "/" + path);
-        arr.add(new File(fileRoot.isDirectory(), fileRoot.lastModified(), path));
+        arr.put(path, new FileInfo(fileRoot.isDirectory(), fileRoot.lastModified()));
 
         if( fileRoot.isDirectory() == false )
             return;
@@ -164,19 +227,30 @@ public enum Manager {
             Scanner s = new Scanner(stream);
 
             m_groups.clear();
-            for(int i=0; i<s.nextInt(); ++i) {
+            int size1 = s.nextInt();
+            for(int i=0; i<size1; ++i) {
                 long id = s.nextLong();
                 GroupInfo g = new GroupInfo();
                 g.name = s.next();
-                for(int j=0; j<s.nextInt(); ++j){
-                    File df = new File();
+
+                int size2 = s.nextInt();
+                for(int j=0; j<size2; ++j){
+                    long userID = s.nextLong();
+                    UserInfo u = new UserInfo();
+                    u.name = s.next();
+                    g.members.put(userID, u);
+                }
+                size2 = s.nextInt();
+                for(int j=0; j<size2; ++j){
+                    String filename = s.next();
+                    FileInfo df = new FileInfo();
+                    df.isDirectory = s.nextBoolean();
                     df.time = s.nextLong();
-                    df.filename = s.next();
-                    g.deletedFiles.add(df);
+                    g.deletedFiles.put(filename, df);
                 }
                 m_groups.put(id, g);
 
-                m_files.put(id, new ArrayList<File>());
+                m_files.put(id, new HashMap<String, FileInfo>());
 
                 for(Long id2 : m_files.keySet()){
                     getFileList(m_files.get(id2), getGroupPath(id2));
@@ -205,12 +279,26 @@ public enum Manager {
                 outputStream.write(s.getBytes());
                 outputStream.write(g.name.getBytes());
                 outputStream.write(s.getBytes());
+
+                outputStream.write(Integer.toString(g.members.size()).getBytes());
+                outputStream.write(s.getBytes());
+                for(Long userID : g.members.keySet()) {
+                    UserInfo u = g.members.get(userID);
+                    outputStream.write(Long.toString(userID).getBytes());
+                    outputStream.write(s.getBytes());
+                    outputStream.write(u.name.getBytes());
+                    outputStream.write(s.getBytes());
+                }
+
                 outputStream.write(Integer.toString(g.deletedFiles.size()).getBytes());
                 outputStream.write(s.getBytes());
-                for(File df : g.deletedFiles){
-                    outputStream.write(Long.toString(df.time).getBytes());
+                for(String filename : g.deletedFiles.keySet()){
+                    FileInfo df = g.deletedFiles.get(filename);
+                    outputStream.write(filename.getBytes());
                     outputStream.write(s.getBytes());
-                    outputStream.write(df.filename.getBytes());
+                    outputStream.write(Boolean.toString(df.isDirectory).getBytes());
+                    outputStream.write(s.getBytes());
+                    outputStream.write(Long.toString(df.time).getBytes());
                     outputStream.write(s.getBytes());
                 }
             }
@@ -225,8 +313,8 @@ public enum Manager {
         return m_groups;
     }
 
-    public File getNewDeletedFile(){
-        return new File();
+    public FileInfo getNewDeletedFile(){
+        return new FileInfo();
     }
 
     public GroupInfo getNewGroupInfo(){
@@ -242,8 +330,8 @@ public enum Manager {
                 if (!file.exists())  // 원하는 경로에 폴더가 있는지 확인
                     file.mkdirs();
 
-                ArrayList<File> arr = new ArrayList<File>();
-                arr.add(new File(true, file.lastModified(), getGroupPath(id)));
+                HashMap<String, FileInfo> arr = new HashMap<>();
+                arr.put(getGroupPath(id),  new FileInfo(true, file.lastModified()));
                 m_files.put(id, arr);
             }
         }
@@ -262,6 +350,9 @@ public enum Manager {
         long id = (m_myNumber * 100) + max + 1;
         GroupInfo g = new GroupInfo();
         g.name = name;
+        UserInfo u = new UserInfo();
+        u.name = m_myUserInfo.name;
+        g.members.put(m_myNumber, u);
         m_groups.put(id, g);
 
         checkDirectories();
@@ -308,12 +399,14 @@ public enum Manager {
     }
 
     public boolean setClient(){
+
+        m_wifiManager.startScan();
         List<ScanResult> results = m_wifiManager.getScanResults();
         String ssid = null;
 
         for(ScanResult r : results){
-            if(r.BSSID.startsWith(RESERVED_SSID)){
-                StringTokenizer t = new StringTokenizer(r.BSSID, "_");
+            if(r.SSID.startsWith(RESERVED_SSID)){
+                StringTokenizer t = new StringTokenizer(r.SSID, "_");
                 String idStr = null;
                 String nameStr = null;
                 if(t.hasMoreTokens()) t.nextToken();
@@ -325,7 +418,7 @@ public enum Manager {
 
                 long group = Long.valueOf(idStr);
                 if(group == m_curGroup){
-                    ssid = r.BSSID;
+                    ssid = r.SSID;
                     break;
                 }
             }
@@ -338,12 +431,14 @@ public enum Manager {
 
         int id = m_wifiManager.addNetwork(m_configuration);
         boolean result = m_wifiManager.enableNetwork(id, true);
-        WiFiNetwork.INSTANCE.initClient();
+
+        if(result)
+            WiFiNetwork.INSTANCE.initClient();
 
         return result;
     }
 
-    public void connect(int group){
+    public void connect(long group){
 
         setCurGroup(group);
 
@@ -383,7 +478,7 @@ public enum Manager {
         Packet_Sync p = new Packet_Sync();
         p.group = getCurGroup();
         java.io.File ioFile = new java.io.File(getRoot() + "/" + file);
-        p.files.add(new File(false, ioFile.lastModified(), file));
+        p.files.put(file, new FileInfo(false, ioFile.lastModified()));
         WiFiNetwork.INSTANCE.writeAll(p);
     }
 }

@@ -2,7 +2,7 @@ package com.example.android.packet;
 
 import com.example.android.basicaccessibility.Manager;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by Kim on 2015-04-07.
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Packet_Sync extends Packet_Command {
 
     public long group;
-    public ArrayList<Manager.File> files = new ArrayList<>();
+    public HashMap<String, Manager.FileInfo> files = new HashMap<>();
 
     public Packet_Sync(){
         setCommand((short) PACKET.PACKET_SYNC);
@@ -25,11 +25,11 @@ public class Packet_Sync extends Packet_Command {
 
         int size = unpackInt(buf);
         for(int i=0; i<size; ++i){
+            String filename = unpackString(buf);
             boolean isDirectory = unpackBool(buf);
             long time = unpackLong(buf);
-            String filename = unpackString(buf);
 
-            files.add(Manager.INSTANCE.getNewFile(isDirectory, time, filename));
+            files.put(filename, Manager.INSTANCE.getNewFileInfo(isDirectory, time));
         }
     }
 
@@ -39,10 +39,11 @@ public class Packet_Sync extends Packet_Command {
 
         pack(group, buf);
         pack(files.size(), buf);
-        for(Manager.File f : files) {
+        for(String filename : files.keySet()) {
+            Manager.FileInfo f = files.get(filename);
+            pack(filename, buf);
             pack(f.isDirectory, buf);
             pack(f.time, buf);
-            pack(f.filename, buf);
         }
     }
 }

@@ -3,24 +3,21 @@ package com.example.android.packet;
 public class Packet_Command {
 
     private short m_command;
-    public int place;
+    public int place = 0;
 
     public Packet_Command()
     {
         m_command = 0;
-        place = 0;
     }
 
     public Packet_Command(short command)
     {
         m_command = command;
-        place = 0;
     }
 
     public Packet_Command(byte[] buf)
     {
         m_command = unpackShort(buf);
-        place = 0;
     }
 
     public short getCommand()
@@ -86,16 +83,22 @@ public class Packet_Command {
     }
 
     protected boolean unpackBool(byte[] buf){
-        return buf[place] != 0;
+        boolean result = buf[place] != 0;
+        ++place;
+        return result;
     }
 
     protected short unpackShort(byte[] buf){
-        return (short)(((buf[place]&0xff) << 8) | (buf[place+1]&0xff));
+        short result = (short)(((buf[place]&0xff) << 8) | (buf[place+1]&0xff));
+        place += 2;
+        return result;
     }
 
     protected int unpackInt(byte[] buf){
-        return ((buf[place]&0xff) << 24) | ((buf[place+1]&0xff) << 16) |
+        int result = ((buf[place]&0xff) << 24) | ((buf[place+1]&0xff) << 16) |
                 ((buf[place+2]&0xff) << 8) | (buf[place+3]&0xff);
+        place += 4;
+        return result;
     }
 
     protected long unpackLong(byte[] buf){

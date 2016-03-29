@@ -8,10 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.StringTokenizer;
 
 public class GrouplistActivity extends Activity {
 
@@ -43,7 +43,7 @@ public class GrouplistActivity extends Activity {
 		HashMap<Long, Manager.GroupInfo> groups = Manager.INSTANCE.getAllGroups();
 		for(Long id : groups.keySet()) {
 			Manager.GroupInfo g = groups.get(id);
-			String str = g.name;
+			String str = new String(g.name);
 			str += "\t\t";
 			str += id;
 			m_adapter.add(str);
@@ -76,7 +76,12 @@ public class GrouplistActivity extends Activity {
 
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-			Toast.makeText(getApplicationContext(), m_adapter.getItem(arg2), Toast.LENGTH_SHORT).show();
+
+			StringTokenizer t = new StringTokenizer(m_adapter.getItem(arg2), "\t");
+			t.nextToken();
+
+			Manager.INSTANCE.connect(Long.valueOf(t.nextToken()));
+			//Toast.makeText(getApplicationContext(), m_adapter.getItem(arg2), Toast.LENGTH_SHORT).show();
 		}
 	};
 

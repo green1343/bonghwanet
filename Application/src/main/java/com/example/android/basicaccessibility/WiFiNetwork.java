@@ -1,5 +1,7 @@
 package com.example.android.basicaccessibility;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Pair;
@@ -7,6 +9,8 @@ import android.util.Pair;
 import com.example.android.packet.PACKET;
 import com.example.android.packet.Packet_Command;
 import com.example.android.packet.Packet_Grouplist;
+import com.example.android.packet.Packet_Join_Request;
+import com.example.android.packet.Packet_New_User;
 import com.example.android.packet.Packet_Share_File_Request;
 import com.example.android.packet.Packet_Share_File_Request_OK;
 import com.example.android.packet.Packet_Share_Text;
@@ -44,7 +48,42 @@ public enum WiFiNetwork {
     private Handler m_handler = new Handler() {
         public void handleMessage(Message msg) {
             Pair<Integer, Packet_Command> pair = (Pair)msg.obj;
-            m_threads.get(pair.first).first.write(pair.second);
+
+            if(pair.first == -1){
+                Packet_Join_Request p = (Packet_Join_Request)pair.second;
+                Manager.INSTANCE.setTempObject(p);
+
+                String message = new String();
+                message = p.userInfo.name;
+                message += "님이 가입신청 하셨습니다.\n수락하시겠습니까?";
+
+                AlertDialog.Builder d = new AlertDialog.Builder(Manager.INSTANCE.getContext());
+                d.setMessage(message);
+                d.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Packet_Join_Request p = (Packet_Join_Request)Manager.INSTANCE.getTempObject();
+
+                        Manager.UserInfo u = Manager.INSTANCE.getNewUserInfo();
+                        u.name = p.userInfo.name;
+                        Manager.INSTANCE.addUser(p.group, p.userID, u);
+
+                        Packet_New_User reply = new Packet_New_User();
+                        reply.group = p.group;
+                        reply.userID = p.userID;
+                        reply.userInfo.name = new String(p.userInfo.name);
+                        WiFiNetwork.INSTANCE.writeAll(reply);
+                    }
+                });
+                d.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                d.show();
+            }
+            else {
+                m_threads.get(pair.first).first.write(pair.second);
+            }
         }
     };
 
@@ -63,6 +102,9 @@ public enum WiFiNetwork {
         }
 
         m_threads.clear();
+
+        m_server = null;
+        m_client = null;
     }
 
     public void initServer(){
@@ -149,6 +191,7 @@ public enum WiFiNetwork {
                     WiFiNetwork.INSTANCE.write(p, m_index-1);
 
                 } catch(IOException e){
+                    e.printStackTrace();
                 }
 
                 try {
@@ -176,6 +219,9 @@ public enum WiFiNetwork {
     public class Client extends Thread{
 
         private boolean m_kill = false;
+        Socket clientSocket;
+        NetworkSpeaker speaker;
+        NetworkListener listener;
 
         public Client()
         {
@@ -189,23 +235,23 @@ public enum WiFiNetwork {
         @Override
         public void run()
         {
+            try {
+                clientSocket = new Socket(SERVERADDRESS, PORT);
+                speaker = new NetworkSpeaker(m_index, clientSocket.getOutputStream(), m_handler);
+                listener = new NetworkListener(m_index, clientSocket.getInputStream(), m_handler);
+                m_threads.put(m_index, new Pair<>(speaker, listener));
+                ++m_index;
+                listener.start();
+
+                Packet_Grouplist p = new Packet_Grouplist();
+                p.groups = (HashMap<Long, Manager.GroupInfo>)Manager.INSTANCE.getAllGroups().clone();
+                WiFiNetwork.INSTANCE.write(p, m_index - 1);
+
+            } catch(IOException e){
+            }
+
             while(!Thread.interrupted())
             {
-                try {
-                    Socket clientSocket = new Socket(SERVERADDRESS, PORT);
-                    NetworkSpeaker speaker = new NetworkSpeaker(m_index, clientSocket.getOutputStream(), m_handler);
-                    NetworkListener listener = new NetworkListener(m_index, clientSocket.getInputStream(), m_handler);
-                    m_threads.put(m_index, new Pair<>(speaker, listener));
-                    ++m_index;
-                    listener.start();
-
-                    Packet_Grouplist p = new Packet_Grouplist();
-                    p.groups = (HashMap<Long, Manager.GroupInfo>)Manager.INSTANCE.getAllGroups().clone();
-                    WiFiNetwork.INSTANCE.write(p, m_index - 1);
-
-                } catch(IOException e){
-                }
-
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
@@ -335,17 +381,35 @@ public enum WiFiNetwork {
 
                     switch (cmd.getCommand())
                     {
-                        case PACKET.PACKET_SHARE_TEXT: {
-                            Packet_Share_Text p = new Packet_Share_Text(stream);
-                            System.out.println(p.text);
+                        case PACKET.PACKET_JOIN_REQUEST: {
+                            Packet_Join_Request p = new Packet_Join_Request(stream);
+
+                            Message msg = Message.obtain(m_handler, 0 , 1 , 0);
+                            msg.obj = new Pair<Integer, Packet_Command>(-1, p);
+                            m_handler.sendMessage(msg);
+
+                            break;
+                        }
+                        case PACKET.PACKET_NEW_USER: {
+                            Packet_New_User p = new Packet_New_User(stream);
+                            if(p.userID == Manager.INSTANCE.getMyNumber())
+                                Manager.INSTANCE.joinGranted(p.group);
                             break;
                         }
                         case PACKET.PACKET_GROUPLIST: {
+                            Manager m = Manager.INSTANCE;
+
                             Packet_Grouplist p = new Packet_Grouplist(stream);
-                            for(Long id : Manager.INSTANCE.getAllGroups().keySet()){
+                            for(Long id : m.getAllGroups().keySet()){
                                 if(p.groups.get(id) != null){
                                     // TODO : send sync
                                 }
+                            }
+
+                            if(m.isWatingJoin()){
+                                Manager.GroupInfo g = p.groups.get(m.getCurGroup());
+                                if(g != null)
+                                    m.setJoinGroup(g);
                             }
                             break;
                         }
@@ -381,6 +445,11 @@ public enum WiFiNetwork {
                             catch(IOException e){
                             }
                             
+                            break;
+                        }
+                        case PACKET.PACKET_SHARE_TEXT: {
+                            Packet_Share_Text p = new Packet_Share_Text(stream);
+                            System.out.println(p.text);
                             break;
                         }
                         default:

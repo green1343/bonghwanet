@@ -2,7 +2,6 @@ package com.example.android.packet;
 
 import com.example.android.basicaccessibility.Manager;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -28,15 +27,24 @@ public class Packet_Grouplist extends Packet_Command {
             Manager.GroupInfo g = Manager.INSTANCE.getNewGroupInfo();
 
             g.name = unpackString(buf);
-            g.deletedFiles = new ArrayList<>();
+            g.members = new HashMap<>();
+            g.deletedFiles = new HashMap<>();
 
-            int size3 = unpackInt(buf);
-            for(int j=0; j<size3; ++j){
-                Manager.File df = Manager.INSTANCE.getNewDeletedFile();
-                int size4 = unpackInt(buf);
-                df.filename = unpackString(buf);
+            int size2 = unpackInt(buf);
+            for(int j=0; j<size2; ++j) {
+                long userID = unpackLong(buf);
+                Manager.UserInfo u = Manager.INSTANCE.getNewUserInfo();
+                u.name = unpackString(buf);
+                g.members.put(userID, u);
+            }
+
+            size2 = unpackInt(buf);
+            for(int j=0; j<size2; ++j){
+                String filename = unpackString(buf);
+                Manager.FileInfo df = Manager.INSTANCE.getNewDeletedFile();
+                df.isDirectory = unpackBool(buf);
                 df.time = unpackLong(buf);
-                g.deletedFiles.add(df);
+                g.deletedFiles.put(filename, df);
             }
 
             groups.put(id, g);
@@ -54,10 +62,19 @@ public class Packet_Grouplist extends Packet_Command {
 
             pack(id, buf);
             pack(g.name, buf);
-            pack(g.deletedFiles.size(), buf);
 
-            for(Manager.File df : g.deletedFiles){
-                pack(df.filename, buf);
+            pack(g.members.size(), buf);
+            for(Long userID : g.members.keySet()){
+                Manager.UserInfo u = g.members.get(userID);
+                pack(userID, buf);
+                pack(u.name, buf);
+            }
+
+            pack(g.deletedFiles.size(), buf);
+            for(String filename : g.deletedFiles.keySet()){
+                Manager.FileInfo df = g.deletedFiles.get(filename);
+                pack(filename, buf);
+                pack(df.isDirectory, buf);
                 pack(df.time, buf);
             }
         }
