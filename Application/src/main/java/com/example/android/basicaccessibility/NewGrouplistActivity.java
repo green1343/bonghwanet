@@ -5,6 +5,8 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.net.wifi.ScanResult;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -18,8 +20,10 @@ import java.util.StringTokenizer;
 
 public class NewGrouplistActivity extends Activity {
 
-	private ListView m_list;
-	public static ArrayAdapter<String> m_adapter;
+	ArrayAdapter<String> m_adapter;
+	ListView m_list;
+
+	Thread m_refreshThread = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +36,39 @@ public class NewGrouplistActivity extends Activity {
 		m_list.setOnItemClickListener(onClickListItem);
 	}
 
+	private Handler m_refreshHandler = new Handler() {
+		public void handleMessage(Message msg) {
+			refreshList();
+		}
+	};
+
 	@Override
 	protected void onResume(){
 		super.onResume();
 		refreshList();
+
+		m_refreshThread = new Thread(new Runnable() {
+			public void run() {
+				while (!Thread.interrupted()) {
+					try {
+						Message msg = Message.obtain(m_refreshHandler, 0 , 1 , 0);
+						m_refreshHandler.sendMessage(msg);
+						Thread.sleep(3000);
+					} catch (Throwable t) {
+					}
+				}
+			}
+		});
+
+		m_refreshThread.start();
+	}
+
+	@Override
+	protected void onPause(){
+		super.onPause();
+
+		m_refreshThread.interrupt();
+		m_refreshThread = null;
 	}
 
 	public void refreshList(){
@@ -46,6 +79,9 @@ public class NewGrouplistActivity extends Activity {
 
 		Manager m = Manager.INSTANCE;
 		HashMap<Long, Manager.GroupInfo> groups = m.getAllGroups();
+
+		if (!m.getWifiManager().isWifiEnabled())
+			m.getWifiManager().setWifiEnabled(true);
 
 		m.getWifiManager().startScan();
 		List<ScanResult> results = m.getWifiManager().getScanResults();
@@ -91,20 +127,28 @@ public class NewGrouplistActivity extends Activity {
 					Manager.INSTANCE.setCurGroup((Long) Manager.INSTANCE.getTempObject());
 					if (Manager.INSTANCE.setClient()) {
 
+						Manager.INSTANCE.setWatingJoin(true);
+
 						Thread myThread = new Thread(new Runnable() {
 							public void run() {
-								while (true) {
+								int cnt = 0;
+								while (!Thread.interrupted()) {
 									try {
-										if (WiFiNetwork.INSTANCE.m_threads.size() > 0) {
+										if (Manager.INSTANCE.getJoingGroup() != null) {
 											Packet_Join_Request p = new Packet_Join_Request();
 											p.group = Manager.INSTANCE.getCurGroup();
 											p.userID = Manager.INSTANCE.getMyNumber();
 											p.userInfo = Manager.INSTANCE.getMyUserInfo();
 											WiFiNetwork.INSTANCE.writeAll(p);
 
-											Manager.INSTANCE.setWatingJoin(true);
+											break;
 										}
 										Thread.sleep(1000);
+
+										++cnt;
+										if(cnt > 20)
+											break;
+
 									} catch (Throwable t) {
 									}
 								}
@@ -117,6 +161,7 @@ public class NewGrouplistActivity extends Activity {
 			});
 			d.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
+					Manager.INSTANCE.setTempObject(null);
 					dialog.cancel();
 				}
 			});

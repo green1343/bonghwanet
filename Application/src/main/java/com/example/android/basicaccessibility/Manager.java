@@ -133,11 +133,10 @@ public enum Manager {
         conf.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
         conf.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
         conf.allowedProtocols.set(WifiConfiguration.Protocol.RSN);*/
-/*
-        conf.wepKeys[0] = "\"" + m_networkPass + "\"";
-        conf.wepTxKeyIndex = 0;
-        conf.preSharedKey = "\"" + m_networkPass + "\"";
-*/
+
+        /*conf.wepKeys[0] = "\"" + m_networkPass + "\"";
+        conf.wepTxKeyIndex = 0;*/
+
         m_configuration = conf;
 
         m_wifiApManager = new WifiApManager(m_context);
@@ -172,8 +171,13 @@ public enum Manager {
         setWatingJoin(false);
     }
 
+    public GroupInfo getJoingGroup(){
+        return m_joinGroup;
+    }
+
     public void joinGranted(long id){
         m_groups.put(id, m_joinGroup);
+        m_joinGroup = null;
     }
 
     public void setCurGroup(long group){
@@ -402,6 +406,9 @@ public enum Manager {
 
         m_wifiManager.startScan();
         List<ScanResult> results = m_wifiManager.getScanResults();
+        if(results == null)
+            return false;
+
         String ssid = null;
 
         for(ScanResult r : results){
@@ -432,8 +439,23 @@ public enum Manager {
         int id = m_wifiManager.addNetwork(m_configuration);
         boolean result = m_wifiManager.enableNetwork(id, true);
 
-        if(result)
+        if(result) {
+
+            // TODO: 삭제
+            try {
+                Thread.sleep(3000);
+            } catch (Throwable t) {
+            }
+            /*Thread myThread = new Thread(new Runnable() {
+                public void run() {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (Throwable t) {
+                    }
+                }
+            });*/
             WiFiNetwork.INSTANCE.initClient();
+        }
 
         return result;
     }

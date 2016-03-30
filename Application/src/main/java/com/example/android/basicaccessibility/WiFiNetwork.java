@@ -48,42 +48,44 @@ public enum WiFiNetwork {
     private Handler m_handler = new Handler() {
         public void handleMessage(Message msg) {
             Pair<Integer, Packet_Command> pair = (Pair)msg.obj;
+            m_threads.get(pair.first).first.write(pair.second);
+        }
+    };
 
-            if(pair.first == -1){
-                Packet_Join_Request p = (Packet_Join_Request)pair.second;
-                Manager.INSTANCE.setTempObject(p);
+    private Handler m_joinHandler = new Handler() {
+        public void handleMessage(Message msg) {
 
-                String message = new String();
-                message = p.userInfo.name;
-                message += "님이 가입신청 하셨습니다.\n수락하시겠습니까?";
+            Packet_Join_Request p = (Packet_Join_Request)msg.obj;
+            Manager.INSTANCE.setTempObject(p);
 
-                AlertDialog.Builder d = new AlertDialog.Builder(Manager.INSTANCE.getContext());
-                d.setMessage(message);
-                d.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Packet_Join_Request p = (Packet_Join_Request)Manager.INSTANCE.getTempObject();
+            String message = new String();
+            message = p.userInfo.name;
+            message += "님이 가입신청 하셨습니다.\n수락하시겠습니까?";
 
-                        Manager.UserInfo u = Manager.INSTANCE.getNewUserInfo();
-                        u.name = p.userInfo.name;
-                        Manager.INSTANCE.addUser(p.group, p.userID, u);
+            AlertDialog.Builder d = new AlertDialog.Builder(Manager.INSTANCE.getContext());
+            d.setMessage(message);
+            d.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    Packet_Join_Request p = (Packet_Join_Request)Manager.INSTANCE.getTempObject();
 
-                        Packet_New_User reply = new Packet_New_User();
-                        reply.group = p.group;
-                        reply.userID = p.userID;
-                        reply.userInfo.name = new String(p.userInfo.name);
-                        WiFiNetwork.INSTANCE.writeAll(reply);
-                    }
-                });
-                d.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-                d.show();
-            }
-            else {
-                m_threads.get(pair.first).first.write(pair.second);
-            }
+                    Manager.UserInfo u = Manager.INSTANCE.getNewUserInfo();
+                    u.name = p.userInfo.name;
+                    Manager.INSTANCE.addUser(p.group, p.userID, u);
+
+                    Packet_New_User reply = new Packet_New_User();
+                    reply.group = p.group;
+                    reply.userID = p.userID;
+                    reply.userInfo.name = new String(p.userInfo.name);
+
+                    writeAll(reply);
+                }
+            });
+            d.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+            d.show();
         }
     };
 
@@ -113,7 +115,7 @@ public enum WiFiNetwork {
 
         try {
             ServerSocket serverSocket = new ServerSocket(PORT);
-            m_server = new Server(serverSocket);
+            m_server = new Server(serverSocket, m_handler);
             m_server.start();
         } catch (IOException ex) {
             //System.err.println(ex);
@@ -131,7 +133,7 @@ public enum WiFiNetwork {
     public void initClient(){
         clearAll();
 
-        m_client = new Client();
+        m_client = new Client(m_handler);
         m_client.start();
     }
 
@@ -162,11 +164,13 @@ public enum WiFiNetwork {
     public class Server extends Thread{
 
         private ServerSocket m_server;
+        private Handler m_handler;
         private boolean m_kill = false;
 
-        public Server(ServerSocket server)
+        public Server(ServerSocket server, Handler handler)
         {
             m_server = server;
+            m_handler = handler;
         }
 
         /*****************************************************
@@ -219,13 +223,14 @@ public enum WiFiNetwork {
     public class Client extends Thread{
 
         private boolean m_kill = false;
+        private Handler m_handler;
         Socket clientSocket;
         NetworkSpeaker speaker;
         NetworkListener listener;
 
-        public Client()
+        public Client(Handler handler)
         {
-
+            m_handler = handler;
         }
 
         /*****************************************************
@@ -290,7 +295,7 @@ public enum WiFiNetwork {
 
         public void write(Packet_Command p)
         {
-            if(m_outStream == null)
+            if(m_outStream == null || p.getCommand() == 0)
                 return;
 
             byte[] b = new byte[BUFFERSIZE];
@@ -384,9 +389,9 @@ public enum WiFiNetwork {
                         case PACKET.PACKET_JOIN_REQUEST: {
                             Packet_Join_Request p = new Packet_Join_Request(stream);
 
-                            Message msg = Message.obtain(m_handler, 0 , 1 , 0);
-                            msg.obj = new Pair<Integer, Packet_Command>(-1, p);
-                            m_handler.sendMessage(msg);
+                            Message msg = Message.obtain(m_joinHandler, 0 , 1 , 0);
+                            msg.obj = p;
+                            m_joinHandler.sendMessage(msg);
 
                             break;
                         }
@@ -422,9 +427,8 @@ public enum WiFiNetwork {
                             Packet_Share_File_Request p = new Packet_Share_File_Request(stream);
                             Packet_Share_File_Request_OK reply = new Packet_Share_File_Request_OK();
                             reply.filename = p.filename;
-                            Message msg = Message.obtain(m_handler, 0 , 1 , 0);
-                            msg.obj = new Pair<Integer, Packet_Command>(m_index, reply);
-                            m_handler.sendMessage(msg);
+                            write(reply, m_index);
+                            break;
                         }
                         case PACKET.PACKET_SHARE_FILE_REQUEST_OK: {
                             Packet_Share_File_Request_OK p = new Packet_Share_File_Request_OK(stream);
