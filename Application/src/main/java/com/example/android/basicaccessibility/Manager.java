@@ -1,10 +1,13 @@
 package com.example.android.basicaccessibility;
 
 import android.content.Context;
+import android.net.DhcpInfo;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
 import android.telephony.TelephonyManager;
 
 import com.example.android.packet.Packet_Sync;
@@ -115,6 +118,7 @@ public enum Manager {
 
         WifiConfiguration conf = new WifiConfiguration();
 
+        // open
         conf.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
         conf.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
         conf.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
@@ -125,6 +129,7 @@ public enum Manager {
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
 
+        // wep
         /*conf.preSharedKey = "\"" + m_networkPass + "\"";
         conf.status = WifiConfiguration.Status.ENABLED;
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
@@ -134,7 +139,20 @@ public enum Manager {
         conf.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
         conf.allowedProtocols.set(WifiConfiguration.Protocol.RSN);*/
 
-        /*conf.wepKeys[0] = "\"" + m_networkPass + "\"";
+        //conf.wepKeys[0] = "\"" + m_networkPass + "\"";
+        //conf.wepTxKeyIndex = 0;
+
+        // wpa
+        /*conf.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+        conf.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+        conf.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+        conf.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);
+        conf.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);
+        conf.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+
+        conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+        conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+        conf.wepKeys[0] = m_networkPass;
         conf.wepTxKeyIndex = 0;*/
 
         m_configuration = conf;
@@ -399,8 +417,30 @@ public enum Manager {
         m_configuration.SSID = ssid;
 
         m_wifiApManager.setWifiApEnabled(m_configuration, true);
-        WiFiNetwork.INSTANCE.initServer();
+
+        Thread t = new Thread(new Runnable() {
+            public void run() {
+                while (!Thread.interrupted()) {
+                    try {
+                        if(m_wifiApManager.getWifiApState() == 13) {
+                            Message msg = Message.obtain(m_initClientHandler, 0, 1, 0);
+                            m_initServerHandler.sendMessage(msg);
+                            break;
+                        }
+                        Thread.sleep(1000);
+                    } catch (Throwable t) {
+                    }
+                }
+            }
+        });
+        t.start();
     }
+
+    private Handler m_initServerHandler = new Handler() {
+        public void handleMessage(Message msg) {
+            WiFiNetwork.INSTANCE.initServer();
+        }
+    };
 
     public boolean setClient(){
 
@@ -434,7 +474,7 @@ public enum Manager {
         if(ssid == null)
             return false;
 
-        m_configuration.SSID = ssid;
+        m_configuration.SSID = "\"" + ssid + "\"";
 
         int id = m_wifiManager.addNetwork(m_configuration);
         boolean result = m_wifiManager.enableNetwork(id, true);
@@ -446,19 +486,44 @@ public enum Manager {
                 Thread.sleep(3000);
             } catch (Throwable t) {
             }
-            /*Thread myThread = new Thread(new Runnable() {
+
+            Thread t = new Thread(new Runnable() {
                 public void run() {
-                    try {
-                        Thread.sleep(1000);
-                    } catch (Throwable t) {
+                    while (!Thread.interrupted()) {
+                        try {
+                            DhcpInfo info = m_wifiManager.getDhcpInfo() ;
+                            if(info.gateway != 0) {
+                                int serverIP = info.gateway;
+                                String ipAddress = String.format(
+                                        "%d.%d.%d.%d",
+                                        (serverIP & 0xff),
+                                        (serverIP >> 8 & 0xff),
+                                        (serverIP >> 16 & 0xff),
+                                        (serverIP >> 24 & 0xff));
+
+                                Message msg = Message.obtain(m_initClientHandler, 0, 1, 0);
+                                msg.obj = ipAddress;
+                                m_initClientHandler.sendMessage(msg);
+                                break;
+                            }
+                            Thread.sleep(1000);
+                        } catch (Throwable t) {
+                        }
                     }
                 }
-            });*/
-            WiFiNetwork.INSTANCE.initClient();
+            });
+            t.start();
         }
 
         return result;
     }
+
+    private Handler m_initClientHandler = new Handler() {
+        public void handleMessage(Message msg) {
+            String ipAddress = (String)msg.obj;
+            WiFiNetwork.INSTANCE.initClient(ipAddress);
+        }
+    };
 
     public void connect(long group){
 
