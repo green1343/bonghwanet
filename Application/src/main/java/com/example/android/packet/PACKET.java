@@ -1,8 +1,5 @@
 package com.example.android.packet;
 
-/**
- * Created by Kim on 2015-03-31.
- */
 public class PACKET {
 
     // Mobile <-> Mobile

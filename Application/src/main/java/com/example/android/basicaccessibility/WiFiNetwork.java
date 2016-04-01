@@ -34,7 +34,7 @@ import java.util.HashMap;
 public enum WiFiNetwork {
     INSTANCE;
 
-    final String SERVERADDRESS = "192.168.43.1";
+    String SERVERADDRESS = "192.168.43.1";
     final int PORT = 11000;
     final int TIMEOUT = 10000;
     final int BUFFERSIZE = 1024;
@@ -130,9 +130,10 @@ public enum WiFiNetwork {
         }
     }
 
-    public void initClient(){
+    public void initClient(String serverAddress){
         clearAll();
 
+        SERVERADDRESS = serverAddress;
         m_client = new Client(m_handler);
         m_client.start();
     }

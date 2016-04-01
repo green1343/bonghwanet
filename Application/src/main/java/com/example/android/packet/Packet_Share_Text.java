@@ -18,19 +18,19 @@ public class Packet_Share_Text extends Packet_Command
 
         super(buf);
 
-        group = unpackLong(buf);
-        uploader = unpackLong(buf);
-        time = unpackLong(buf);
-        text = unpackString(buf);
+        group = unpackLong();
+        uploader = unpackLong();
+        time = unpackLong();
+        text = unpackString();
     }
 
     public void GetBytes(byte[] buf){
 
         super.GetBytes(buf);
 
-        pack(group, buf);
-        pack(uploader, buf);
-        pack(time, buf);
-        pack(text, buf);
+        pack(group);
+        pack(uploader);
+        pack(time);
+        pack(text);
     }
 }

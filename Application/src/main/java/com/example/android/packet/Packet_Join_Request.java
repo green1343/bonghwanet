@@ -2,9 +2,6 @@ package com.example.android.packet;
 
 import com.example.android.basicaccessibility.Manager;
 
-/**
- * Created by Kim on 2015-04-03.
- */
 public class Packet_Join_Request extends Packet_Command
 {
     public long group;
@@ -19,17 +16,17 @@ public class Packet_Join_Request extends Packet_Command
 
         super(buf);
 
-        group = unpackLong(buf);
-        userID = unpackLong(buf);
-        userInfo.name = unpackString(buf);
+        group = unpackLong();
+        userID = unpackLong();
+        userInfo.name = unpackString();
     }
 
     public void GetBytes(byte[] buf){
 
         super.GetBytes(buf);
 
-        pack(group, buf);
-        pack(userID, buf);
-        pack(userInfo.name, buf);
+        pack(group);
+        pack(userID);
+        pack(userInfo.name);
     }
 }

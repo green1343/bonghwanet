@@ -21,13 +21,13 @@ public class Packet_Sync extends Packet_Command {
     {
         super(buf);
 
-        group = unpackLong(buf);
+        group = unpackLong();
 
-        int size = unpackInt(buf);
+        int size = unpackInt();
         for(int i=0; i<size; ++i){
-            String filename = unpackString(buf);
-            boolean isDirectory = unpackBool(buf);
-            long time = unpackLong(buf);
+            String filename = unpackString();
+            boolean isDirectory = unpackBool();
+            long time = unpackLong();
 
             files.put(filename, Manager.INSTANCE.getNewFileInfo(isDirectory, time));
         }
@@ -37,13 +37,13 @@ public class Packet_Sync extends Packet_Command {
     {
         super.GetBytes(buf);
 
-        pack(group, buf);
-        pack(files.size(), buf);
+        pack(group);
+        pack(files.size());
         for(String filename : files.keySet()) {
             Manager.FileInfo f = files.get(filename);
-            pack(filename, buf);
-            pack(f.isDirectory, buf);
-            pack(f.time, buf);
+            pack(filename);
+            pack(f.isDirectory);
+            pack(f.time);
         }
     }
 }

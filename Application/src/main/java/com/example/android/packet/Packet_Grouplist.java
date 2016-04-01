@@ -4,10 +4,6 @@ import com.example.android.basicaccessibility.Manager;
 
 import java.util.HashMap;
 
-/**
- * Created by Kim on 2015-04-07.
- */
-
 public class Packet_Grouplist extends Packet_Command {
 
     public HashMap<Long, Manager.GroupInfo> groups = new HashMap<>();
@@ -20,30 +16,30 @@ public class Packet_Grouplist extends Packet_Command {
     {
         super(buf);
 
-        int size1 = unpackInt(buf);
+        int size1 = unpackInt();
         for(int i=0; i<size1; ++i){
-            long id = unpackLong(buf);
+            long id = unpackLong();
 
             Manager.GroupInfo g = Manager.INSTANCE.getNewGroupInfo();
 
-            g.name = unpackString(buf);
+            g.name = unpackString();
             g.members = new HashMap<>();
             g.deletedFiles = new HashMap<>();
 
-            int size2 = unpackInt(buf);
+            int size2 = unpackInt();
             for(int j=0; j<size2; ++j) {
-                long userID = unpackLong(buf);
+                long userID = unpackLong();
                 Manager.UserInfo u = Manager.INSTANCE.getNewUserInfo();
-                u.name = unpackString(buf);
+                u.name = unpackString();
                 g.members.put(userID, u);
             }
 
-            size2 = unpackInt(buf);
+            size2 = unpackInt();
             for(int j=0; j<size2; ++j){
-                String filename = unpackString(buf);
+                String filename = unpackString();
                 Manager.FileInfo df = Manager.INSTANCE.getNewDeletedFile();
-                df.isDirectory = unpackBool(buf);
-                df.time = unpackLong(buf);
+                df.isDirectory = unpackBool();
+                df.time = unpackLong();
                 g.deletedFiles.put(filename, df);
             }
 
@@ -55,27 +51,27 @@ public class Packet_Grouplist extends Packet_Command {
     {
         super.GetBytes(buf);
 
-        pack(groups.size(), buf);
+        pack(groups.size());
 
         for(Long id : groups.keySet()){
             Manager.GroupInfo g = groups.get(id);
 
-            pack(id, buf);
-            pack(g.name, buf);
+            pack(id);
+            pack(g.name);
 
-            pack(g.members.size(), buf);
+            pack(g.members.size());
             for(Long userID : g.members.keySet()){
                 Manager.UserInfo u = g.members.get(userID);
-                pack(userID, buf);
-                pack(u.name, buf);
+                pack(userID);
+                pack(u.name);
             }
 
-            pack(g.deletedFiles.size(), buf);
+            pack(g.deletedFiles.size());
             for(String filename : g.deletedFiles.keySet()){
                 Manager.FileInfo df = g.deletedFiles.get(filename);
-                pack(filename, buf);
-                pack(df.isDirectory, buf);
-                pack(df.time, buf);
+                pack(filename);
+                pack(df.isDirectory);
+                pack(df.time);
             }
         }
     }
