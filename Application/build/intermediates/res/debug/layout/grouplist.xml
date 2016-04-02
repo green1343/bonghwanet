@@ -27,4 +27,4 @@
         android:id="@+id/listView"
         android:layout_below="@+id/editGroupname" />
 
-</RelativeLayout><!-- From: file:/C:/wifi/Application/src/main/res/layout/grouplist.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/kyung/Desktop/bonghwanet/Application/src/main/res/layout/grouplist.xml -->

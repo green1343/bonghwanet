@@ -1,6 +1,7 @@
 package com.example.android.basicaccessibility;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -79,6 +80,8 @@ public class GrouplistActivity extends Activity {
 
 			StringTokenizer t = new StringTokenizer(m_adapter.getItem(arg2), "\t");
 			t.nextToken();
+			Intent intent = new Intent(getApplicationContext(), Main2.class);
+			startActivity(intent);
 
 			Manager.INSTANCE.connect(Long.valueOf(t.nextToken()));
 			//Toast.makeText(getApplicationContext(), m_adapter.getItem(arg2), Toast.LENGTH_SHORT).show();

@@ -271,23 +271,24 @@ containing a value of this type.
     }
     public static final class drawable {
         public static final int addfriend=0x7f020000;
-        public static final int alarm=0x7f020001;
-        public static final int back=0x7f020002;
-        public static final int battery=0x7f020003;
-        public static final int chat=0x7f020004;
-        public static final int de=0x7f020005;
-        public static final int emergancy=0x7f020006;
-        public static final int fd=0x7f020007;
-        public static final int find=0x7f020008;
-        public static final int hwan=0x7f020009;
-        public static final int ic_action_discard=0x7f02000a;
-        public static final int ic_action_info=0x7f02000b;
-        public static final int ic_launcher=0x7f02000c;
-        public static final int ic_tab=0x7f02000d;
-        public static final int normalchat=0x7f02000e;
-        public static final int partly_cloudy=0x7f02000f;
-        public static final int qw=0x7f020010;
-        public static final int tile=0x7f020011;
+        public static final int addphoto=0x7f020001;
+        public static final int alarm=0x7f020002;
+        public static final int back=0x7f020003;
+        public static final int battery=0x7f020004;
+        public static final int chat=0x7f020005;
+        public static final int de=0x7f020006;
+        public static final int emergancy=0x7f020007;
+        public static final int fd=0x7f020008;
+        public static final int find=0x7f020009;
+        public static final int hwan=0x7f02000a;
+        public static final int ic_action_discard=0x7f02000b;
+        public static final int ic_action_info=0x7f02000c;
+        public static final int ic_launcher=0x7f02000d;
+        public static final int ic_tab=0x7f02000e;
+        public static final int normalchat=0x7f02000f;
+        public static final int partly_cloudy=0x7f020010;
+        public static final int qw=0x7f020011;
+        public static final int tile=0x7f020012;
     }
     public static final class id {
         public static final int action_settings=0x7f090016;
@@ -318,7 +319,10 @@ containing a value of this type.
         public static final int grouplist=0x7f030000;
         public static final int list_item=0x7f030001;
         public static final int main=0x7f030002;
-        public static final int newgrouplist=0x7f030003;
+        public static final int main2=0x7f030003;
+        public static final int main2_gallery=0x7f030004;
+        public static final int main2_grouplist=0x7f030005;
+        public static final int newgrouplist=0x7f030006;
     }
     public static final class menu {
         public static final int menu_main=0x7f080000;

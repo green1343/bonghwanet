@@ -49,6 +49,11 @@
         <activity android:name=".GrouplistActivity"></activity>
         <activity android:name=".NewGrouplistActivity"></activity>
         <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".Main2"></activity>
+        <activity android:name=".FileActivity"></activity>
+        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".GallaryActivity"></activity>
+        <activity android:name=".ChatActivity"></activity>
     </application>
 
 </manifest>

@@ -51,6 +51,11 @@
         <activity android:name="com.example.android.basicaccessibility.GrouplistActivity" />
         <activity android:name="com.example.android.basicaccessibility.NewGrouplistActivity" />
         <activity android:name="com.example.android.basicaccessibility.SettingsActivity" />
+        <activity android:name="com.example.android.basicaccessibility.Main2" />
+        <activity android:name="com.example.android.basicaccessibility.FileActivity" />
+        <activity android:name="com.example.android.basicaccessibility.Main2Activity" />
+        <activity android:name="com.example.android.basicaccessibility.GallaryActivity" />
+        <activity android:name="com.example.android.basicaccessibility.ChatActivity" />
     </application>
 
 </manifest>

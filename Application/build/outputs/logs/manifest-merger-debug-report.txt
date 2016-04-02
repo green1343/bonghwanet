@@ -103,3 +103,23 @@ activity#com.example.android.basicaccessibility.SettingsActivity
 ADDED from AndroidManifest.xml:51:9
 	android:name
 		ADDED from AndroidManifest.xml:51:19
+activity#com.example.android.basicaccessibility.Main2
+ADDED from AndroidManifest.xml:52:9
+	android:name
+		ADDED from AndroidManifest.xml:52:19
+activity#com.example.android.basicaccessibility.FileActivity
+ADDED from AndroidManifest.xml:53:9
+	android:name
+		ADDED from AndroidManifest.xml:53:19
+activity#com.example.android.basicaccessibility.Main2Activity
+ADDED from AndroidManifest.xml:54:9
+	android:name
+		ADDED from AndroidManifest.xml:54:19
+activity#com.example.android.basicaccessibility.GallaryActivity
+ADDED from AndroidManifest.xml:55:9
+	android:name
+		ADDED from AndroidManifest.xml:55:19
+activity#com.example.android.basicaccessibility.ChatActivity
+ADDED from AndroidManifest.xml:56:9
+	android:name
+		ADDED from AndroidManifest.xml:56:19
