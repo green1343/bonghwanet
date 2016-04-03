@@ -9,7 +9,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TabHost;
+import android.widget.Toast;
 
 import java.io.File;
 
@@ -51,6 +54,28 @@ public class Main2 extends TabActivity {
                 res.getDrawable(R.drawable.ic_tab)).setContent(intent);
         tabHost.addTab(spec);
         tabHost.setCurrentTab(0);
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+
+    public boolean onOptionsItemSelected(android.view.MenuItem item) {
+        switch(item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            case R.id.action_settings:
+                Toast.makeText(this, "설정버튼", Toast.LENGTH_LONG).show();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public static final int REQ_FILE_SELECT = 0;
