@@ -4,10 +4,6 @@ import com.example.android.basicaccessibility.Manager;
 
 import java.util.HashMap;
 
-/**
- * Created by Kim on 2015-04-07.
- */
-
 public class Packet_Sync extends Packet_Command {
 
     public long group;

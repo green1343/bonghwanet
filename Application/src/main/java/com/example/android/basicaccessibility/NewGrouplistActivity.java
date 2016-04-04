@@ -134,7 +134,7 @@ public class NewGrouplistActivity extends Activity {
 								int cnt = 0;
 								while (!Thread.interrupted()) {
 									try {
-										if (Manager.INSTANCE.getJoingGroup() != null) {
+										if (Manager.INSTANCE.getJoinGroup() != null) {
 											Packet_Join_Request p = new Packet_Join_Request();
 											p.group = Manager.INSTANCE.getCurGroup();
 											p.userID = Manager.INSTANCE.getMyNumber();

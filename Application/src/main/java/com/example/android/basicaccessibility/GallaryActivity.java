@@ -3,12 +3,11 @@ package com.example.android.basicaccessibility;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
 
 public class GallaryActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main2_gallery);
+		setContentView(R.layout.gallery);
 	}
 
 	public static final int REQ_FILE_SELECT = 0;

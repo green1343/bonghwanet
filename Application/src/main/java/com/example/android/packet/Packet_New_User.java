@@ -2,9 +2,6 @@ package com.example.android.packet;
 
 import com.example.android.basicaccessibility.Manager;
 
-/**
- * Created by Kim on 2015-04-03.
- */
 public class Packet_New_User extends Packet_Command
 {
     public long group;

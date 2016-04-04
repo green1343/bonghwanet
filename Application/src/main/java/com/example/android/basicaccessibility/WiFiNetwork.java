@@ -72,6 +72,8 @@ public enum WiFiNetwork {
                     u.name = p.userInfo.name;
                     Manager.INSTANCE.addUser(p.group, p.userID, u);
 
+                    GroupHomeActivity.refreshList();
+
                     Packet_New_User reply = new Packet_New_User();
                     reply.group = p.group;
                     reply.userID = p.userID;
@@ -86,6 +88,12 @@ public enum WiFiNetwork {
                 }
             });
             d.show();
+        }
+    };
+
+    private Handler m_refreshChatting = new Handler() {
+        public void handleMessage(Message msg) {
+            ChattingActivity.refreshList();
         }
     };
 
@@ -303,7 +311,7 @@ public enum WiFiNetwork {
             p.GetBytes(b);
 
             try {
-                m_outStream.write(b);
+                m_outStream.write(b, 0, p.place);
                 m_outStream.flush();
                 if(p.getCommand() == PACKET.PACKET_SHARE_FILE_REQUEST_OK){
                     writeFile(((Packet_Share_File_Request_OK)p).filename);
@@ -400,6 +408,9 @@ public enum WiFiNetwork {
                             Packet_New_User p = new Packet_New_User(stream);
                             if(p.userID == Manager.INSTANCE.getMyNumber())
                                 Manager.INSTANCE.joinGranted(p.group);
+
+                            GroupHomeActivity.refreshList();
+
                             break;
                         }
                         case PACKET.PACKET_GROUPLIST: {
@@ -454,7 +465,10 @@ public enum WiFiNetwork {
                         }
                         case PACKET.PACKET_SHARE_TEXT: {
                             Packet_Share_Text p = new Packet_Share_Text(stream);
-                            System.out.println(p.text);
+                            Manager.INSTANCE.addText(p.group, p.uploader, p.time, p.text);
+
+                            Message msg = Message.obtain(m_refreshChatting, 0 , 1 , 0);
+                            m_refreshChatting.sendMessage(msg);
                             break;
                         }
                         default:
@@ -462,13 +476,6 @@ public enum WiFiNetwork {
                     }
                 } catch (IOException ex) {
                     //System.err.println(ex);
-                }
-
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                    break;
                 }
 
                 if(m_kill)

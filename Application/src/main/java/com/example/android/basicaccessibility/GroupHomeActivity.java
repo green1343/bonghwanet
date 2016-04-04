@@ -1,28 +1,21 @@
 package com.example.android.basicaccessibility;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.StringTokenizer;
-
-public class Main2Activity extends Activity {
+public class GroupHomeActivity extends Activity {
 
 	private ListView m_list;
-	public static ArrayAdapter<String> m_adapter;
+	public static ArrayAdapter<String> m_adapter = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main2_grouplist);
+		setContentView(R.layout.grouphome);
 
 		m_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_item);
 		m_list = (ListView) findViewById(R.id.listView);
@@ -37,21 +30,21 @@ public class Main2Activity extends Activity {
 		refreshList();
 	}
 
-	private void refreshList(){
+	public static void refreshList(){
+		if(m_adapter == null)
+			return;
+
 		m_adapter.clear();
 
-		long UserName = Manager.INSTANCE.getCurGroup();
+		Manager.GroupInfo g = Manager.INSTANCE.getCurGroupInfo();
+		for(Long key : g.members.keySet()){
+			Manager.UserInfo u = g.members.get(key);
+			if(u.name == Manager.DEFAULT_USERNAME)
+				m_adapter.add(Manager.INSTANCE.getUserName(key));
+			else
+				m_adapter.add(u.name);
+		}
 
-		String str = new String(UserName+"");
-		str += "\t\t";
-		m_adapter.add(str);
-
-		m_adapter.sort(new Comparator<String>() {
-			@Override
-			public int compare(String lhs, String rhs) {
-				return lhs.compareTo(rhs);
-			}
-		});
 		m_adapter.notifyDataSetChanged();
 	}
 

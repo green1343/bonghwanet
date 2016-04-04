@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:text="BACK"
+        android:layout_gravity="right"
+        android:id="@+id/button"
+        android:layout_row="0"
+        android:layout_column="1" />
+
+    <TextView
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Chatting"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_row="1"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_row="0"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/editGroupname"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_row="3"
+        android:layout_column="0" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:id="@+id/listView2"
+        android:layout_below="@+id/textView2"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:focusable="true"
+        android:layout_columnSpan="2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Users"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/editGroupname"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_row="4"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="New Files"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/editGroupname"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_row="4"
+        android:layout_column="1" />
+
+    <ListView
+        android:layout_width="182dp"
+        android:layout_height="258dp"
+        android:id="@+id/listView"
+        android:layout_below="@+id/textView2"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:focusable="true" />
+
+</GridLayout>

@@ -1,0 +1,67 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <!-- 이 부분은 키보드와 함께 움직일 레이어 -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"/>
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/listView"
+            android:layout_weight="12.66" />
+
+            <!--중간에 떠있는 채팅창 키보드가 올라올때 키보드와 붙어 올라간다. -->
+
+
+        <!-- 중요포인트 :layout_weight = "1" 을 주고 marginBottom 값을 마이너스를 주어서 CChat를 적절한 위치에 선정해주면 키보드가 올라가면서 이부분의 레이어가 자연스럽게 공간이 줄어들게되고 cchat와  키보드가 붙게된다, -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <EditText
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editMessage"
+                android:visibility="visible"
+                android:hint="type here..."
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/buttonSend"
+                android:layout_toStartOf="@+id/buttonSend" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SEND"
+                android:id="@+id/buttonSend"
+                android:layout_gravity="right"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight = "1.67"
+        android:layout_marginBottom="-320dip"/>
+
+    </LinearLayout>
+
+
+</FrameLayout><!-- From: file:/C:/wifi/Application/src/main/res/layout/chatting.xml -->

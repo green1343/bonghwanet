@@ -1,8 +1,5 @@
 package com.example.android.packet;
 
-/**
- * Created by Kim on 2015-04-03.
- */
 public class Packet_Share_Text extends Packet_Command
 {
     public long group;

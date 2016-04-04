@@ -15,6 +15,7 @@ import com.example.android.packet.Packet_Sync;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.StringTokenizer;
@@ -67,8 +68,20 @@ public enum Manager {
         }
     }
 
+    public class TextInfo{
+        public long uploader;
+        public long time;
+        public String text;
+
+        public TextInfo(){}
+    }
+
+    public TextInfo getNewTextInfo(){
+        return new TextInfo();
+    }
+
     Context m_context;
-    long m_myNumber = 1064238768L;
+    long m_myNumber = 1012341234L;
     UserInfo m_myUserInfo = new UserInfo();
     long m_curGroup = 106423876801L; // TODO : delete
 
@@ -80,6 +93,8 @@ public enum Manager {
 
     HashMap<Long, GroupInfo> m_groups = new HashMap<>(); // id, name
     HashMap<Long, HashMap<String, FileInfo>> m_files = new HashMap<>(); // id, files
+    HashMap<Long, LinkedList<TextInfo>> m_texts = new HashMap<>();
+
 
     Object m_tempObject;
 
@@ -189,13 +204,29 @@ public enum Manager {
         setWatingJoin(false);
     }
 
-    public GroupInfo getJoingGroup(){
+    public GroupInfo getJoinGroup(){
         return m_joinGroup;
     }
 
     public void joinGranted(long id){
-        m_groups.put(id, m_joinGroup);
+        addNewGroup(id, m_joinGroup);
         m_joinGroup = null;
+    }
+
+    public void addNewGroup(long id, GroupInfo g){
+        m_groups.put(id, g);
+        m_files.put(id, new HashMap<String, FileInfo>());
+        m_texts.put(id, new LinkedList<TextInfo>());
+    }
+
+    HashMap<Long, LinkedList<TextInfo>> getAllTexts(){return m_texts;}
+
+    List<TextInfo> getText(long group){
+        return m_texts.get(group);
+    }
+
+    List<TextInfo> getText(){
+        return m_texts.get(m_curGroup);
     }
 
     public void setCurGroup(long group){
@@ -204,6 +235,10 @@ public enum Manager {
 
     public long getCurGroup(){
         return m_curGroup;
+    }
+
+    public GroupInfo getCurGroupInfo(){
+        return m_groups.get(m_curGroup);
     }
 
     public void addUser(long group, long userID, UserInfo info){
@@ -270,9 +305,7 @@ public enum Manager {
                     df.time = s.nextLong();
                     g.deletedFiles.put(filename, df);
                 }
-                m_groups.put(id, g);
-
-                m_files.put(id, new HashMap<String, FileInfo>());
+                addNewGroup(id, g);
 
                 for(Long id2 : m_files.keySet()){
                     getFileList(m_files.get(id2), getGroupPath(id2));
@@ -343,6 +376,22 @@ public enum Manager {
         return new GroupInfo();
     }
 
+    public TextInfo addText(long group, long uploader, long time, String text){
+        TextInfo t = new TextInfo();
+        t.uploader = uploader;
+        t.time = time;
+        t.text = new String(text);
+
+        m_texts.get(group).add(t);
+
+        return t;
+    }
+
+    public String getUserName(long id){
+        // TODO : 주소록
+        return DEFAULT_USERNAME;
+    }
+
     public void checkDirectories(){
         String storage = Environment.getExternalStorageState();
         if ( storage.equals(Environment.MEDIA_MOUNTED)) {
@@ -375,6 +424,7 @@ public enum Manager {
         UserInfo u = new UserInfo();
         u.name = m_myUserInfo.name;
         g.members.put(m_myNumber, u);
+        addNewGroup(id, g);
         m_groups.put(id, g);
 
         checkDirectories();

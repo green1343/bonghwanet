@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -30,6 +31,15 @@ public class GrouplistActivity extends Activity {
 		m_list = (ListView) findViewById(R.id.listView);
 		m_list.setAdapter(m_adapter);
 		m_list.setOnItemClickListener(onClickListItem);
+
+		m_list.requestFocus();
+
+		//InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+		//imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
+
+		// 키보드 숨기기
+		InputMethodManager immhide = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+		immhide.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
 	}
 
 	@Override
@@ -60,6 +70,10 @@ public class GrouplistActivity extends Activity {
 
 	Button.OnClickListener onClickButton = new View.OnClickListener() {
 		public void onClick(View v) {
+			// 키보드 숨기기
+			InputMethodManager immhide = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+			immhide.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
 			EditText textFruit=(EditText)findViewById(R.id.editGroupname);
 			switch (v.getId()) {
 				case R.id.buttonCreate:
@@ -78,13 +92,17 @@ public class GrouplistActivity extends Activity {
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 
+			// 키보드 숨기기
+			InputMethodManager immhide = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+			immhide.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
 			StringTokenizer t = new StringTokenizer(m_adapter.getItem(arg2), "\t");
 			t.nextToken();
-			Intent intent = new Intent(getApplicationContext(), Main2.class);
+			Manager.INSTANCE.connect(Long.valueOf(t.nextToken()));
+
+			Intent intent = new Intent(getApplicationContext(), GroupMain.class);
 			startActivity(intent);
 
-			Manager.INSTANCE.connect(Long.valueOf(t.nextToken()));
-			//Toast.makeText(getApplicationContext(), m_adapter.getItem(arg2), Toast.LENGTH_SHORT).show();
 		}
 	};
 
