@@ -80,7 +80,7 @@ public class GrouplistActivity extends Activity {
 
 			StringTokenizer t = new StringTokenizer(m_adapter.getItem(arg2), "\t");
 			t.nextToken();
-			Intent intent = new Intent(getApplicationContext(), Main2.class);
+			Intent intent = new Intent(getApplicationContext(), Main2.class); //group list 클릭시 두번째 main 화면으로 이동
 			startActivity(intent);
 
 			Manager.INSTANCE.connect(Long.valueOf(t.nextToken()));

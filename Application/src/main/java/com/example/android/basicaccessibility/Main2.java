@@ -15,7 +15,7 @@ import android.widget.TabHost;
 import android.widget.Toast;
 
 import java.io.File;
-
+//2번째 메인화면 생성
 public class Main2 extends TabActivity {
 
     /** Called when the activity is first created. */
@@ -39,39 +39,41 @@ public class Main2 extends TabActivity {
         // Initialize a TabSpec for each tab and add it to the TabHost
         spec = tabHost.newTabSpec("main").setIndicator("Main",
                 res.getDrawable(R.drawable.ic_tab)).setContent(intent);
-        tabHost.addTab(spec);
+        tabHost.addTab(spec); //main탭 생성
         // Do the same for the other tabs
         intent = new Intent().setClass(this, ChatActivity.class);
         spec = tabHost.newTabSpec("chat").setIndicator("Chat",
                 res.getDrawable(R.drawable.ic_tab)).setContent(intent);
-        tabHost.addTab(spec);
+        tabHost.addTab(spec); //chat 탭 생성
         intent = new Intent().setClass(this, GallaryActivity.class);
         spec = tabHost.newTabSpec("gallery").setIndicator("Gallery",
                 res.getDrawable(R.drawable.ic_tab)).setContent(intent);
-        tabHost.addTab(spec);
+        tabHost.addTab(spec);//gallery 탭 생성
         intent = new Intent().setClass(this, FileActivity.class);
         spec = tabHost.newTabSpec("file").setIndicator("File",
                 res.getDrawable(R.drawable.ic_tab)).setContent(intent);
-        tabHost.addTab(spec);
+        tabHost.addTab(spec); //file 탭 생성
         tabHost.setCurrentTab(0);
 
+        //뒤돌아가기 모양 생성
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
+    //엑션바 메뉴 생성
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
-
+    //엑션바 기능 생성
     public boolean onOptionsItemSelected(android.view.MenuItem item) {
         switch(item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: //돌아가기 버튼
                 finish();
                 return true;
-            case R.id.action_settings:
+            case R.id.action_settings: //설정 버튼
                 Toast.makeText(this, "설정버튼", Toast.LENGTH_LONG).show();
                 return true;
         }
