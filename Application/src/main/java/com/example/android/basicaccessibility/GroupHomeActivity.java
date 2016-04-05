@@ -37,13 +37,8 @@ public class GroupHomeActivity extends Activity {
 		m_adapter.clear();
 
 		Manager.GroupInfo g = Manager.INSTANCE.getCurGroupInfo();
-		for(Long key : g.members.keySet()){
-			Manager.UserInfo u = g.members.get(key);
-			if(u.name == Manager.DEFAULT_USERNAME)
-				m_adapter.add(Manager.INSTANCE.getUserName(key));
-			else
-				m_adapter.add(u.name);
-		}
+		for(Long key : g.members.keySet())
+			m_adapter.add(Manager.INSTANCE.getUserName(key));
 
 		m_adapter.notifyDataSetChanged();
 	}

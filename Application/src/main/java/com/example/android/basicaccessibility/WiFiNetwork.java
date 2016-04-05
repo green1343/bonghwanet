@@ -59,7 +59,7 @@ public enum WiFiNetwork {
             Manager.INSTANCE.setTempObject(p);
 
             String message = new String();
-            message = p.userInfo.name;
+            message = Manager.INSTANCE.getUserName(p.userID);
             message += "님이 가입신청 하셨습니다.\n수락하시겠습니까?";
 
             AlertDialog.Builder d = new AlertDialog.Builder(Manager.INSTANCE.getContext());

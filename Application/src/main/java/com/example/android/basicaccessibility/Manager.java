@@ -86,7 +86,7 @@ public enum Manager {
     }
 
     Context m_context;
-    long m_myNumber = 1012341234L;
+    long m_myNumber = 1033245828L;
     UserInfo m_myUserInfo = new UserInfo();
     long m_curGroup = 106423876801L; // TODO : delete
 
@@ -401,7 +401,11 @@ public enum Manager {
         if(id == m_myNumber)
             return DEFAULT_MYNAME;
 
-        // 주소록
+        String name = getCurGroupInfo().members.get(id).name;
+        if(name.compareTo(Manager.DEFAULT_USERNAME) != 0)
+            return name;
+
+            // 주소록
         ContentResolver cr = m_context.getContentResolver();
         Uri uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode("0" + id));
         Cursor cursor = cr.query(uri, new String[]{ContactsContract.PhoneLookup.DISPLAY_NAME}, null, null, null);
