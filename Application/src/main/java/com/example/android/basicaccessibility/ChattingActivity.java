@@ -14,7 +14,7 @@ import com.example.android.packet.Packet_Share_Text;
 
 public class ChattingActivity extends Activity {
 
-	private ListView m_list;
+	private static ListView m_list;
 	public static ArrayAdapter<String> m_adapter = null;
 
 	@Override
@@ -28,6 +28,7 @@ public class ChattingActivity extends Activity {
 		m_list = (ListView) findViewById(R.id.listView);
 		m_list.setAdapter(m_adapter);
 		m_list.setOnItemClickListener(onClickListItem);
+		m_list.requestFocusFromTouch();
 
 		// 키보드 숨기기
 		InputMethodManager immhide = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
@@ -53,6 +54,7 @@ public class ChattingActivity extends Activity {
 		}
 
 		m_adapter.notifyDataSetChanged();
+		m_list.setSelection(100);
 	}
 
 	Button.OnClickListener onClickButton = new View.OnClickListener() {
