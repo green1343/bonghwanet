@@ -6,8 +6,4 @@
         android:orderInCategory="100"
         android:showAsAction="never" />
 </menu>
-<<<<<<< Updated upstream
 <!-- From: file:/C:/wifi/Application/src/main/res/menu/menu_main.xml -->
-=======
-<!-- From: file:/C:/eclipse/workspace/bonghwanet/Application/src/main/res/menu/menu_main.xml -->
->>>>>>> Stashed changes
