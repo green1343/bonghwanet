@@ -1,13 +1,17 @@
 package com.example.android.basicaccessibility;
 
+import android.content.ContentResolver;
 import android.content.Context;
+import android.database.Cursor;
 import android.net.DhcpInfo;
+import android.net.Uri;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.ContactsContract;
 import android.telephony.TelephonyManager;
 
 import com.example.android.packet.Packet_Sync;
@@ -27,6 +31,7 @@ public enum Manager {
     INSTANCE;
 
     public final static String RESERVED_SSID = "bhn";
+    public final static String DEFAULT_MYNAME = "Me";
     public final static String DEFAULT_USERNAME = "User";
 
     public class FileInfo {
@@ -62,7 +67,7 @@ public enum Manager {
 
         public GroupInfo(){}
         public GroupInfo(GroupInfo g){
-            name = g.name;
+            name = new String(g.name);
             members = (HashMap<Long, UserInfo>)g.members.clone();
             deletedFiles = (HashMap<String, FileInfo>)g.deletedFiles.clone();
         }
@@ -214,7 +219,11 @@ public enum Manager {
     }
 
     public void addNewGroup(long id, GroupInfo g){
-        m_groups.put(id, g);
+
+        if(g.members.containsKey(m_myNumber) == false)
+            g.members.put(m_myNumber, m_myUserInfo);
+
+        m_groups.put(id, new GroupInfo(g));
         m_files.put(id, new HashMap<String, FileInfo>());
         m_texts.put(id, new LinkedList<TextInfo>());
     }
@@ -388,8 +397,26 @@ public enum Manager {
     }
 
     public String getUserName(long id){
-        // TODO : 주소록
-        return DEFAULT_USERNAME;
+
+        if(id == m_myNumber)
+            return DEFAULT_MYNAME;
+
+        // 주소록
+        ContentResolver cr = m_context.getContentResolver();
+        Uri uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode("0" + id));
+        Cursor cursor = cr.query(uri, new String[]{ContactsContract.PhoneLookup.DISPLAY_NAME}, null, null, null);
+        if (cursor == null)
+            return DEFAULT_USERNAME;
+
+        String contactName = null;
+
+        if(cursor.moveToFirst())
+            contactName = cursor.getString(cursor.getColumnIndex(ContactsContract.PhoneLookup.DISPLAY_NAME));
+
+        if(cursor != null && !cursor.isClosed())
+            cursor.close();
+
+        return contactName;
     }
 
     public void checkDirectories(){
@@ -438,7 +465,7 @@ public enum Manager {
         if(m_groups.containsKey(id)){
             String storage = Environment.getExternalStorageState();
             if ( storage.equals(Environment.MEDIA_MOUNTED))
-                return getRoot() + "/" + m_groups.get(id) + "_" + id;
+                return getRoot() + "/" + m_groups.get(id).name + "_" + id;
             else
                 return null;
         }
@@ -450,7 +477,7 @@ public enum Manager {
         if(m_groups.containsKey(id)){
             String storage = Environment.getExternalStorageState();
             if ( storage.equals(Environment.MEDIA_MOUNTED))
-                return "" + m_groups.get(id) + "_" + id;
+                return "" + m_groups.get(id).name + "_" + id;
             else
                 return null;
         }
