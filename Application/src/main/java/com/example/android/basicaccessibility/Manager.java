@@ -213,6 +213,7 @@ public enum Manager {
         return m_joinGroup;
     }
 
+
     public void joinGranted(long id){
         addNewGroup(id, m_joinGroup);
         m_joinGroup = null;
