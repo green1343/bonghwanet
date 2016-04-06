@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/chat"
+        android:background="@null"
         android:padding="5dp" >
 
         <LinearLayout
@@ -24,7 +24,7 @@
                 android:id="@+id/vi_image"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:background="@null" />
+                android:background="@drawable/profile" />
         </LinearLayout>
 
         <LinearLayout
@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="4"
-                android:text="별에서온그대1화"
+                android:text="사용자"
                 android:textColor="#ffffff"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="4"
-                android:text="도민준은 외계인!?"
+                android:text="대화내용"
                 android:textColor="#ffffff"
                 android:textSize="13sp"
                 android:textStyle="bold"
