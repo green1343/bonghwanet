@@ -57,8 +57,9 @@ int drawable ic_launcher 0x7f02000d
 int drawable ic_tab 0x7f02000e
 int drawable normalchat 0x7f02000f
 int drawable partly_cloudy 0x7f020010
-int drawable qw 0x7f020011
-int drawable tile 0x7f020012
+int drawable profile 0x7f020011
+int drawable qw 0x7f020012
+int drawable tile 0x7f020013
 int id action_settings 0x7f090023
 int id alignBounds 0x7f090002
 int id alignMargins 0x7f090003

@@ -1,5 +1,7 @@
 package com.example.android.packet;
 
+import java.io.IOException;
+
 public class Packet_Command {
 
     private short m_command;
@@ -78,11 +80,12 @@ public class Packet_Command {
     }
 
     protected void pack(String value){
-        pack(value.length());
-        byte [] str = value.getBytes();
-        for(int i=0; i<str.length; ++i)
-            buf[place+i] = str[i];
-        place += str.length;
+        try {
+            byte bytearr[] = value.getBytes("UTF-8");
+            pack(bytearr.length);
+            System.arraycopy(bytearr, 0, buf, place, bytearr.length);
+            place += bytearr.length;
+        }catch (Exception e){}
     }
 
     protected boolean unpackBool(){
@@ -121,11 +124,13 @@ public class Packet_Command {
     }
 
     protected String unpackString(){
-        int size = unpackInt();
-        String result = new String();
-        for(int i=0; i<size; ++i)
-            result += (char)buf[place+i];
-        place += size;
-        return result;
+        try {
+            int size = unpackInt();
+            String result = new String(buf, place, size, "UTF-8");
+            place += size;
+            return result;
+        }catch (IOException e){
+            return new String();
+        }
     }
 }
