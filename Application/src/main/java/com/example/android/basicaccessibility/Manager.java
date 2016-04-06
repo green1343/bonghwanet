@@ -401,9 +401,11 @@ public enum Manager {
         if(id == m_myNumber)
             return DEFAULT_MYNAME;
 
-        String name = getCurGroupInfo().members.get(id).name;
-        if(name.compareTo(Manager.DEFAULT_USERNAME) != 0)
-            return name;
+        if(getCurGroupInfo().members.get(id) != null) {
+            String name = getCurGroupInfo().members.get(id).name;
+            if (name.compareTo(Manager.DEFAULT_USERNAME) != 0)
+                return name;
+        }
 
             // 주소록
         ContentResolver cr = m_context.getContentResolver();
@@ -412,7 +414,7 @@ public enum Manager {
         if (cursor == null)
             return DEFAULT_USERNAME;
 
-        String contactName = null;
+        String contactName = new String(DEFAULT_USERNAME);
 
         if(cursor.moveToFirst())
             contactName = cursor.getString(cursor.getColumnIndex(ContactsContract.PhoneLookup.DISPLAY_NAME));
@@ -561,13 +563,6 @@ public enum Manager {
         boolean result = m_wifiManager.enableNetwork(id, true);
 
         if(result) {
-
-            // TODO: 삭제
-            try {
-                Thread.sleep(3000);
-            } catch (Throwable t) {
-            }
-
             Thread t = new Thread(new Runnable() {
                 public void run() {
                     while (!Thread.interrupted()) {

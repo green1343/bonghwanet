@@ -249,23 +249,25 @@ public enum WiFiNetwork {
         @Override
         public void run()
         {
-            try {
-                clientSocket = new Socket(SERVERADDRESS, PORT);
-                speaker = new NetworkSpeaker(m_index, clientSocket.getOutputStream(), m_handler);
-                listener = new NetworkListener(m_index, clientSocket.getInputStream(), m_handler);
-                m_threads.put(m_index, new Pair<>(speaker, listener));
-                ++m_index;
-                listener.start();
-
-                Packet_Grouplist p = new Packet_Grouplist();
-                p.groups = (HashMap<Long, Manager.GroupInfo>)Manager.INSTANCE.getAllGroups().clone();
-                WiFiNetwork.INSTANCE.write(p, m_index - 1);
-
-            } catch(IOException e){
-            }
-
             while(!Thread.interrupted())
             {
+                try {
+                    clientSocket = new Socket(SERVERADDRESS, PORT);
+                    speaker = new NetworkSpeaker(m_index, clientSocket.getOutputStream(), m_handler);
+                    listener = new NetworkListener(m_index, clientSocket.getInputStream(), m_handler);
+                    m_threads.put(m_index, new Pair<>(speaker, listener));
+                    ++m_index;
+                    listener.start();
+
+                    Packet_Grouplist p = new Packet_Grouplist();
+                    p.groups = (HashMap<Long, Manager.GroupInfo>)Manager.INSTANCE.getAllGroups().clone();
+                    WiFiNetwork.INSTANCE.write(p, m_index - 1);
+
+                    break;
+
+                } catch(IOException e){
+                }
+
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
