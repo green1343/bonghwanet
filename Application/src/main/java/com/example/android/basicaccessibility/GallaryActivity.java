@@ -1,19 +1,76 @@
 package com.example.android.basicaccessibility;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Gallery;
+import android.widget.ImageView;
 
 import java.io.File;
+import java.util.Objects;
 
 public class GallaryActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.gallery);
+		setTitle("갤러리 사진");
+
+		Gallery gallery = (Gallery) findViewById(R.id.gallery);
+		MyGalleryAdapter galAdapter = new MyGalleryAdapter(this);
+		gallery.setAdapter(galAdapter);
+	}
+
+	public class MyGalleryAdapter extends BaseAdapter {
+		Context context;
+		Integer[] posterID = {
+				R.drawable.mov11, R.drawable.mov12, R.drawable.mov13, R.drawable.mov14, R.drawable.mov15, R.drawable.mov16
+		};
+
+		public MyGalleryAdapter(Context c) {
+			context = c;
+		}
+
+		public int getCount() {
+			return  posterID.length;
+		}
+
+		public Object getItem(int arg0) {
+			return null;
+		}
+
+		public long getItemId(int arg0) {
+			return 0;
+		}
+
+		public View getView(int position, View convertView, ViewGroup parent) {
+			ImageView imageView = new ImageView(context);
+			imageView.setLayoutParams(new Gallery.LayoutParams(100, 150));
+			imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+			imageView.setPadding(5, 5, 5, 5);
+
+			final int pos = position;
+			imageView.setOnTouchListener(new View.OnTouchListener() {
+				public boolean onTouch(View v, MotionEvent event) {
+					ImageView ivPoster = (ImageView) findViewById(R.id.ivPoster);
+					ivPoster.setScaleType(ImageView.ScaleType.FIT_CENTER);
+					ivPoster.setImageResource(posterID[pos]);
+					return false;
+				}
+			});
+
+			imageView.setImageResource(posterID[position]);
+
+			return imageView;
+		}
 	}
 
 	public static final int REQ_FILE_SELECT = 0;
@@ -28,7 +85,7 @@ public class GallaryActivity extends Activity {
 		startActivityForResult(intent, REQ_FILE_SELECT);
 	}
 
-	void uploadFile(){
+	void uploadFil(){
 		Intent intent = new Intent();
 		intent.setAction(Intent.ACTION_GET_CONTENT);
 		intent.setType("*/*");
