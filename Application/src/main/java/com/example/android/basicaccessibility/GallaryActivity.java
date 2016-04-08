@@ -12,10 +12,15 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Gallery;
 import android.widget.ImageView;
 
+import com.example.android.packet.Packet_Share_Text;
+
 import java.io.File;
+import java.util.HashMap;
 import java.util.Objects;
 
 public class GallaryActivity extends Activity {
@@ -27,7 +32,22 @@ public class GallaryActivity extends Activity {
 		Gallery gallery = (Gallery) findViewById(R.id.gallery);
 		MyGalleryAdapter galAdapter = new MyGalleryAdapter(this);
 		gallery.setAdapter(galAdapter);
+
+		findViewById(R.id.buttonCreate).setOnClickListener(onClickButton);
 	}
+
+	Button.OnClickListener onClickButton = new View.OnClickListener() {
+		public void onClick(View v) {
+
+			EditText text=(EditText)findViewById(R.id.editMessage);
+			switch (v.getId()) {
+				case R.id.buttonCreate:
+					uploadCameraFile();
+				default:
+					break;
+			}
+		}
+	};
 
 	public class MyGalleryAdapter extends BaseAdapter {
 		Context context;
@@ -93,7 +113,10 @@ public class GallaryActivity extends Activity {
 	}
 
 	void uploadCameraFile(){
-		cameraTempFilePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/tmp_image.jpg";
+		/*HashMap<Long, Manager.GroupInfo> groups = Manager.INSTANCE.getAllGroups();
+		Manager.GroupInfo g = groups.get(groups.keySet());
+		String str = new String(g.name);*/
+		cameraTempFilePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/bonghwanet/"+"/tmp_image.jpg";
 		File imageFile = new File(cameraTempFilePath);
 		Uri imageFileUri = Uri.fromFile(imageFile);
 

@@ -58,30 +58,30 @@ public class ChattingActivity extends Activity {
 	}
 
 	Button.OnClickListener onClickButton = new View.OnClickListener() {
-		public void onClick(View v) {
+			public void onClick(View v) {
 
-			EditText text=(EditText)findViewById(R.id.editMessage);
-			switch (v.getId()) {
-				case R.id.buttonSend:
-					Manager.TextInfo info = Manager.INSTANCE.addText(
-							Manager.INSTANCE.getCurGroup(),
-							Manager.INSTANCE.getMyNumber(),
-							System.currentTimeMillis(),
-							text.getText().toString());
+				EditText text=(EditText)findViewById(R.id.editMessage);
+				switch (v.getId()) {
+					case R.id.buttonSend:
+						Manager.TextInfo info = Manager.INSTANCE.addText(
+								Manager.INSTANCE.getCurGroup(),
+								Manager.INSTANCE.getMyNumber(),
+								System.currentTimeMillis(),
+								text.getText().toString());
 
-					refreshList();
+						refreshList();
 
-					Packet_Share_Text p = new Packet_Share_Text();
-					p.group = Manager.INSTANCE.getCurGroup();
-					p.uploader = info.uploader;
-					p.time = info.time;
-					p.text = info.text;
-					WiFiNetwork.INSTANCE.writeAll(p);
+						Packet_Share_Text p = new Packet_Share_Text();
+						p.group = Manager.INSTANCE.getCurGroup();
+						p.uploader = info.uploader;
+						p.time = info.time;
+						p.text = info.text;
+						WiFiNetwork.INSTANCE.writeAll(p);
 
-					text.setText("");
-					break;
+						text.setText("");
+						break;
+				}
 			}
-		}
 	};
 
 	private AdapterView.OnItemClickListener onClickListItem = new AdapterView.OnItemClickListener() {
