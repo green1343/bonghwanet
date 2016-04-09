@@ -3,10 +3,12 @@ package com.example.android.basicaccessibility;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
+import android.net.ConnectivityManager;
 import android.net.DhcpInfo;
 import android.net.Uri;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Environment;
 import android.os.Handler;
@@ -89,6 +91,8 @@ public enum Manager {
     long m_myNumber = 1033245828L;
     UserInfo m_myUserInfo = new UserInfo();
     long m_curGroup = 106423876801L; // TODO : delete
+
+    String m_curBSSID = new String();
 
     String m_networkPass = "dafsglokvogzsuiwhbejfgr";
 
@@ -534,6 +538,7 @@ public enum Manager {
             return false;
 
         String ssid = null;
+        String bssid = null;
 
         for(ScanResult r : results){
             if(r.SSID.startsWith(RESERVED_SSID)){
@@ -550,7 +555,10 @@ public enum Manager {
                 long group = Long.valueOf(idStr);
                 if(group == m_curGroup){
                     ssid = r.SSID;
-                    break;
+                    bssid = r.BSSID;
+
+                    if(bssid.compareTo(m_curBSSID) != 0)
+                        break;
                 }
             }
         }
@@ -559,18 +567,21 @@ public enum Manager {
             return false;
 
         m_configuration.SSID = "\"" + ssid + "\"";
+        m_configuration.BSSID = bssid;
 
         int id = m_wifiManager.addNetwork(m_configuration);
         boolean result = m_wifiManager.enableNetwork(id, true);
 
         if(result) {
+            m_curBSSID = bssid;
             Thread t = new Thread(new Runnable() {
                 public void run() {
                     while (!Thread.interrupted()) {
                         try {
-                            DhcpInfo info = m_wifiManager.getDhcpInfo() ;
-                            if(info.gateway != 0) {
-                                int serverIP = info.gateway;
+                            DhcpInfo dhcp = m_wifiManager.getDhcpInfo();
+                            WifiInfo info = m_wifiManager.getConnectionInfo();
+                            if(info.getBSSID().compareTo(m_curBSSID) == 0 && dhcp.gateway != 0) {
+                                int serverIP = dhcp.gateway;
                                 String ipAddress = String.format(
                                         "%d.%d.%d.%d",
                                         (serverIP & 0xff),
