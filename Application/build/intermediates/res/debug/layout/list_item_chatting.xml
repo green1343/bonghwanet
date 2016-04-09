@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/vi_view"
     android:layout_width="match_parent"
-    android:layout_height="90dp"
+    android:layout_height="80dp"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -15,15 +15,15 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="70dp"
-            android:layout_weight="1"
+            android:layout_weight="0.7"
             android:background="#000000"
             android:gravity="left"
             android:orientation="vertical" >
 
             <ImageView
                 android:id="@+id/vi_image"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/profile" />
         </LinearLayout>
 
@@ -60,4 +60,4 @@
 
     </LinearLayout>
 
-</LinearLayout><!-- From: file:/C:/Users/kyung/AndroidStudioProjects/bonghwanet-master/bonghwanet/Application/src/main/res/layout/list_item_chatting.xml -->
+</LinearLayout><!-- From: file:/C:/wifi/Application/src/main/res/layout/list_item_chatting.xml -->

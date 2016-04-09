@@ -12,10 +12,13 @@ import android.widget.ListView;
 
 import com.example.android.packet.Packet_Share_Text;
 
+import java.util.ArrayList;
+
 public class ChattingActivity extends Activity {
 
 	private static ListView m_list;
-	public static ArrayAdapter<String> m_adapter = null;
+	public static ChatListAdapter m_adapter = null;
+	public static ArrayList<Manager.TextInfo> m_listitem = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +27,7 @@ public class ChattingActivity extends Activity {
 
 		findViewById(R.id.buttonSend).setOnClickListener(onClickButton);
 
-		m_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_item);
+		m_adapter = new ChatListAdapter(this);
 		m_list = (ListView) findViewById(R.id.listView);
 		m_list.setAdapter(m_adapter);
 		m_list.setOnItemClickListener(onClickListItem);
@@ -48,9 +51,10 @@ public class ChattingActivity extends Activity {
 			return;
 
 		// TODO : 효율성
-		m_adapter.clear();
+		m_adapter.arr.clear();
 		for(Manager.TextInfo info : Manager.INSTANCE.getText()){
-			m_adapter.add("" + Manager.INSTANCE.getUserName(info.uploader) + " : " + info.text);
+			//m_adapter.add("" + Manager.INSTANCE.getUserName(info.uploader) + " : " + info.text);
+			m_adapter.arr.add(info);
 		}
 
 		m_adapter.notifyDataSetChanged();
