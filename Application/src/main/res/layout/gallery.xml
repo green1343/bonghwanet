@@ -7,7 +7,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="사진추가"
-        android:id="@+id/buttonCreate"
+        android:id="@+id/buttonCreate1"
         android:layout_gravity="right"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
@@ -30,10 +30,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="카메라"
-        android:id="@+id/button2"
+        android:id="@+id/buttonCreate2"
         android:layout_gravity="right"
-        android:layout_below="@+id/ivPoster"
-        android:layout_toLeftOf="@+id/buttonCreate"
-        android:layout_toStartOf="@+id/buttonCreate" />
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/buttonCreate1"
+        android:layout_toStartOf="@+id/buttonCreate1" />
 
 </RelativeLayout>

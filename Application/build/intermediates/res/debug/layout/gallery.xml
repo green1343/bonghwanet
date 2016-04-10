@@ -36,4 +36,4 @@
         android:layout_toLeftOf="@+id/buttonCreate"
         android:layout_toStartOf="@+id/buttonCreate" />
 
-</RelativeLayout><!-- From: file:/C:/wifi/Application/src/main/res/layout/gallery.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/kyung/Downloads/bonghwanet/Application/src/main/res/layout/gallery.xml -->

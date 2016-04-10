@@ -20,8 +20,12 @@ import android.widget.ImageView;
 import com.example.android.packet.Packet_Share_Text;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Objects;
+import java.lang.String;
 
 public class GallaryActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
@@ -33,7 +37,8 @@ public class GallaryActivity extends Activity {
 		MyGalleryAdapter galAdapter = new MyGalleryAdapter(this);
 		gallery.setAdapter(galAdapter);
 
-		findViewById(R.id.buttonCreate).setOnClickListener(onClickButton);
+		findViewById(R.id.buttonCreate1).setOnClickListener(onClickButton);
+		findViewById(R.id.buttonCreate2).setOnClickListener(onClickButton);
 	}
 
 	Button.OnClickListener onClickButton = new View.OnClickListener() {
@@ -41,8 +46,12 @@ public class GallaryActivity extends Activity {
 
 			EditText text=(EditText)findViewById(R.id.editMessage);
 			switch (v.getId()) {
-				case R.id.buttonCreate:
+				case R.id.buttonCreate1:
+					uploadPicture();
+					break;
+				case R.id.buttonCreate2:
 					uploadCameraFile();
+					break;
 				default:
 					break;
 			}
@@ -51,6 +60,12 @@ public class GallaryActivity extends Activity {
 
 	public class MyGalleryAdapter extends BaseAdapter {
 		Context context;
+
+		String sysDir = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroup())+"/Pictures";
+		File[] sysFiles = (new File(sysDir).listFiles());
+
+		//String strFname;
+
 		Integer[] posterID = {
 				R.drawable.mov11, R.drawable.mov12, R.drawable.mov13, R.drawable.mov14, R.drawable.mov15, R.drawable.mov16
 		};
@@ -72,6 +87,11 @@ public class GallaryActivity extends Activity {
 		}
 
 		public View getView(int position, View convertView, ViewGroup parent) {
+
+			/*for(int i = 0; i < sysFiles.length; i++) {
+				strFname = sysFiles[i].toString();
+			}*/
+
 			ImageView imageView = new ImageView(context);
 			imageView.setLayoutParams(new Gallery.LayoutParams(100, 150));
 			imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
@@ -112,11 +132,19 @@ public class GallaryActivity extends Activity {
 		startActivityForResult(intent, REQ_FILE_SELECT);
 	}
 
+	public String getDateString()
+	{
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.KOREA);
+		String str_date = df.format(new Date());
+
+		return str_date;
+	}
+
 	void uploadCameraFile(){
 		/*HashMap<Long, Manager.GroupInfo> groups = Manager.INSTANCE.getAllGroups();
 		Manager.GroupInfo g = groups.get(groups.keySet());
 		String str = new String(g.name);*/
-		cameraTempFilePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/bonghwanet/"+"/tmp_image.jpg";
+		cameraTempFilePath = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroup())+"/Pictures/"+getDateString()+".jpg";
 		File imageFile = new File(cameraTempFilePath);
 		Uri imageFileUri = Uri.fromFile(imageFile);
 
