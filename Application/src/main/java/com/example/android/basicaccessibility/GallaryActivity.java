@@ -1,6 +1,7 @@
 package com.example.android.basicaccessibility;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -15,11 +16,14 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Gallery;
+import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.android.packet.Packet_Share_Text;
 
 import java.io.File;
+import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -33,9 +37,9 @@ public class GallaryActivity extends Activity {
 		setContentView(R.layout.gallery);
 		setTitle("갤러리 사진");
 
-		Gallery gallery = (Gallery) findViewById(R.id.gallery);
-		MyGalleryAdapter galAdapter = new MyGalleryAdapter(this);
-		gallery.setAdapter(galAdapter);
+		final GridView gv = (GridView) findViewById(R.id.gridView1);
+		MyGridAdapter gAdapter = new MyGridAdapter(this);
+		gv.setAdapter(gAdapter);
 
 		findViewById(R.id.buttonCreate1).setOnClickListener(onClickButton);
 		findViewById(R.id.buttonCreate2).setOnClickListener(onClickButton);
@@ -58,24 +62,22 @@ public class GallaryActivity extends Activity {
 		}
 	};
 
-	public class MyGalleryAdapter extends BaseAdapter {
+	public class MyGridAdapter extends BaseAdapter {
 		Context context;
 
 		String sysDir = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroup())+"/Pictures";
 		File[] sysFiles = (new File(sysDir).listFiles());
 
-		//String strFname;
-
-		Integer[] posterID = {
+		Integer[] posterID ={
 				R.drawable.mov11, R.drawable.mov12, R.drawable.mov13, R.drawable.mov14, R.drawable.mov15, R.drawable.mov16
 		};
 
-		public MyGalleryAdapter(Context c) {
+		public MyGridAdapter(Context c) {
 			context = c;
 		}
 
 		public int getCount() {
-			return  posterID.length;
+			return posterID.length;
 		}
 
 		public Object getItem(int arg0) {
@@ -88,26 +90,28 @@ public class GallaryActivity extends Activity {
 
 		public View getView(int position, View convertView, ViewGroup parent) {
 
-			/*for(int i = 0; i < sysFiles.length; i++) {
-				strFname = sysFiles[i].toString();
-			}*/
-
 			ImageView imageView = new ImageView(context);
-			imageView.setLayoutParams(new Gallery.LayoutParams(100, 150));
+			imageView.setLayoutParams(new GridView.LayoutParams(500, 500));
 			imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
 			imageView.setPadding(5, 5, 5, 5);
 
+			imageView.setImageResource(posterID[position]);
+			//imageView.setImageURI(Uri.parse(sysFiles[position].toString()));
+
 			final int pos = position;
-			imageView.setOnTouchListener(new View.OnTouchListener() {
-				public boolean onTouch(View v, MotionEvent event) {
-					ImageView ivPoster = (ImageView) findViewById(R.id.ivPoster);
-					ivPoster.setScaleType(ImageView.ScaleType.FIT_CENTER);
+			imageView.setOnClickListener(new View.OnClickListener() {
+				public void onClick(View v) {
+					View dialogView = (View) View.inflate(GallaryActivity.this, R.layout.dialog, null);
+					AlertDialog.Builder dlg = new AlertDialog.Builder(GallaryActivity.this);
+					ImageView ivPoster = (ImageView) dialogView.findViewById(R.id.ivPoster);
+					//ivPoster.setImageURI(Uri.parse(sysFiles[pos].toString()));
 					ivPoster.setImageResource(posterID[pos]);
-					return false;
+					dlg.setIcon(R.drawable.ic_launcher);
+					dlg.setView(dialogView);
+					//dlg.setNegativeButton("닫기", null);
+					dlg.show();
 				}
 			});
-
-			imageView.setImageResource(posterID[position]);
 
 			return imageView;
 		}
@@ -134,8 +138,8 @@ public class GallaryActivity extends Activity {
 
 	public String getDateString()
 	{
-		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.KOREA);
-		String str_date = df.format(new Date());
+		SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss", Locale.KOREA);
+		String str_date = "bonghwa_"+df.format(new Date());
 
 		return str_date;
 	}

@@ -298,13 +298,14 @@ containing a value of this type.
         public static final int tile=0x7f020019;
     }
     public static final class id {
-        public static final int action_settings=0x7f090026;
+        public static final int action_settings=0x7f090027;
         public static final int alignBounds=0x7f090002;
         public static final int alignMargins=0x7f090003;
         public static final int bottom=0x7f090004;
         public static final int button=0x7f090019;
-        public static final int button2=0x7f090018;
-        public static final int buttonCreate=0x7f090015;
+        public static final int buttonCreate=0x7f090021;
+        public static final int buttonCreate1=0x7f090016;
+        public static final int buttonCreate2=0x7f090018;
         public static final int buttonSend=0x7f090014;
         public static final int center=0x7f090005;
         public static final int center_horizontal=0x7f090006;
@@ -317,15 +318,15 @@ containing a value of this type.
         public static final int fill=0x7f09000b;
         public static final int fill_horizontal=0x7f09000c;
         public static final int fill_vertical=0x7f09000d;
-        public static final int gallery=0x7f090016;
+        public static final int gridView1=0x7f090017;
         public static final int horizontal=0x7f090000;
-        public static final int ivPoster=0x7f090017;
+        public static final int ivPoster=0x7f090015;
         public static final int left=0x7f09000e;
         public static final int listView=0x7f090012;
         public static final int listView2=0x7f09001e;
         public static final int right=0x7f09000f;
         public static final int start=0x7f090010;
-        public static final int text1=0x7f090021;
+        public static final int text1=0x7f090022;
         public static final int textView=0x7f09001a;
         public static final int textView2=0x7f09001f;
         public static final int textView3=0x7f09001b;
@@ -333,21 +334,22 @@ containing a value of this type.
         public static final int textView5=0x7f090020;
         public static final int top=0x7f090011;
         public static final int vertical=0x7f090001;
-        public static final int vi_content=0x7f090025;
-        public static final int vi_image=0x7f090023;
-        public static final int vi_title=0x7f090024;
-        public static final int vi_view=0x7f090022;
+        public static final int vi_content=0x7f090026;
+        public static final int vi_image=0x7f090024;
+        public static final int vi_title=0x7f090025;
+        public static final int vi_view=0x7f090023;
     }
     public static final class layout {
         public static final int chatting=0x7f030000;
-        public static final int gallery=0x7f030001;
-        public static final int grouphome=0x7f030002;
-        public static final int grouplist=0x7f030003;
-        public static final int groupmain=0x7f030004;
-        public static final int list_item=0x7f030005;
-        public static final int list_item_chatting=0x7f030006;
-        public static final int main=0x7f030007;
-        public static final int newgrouplist=0x7f030008;
+        public static final int dialog=0x7f030001;
+        public static final int gallery=0x7f030002;
+        public static final int grouphome=0x7f030003;
+        public static final int grouplist=0x7f030004;
+        public static final int groupmain=0x7f030005;
+        public static final int list_item=0x7f030006;
+        public static final int list_item_chatting=0x7f030007;
+        public static final int main=0x7f030008;
+        public static final int newgrouplist=0x7f030009;
     }
     public static final class menu {
         public static final int menu_main=0x7f080000;

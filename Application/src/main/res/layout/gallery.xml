@@ -13,18 +13,15 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <Gallery
+    <GridView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:id="@+id/gallery"
-        android:spacing="5dp"
-        android:layout_alignParentTop="true" />
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:id="@+id/ivPoster"
-        android:padding="20dp"
-        android:layout_above="@+id/buttonCreate" />
+        android:layout_height="wrap_content"
+        android:id="@+id/gridView1"
+        android:gravity="center"
+        android:numColumns="2"
+        android:layout_above="@+id/buttonCreate1"
+        android:layout_alignParentTop="true">
+    </GridView>
 
     <Button
         android:layout_width="wrap_content"
