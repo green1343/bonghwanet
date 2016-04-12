@@ -65,20 +65,16 @@ public class GallaryActivity extends Activity {
 	public class MyGridAdapter extends BaseAdapter {
 		Context context;
 
-		String sysDir = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroup())+"/Pictures";
+		String sysDir = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroup());
 		File[] sysFiles = (new File(sysDir).listFiles());
-
-		Integer[] posterID ={
-				R.drawable.mov11, R.drawable.mov12, R.drawable.mov13, R.drawable.mov14, R.drawable.mov15, R.drawable.mov16
-		};
 
 		public MyGridAdapter(Context c) {
 			context = c;
 		}
 
 		public int getCount() {
-			 //return sysFiles.length;
-			return posterID.length;
+			return sysFiles.length;
+			//return posterID.length;
 		}
 
 		public Object getItem(int arg0) {
@@ -96,8 +92,8 @@ public class GallaryActivity extends Activity {
 			imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
 			imageView.setPadding(5, 5, 5, 5);
 
-			imageView.setImageResource(posterID[position]);
-			//imageView.setImageURI(Uri.parse(sysFiles[position].toString()));
+			//imageView.setImageResource(posterID[position]);
+			imageView.setImageURI(Uri.parse(sysFiles[position].toString()));
 
 			final int pos = position;
 			imageView.setOnClickListener(new View.OnClickListener() {
@@ -105,8 +101,8 @@ public class GallaryActivity extends Activity {
 					View dialogView = (View) View.inflate(GallaryActivity.this, R.layout.dialog, null);
 					AlertDialog.Builder dlg = new AlertDialog.Builder(GallaryActivity.this);
 					ImageView ivPoster = (ImageView) dialogView.findViewById(R.id.ivPoster);
-					//ivPoster.setImageURI(Uri.parse(sysFiles[pos].toString()));
-					ivPoster.setImageResource(posterID[pos]);
+					ivPoster.setImageURI(Uri.parse(sysFiles[pos].toString()));
+					//ivPoster.setImageResource(posterID[pos]);
 					dlg.setIcon(R.drawable.ic_launcher);
 					dlg.setView(dialogView);
 					//dlg.setNegativeButton("닫기", null);
@@ -149,7 +145,7 @@ public class GallaryActivity extends Activity {
 		/*HashMap<Long, Manager.GroupInfo> groups = Manager.INSTANCE.getAllGroups();
 		Manager.GroupInfo g = groups.get(groups.keySet());
 		String str = new String(g.name);*/
-		cameraTempFilePath = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroup())+"/Pictures/"+getDateString()+".jpg";
+		cameraTempFilePath = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroup())+"/"+getDateString()+".jpg";
 		File imageFile = new File(cameraTempFilePath);
 		Uri imageFileUri = Uri.fromFile(imageFile);
 
