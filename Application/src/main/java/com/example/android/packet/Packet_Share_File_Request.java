@@ -3,8 +3,6 @@ package com.example.android.packet;
 public class Packet_Share_File_Request extends Packet_Command
 {
     public long group;
-    public long uploader;
-    public long time;
     public String filename;
 
     public Packet_Share_File_Request(){
@@ -16,8 +14,6 @@ public class Packet_Share_File_Request extends Packet_Command
         super(buf);
 
         group = unpackLong();
-        uploader = unpackLong();
-        time = unpackLong();
         filename = unpackString();
     }
 
@@ -26,8 +22,6 @@ public class Packet_Share_File_Request extends Packet_Command
         super.GetBytes(buf);
 
         pack(group);
-        pack(uploader);
-        pack(time);
         pack(filename);
     }
 }

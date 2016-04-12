@@ -365,6 +365,7 @@ public enum WiFiNetwork {
         }
     }
 
+    // TODO : 파일전송 멀티스레드
     public class NetworkListener extends Thread{
 
         int m_index;
@@ -438,11 +439,30 @@ public enum WiFiNetwork {
                         case PACKET.PACKET_SYNC: {
                             Packet_Sync p = new Packet_Sync(stream);
 
+                            HashMap<String, Manager.FileInfo> files = Manager.INSTANCE.getAllFiles().get(p.group);
+                            if(files == null)
+                                break;
+
+                            for(String key : p.files.keySet()){
+                                if(files.containsKey(key) == false){
+                                    Packet_Share_File_Request reply = new Packet_Share_File_Request();
+                                    reply.group = p.group;
+                                    reply.filename = key;
+                                    Message msg = Message.obtain(m_handler, 0 , 1 , 0);
+                                    msg.obj = new Pair(m_index, reply);
+                                    m_handler.sendMessage(msg);
+                                }
+                            }
+
+                            // TODO : 전송 완료 확인
+                            Manager.INSTANCE.getAllFiles().get(p.group).putAll(p.files);
+
                             break;
                         }
                         case PACKET.PACKET_SHARE_FILE_REQUEST:{
                             Packet_Share_File_Request p = new Packet_Share_File_Request(stream);
                             Packet_Share_File_Request_OK reply = new Packet_Share_File_Request_OK();
+                            reply.group = p.group;
                             reply.filename = p.filename;
                             Message msg = Message.obtain(m_handler, 0 , 1 , 0);
                             msg.obj = new Pair(m_index, reply);
