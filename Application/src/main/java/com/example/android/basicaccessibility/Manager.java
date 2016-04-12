@@ -476,7 +476,7 @@ public enum Manager {
         if(m_groups.containsKey(id)){
             String storage = Environment.getExternalStorageState();
             if ( storage.equals(Environment.MEDIA_MOUNTED))
-                return getRoot() + "/" + m_groups.get(id).name + "_" + id;
+                return getRoot() + "/" + m_groups.get(id).name + "_" + id + "/Pictures";
             else
                 return null;
         }
@@ -488,7 +488,7 @@ public enum Manager {
         if(m_groups.containsKey(id)){
             String storage = Environment.getExternalStorageState();
             if ( storage.equals(Environment.MEDIA_MOUNTED))
-                return "" + m_groups.get(id).name + "_" + id;
+                return "" + m_groups.get(id).name + "_" + id + "/Pictures";
             else
                 return null;
         }

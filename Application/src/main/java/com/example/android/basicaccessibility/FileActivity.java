@@ -13,7 +13,7 @@ import java.io.File;
 
 public class FileActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {        
-		super.onCreate(savedInstanceState);        
+		super.onCreate(savedInstanceState);
 		TextView textview = new TextView(this);        
 		textview.setText("This is the FileActivity tab");
 		setContentView(textview);    

@@ -77,6 +77,7 @@ public class GallaryActivity extends Activity {
 		}
 
 		public int getCount() {
+			 //return sysFiles.length;
 			return posterID.length;
 		}
 
