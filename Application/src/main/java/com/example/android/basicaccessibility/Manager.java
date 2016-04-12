@@ -3,7 +3,6 @@ package com.example.android.basicaccessibility;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
-import android.net.ConnectivityManager;
 import android.net.DhcpInfo;
 import android.net.Uri;
 import android.net.wifi.ScanResult;
@@ -35,6 +34,9 @@ public enum Manager {
     public final static String RESERVED_SSID = "bhn";
     public final static String DEFAULT_MYNAME = "Me";
     public final static String DEFAULT_USERNAME = "User";
+    public final static String EMERGENCY_SSID = "emergencybhn";
+
+    public final static long EMERGENCY = -1;
 
     public class FileInfo {
 
@@ -328,6 +330,12 @@ public enum Manager {
 
             stream.close();
 
+            if(m_groups.containsKey(EMERGENCY) == false){
+                GroupInfo g = new GroupInfo();
+                g.members.put(m_myNumber, m_myUserInfo);
+                m_groups.put(EMERGENCY, g);
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -412,7 +420,7 @@ public enum Manager {
                 return name;
         }
 
-            // 주소록
+        // 주소록
         ContentResolver cr = m_context.getContentResolver();
         Uri uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode("0" + id));
         Cursor cursor = cr.query(uri, new String[]{ContactsContract.PhoneLookup.DISPLAY_NAME}, null, null, null);
@@ -497,11 +505,18 @@ public enum Manager {
     }
 
     public void setServer(){
-        String ssid = RESERVED_SSID;
-        ssid += "_";
-        ssid += String.valueOf(m_curGroup);
-        ssid += "_";
-        ssid += m_groups.get(m_curGroup).name;
+        String ssid;
+
+        if(m_curGroup == EMERGENCY)
+            ssid = EMERGENCY_SSID;
+        else {
+            ssid = RESERVED_SSID;
+            ssid += "_";
+            ssid += String.valueOf(m_curGroup);
+            ssid += "_";
+            ssid += m_groups.get(m_curGroup).name;
+        }
+
         m_configuration.SSID = ssid;
 
         m_wifiApManager.setWifiApEnabled(m_configuration, true);
@@ -540,25 +555,35 @@ public enum Manager {
         String ssid = null;
         String bssid = null;
 
-        for(ScanResult r : results){
-            if(r.SSID.startsWith(RESERVED_SSID)){
-                StringTokenizer t = new StringTokenizer(r.SSID, "_");
-                String idStr = null;
-                String nameStr = null;
-                if(t.hasMoreTokens()) t.nextToken();
-                if(t.hasMoreTokens()) idStr = t.nextToken();
-                if(t.hasMoreTokens()) nameStr = t.nextToken();
-
-                if(nameStr == null)
-                    continue;
-
-                long group = Long.valueOf(idStr);
-                if(group == m_curGroup){
+        if(m_curGroup == EMERGENCY) {
+            for (ScanResult r : results) {
+                if (r.SSID.compareTo(EMERGENCY_SSID) == 0) {
                     ssid = r.SSID;
                     bssid = r.BSSID;
 
                     if(bssid.compareTo(m_curBSSID) != 0)
                         break;
+                }
+            }
+        }
+        else {
+            for (ScanResult r : results) {
+                if (r.SSID.startsWith(RESERVED_SSID)) {
+                    StringTokenizer t = new StringTokenizer(r.SSID, "_");
+                    String idStr = null;
+                    String nameStr = null;
+                    if (t.hasMoreTokens()) t.nextToken();
+                    if (t.hasMoreTokens()) idStr = t.nextToken();
+                    if (t.hasMoreTokens()) nameStr = t.nextToken();
+
+                    if (nameStr == null)
+                        continue;
+
+                    long group = Long.valueOf(idStr);
+                    if (group == m_curGroup) {
+                        ssid = r.SSID;
+                        break;
+                    }
                 }
             }
         }

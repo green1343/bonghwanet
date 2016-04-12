@@ -26,6 +26,7 @@ public class GrouplistActivity extends Activity {
 		setContentView(R.layout.grouplist);
 
 		findViewById(R.id.buttonCreate).setOnClickListener(onClickButton);
+		findViewById(R.id.buttonEmergency).setOnClickListener(onClickButton);
 
 		m_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_item);
 		m_list = (ListView) findViewById(R.id.listView);
@@ -53,6 +54,9 @@ public class GrouplistActivity extends Activity {
 		m_adapter.clear();
 		HashMap<Long, Manager.GroupInfo> groups = Manager.INSTANCE.getAllGroups();
 		for(Long id : groups.keySet()) {
+			if(id == Manager.EMERGENCY)
+				continue;
+
 			Manager.GroupInfo g = groups.get(id);
 			String str = new String(g.name);
 			str += "\t\t";
@@ -77,11 +81,17 @@ public class GrouplistActivity extends Activity {
 			EditText textFruit=(EditText)findViewById(R.id.editGroupname);
 			switch (v.getId()) {
 				case R.id.buttonCreate:
-					// TODO : delete
 					Manager.INSTANCE.createGroup(textFruit.getText().toString());
 					refreshList();
 
 					textFruit.setText("");
+					break;
+
+				case R.id.buttonEmergency:
+					Manager.INSTANCE.connect(Manager.EMERGENCY);
+
+					Intent intent = new Intent(getApplicationContext(), GroupMain.class);
+					startActivity(intent);
 					break;
 			}
 		}
