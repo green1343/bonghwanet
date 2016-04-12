@@ -75,6 +75,14 @@ public enum Manager {
             members = (HashMap<Long, UserInfo>)g.members.clone();
             deletedFiles = (HashMap<String, FileInfo>)g.deletedFiles.clone();
         }
+
+        public void merge(GroupInfo g){
+            if(g == null)
+                return;
+
+            members.putAll(g.members);
+            deletedFiles.putAll(g.deletedFiles);
+        }
     }
 
     public class TextInfo{
@@ -249,12 +257,16 @@ public enum Manager {
         m_curGroup = group;
     }
 
-    public long getCurGroup(){
+    public long getCurGroupID(){
         return m_curGroup;
     }
 
-    public GroupInfo getCurGroupInfo(){
+    public GroupInfo getCurGroup(){
         return m_groups.get(m_curGroup);
+    }
+
+    public GroupInfo getGroup(long id){
+        return m_groups.get(id);
     }
 
     public void addUser(long group, long userID, UserInfo info){
@@ -390,6 +402,10 @@ public enum Manager {
         return m_groups;
     }
 
+    public HashMap<Long, HashMap<String, FileInfo>> getAllFiles(){
+        return m_files;
+    }
+
     public FileInfo getNewDeletedFile(){
         return new FileInfo();
     }
@@ -414,8 +430,8 @@ public enum Manager {
         if(id == m_myNumber)
             return DEFAULT_MYNAME;
 
-        if(getCurGroupInfo().members.get(id) != null) {
-            String name = getCurGroupInfo().members.get(id).name;
+        if(getCurGroup().members.get(id) != null) {
+            String name = getCurGroup().members.get(id).name;
             if (name.compareTo(Manager.DEFAULT_USERNAME) != 0)
                 return name;
         }
@@ -653,7 +669,7 @@ public enum Manager {
         while(st.hasMoreTokens())
             filename = st.nextToken();
 
-        String newPath = getRealGroupPath(getCurGroup()) + "/" + filename;
+        String newPath = getRealGroupPath(getCurGroupID()) + "/" + filename;
         copyFile(path, newPath);
         sendSync(newPath);
     }
@@ -676,7 +692,7 @@ public enum Manager {
 
     public void sendSync(String file){
         Packet_Sync p = new Packet_Sync();
-        p.group = getCurGroup();
+        p.group = getCurGroupID();
         java.io.File ioFile = new java.io.File(getRoot() + "/" + file);
         p.files.put(file, new FileInfo(false, ioFile.lastModified()));
         WiFiNetwork.INSTANCE.writeAll(p);

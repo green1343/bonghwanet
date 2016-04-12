@@ -123,7 +123,7 @@ public enum WiFiNetwork {
 
         try {
             ServerSocket serverSocket = new ServerSocket(PORT);
-            m_server = new Server(serverSocket, m_handler);
+            m_server = new Server(serverSocket);
             m_server.start();
         } catch (IOException ex) {
             //System.err.println(ex);
@@ -142,7 +142,7 @@ public enum WiFiNetwork {
         clearAll();
 
         SERVERADDRESS = serverAddress;
-        m_client = new Client(m_handler);
+        m_client = new Client();
         m_client.start();
     }
 
@@ -173,13 +173,11 @@ public enum WiFiNetwork {
     public class Server extends Thread{
 
         private ServerSocket m_server;
-        private Handler m_handler;
         private boolean m_kill = false;
 
-        public Server(ServerSocket server, Handler handler)
+        public Server(ServerSocket server)
         {
             m_server = server;
-            m_handler = handler;
         }
 
         /*****************************************************
@@ -193,8 +191,8 @@ public enum WiFiNetwork {
             {
                 try {
                     Socket socket = m_server.accept();
-                    NetworkSpeaker speaker = new NetworkSpeaker(m_index, socket.getOutputStream(), m_handler);
-                    NetworkListener listener = new NetworkListener(m_index, socket.getInputStream(), m_handler);
+                    NetworkSpeaker speaker = new NetworkSpeaker(m_index, socket.getOutputStream());
+                    NetworkListener listener = new NetworkListener(m_index, socket.getInputStream());
                     m_threads.put(m_index, new Pair<>(speaker, listener));
                     ++m_index;
                     listener.start();
@@ -232,14 +230,12 @@ public enum WiFiNetwork {
     public class Client extends Thread{
 
         private boolean m_kill = false;
-        private Handler m_handler;
         Socket clientSocket;
         NetworkSpeaker speaker;
         NetworkListener listener;
 
-        public Client(Handler handler)
+        public Client()
         {
-            m_handler = handler;
         }
 
         /*****************************************************
@@ -253,8 +249,8 @@ public enum WiFiNetwork {
             {
                 try {
                     clientSocket = new Socket(SERVERADDRESS, PORT);
-                    speaker = new NetworkSpeaker(m_index, clientSocket.getOutputStream(), m_handler);
-                    listener = new NetworkListener(m_index, clientSocket.getInputStream(), m_handler);
+                    speaker = new NetworkSpeaker(m_index, clientSocket.getOutputStream());
+                    listener = new NetworkListener(m_index, clientSocket.getInputStream());
                     m_threads.put(m_index, new Pair<>(speaker, listener));
                     ++m_index;
                     listener.start();
@@ -294,14 +290,12 @@ public enum WiFiNetwork {
 
         int m_index;
         OutputStream m_outStream;
-        Handler m_handler;
         boolean m_kill = false;
 
-        public NetworkSpeaker(int index, OutputStream outstream, Handler handler)
+        public NetworkSpeaker(int index, OutputStream outstream)
         {
             m_index = index;
             m_outStream = outstream;
-            m_handler = handler;
         }
 
         public void write(Packet_Command p)
@@ -375,14 +369,12 @@ public enum WiFiNetwork {
 
         int m_index;
         InputStream m_inStream;
-        Handler m_handler;
         boolean m_kill = false;
 
-        public NetworkListener(int index, InputStream instream, Handler handler)
+        public NetworkListener(int index, InputStream instream)
         {
             m_index = index;
             m_inStream = instream;
-            m_handler = handler;
         }
 
         @Override
@@ -420,13 +412,24 @@ public enum WiFiNetwork {
 
                             Packet_Grouplist p = new Packet_Grouplist(stream);
                             for(Long id : m.getAllGroups().keySet()){
-                                if(p.groups.get(id) != null){
-                                    // TODO : send sync
+                                if(p.groups.containsKey(id)) {
+                                    Manager.GroupInfo g1 = m.getAllGroups().get(id);
+                                    Manager.GroupInfo g2 = p.groups.get(id);
+
+                                    g1.merge(g2);
+
+                                    // send sync
+                                    Packet_Sync reply = new Packet_Sync();
+                                    reply.group = id;
+                                    reply.files.putAll(Manager.INSTANCE.getAllFiles().get(id));
+                                    Message msg = Message.obtain(m_handler, 0 , 1 , 0);
+                                    msg.obj = new Pair(m_index, reply);
+                                    m_handler.sendMessage(msg);
                                 }
                             }
 
                             if(m.isWatingJoin()){
-                                Manager.GroupInfo g = p.groups.get(m.getCurGroup());
+                                Manager.GroupInfo g = p.groups.get(m.getCurGroupID());
                                 if(g != null)
                                     m.setJoinGroup(g);
                             }
@@ -441,7 +444,9 @@ public enum WiFiNetwork {
                             Packet_Share_File_Request p = new Packet_Share_File_Request(stream);
                             Packet_Share_File_Request_OK reply = new Packet_Share_File_Request_OK();
                             reply.filename = p.filename;
-                            write(reply, m_index);
+                            Message msg = Message.obtain(m_handler, 0 , 1 , 0);
+                            msg.obj = new Pair(m_index, reply);
+                            m_handler.sendMessage(msg);
                             break;
                         }
                         case PACKET.PACKET_SHARE_FILE_REQUEST_OK: {

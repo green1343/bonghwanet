@@ -1,13 +1,7 @@
 package com.example.android.basicaccessibility;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.content.pm.ResolveInfo;
-import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,7 +10,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class ChatListAdapter extends BaseAdapter{
     private LayoutInflater mInflater;
@@ -50,7 +45,7 @@ public class ChatListAdapter extends BaseAdapter{
         LinearLayout layout_view =  (LinearLayout)convertView.findViewById(R.id.vi_view);
         int resId = R.drawable.profile;
         imView.setBackgroundResource(resId);
-        title.setText(Manager.INSTANCE.getCurGroupInfo().members.get(arr.get(position).uploader).name);
+        title.setText(Manager.INSTANCE.getCurGroup().members.get(arr.get(position).uploader).name);
         content.setText(arr.get(position).text);
 
 		/*	버튼에 이벤트처리를 하기위해선 setTag를 이용해서 사용할 수 있습니다.

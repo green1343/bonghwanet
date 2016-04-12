@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -68,7 +67,7 @@ public class ChattingActivity extends Activity {
 				switch (v.getId()) {
 					case R.id.buttonSend:
 						Manager.TextInfo info = Manager.INSTANCE.addText(
-								Manager.INSTANCE.getCurGroup(),
+								Manager.INSTANCE.getCurGroupID(),
 								Manager.INSTANCE.getMyNumber(),
 								System.currentTimeMillis(),
 								text.getText().toString());
@@ -76,7 +75,7 @@ public class ChattingActivity extends Activity {
 						refreshList();
 
 						Packet_Share_Text p = new Packet_Share_Text();
-						p.group = Manager.INSTANCE.getCurGroup();
+						p.group = Manager.INSTANCE.getCurGroupID();
 						p.uploader = info.uploader;
 						p.time = info.time;
 						p.text = info.text;

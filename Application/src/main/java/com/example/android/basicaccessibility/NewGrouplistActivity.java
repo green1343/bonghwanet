@@ -136,7 +136,7 @@ public class NewGrouplistActivity extends Activity {
 									try {
 										if (Manager.INSTANCE.getJoinGroup() != null) {
 											Packet_Join_Request p = new Packet_Join_Request();
-											p.group = Manager.INSTANCE.getCurGroup();
+											p.group = Manager.INSTANCE.getCurGroupID();
 											p.userID = Manager.INSTANCE.getMyNumber();
 											p.userInfo = Manager.INSTANCE.getMyUserInfo();
 											WiFiNetwork.INSTANCE.writeAll(p);

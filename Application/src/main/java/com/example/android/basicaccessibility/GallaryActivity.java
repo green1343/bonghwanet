@@ -7,28 +7,19 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Gallery;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.example.android.packet.Packet_Share_Text;
 
 import java.io.File;
-import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Locale;
-import java.util.Objects;
 import java.lang.String;
 
 public class GallaryActivity extends Activity {
@@ -65,7 +56,7 @@ public class GallaryActivity extends Activity {
 	public class MyGridAdapter extends BaseAdapter {
 		Context context;
 
-		String sysDir = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroup());
+		String sysDir = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroupID());
 		File[] sysFiles = (new File(sysDir).listFiles());
 
 		public MyGridAdapter(Context c) {
@@ -145,7 +136,7 @@ public class GallaryActivity extends Activity {
 		/*HashMap<Long, Manager.GroupInfo> groups = Manager.INSTANCE.getAllGroups();
 		Manager.GroupInfo g = groups.get(groups.keySet());
 		String str = new String(g.name);*/
-		cameraTempFilePath = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroup())+"/"+getDateString()+".jpg";
+		cameraTempFilePath = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroupID())+"/"+getDateString()+".jpg";
 		File imageFile = new File(cameraTempFilePath);
 		Uri imageFileUri = Uri.fromFile(imageFile);
 
