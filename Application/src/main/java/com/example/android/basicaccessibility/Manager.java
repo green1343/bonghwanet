@@ -598,7 +598,10 @@ public enum Manager {
                     long group = Long.valueOf(idStr);
                     if (group == m_curGroup) {
                         ssid = r.SSID;
-                        break;
+                        bssid = r.BSSID;
+
+                        if(bssid.compareTo(m_curBSSID) != 0)
+                            break;
                     }
                 }
             }

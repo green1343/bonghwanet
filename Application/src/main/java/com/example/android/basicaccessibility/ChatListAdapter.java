@@ -45,7 +45,7 @@ public class ChatListAdapter extends BaseAdapter{
         LinearLayout layout_view =  (LinearLayout)convertView.findViewById(R.id.vi_view);
         int resId = R.drawable.profile;
         imView.setBackgroundResource(resId);
-        title.setText(Manager.INSTANCE.getCurGroup().members.get(arr.get(position).uploader).name);
+        title.setText(Manager.INSTANCE.getUserName(arr.get(position).uploader));
         content.setText(arr.get(position).text);
 
 		/*	버튼에 이벤트처리를 하기위해선 setTag를 이용해서 사용할 수 있습니다.

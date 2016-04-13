@@ -423,9 +423,7 @@ public enum WiFiNetwork {
                                     Packet_Sync reply = new Packet_Sync();
                                     reply.group = id;
                                     reply.files.putAll(Manager.INSTANCE.getAllFiles().get(id));
-                                    Message msg = Message.obtain(m_handler, 0 , 1 , 0);
-                                    msg.obj = new Pair(m_index, reply);
-                                    m_handler.sendMessage(msg);
+                                    write(reply, m_index);
                                 }
                             }
 
@@ -448,9 +446,7 @@ public enum WiFiNetwork {
                                     Packet_Share_File_Request reply = new Packet_Share_File_Request();
                                     reply.group = p.group;
                                     reply.filename = key;
-                                    Message msg = Message.obtain(m_handler, 0 , 1 , 0);
-                                    msg.obj = new Pair(m_index, reply);
-                                    m_handler.sendMessage(msg);
+                                    write(reply, m_index);
                                 }
                             }
 
@@ -464,9 +460,7 @@ public enum WiFiNetwork {
                             Packet_Share_File_Request_OK reply = new Packet_Share_File_Request_OK();
                             reply.group = p.group;
                             reply.filename = p.filename;
-                            Message msg = Message.obtain(m_handler, 0 , 1 , 0);
-                            msg.obj = new Pair(m_index, reply);
-                            m_handler.sendMessage(msg);
+                            write(reply, m_index);
                             break;
                         }
                         case PACKET.PACKET_SHARE_FILE_REQUEST_OK: {
