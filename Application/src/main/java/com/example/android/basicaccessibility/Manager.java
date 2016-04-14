@@ -22,6 +22,7 @@ import java.io.FileOutputStream;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -114,8 +115,9 @@ public enum Manager {
     HashMap<Long, HashMap<String, FileInfo>> m_files = new HashMap<>(); // id, files
     HashMap<Long, LinkedList<TextInfo>> m_texts = new HashMap<>();
 
-
     Object m_tempObject;
+
+    Random m_random = new Random();
 
     // join
     boolean m_bWatingJoin = false;
@@ -558,6 +560,7 @@ public enum Manager {
     private Handler m_initServerHandler = new Handler() {
         public void handleMessage(Message msg) {
             WiFiNetwork.INSTANCE.initServer();
+            onConnectEnd();
         }
     };
 
@@ -654,8 +657,11 @@ public enum Manager {
         public void handleMessage(Message msg) {
             String ipAddress = (String)msg.obj;
             WiFiNetwork.INSTANCE.initClient(ipAddress);
+            onConnectEnd();
         }
     };
+
+    MyThread m_timerThread = null;
 
     public void connect(long group){
 
@@ -663,6 +669,28 @@ public enum Manager {
 
         if(setClient() == false)
             setServer();
+    }
+
+    public void onConnectEnd(){
+        if(m_curGroup == EMERGENCY){
+            m_timerThread = new MyThread() {
+                int r = m_random.nextInt(10) + 10;
+                public void run() {
+                    while (!Thread.interrupted() && running) {
+                        try {
+                            Thread.sleep(1000);
+                            ++data;
+                            if(data > r) {
+                                connect(m_curGroup);
+                                break;
+                            }
+                        } catch (Throwable t) {
+                        }
+                    }
+                }
+            };
+            m_timerThread.start();
+        }
     }
 
     public void uploadFile(String path){

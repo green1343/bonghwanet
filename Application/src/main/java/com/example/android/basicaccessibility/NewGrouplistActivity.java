@@ -23,7 +23,7 @@ public class NewGrouplistActivity extends Activity {
 	ArrayAdapter<String> m_adapter;
 	ListView m_list;
 
-	Thread m_refreshThread = null;
+	MyThread m_refreshThread = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +47,10 @@ public class NewGrouplistActivity extends Activity {
 		super.onResume();
 		refreshList();
 
-		m_refreshThread = new Thread(new Runnable() {
+		m_refreshThread = new MyThread() {
+
 			public void run() {
-				while (!Thread.interrupted()) {
+				while (!Thread.interrupted() && running) {
 					try {
 						Message msg = Message.obtain(m_refreshHandler, 0 , 1 , 0);
 						m_refreshHandler.sendMessage(msg);
@@ -58,7 +59,7 @@ public class NewGrouplistActivity extends Activity {
 					}
 				}
 			}
-		});
+		};
 
 		m_refreshThread.start();
 	}
@@ -68,6 +69,7 @@ public class NewGrouplistActivity extends Activity {
 		super.onPause();
 
 		m_refreshThread.interrupt();
+		m_refreshThread.running = false;
 		m_refreshThread = null;
 	}
 
