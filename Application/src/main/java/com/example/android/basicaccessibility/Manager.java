@@ -65,7 +65,7 @@ public enum Manager {
     }
 
     public class GroupInfo{
-        public String name;
+        public String name = new String();
         public HashMap<Long, UserInfo> members = new HashMap<>();
         public HashMap<String, FileInfo> deletedFiles = new HashMap<>();
 
@@ -342,14 +342,14 @@ public enum Manager {
 
             stream.close();
 
-            if(m_groups.containsKey(EMERGENCY) == false){
-                GroupInfo g = new GroupInfo();
-                g.members.put(m_myNumber, m_myUserInfo);
-                m_groups.put(EMERGENCY, g);
-            }
-
         } catch (Exception e) {
             e.printStackTrace();
+        }
+
+        if(m_groups.containsKey(EMERGENCY) == false){
+            GroupInfo g = new GroupInfo();
+            g.members.put(m_myNumber, m_myUserInfo);
+            addNewGroup(EMERGENCY, g);
         }
     }
 
