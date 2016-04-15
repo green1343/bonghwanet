@@ -33,4 +33,4 @@
         android:layout_toLeftOf="@+id/buttonCreate1"
         android:layout_toStartOf="@+id/buttonCreate1" />
 
-</RelativeLayout><!-- From: file:/C:/bonghwanet/Application/src/main/res/layout/gallery.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/kyung/AndroidStudioProjects/bonghwa/Application/src/main/res/layout/gallery.xml -->

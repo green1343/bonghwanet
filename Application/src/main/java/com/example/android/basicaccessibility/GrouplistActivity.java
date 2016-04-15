@@ -90,7 +90,7 @@ public class GrouplistActivity extends Activity {
 				case R.id.buttonEmergency:
 					Manager.INSTANCE.connect(Manager.EMERGENCY);
 
-					Intent intent = new Intent(getApplicationContext(), GroupMain.class);
+					Intent intent = new Intent(getApplicationContext(), Emergency_main.class);
 					startActivity(intent);
 					break;
 			}

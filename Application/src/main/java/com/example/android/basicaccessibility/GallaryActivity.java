@@ -23,6 +23,7 @@ import java.util.Locale;
 import java.lang.String;
 
 public class GallaryActivity extends Activity {
+
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.gallery);
@@ -36,6 +37,11 @@ public class GallaryActivity extends Activity {
 		findViewById(R.id.buttonCreate2).setOnClickListener(onClickButton);
 	}
 
+	protected void onResume() {
+		super.onResume();
+
+	}
+
 	Button.OnClickListener onClickButton = new View.OnClickListener() {
 		public void onClick(View v) {
 
@@ -46,6 +52,7 @@ public class GallaryActivity extends Activity {
 					break;
 				case R.id.buttonCreate2:
 					uploadCameraFile();
+					onResume();
 					break;
 				default:
 					break;

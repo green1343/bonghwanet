@@ -55,6 +55,9 @@
         <activity android:name="com.example.android.basicaccessibility.GroupHomeActivity" />
         <activity android:name="com.example.android.basicaccessibility.GallaryActivity" />
         <activity android:name="com.example.android.basicaccessibility.ChattingActivity" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency_main" />
+        <activity android:name="com.example.android.basicaccessibility.Emergencytype" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency_Battery" />
     </application>
 
 </manifest>
