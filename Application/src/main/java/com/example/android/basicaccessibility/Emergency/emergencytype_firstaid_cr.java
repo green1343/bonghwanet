@@ -1,4 +1,4 @@
-package com.example.android.basicaccessibility;
+package com.example.android.basicaccessibility.Emergency;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -17,6 +17,8 @@ import android.widget.EditText;
 import android.widget.Gallery;
 import android.widget.GridView;
 import android.widget.ImageView;
+
+import com.example.android.basicaccessibility.R;
 
 import java.io.File;
 import java.text.SimpleDateFormat;

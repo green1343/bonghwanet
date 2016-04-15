@@ -1,17 +1,13 @@
-package com.example.android.basicaccessibility;
+package com.example.android.basicaccessibility.Emergency;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import java.io.File;
+import com.example.android.basicaccessibility.R;
 
 public class Emergencytype extends Activity {
 	public void onCreate(Bundle savedInstanceState) {

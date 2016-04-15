@@ -1,4 +1,4 @@
-package com.example.android.basicaccessibility;
+package com.example.android.basicaccessibility.Emergency;
 
 import android.app.Activity;
 import android.content.Intent;

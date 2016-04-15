@@ -127,35 +127,35 @@ activity#com.example.android.basicaccessibility.ChattingActivity
 ADDED from AndroidManifest.xml:55:9
 	android:name
 		ADDED from AndroidManifest.xml:55:19
-activity#com.example.android.basicaccessibility.Emergency_main
+activity#com.example.android.basicaccessibility.Emergency.Emergency_main
 ADDED from AndroidManifest.xml:56:9
 	android:name
 		ADDED from AndroidManifest.xml:56:19
-activity#com.example.android.basicaccessibility.Emergencytype
+activity#com.example.android.basicaccessibility.Emergency.Emergencytype
 ADDED from AndroidManifest.xml:57:9
 	android:name
 		ADDED from AndroidManifest.xml:57:19
-activity#com.example.android.basicaccessibility.Emergency_Battery
+activity#com.example.android.basicaccessibility.Emergency.Emergency_Battery
 ADDED from AndroidManifest.xml:58:9
 	android:name
 		ADDED from AndroidManifest.xml:58:19
-activity#com.example.android.basicaccessibility.Emergencytype_firstaid
+activity#com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid
 ADDED from AndroidManifest.xml:59:9
 	android:name
 		ADDED from AndroidManifest.xml:59:19
-activity#com.example.android.basicaccessibility.Emergencytype_firstaid_fracture
+activity#com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_fracture
 ADDED from AndroidManifest.xml:60:9
 	android:name
 		ADDED from AndroidManifest.xml:60:19
-activity#com.example.android.basicaccessibility.Emergencytype_firstaid_abrasion
+activity#com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_abrasion
 ADDED from AndroidManifest.xml:61:9
 	android:name
 		ADDED from AndroidManifest.xml:61:19
-activity#com.example.android.basicaccessibility.Emergencytype_firstaid_laceration
+activity#com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_laceration
 ADDED from AndroidManifest.xml:62:9
 	android:name
 		ADDED from AndroidManifest.xml:62:19
-activity#com.example.android.basicaccessibility.emergencytype_firstaid_cr
+activity#com.example.android.basicaccessibility.Emergency.emergencytype_firstaid_cr
 ADDED from AndroidManifest.xml:63:9
 	android:name
 		ADDED from AndroidManifest.xml:63:19

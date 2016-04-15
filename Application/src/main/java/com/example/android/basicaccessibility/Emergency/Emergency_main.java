@@ -1,10 +1,15 @@
-package com.example.android.basicaccessibility;
+package com.example.android.basicaccessibility.Emergency;
 
 import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.widget.TabHost;
+
+import com.example.android.basicaccessibility.ChattingActivity;
+import com.example.android.basicaccessibility.GallaryActivity;
+import com.example.android.basicaccessibility.Manager;
+import com.example.android.basicaccessibility.R;
 
 /* 첫번째 메인 화면 생성*/
 public class Emergency_main extends TabActivity {

@@ -55,14 +55,14 @@
         <activity android:name="com.example.android.basicaccessibility.GroupHomeActivity" />
         <activity android:name="com.example.android.basicaccessibility.GallaryActivity" />
         <activity android:name="com.example.android.basicaccessibility.ChattingActivity" />
-        <activity android:name="com.example.android.basicaccessibility.Emergency_main" />
-        <activity android:name="com.example.android.basicaccessibility.Emergencytype" />
-        <activity android:name="com.example.android.basicaccessibility.Emergency_Battery" />
-        <activity android:name="com.example.android.basicaccessibility.Emergencytype_firstaid" />
-        <activity android:name="com.example.android.basicaccessibility.Emergencytype_firstaid_fracture" />
-        <activity android:name="com.example.android.basicaccessibility.Emergencytype_firstaid_abrasion" />
-        <activity android:name="com.example.android.basicaccessibility.Emergencytype_firstaid_laceration" />
-        <activity android:name="com.example.android.basicaccessibility.emergencytype_firstaid_cr" >
+        <activity android:name="com.example.android.basicaccessibility.Emergency.Emergency_main" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency.Emergency_Battery" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_fracture" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_abrasion" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_laceration" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency.emergencytype_firstaid_cr" >
 ?
         </activity>
     </application>

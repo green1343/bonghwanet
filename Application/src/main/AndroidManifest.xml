@@ -53,14 +53,14 @@
         <activity android:name=".GroupHomeActivity"></activity>
         <activity android:name=".GallaryActivity"></activity>
         <activity android:name=".ChattingActivity"></activity>
-        <activity android:name=".Emergency_main"></activity>
-        <activity android:name=".Emergencytype"></activity>
-        <activity android:name=".Emergency_Battery"></activity>
-        <activity android:name=".Emergencytype_firstaid"></activity>
-        <activity android:name=".Emergencytype_firstaid_fracture"></activity>
-        <activity android:name=".Emergencytype_firstaid_abrasion"></activity>
-        <activity android:name=".Emergencytype_firstaid_laceration"></activity>
-        <activity android:name=".emergencytype_firstaid_cr">?</activity>
+        <activity android:name=".Emergency.Emergency_main"></activity>
+        <activity android:name=".Emergency.Emergencytype"></activity>
+        <activity android:name=".Emergency.Emergency_Battery"></activity>
+        <activity android:name=".Emergency.Emergencytype_firstaid"></activity>
+        <activity android:name=".Emergency.Emergencytype_firstaid_fracture"></activity>
+        <activity android:name=".Emergency.Emergencytype_firstaid_abrasion"></activity>
+        <activity android:name=".Emergency.Emergencytype_firstaid_laceration"></activity>
+        <activity android:name=".Emergency.emergencytype_firstaid_cr">?</activity>
     </application>
 
 </manifest>
