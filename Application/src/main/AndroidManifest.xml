@@ -56,6 +56,9 @@
         <activity android:name=".Emergency_main"></activity>
         <activity android:name=".Emergencytype"></activity>
         <activity android:name=".Emergency_Battery"></activity>
+        <activity android:name=".Emergencytype_firstaid"></activity>
+        <activity android:name=".Emergencytype_firstaid_fracture"></activity>
+        <activity android:name=".Emergencytype_firstaid_abrasion"></activity>
     </application>
 
 </manifest>
