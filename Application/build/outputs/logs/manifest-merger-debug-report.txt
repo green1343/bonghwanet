@@ -167,3 +167,7 @@ activity#com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid
 ADDED from AndroidManifest.xml:65:9
 	android:name
 		ADDED from AndroidManifest.xml:65:19
+activity#com.example.android.basicaccessibility.Emergency.Emergencytype_earthquake
+ADDED from AndroidManifest.xml:66:9
+	android:name
+		ADDED from AndroidManifest.xml:66:19

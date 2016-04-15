@@ -65,6 +65,7 @@
         <activity android:name="com.example.android.basicaccessibility.Emergency.emergencytype_firstaid_cr" />
         <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_wound" />
         <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_amputation" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_earthquake" />
     </application>
 
 </manifest>

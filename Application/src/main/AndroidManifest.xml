@@ -63,6 +63,7 @@
         <activity android:name=".Emergency.emergencytype_firstaid_cr"></activity>
         <activity android:name=".Emergency.Emergencytype_firstaid_wound"></activity>
         <activity android:name=".Emergency.Emergencytype_firstaid_amputation"></activity>
+        <activity android:name=".Emergency.Emergencytype_earthquake"></activity>
     </application>
 
 </manifest>
