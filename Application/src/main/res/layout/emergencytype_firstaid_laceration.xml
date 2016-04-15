@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="※ 찰과상"
+            android:text="※ 열상"
             android:id="@+id/textView6"
             android:layout_row="0"
             android:layout_column="1" />
@@ -26,9 +26,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="-긁힌 손상에 의해 피부의 표피층이나 진피층의 일부가 벗겨져 출혈과 삼출물이 흘러나오는 경우이다.
-                           \n -손상 직후 깨끗한 물로 상처 부위를 충분히 세척하여 이차적인 감염을 예방한다.
-                           \n\n -소독액을 이용해 상처를 소독하고 건조시킨 후 출혈 및 삼출물을 흡수할 수 있는 드레싱 제재를 이용하여 드레싱한다."
+            android:text="-피부의 진피층을 포함하여 찢어진 상처를 말한다.
+                           \n -깨끗한 거즈나 수건을 이용해 상처부위를 직접 압박하고 심장보다 높게 유지한다. 임의로 지혈제 등 이물을 상처에 바르는 것은 피해야 한다.
+                           \n -출혈이 미미하거나 없는 경우에는 깨끗한 물로 세척하여 감염을 예방한다.
+                           \n\n -두피의 경우 선택적인 경우 상처 좌우의 머리카락을 당겨 고정함으로써 봉합과 동일한 효과를 보일 수 있다."
             android:id="@+id/textView8"
             android:layout_row="1"
             android:layout_column="0" />
