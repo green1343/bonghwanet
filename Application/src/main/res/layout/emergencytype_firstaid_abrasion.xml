@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#a4a97c">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_row="0"
+        android:layout_column="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="※ 찰과상"
+            android:id="@+id/textView6"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="-긁힌 손상에 의해 피부의 표피층이나 진피층의 일부가 벗겨져 출혈과 삼출물이 흘러나오는 경우이다.
+                           \n -손상 직후 깨끗한 물로 상처 부위를 충분히 세척하여 이차적인 감염을 예방한다.
+                           \n -소독액을 이용해 상처를 소독하고 건조시킨 후 출혈 및 삼출물을 흡수할 수 있는 드레싱 제재를 이용하여 드레싱한다."
+            android:id="@+id/textView8"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+    </LinearLayout>
+
+</GridLayout>

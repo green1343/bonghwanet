@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#a4a97c">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_row="0"
+        android:layout_column="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="※ 골절"
+            android:id="@+id/textView6"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="-골절되거나 탈구된 뼈와 관절의 위/아래 관절을 동시에 고정하여 움직이지 않도록 하는 것이 중요하다.
+                           \n -골절되거나 탈구된 뼈와 관절의 위/아래 관절을 동시에 고정하여 움직이지 않도록 하는 것이 중요하다.
+                           \n -부목은 다친 부위의 뼈보다 길어야 하고 부드러운 천으로 감싸 피부에 직접 닿아 손상을 주지 않도록 해야 한다. 부목은 가볍고 단단한 재질로 된 것이 좋으나 구하기 어려운 경우에는 담요나 신문지를 접은 것, 종이 상자 등을 사용 할 수 있다.
+                           \n -관절이나 뼈의 단단한 부위가 밖으로 만져지더라도 이를 제자리로 돌리려는 시도는 하면 안된다."
+            android:id="@+id/textView8"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+    </LinearLayout>
+
+</GridLayout>
