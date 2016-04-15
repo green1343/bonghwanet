@@ -2,53 +2,53 @@
 <items version="2" >
 
     <item
-        jar="C:\wifi\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="1a57337a520bf40b9ad1e074cb780527dffa1aac">
-        <dex dex="C:\wifi\Application\build\intermediates\pre-dexed\debug\classes-887cee7e34f2c26f2259fe1592405b57acdcaba4.jar" />
-    </item>
-    <item
-        jar="C:\wifi\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.0\jars\libs\internal_impl-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="076c7d9e22cc325b8008ff799e0c06dfb8eefdf3">
-        <dex dex="C:\wifi\Application\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-e40ee4335820f54ebbe4b9635bd7cd5990783e69.jar" />
-    </item>
-    <item
-        jar="C:\wifi\Application\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="3713f30726299231eddfb206043ebb72a2519b6f">
-        <dex dex="C:\wifi\Application\build\intermediates\pre-dexed\debug\classes-dd31d4f73f091a9fbee2787c07299ef68325d85b.jar" />
-    </item>
-    <item
-        jar="C:\wifi\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="C:\wifi\Application\build\intermediates\pre-dexed\debug\classes-f49bc2457ddcbaefbf6d439aa4498a1cf69db82a.jar" />
-    </item>
-    <item
-        jar="C:\wifi\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="C:\wifi\Application\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-8296ab1d7da94464f608d7a3b5d00c88c40be8b9.jar" />
-    </item>
-    <item
-        jar="C:\Users\Administrator\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jar="A:\util\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="C:\wifi\Application\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-a27c3f024e51ace21f3d1dd13012f4f9d527fafe.jar" />
+        <dex dex="C:\Users\kyung\AndroidStudioProjects\bonghwa\Application\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-a4491c4ee9e4cc6aa194c2fac2f3e8af9d4ef901.jar" />
     </item>
     <item
-        jar="C:\wifi\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.0\jars\classes.jar"
+        jar="C:\Users\kyung\AndroidStudioProjects\bonghwa\Application\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3713f30726299231eddfb206043ebb72a2519b6f">
+        <dex dex="C:\Users\kyung\AndroidStudioProjects\bonghwa\Application\build\intermediates\pre-dexed\debug\classes-f99cd64a8d75ac780e2a56c764483cce35cc48ed.jar" />
+    </item>
+    <item
+        jar="C:\Users\kyung\AndroidStudioProjects\bonghwa\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Users\kyung\AndroidStudioProjects\bonghwa\Application\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-729f0e02bcd8d8afadaee0dbcfe7ed563070946d.jar" />
+    </item>
+    <item
+        jar="C:\Users\kyung\AndroidStudioProjects\bonghwa\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="d96886efea7cc74fbb3abd0e3b51d5638fc57be0">
-        <dex dex="C:\wifi\Application\build\intermediates\pre-dexed\debug\classes-ac7c9eebdaef36f6ec4e45258eab6e540d7be8a3.jar" />
+        <dex dex="C:\Users\kyung\AndroidStudioProjects\bonghwa\Application\build\intermediates\pre-dexed\debug\classes-6c295e345cd34a1ef2d6467cd796104d9deedeb6.jar" />
+    </item>
+    <item
+        jar="C:\Users\kyung\AndroidStudioProjects\bonghwa\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1a57337a520bf40b9ad1e074cb780527dffa1aac">
+        <dex dex="C:\Users\kyung\AndroidStudioProjects\bonghwa\Application\build\intermediates\pre-dexed\debug\classes-96754432d89a7fc120bf8eb31a494883a90d82ba.jar" />
+    </item>
+    <item
+        jar="C:\Users\kyung\AndroidStudioProjects\bonghwa\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="076c7d9e22cc325b8008ff799e0c06dfb8eefdf3">
+        <dex dex="C:\Users\kyung\AndroidStudioProjects\bonghwa\Application\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-39ff0f4e436d6f663b41a96a6ad458a13391f071.jar" />
+    </item>
+    <item
+        jar="C:\Users\kyung\AndroidStudioProjects\bonghwa\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\kyung\AndroidStudioProjects\bonghwa\Application\build\intermediates\pre-dexed\debug\classes-b3aede7608e85f296700fc070117da1e57458d47.jar" />
     </item>
 
 </items>

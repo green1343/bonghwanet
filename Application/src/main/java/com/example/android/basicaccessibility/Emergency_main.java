@@ -28,18 +28,25 @@ public class Emergency_main extends TabActivity {
         // Create an Intent to launch an Activity for the tab (to be reused)
         intent = new Intent().setClass(this, Emergencytype.class);
         // Initialize a TabSpec for each tab and add it to the TabHost
-        spec = tabHost.newTabSpec("emergencytype").setIndicator("Emergency type",
+        spec = tabHost.newTabSpec("type").setIndicator("Type",
                 res.getDrawable(R.drawable.emergancy)).setContent(intent);
         tabHost.addTab(spec);/*그룹 리스트 탭 생성*/
         // Do the same for the other tabs
         intent = new Intent().setClass(this, ChattingActivity.class);
-        spec = tabHost.newTabSpec("emergency chat").setIndicator("Emergency Chat",
+        spec = tabHost.newTabSpec("chat").setIndicator("Chat",
                 res.getDrawable(R.drawable.ic_tab)).setContent(intent);
         tabHost.addTab(spec);
+
+        intent = new Intent().setClass(this, GallaryActivity.class);
+        spec = tabHost.newTabSpec("gallary").setIndicator("Gallary",
+                res.getDrawable(R.drawable.ic_tab)).setContent(intent);
+        tabHost.addTab(spec);
+
         intent = new Intent().setClass(this, Emergency_Battery.class);
         spec = tabHost.newTabSpec("battery").setIndicator("Battery",
                 res.getDrawable(R.drawable.ic_tab)).setContent(intent);
         tabHost.addTab(spec); //Setting 탭 생성
+
         tabHost.setCurrentTab(0);
     }
 
