@@ -62,6 +62,9 @@
         <activity android:name="com.example.android.basicaccessibility.Emergencytype_firstaid_fracture" />
         <activity android:name="com.example.android.basicaccessibility.Emergencytype_firstaid_abrasion" />
         <activity android:name="com.example.android.basicaccessibility.Emergencytype_firstaid_laceration" />
+        <activity android:name="com.example.android.basicaccessibility.emergencytype_firstaid_cr" >
+?
+        </activity>
     </application>
 
 </manifest>

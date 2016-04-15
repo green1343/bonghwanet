@@ -155,3 +155,7 @@ activity#com.example.android.basicaccessibility.Emergencytype_firstaid_laceratio
 ADDED from AndroidManifest.xml:62:9
 	android:name
 		ADDED from AndroidManifest.xml:62:19
+activity#com.example.android.basicaccessibility.emergencytype_firstaid_cr
+ADDED from AndroidManifest.xml:63:9
+	android:name
+		ADDED from AndroidManifest.xml:63:19

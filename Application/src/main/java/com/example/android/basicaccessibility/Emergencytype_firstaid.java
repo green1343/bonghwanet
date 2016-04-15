@@ -12,6 +12,7 @@ public class Emergencytype_firstaid extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.emergencytype_firstaid);
 
+		findViewById(R.id.button2).setOnClickListener(onClickButton);
 		findViewById(R.id.button3).setOnClickListener(onClickButton);
 		findViewById(R.id.button4).setOnClickListener(onClickButton);
 		findViewById(R.id.button5).setOnClickListener(onClickButton);
@@ -22,9 +23,13 @@ public class Emergencytype_firstaid extends Activity {
 
 			EditText text=(EditText)findViewById(R.id.editMessage);
 			switch (v.getId()) {
-				case R.id.button3:
-					Intent intent = new Intent(getApplicationContext(), Emergencytype_firstaid_fracture.class);
+				case R.id.button2:
+					Intent intent = new Intent(getApplicationContext(), emergencytype_firstaid_cr.class);
 					startActivity(intent);
+					break;
+				case R.id.button3:
+					Intent intent1 = new Intent(getApplicationContext(), Emergencytype_firstaid_fracture.class);
+					startActivity(intent1);
 					break;
 				case R.id.button4:
 					Intent intent2 = new Intent(getApplicationContext(), Emergencytype_firstaid_abrasion.class);
