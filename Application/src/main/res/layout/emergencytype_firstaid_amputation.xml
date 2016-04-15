@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="※ 골절"
+            android:text="※ 손가락 절단"
             android:id="@+id/textView6"
             android:layout_row="0"
             android:layout_column="1" />
@@ -26,10 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="-골절되거나 탈구된 뼈와 관절의 위/아래 관절을 동시에 고정하여 움직이지 않도록 하는 것이 중요하다.
-                           \n\n -골절되거나 탈구된 뼈와 관절의 위/아래 관절을 동시에 고정하여 움직이지 않도록 하는 것이 중요하다.
-                           \n\n -부목은 다친 부위의 뼈보다 길어야 하고 부드러운 천으로 감싸 피부에 직접 닿아 손상을 주지 않도록 해야 한다. 부목은 가볍고 단단한 재질로 된 것이 좋으나 구하기 어려운 경우에는 담요나 신문지를 접은 것, 종이 상자 등을 사용 할 수 있다.
-                           \n -관절이나 뼈의 단단한 부위가 밖으로 만져지더라도 이를 제자리로 돌리려는 시도는 하면 안된다."
+            android:text="-출혈 부위를 누르고 심장보다 높이 들어주는 것으로도 효과적인 지혈이 될 수 있다.(지혈제 등은 사용 X)
+                           \n\n -절단된 손가락을 찾아 깨끗한 거즈나 손수건 등으로 싼 뒤 비닐 주머니에 넣어 밀봉하고 이를 다시 얼음이 채워진 비닐 봉지에 넣어 보관하도록 한다.(절단된 수지를 직접 얼음에 담그는 것은 피해야 한다.)"
             android:id="@+id/textView8"
             android:layout_row="1"
             android:layout_column="0" />

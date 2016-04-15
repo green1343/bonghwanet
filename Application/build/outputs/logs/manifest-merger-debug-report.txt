@@ -159,3 +159,11 @@ activity#com.example.android.basicaccessibility.Emergency.emergencytype_firstaid
 ADDED from AndroidManifest.xml:63:9
 	android:name
 		ADDED from AndroidManifest.xml:63:19
+activity#com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_wound
+ADDED from AndroidManifest.xml:64:9
+	android:name
+		ADDED from AndroidManifest.xml:64:19
+activity#com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_amputation
+ADDED from AndroidManifest.xml:65:9
+	android:name
+		ADDED from AndroidManifest.xml:65:19

@@ -92,7 +92,7 @@
 
     <ListView
         android:layout_width="wrap_content"
-        android:layout_height="290dp"
+        android:layout_height="250dp"
         android:id="@+id/listView"
         android:layout_below="@+id/textView2"
         android:layout_columnSpan="2"
@@ -100,4 +100,4 @@
         android:layout_column="0"
         android:focusable="true" />
 
-</GridLayout><!-- From: file:/C:/Users/kyung/AndroidStudioProjects/bonghwa/Application/src/main/res/layout/grouplist.xml -->
+</GridLayout><!-- From: file:/C:/Users/asd/.AndroidStudio1.5/AndroidProject/bonghwanet/Application/src/main/res/layout/grouplist.xml -->

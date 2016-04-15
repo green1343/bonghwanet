@@ -18,6 +18,8 @@ public class Emergencytype_firstaid extends Activity {
 		findViewById(R.id.button3).setOnClickListener(onClickButton);
 		findViewById(R.id.button4).setOnClickListener(onClickButton);
 		findViewById(R.id.button5).setOnClickListener(onClickButton);
+		findViewById(R.id.button6).setOnClickListener(onClickButton);
+		findViewById(R.id.button7).setOnClickListener(onClickButton);
 	}
 
 	Button.OnClickListener onClickButton = new View.OnClickListener() {
@@ -40,6 +42,14 @@ public class Emergencytype_firstaid extends Activity {
 				case R.id.button5:
 					Intent intent3 = new Intent(getApplicationContext(), Emergencytype_firstaid_laceration.class);
 					startActivity(intent3);
+					break;
+				case R.id.button6:
+					Intent intent4 = new Intent(getApplicationContext(), Emergencytype_firstaid_wound.class);
+					startActivity(intent4);
+					break;
+				case R.id.button7:
+					Intent intent5 = new Intent(getApplicationContext(), Emergencytype_firstaid_amputation.class);
+					startActivity(intent5);
 					break;
 				default:
 					break;

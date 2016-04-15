@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="※ 골절"
+            android:text="※ 관통상"
             android:id="@+id/textView6"
             android:layout_row="0"
             android:layout_column="1" />
@@ -26,10 +26,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="-골절되거나 탈구된 뼈와 관절의 위/아래 관절을 동시에 고정하여 움직이지 않도록 하는 것이 중요하다.
-                           \n\n -골절되거나 탈구된 뼈와 관절의 위/아래 관절을 동시에 고정하여 움직이지 않도록 하는 것이 중요하다.
-                           \n\n -부목은 다친 부위의 뼈보다 길어야 하고 부드러운 천으로 감싸 피부에 직접 닿아 손상을 주지 않도록 해야 한다. 부목은 가볍고 단단한 재질로 된 것이 좋으나 구하기 어려운 경우에는 담요나 신문지를 접은 것, 종이 상자 등을 사용 할 수 있다.
-                           \n -관절이나 뼈의 단단한 부위가 밖으로 만져지더라도 이를 제자리로 돌리려는 시도는 하면 안된다."
+            android:text="-뾰족한 물질이나 총상에 의해 뚫린 상처를 말한다.
+                           \n -뚫어진 피부 입구가 좁아도 내부 구조물의 손상 정도를 파악하기 힘들고 이물질이 조직 깊이 침범하기 때문에 감염의 위험이 높다.
+                           \n\n -신체의 어느 곳이든 관통상이 있는 경우 일단 이물이 박혀 있는 상태라면 이물을 제거하지 않고 추가적인 손상을 예방하기 위해 체외에 노출된 부분을 고정한다."
             android:id="@+id/textView8"
             android:layout_row="1"
             android:layout_column="0" />
