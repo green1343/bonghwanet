@@ -97,6 +97,14 @@ public enum WiFiNetwork {
         }
     };
 
+    public boolean isServer(){
+        return m_server != null;
+    }
+
+    public HashMap<Integer, Pair<NetworkSpeaker, NetworkListener>> getAllThreads(){
+        return m_threads;
+    }
+
     private void clearAll(){
 
         m_index = 0;
@@ -146,14 +154,24 @@ public enum WiFiNetwork {
         m_client.start();
     }
 
-    public void write(Packet_Command p, int index)
+    public synchronized void killThread(int index){
+
+        if(m_threads.get(index) == null)
+            return;
+
+        m_threads.get(index).first.setKill();
+        m_threads.get(index).second.setKill();
+        m_threads.remove(index);
+    }
+
+    public synchronized void write(Packet_Command p, int index)
     {
         Message msg = Message.obtain(m_handler, 0 , 1 , 0);
         msg.obj = new Pair<Integer, Packet_Command>(index, p);
         m_handler.sendMessage(msg);
     }
 
-    public void writeAll(Packet_Command p)
+    public synchronized void writeAll(Packet_Command p)
     {
         for(Integer index : m_threads.keySet()){
             Message msg = Message.obtain(m_handler, 0 , 1 , 0);
@@ -385,7 +403,12 @@ public enum WiFiNetwork {
             {
                 try {
                     byte stream[] = new byte[BUFFERSIZE];
-                    m_inStream.read(stream);
+                    int result = m_inStream.read(stream);
+                    if(result == -1){
+                        killThread(m_index);
+                        break;
+                    }
+
                     Packet_Command cmd = new Packet_Command(stream); // new
 
                     switch (cmd.getCommand())

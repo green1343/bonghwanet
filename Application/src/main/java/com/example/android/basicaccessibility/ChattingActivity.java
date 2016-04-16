@@ -82,6 +82,8 @@ public class ChattingActivity extends Activity {
 						WiFiNetwork.INSTANCE.writeAll(p);
 
 						text.setText("");
+
+						Manager.INSTANCE.setTimerZero();
 						break;
 				}
 			}

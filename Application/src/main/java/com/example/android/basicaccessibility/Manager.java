@@ -576,7 +576,7 @@ public enum Manager {
 
         if(m_curGroup == EMERGENCY) {
             for (ScanResult r : results) {
-                if (r.SSID.compareTo(EMERGENCY_SSID) == 0) {
+                if (r.SSID.startsWith(EMERGENCY_SSID)) {
                     ssid = r.SSID;
                     bssid = r.BSSID;
 
@@ -674,13 +674,17 @@ public enum Manager {
     public void onConnectEnd(){
         if(m_curGroup == EMERGENCY){
             m_timerThread = new MyThread() {
-                int r = m_random.nextInt(10) + 10;
+                int r = getRandomInt(10, 20);
                 public void run() {
                     while (!Thread.interrupted() && running) {
                         try {
                             Thread.sleep(1000);
-                            ++data;
-                            if(data > r) {
+
+                            if(WiFiNetwork.INSTANCE.isServer() && WiFiNetwork.INSTANCE.getAllThreads().size() >= 1)
+                                continue;
+
+                            setData(getData() + 1);
+                            if(getData() > r) {
                                 connect(m_curGroup);
                                 break;
                             }
@@ -691,6 +695,15 @@ public enum Manager {
             };
             m_timerThread.start();
         }
+    }
+
+    public void setTimerZero(){
+        if(m_timerThread != null)
+            m_timerThread.setData(0);
+    }
+
+    public synchronized int getRandomInt(int s, int e){
+        return m_random.nextInt(e - s) + s;
     }
 
     public void uploadFile(String path){
