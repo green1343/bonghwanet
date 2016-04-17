@@ -171,3 +171,19 @@ activity#com.example.android.basicaccessibility.Emergency.Emergencytype_earthqua
 ADDED from AndroidManifest.xml:66:9
 	android:name
 		ADDED from AndroidManifest.xml:66:19
+activity#com.example.android.basicaccessibility.Emergency.Emergencytype_surge
+ADDED from AndroidManifest.xml:67:9
+	android:name
+		ADDED from AndroidManifest.xml:67:19
+activity#com.example.android.basicaccessibility.Emergency.Emergencytype_typhoon
+ADDED from AndroidManifest.xml:68:9
+	android:name
+		ADDED from AndroidManifest.xml:68:19
+activity#com.example.android.basicaccessibility.Emergency.Emergencytype_volcano
+ADDED from AndroidManifest.xml:69:9
+	android:name
+		ADDED from AndroidManifest.xml:69:19
+activity#com.example.android.basicaccessibility.Emergency.Emergencytype_war
+ADDED from AndroidManifest.xml:70:9
+	android:name
+		ADDED from AndroidManifest.xml:70:19

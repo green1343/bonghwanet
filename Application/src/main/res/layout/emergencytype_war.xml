@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#a4a97c">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="※ 전쟁"
+                android:id="@+id/textView7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="-국가와 국가, 또는 교전(交戰) 단체 사이에 무력을 사용하여 싸움을 말하는 것입니다.
+                       \n\n 행동요령
+                       \n -대피소 위치확인하기(지하철역, 지하주차장, 대형건물 지하실 등 대피소 표지판이 부착되어 있는 지하시설)
+                       \n\n -전시 필요한 물자 준비하기(비상식량,비상약,랜턴 등).
+                       \n\n -방독면 착용요령 숙달하기(화생방 전 상황에 대비하기 위해)"
+                android:id="@+id/textView9" />
+        </LinearLayout>
+    </ScrollView>
+
+</GridLayout>

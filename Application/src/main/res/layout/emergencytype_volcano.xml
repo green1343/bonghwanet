@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#a4a97c">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="※ 화산폭발"
+                android:id="@+id/textView7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="-화에서 대기나 지표면으로 고체, 유체와 기체 형태의 물질이 분출되는 과정을 말합니다.
+                       \n 행동요령
+                       \n -만성기관지염이나 폐기종, 천식일 경우는 실내에 머무르고, 불필요하게 화산재에 노출되지 않도록 한다.
+                       \n\n -문이나 창문을 닫고, 물을 묻힌 수건을 문의 빈틈이나 환기구에 둔다.
+                       \n -실외에 있을 경우, 피난 시설(차나 건물 등)을 찾는다.
+                       \n\n -각막에 손상의 위험이 있으므로 콘택트렌즈(contact lens)를 착용하지 않는다."
+                android:id="@+id/textView9" />
+        </LinearLayout>
+    </ScrollView>
+
+</GridLayout>

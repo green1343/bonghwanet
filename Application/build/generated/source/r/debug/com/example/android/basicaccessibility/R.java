@@ -376,14 +376,18 @@ containing a value of this type.
         public static final int emergencytype_firstaid_fracture=0x7f030009;
         public static final int emergencytype_firstaid_laceration=0x7f03000a;
         public static final int emergencytype_firstaid_wound=0x7f03000b;
-        public static final int gallery=0x7f03000c;
-        public static final int grouphome=0x7f03000d;
-        public static final int grouplist=0x7f03000e;
-        public static final int groupmain=0x7f03000f;
-        public static final int list_item=0x7f030010;
-        public static final int list_item_chatting=0x7f030011;
-        public static final int main=0x7f030012;
-        public static final int newgrouplist=0x7f030013;
+        public static final int emergencytype_surge=0x7f03000c;
+        public static final int emergencytype_typhoon=0x7f03000d;
+        public static final int emergencytype_volcano=0x7f03000e;
+        public static final int emergencytype_war=0x7f03000f;
+        public static final int gallery=0x7f030010;
+        public static final int grouphome=0x7f030011;
+        public static final int grouplist=0x7f030012;
+        public static final int groupmain=0x7f030013;
+        public static final int list_item=0x7f030014;
+        public static final int list_item_chatting=0x7f030015;
+        public static final int main=0x7f030016;
+        public static final int newgrouplist=0x7f030017;
     }
     public static final class menu {
         public static final int menu_main=0x7f080000;

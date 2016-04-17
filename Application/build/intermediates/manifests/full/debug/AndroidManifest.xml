@@ -66,6 +66,10 @@
         <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_wound" />
         <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_amputation" />
         <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_earthquake" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_surge" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_typhoon" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_volcano" />
+        <activity android:name="com.example.android.basicaccessibility.Emergency.Emergencytype_war" />
     </application>
 
 </manifest>

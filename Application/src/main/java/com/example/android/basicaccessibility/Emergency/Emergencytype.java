@@ -15,6 +15,10 @@ public class Emergencytype extends Activity {
 		setContentView(R.layout.emergencytype);
 
 		findViewById(R.id.button2).setOnClickListener(onClickButton);
+		findViewById(R.id.button3).setOnClickListener(onClickButton);
+		findViewById(R.id.button4).setOnClickListener(onClickButton);
+		findViewById(R.id.button5).setOnClickListener(onClickButton);
+		findViewById(R.id.button6).setOnClickListener(onClickButton);
 		findViewById(R.id.button7).setOnClickListener(onClickButton);
 	}
 
@@ -27,9 +31,25 @@ public class Emergencytype extends Activity {
 					Intent intent = new Intent(getApplicationContext(), Emergencytype_earthquake.class);
 					startActivity(intent);
 					break;
-				case R.id.button7:
-					Intent intent1 = new Intent(getApplicationContext(), Emergencytype_firstaid.class);
+				case R.id.button3:
+					Intent intent1 = new Intent(getApplicationContext(), Emergencytype_surge.class);
 					startActivity(intent1);
+					break;
+				case R.id.button4:
+					Intent intent2 = new Intent(getApplicationContext(), Emergencytype_typhoon.class);
+					startActivity(intent2);
+					break;
+				case R.id.button5:
+					Intent intent3 = new Intent(getApplicationContext(), Emergencytype_volcano.class);
+					startActivity(intent3);
+					break;
+				case R.id.button6:
+					Intent intent4 = new Intent(getApplicationContext(), Emergencytype_war.class);
+					startActivity(intent4);
+					break;
+				case R.id.button7:
+					Intent intent5 = new Intent(getApplicationContext(), Emergencytype_firstaid.class);
+					startActivity(intent5);
 					break;
 				default:
 					break;
