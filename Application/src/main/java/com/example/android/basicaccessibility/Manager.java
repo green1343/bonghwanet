@@ -1,24 +1,37 @@
 package com.example.android.basicaccessibility;
 
+import android.Manifest;
+import android.app.Activity;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.location.Criteria;
 import android.net.DhcpInfo;
 import android.net.Uri;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.ContactsContract;
+import android.support.v4.content.ContextCompat;
+import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.view.View;
+import android.widget.Toast;
 
 
 import com.example.android.common.logger.Log;
@@ -259,7 +272,7 @@ public enum Manager {
         return m_texts.get(group);
     }
 
-    List<TextInfo> getText(){
+    public List<TextInfo> getText(){
         return m_texts.get(m_curGroup);
     }
 
@@ -751,50 +764,148 @@ public enum Manager {
     }
 
 
+    LocationManager m_locManager = null;
+    Location m_location = null;
 
-        /**
-         * 위도와 경도 기반으로 주소를 리턴하는 메서드
-         */
-        public String getAddress(double lat, double lng, Location location) {      //gps_주소찾기.
-            String address = null;
+    public void setupGPS(){
 
+        // Acquire a reference to the system Location Manager
+        m_locManager = (LocationManager) m_context.getSystemService(Context.LOCATION_SERVICE);
 
-            lat = location.getLatitude();
-            lng = location.getLongitude();
+        // GPS 프로바이더 사용가능여부
+        boolean isGPSEnabled = m_locManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        // 네트워크 프로바이더 사용가능여부
+        boolean isNetworkEnabled = m_locManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
+        Log.d("Main", "isGPSEnabled="+ isGPSEnabled);
+        Log.d("Main", "isNetworkEnabled="+ isNetworkEnabled);
 
-            //위치정보를 활용하기 위한 구글 API 객체
-            Geocoder geocoder = new Geocoder(m_context, Locale.getDefault());     //에러시, 여기확인
-
-            //주소 목록을 담기 위한 HashMap
-            List<Address> list = null;
-
-            try {
-                list = geocoder.getFromLocation(lat, lng, 1);
-            } catch (Exception e) {
-                e.printStackTrace();
+        LocationListener locationListener = new LocationListener() {
+            public void onLocationChanged(Location location) {
+                m_location = location;
             }
 
-            if (list == null) {
-                Log.e("getAddress", "주소 데이터 얻기 실패");
-                return null;
-            }
-            if (list.size() > 0) {
-                Address addr = list.get(0);
-                address = addr.getCountryName() + " "    //국가이름
-                        + addr.getAdminArea() + " "      //도(경기도, 충청남도...) / 서울은 null값
-                        // + addr.getPostalCode() + " "    //우편번호
-                        + addr.getLocality() + " "       //시 이름
-                        + addr.getThoroughfare() + " "   //동이름
-                        + addr.getFeatureName();          //번지
+            public void onStatusChanged(String provider, int status, Bundle extras) {
             }
 
-            return address;
+            public void onProviderEnabled(String provider) {
+            }
+
+            public void onProviderDisabled(String provider) {
+            }
+        };
+
+        // Register the listener with the Location Manager to receive location updates
+        m_locManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+        m_locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+    }
+
+    /**
+     * 위도와 경도 기반으로 주소를 리턴하는 메서드
+     */
+    public String getGPSAddress() {      //gps_주소찾기.
+        if(m_location == null)
+            return null;
+
+        String address = null;
+
+        double lat = m_location.getLatitude();
+        double lng = m_location.getLongitude();
 
 
+        //위치정보를 활용하기 위한 구글 API 객체
+        Geocoder geocoder = new Geocoder(m_context, Locale.getDefault());     //에러시, 여기확인
+
+        //주소 목록을 담기 위한 HashMap
+        List<Address> list = null;
+
+        try {
+            list = geocoder.getFromLocation(lat, lng, 1);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
+        if (list == null) {
+            Log.e("getAddress", "주소 데이터 얻기 실패");
+            return null;
+        }
+        if (list.size() > 0) {
+            Address addr = list.get(0);
+            address = addr.getCountryName() + " "    //국가이름
+                    + addr.getAdminArea() + " "      //도(경기도, 충청남도...) / 서울은 null값
+                    // + addr.getPostalCode() + " "    //우편번호
+                    + addr.getLocality() + " "       //시 이름
+                    + addr.getThoroughfare() + " "   //동이름
+                    + addr.getFeatureName();          //번지
+        }
 
+        return address;
     }
+
+    public void sendSMS(String smsNumber, String smsText){
+        PendingIntent sentIntent = PendingIntent.getBroadcast(m_context, 0, new Intent("SMS_SENT_ACTION"), 0);
+        PendingIntent deliveredIntent = PendingIntent.getBroadcast(m_context, 0, new Intent("SMS_DELIVERED_ACTION"), 0);
+
+        /**
+         * SMS가 발송될때 실행
+         * When the SMS massage has been sent
+         */
+        m_context.registerReceiver(new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                switch(getResultCode()){
+                    case Activity.RESULT_OK:
+                        // 전송 성공
+                        Toast.makeText(m_context, "전송 완료", Toast.LENGTH_SHORT).show();
+                        break;
+                    case SmsManager.RESULT_ERROR_GENERIC_FAILURE:
+                        // 전송 실패
+                        Toast.makeText(m_context, "전송 실패", Toast.LENGTH_SHORT).show();
+                        break;
+                    case SmsManager.RESULT_ERROR_NO_SERVICE:
+                        // 서비스 지역 아님
+                        Toast.makeText(m_context, "서비스 지역이 아닙니다", Toast.LENGTH_SHORT).show();
+                        break;
+                    case SmsManager.RESULT_ERROR_RADIO_OFF:
+                        // 무선 꺼짐
+                        Toast.makeText(m_context, "무선(Radio)가 꺼져있습니다", Toast.LENGTH_SHORT).show();
+                        break;
+                    case SmsManager.RESULT_ERROR_NULL_PDU:
+                        // PDU 실패
+                        Toast.makeText(m_context, "PDU Null", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+        }, new IntentFilter("SMS_SENT_ACTION"));
+
+        /**
+         * SMS가 도착했을때 실행
+         * When the SMS massage has been delivered
+         */
+        m_context.registerReceiver(new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                switch (getResultCode()){
+                    case Activity.RESULT_OK:
+                        // 도착 완료
+                        Toast.makeText(m_context, "SMS 도착 완료", Toast.LENGTH_SHORT).show();
+                        break;
+                    case Activity.RESULT_CANCELED:
+                        // 도착 안됨
+                        Toast.makeText(m_context, "SMS 도착 실패", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+        }, new IntentFilter("SMS_DELIVERED_ACTION"));
+
+        SmsManager mSmsManager = SmsManager.getDefault();
+        mSmsManager.sendTextMessage(smsNumber, null, smsText, sentIntent, deliveredIntent);
+    }
+
+    public void sendEmergencySMS(String text){
+        //sendSMS("119", text);
+        sendSMS("00000000000", text);
+    }
+}
 
 

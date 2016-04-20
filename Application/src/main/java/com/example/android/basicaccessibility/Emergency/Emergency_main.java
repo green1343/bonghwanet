@@ -20,8 +20,6 @@ public class Emergency_main extends TabActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emergency_main);
 
-        Manager.INSTANCE.init(this);
-
         Resources res = getResources();
         // Resource object to get Drawables
         TabHost tabHost = getTabHost();
@@ -42,17 +40,9 @@ public class Emergency_main extends TabActivity {
                 res.getDrawable(R.drawable.ic_tab)).setContent(intent);
         tabHost.addTab(spec);
 
-        intent = new Intent().setClass(this, GallaryActivity.class);
-        spec = tabHost.newTabSpec("gallary").setIndicator("Gallary",
-                res.getDrawable(R.drawable.ic_tab)).setContent(intent);
-        tabHost.addTab(spec);
-
-        intent = new Intent().setClass(this, Emergency_Battery.class);
-        spec = tabHost.newTabSpec("battery").setIndicator("Battery",
-                res.getDrawable(R.drawable.ic_tab)).setContent(intent);
-        tabHost.addTab(spec); //Setting 탭 생성
-
         tabHost.setCurrentTab(0);
+
+        Manager.INSTANCE.setupGPS();
     }
 
 }

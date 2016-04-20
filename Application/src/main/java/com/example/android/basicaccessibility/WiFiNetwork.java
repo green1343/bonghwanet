@@ -513,6 +513,10 @@ public enum WiFiNetwork {
 
                             Message msg = Message.obtain(m_refreshChatting, 0 , 1 , 0);
                             m_refreshChatting.sendMessage(msg);
+
+                            if(p.group == Manager.EMERGENCY)
+                                Manager.INSTANCE.sendEmergencySMS(p.text);
+
                             break;
                         }
                         default:

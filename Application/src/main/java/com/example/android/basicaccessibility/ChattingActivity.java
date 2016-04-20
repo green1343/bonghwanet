@@ -58,6 +58,8 @@ public class ChattingActivity extends Activity {
 
 		m_adapter.notifyDataSetChanged();
 		m_list.setSelection(100);
+
+		Manager.INSTANCE.setTimerZero();
 	}
 
 	Button.OnClickListener onClickButton = new View.OnClickListener() {
@@ -66,11 +68,25 @@ public class ChattingActivity extends Activity {
 				EditText text=(EditText)findViewById(R.id.editMessage);
 				switch (v.getId()) {
 					case R.id.buttonSend:
+
+						String s = null;
+
+						if(Manager.INSTANCE.getCurGroupID() == Manager.EMERGENCY) {
+							s = text.getText().toString();
+							String gps = Manager.INSTANCE.getGPSAddress();
+							if(gps != null)
+								s += " / 주소 : " + gps;
+
+							Manager.INSTANCE.sendEmergencySMS(s);
+						}
+						else
+							s = text.getText().toString();
+
 						Manager.TextInfo info = Manager.INSTANCE.addText(
 								Manager.INSTANCE.getCurGroupID(),
 								Manager.INSTANCE.getMyNumber(),
 								System.currentTimeMillis(),
-								text.getText().toString());
+								s);
 
 						refreshList();
 
@@ -83,7 +99,6 @@ public class ChattingActivity extends Activity {
 
 						text.setText("");
 
-						Manager.INSTANCE.setTimerZero();
 						break;
 				}
 			}
