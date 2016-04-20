@@ -14,7 +14,14 @@ import android.os.Handler;
 import android.os.Message;
 import android.provider.ContactsContract;
 import android.telephony.TelephonyManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 
+
+import com.example.android.common.logger.Log;
 import com.example.android.packet.Packet_Sync;
 
 import java.io.FileInputStream;
@@ -22,6 +29,7 @@ import java.io.FileOutputStream;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.StringTokenizer;
@@ -741,4 +749,46 @@ public enum Manager {
         p.files.put(file, new FileInfo(false, ioFile.lastModified()));
         WiFiNetwork.INSTANCE.writeAll(p);
     }
+
+
+    /** 위도와 경도 기반으로 주소를 리턴하는 메서드*/
+    public String getAddress(double lat, double lng){      //gps_주소찾기.
+        String address = null;
+
+        //위치정보를 활용하기 위한 구글 API 객체
+        Geocoder geocoder = new Geocoder(m_context, Locale.getDefault());     //에러시, 여기확인
+
+        //주소 목록을 담기 위한 HashMap
+        List<Address> list = null;
+
+        try{
+            list = geocoder.getFromLocation(lat, lng, 1);
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+
+        if(list == null){
+            Log.e("getAddress", "주소 데이터 얻기 실패");
+            return null;
+        }
+        if(list.size() > 0){
+            Address addr = list.get(0);
+            address = addr.getCountryName() + " "    //국가이름
+                    + addr.getAdminArea() + " "      //도(경기도, 충청남도...) / 서울은 null값
+                   // + addr.getPostalCode() + " "    //우편번호
+                    + addr.getLocality() + " "       //시 이름
+                    + addr.getThoroughfare() + " "   //동이름
+                    + addr.getFeatureName();          //번지
+        }
+
+        return address;
+
+
+    }
+
+
+
+
+
+
 }
