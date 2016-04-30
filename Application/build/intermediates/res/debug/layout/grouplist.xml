@@ -66,7 +66,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_row="2"
-        android:layout_column="2" />
+        android:layout_column="1" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -100,4 +100,4 @@
         android:layout_column="0"
         android:focusable="true" />
 
-</GridLayout><!-- From: file:/C:/Users/asd/.AndroidStudio1.5/AndroidProject/bonghwanet/Application/src/main/res/layout/grouplist.xml -->
+</GridLayout><!-- From: file:/C:/Users/kyung/AndroidStudioProjects/bonghwa/Application/src/main/res/layout/grouplist.xml -->

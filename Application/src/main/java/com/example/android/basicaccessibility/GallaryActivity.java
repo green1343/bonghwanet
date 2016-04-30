@@ -10,15 +10,19 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Locale;
 import java.lang.String;
 
@@ -35,11 +39,9 @@ public class GallaryActivity extends Activity {
 
 		findViewById(R.id.buttonCreate1).setOnClickListener(onClickButton);
 		findViewById(R.id.buttonCreate2).setOnClickListener(onClickButton);
-	}
 
-	protected void onResume() {
-		super.onResume();
-
+		gAdapter.notifyDataSetChanged();
+		gv.setAdapter(gAdapter);
 	}
 
 	Button.OnClickListener onClickButton = new View.OnClickListener() {
@@ -52,7 +54,6 @@ public class GallaryActivity extends Activity {
 					break;
 				case R.id.buttonCreate2:
 					uploadCameraFile();
-					onResume();
 					break;
 				default:
 					break;
