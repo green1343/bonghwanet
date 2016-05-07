@@ -28,20 +28,23 @@ import java.lang.String;
 
 public class GallaryActivity extends Activity {
 
+	GridView m_gv = null;
+	MyGridAdapter m_gAdapter = null;
+
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.gallery);
 		setTitle("갤러리 사진");
 
-		final GridView gv = (GridView) findViewById(R.id.gridView1);
-		MyGridAdapter gAdapter = new MyGridAdapter(this);
-		gv.setAdapter(gAdapter);
+		m_gv = (GridView) findViewById(R.id.gridView1);
+		m_gAdapter = new MyGridAdapter(this);
+		m_gv.setAdapter(m_gAdapter);
 
 		findViewById(R.id.buttonCreate1).setOnClickListener(onClickButton);
 		findViewById(R.id.buttonCreate2).setOnClickListener(onClickButton);
 
-		gAdapter.notifyDataSetChanged();
-		gv.setAdapter(gAdapter);
+		m_gAdapter.notifyDataSetChanged();
+		m_gv.setAdapter(m_gAdapter);
 	}
 
 	Button.OnClickListener onClickButton = new View.OnClickListener() {
@@ -64,11 +67,19 @@ public class GallaryActivity extends Activity {
 	public class MyGridAdapter extends BaseAdapter {
 		Context context;
 
-		String sysDir = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroupID());
-		File[] sysFiles = (new File(sysDir).listFiles());
+		String sysDir = null;
+		File[] sysFiles = null;
+
+		public void refreshList(){
+			sysDir = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroupID()) + "/Pictures";
+			sysFiles = (new File(sysDir).listFiles());
+
+			notifyDataSetChanged();
+		}
 
 		public MyGridAdapter(Context c) {
 			context = c;
+			refreshList();
 		}
 
 		public int getCount() {
@@ -125,13 +136,6 @@ public class GallaryActivity extends Activity {
 		startActivityForResult(intent, REQ_FILE_SELECT);
 	}
 
-	void uploadFil(){
-		Intent intent = new Intent();
-		intent.setAction(Intent.ACTION_GET_CONTENT);
-		intent.setType("*/*");
-		startActivityForResult(intent, REQ_FILE_SELECT);
-	}
-
 	public String getDateString()
 	{
 		SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss", Locale.KOREA);
@@ -160,7 +164,8 @@ public class GallaryActivity extends Activity {
 		if(data == null)
 			return;
 
-		Manager.INSTANCE.uploadFile(getPath(data.getData()));
+		Manager.INSTANCE.uploadPicture(getPath(data.getData()));
+		m_gAdapter.refreshList();
 
         /*if(resultCode == RESULT_OK) {
 

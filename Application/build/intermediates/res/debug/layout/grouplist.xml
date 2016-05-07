@@ -88,7 +88,7 @@
         android:text="Emergency"
         android:id="@+id/buttonEmergency"
         android:layout_row="8"
-        android:layout_column="1" />
+        android:layout_column="0" />
 
     <ListView
         android:layout_width="wrap_content"
@@ -100,4 +100,4 @@
         android:layout_column="0"
         android:focusable="true" />
 
-</GridLayout><!-- From: file:/C:/Users/kyung/AndroidStudioProjects/bonghwa/Application/src/main/res/layout/grouplist.xml -->
+</GridLayout><!-- From: file:/C:/bonghwa/Application/src/main/res/layout/grouplist.xml -->

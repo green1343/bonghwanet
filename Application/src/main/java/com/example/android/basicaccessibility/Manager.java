@@ -523,7 +523,7 @@ public enum Manager {
         if(m_groups.containsKey(id)){
             String storage = Environment.getExternalStorageState();
             if ( storage.equals(Environment.MEDIA_MOUNTED))
-                return getRoot() + "/" + m_groups.get(id).name + "_" + id + "/Pictures";
+                return getRoot() + "/" + m_groups.get(id).name + "_" + id;
             else
                 return null;
         }
@@ -535,7 +535,7 @@ public enum Manager {
         if(m_groups.containsKey(id)){
             String storage = Environment.getExternalStorageState();
             if ( storage.equals(Environment.MEDIA_MOUNTED))
-                return "" + m_groups.get(id).name + "_" + id + "/Pictures";
+                return "" + m_groups.get(id).name + "_" + id;
             else
                 return null;
         }
@@ -735,6 +735,18 @@ public enum Manager {
             filename = st.nextToken();
 
         String newPath = getRealGroupPath(getCurGroupID()) + "/" + filename;
+        copyFile(path, newPath);
+        sendSync(newPath);
+    }
+
+    public void uploadPicture(String path){
+
+        StringTokenizer st = new StringTokenizer(path, "/");
+        String filename = null;
+        while(st.hasMoreTokens())
+            filename = st.nextToken();
+
+        String newPath = getRealGroupPath(getCurGroupID()) + "/Pictures/" + filename;
         copyFile(path, newPath);
         sendSync(newPath);
     }
