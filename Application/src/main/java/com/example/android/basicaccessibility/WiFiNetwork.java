@@ -27,6 +27,7 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 /**
  * Created by 초록 on 2015-10-05.
@@ -100,6 +101,7 @@ public enum WiFiNetwork {
     public boolean isServer(){
         return m_server != null;
     }
+    public boolean isClient(){ return !isServer(); }
 
     public HashMap<Integer, Pair<NetworkSpeaker, NetworkListener>> getAllThreads(){
         return m_threads;
@@ -406,6 +408,8 @@ public enum WiFiNetwork {
                     int result = m_inStream.read(stream);
                     if(result == -1){
                         killThread(m_index);
+                        if(isClient())
+                            Manager.INSTANCE.createClientThread();
                         break;
                     }
 
@@ -458,7 +462,18 @@ public enum WiFiNetwork {
                             break;
                         }
                         case PACKET.PACKET_SYNC: {
+
                             Packet_Sync p = new Packet_Sync(stream);
+
+                            LinkedList<Manager.TextInfo> texts = Manager.INSTANCE.getAllTexts().get(p.group);
+                            for(Manager.TextInfo t : texts) {
+                                Packet_Share_Text reply = new Packet_Share_Text();
+                                reply.group = p.group;
+                                reply.text = t.text;
+                                reply.time = t.time;
+                                reply.uploader = t.uploader;
+                                write(reply, m_index);
+                            }
 
                             HashMap<String, Manager.FileInfo> files = Manager.INSTANCE.getAllFiles().get(p.group);
                             if(files == null)
@@ -501,6 +516,9 @@ public enum WiFiNetwork {
                                 }
 
                                 bos.flush();
+
+                                GallaryActivity.refreshList();
+                                FileActivity.refreshList();
                             }
                             catch(IOException e){
                             }
@@ -513,9 +531,6 @@ public enum WiFiNetwork {
 
                             Message msg = Message.obtain(m_refreshChatting, 0 , 1 , 0);
                             m_refreshChatting.sendMessage(msg);
-
-                            if(p.group == Manager.EMERGENCY)
-                                Manager.INSTANCE.sendEmergencySMS(p.text);
 
                             break;
                         }

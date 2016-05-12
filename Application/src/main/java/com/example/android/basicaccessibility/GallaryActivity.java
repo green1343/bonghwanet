@@ -10,26 +10,22 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.ListView;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
-import java.util.Comparator;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Locale;
 import java.lang.String;
 
 public class GallaryActivity extends Activity {
 
 	GridView m_gv = null;
-	MyGridAdapter m_gAdapter = null;
+	static MyGridAdapter m_adapter = null;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -37,14 +33,14 @@ public class GallaryActivity extends Activity {
 		setTitle("갤러리 사진");
 
 		m_gv = (GridView) findViewById(R.id.gridView1);
-		m_gAdapter = new MyGridAdapter(this);
-		m_gv.setAdapter(m_gAdapter);
+		m_adapter = new MyGridAdapter(this);
+		m_gv.setAdapter(m_adapter);
 
 		findViewById(R.id.buttonCreate1).setOnClickListener(onClickButton);
 		findViewById(R.id.buttonCreate2).setOnClickListener(onClickButton);
 
-		m_gAdapter.notifyDataSetChanged();
-		m_gv.setAdapter(m_gAdapter);
+		m_adapter.notifyDataSetChanged();
+		m_gv.setAdapter(m_adapter);
 	}
 
 	Button.OnClickListener onClickButton = new View.OnClickListener() {
@@ -63,6 +59,13 @@ public class GallaryActivity extends Activity {
 			}
 		}
 	};
+
+	public static void refreshList(){
+		if(m_adapter == null)
+			return;
+
+		m_adapter.refreshList();
+	}
 
 	public class MyGridAdapter extends BaseAdapter {
 		Context context;
@@ -83,6 +86,9 @@ public class GallaryActivity extends Activity {
 		}
 
 		public int getCount() {
+			if(sysFiles == null)
+				return 0;
+
 			return sysFiles.length;
 			//return posterID.length;
 		}
@@ -165,7 +171,7 @@ public class GallaryActivity extends Activity {
 			return;
 
 		Manager.INSTANCE.uploadPicture(getPath(data.getData()));
-		m_gAdapter.refreshList();
+		refreshList();
 
         /*if(resultCode == RESULT_OK) {
 

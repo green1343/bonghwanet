@@ -14,11 +14,12 @@ import android.widget.*;
 
 
 public class FileActivity extends Activity implements AdapterView.OnItemClickListener {
-	String mRoot = "";
-	String mPath = "";
-	TextView mTextMsg;
-	ListView mListFile;
-	ArrayList<String> mArFile;
+
+	static String mRoot = null;
+	static String mPath = null;
+	static TextView mTextMsg = null;
+	static ListView mListFile = null;
+	static ArrayList<String> mArFile = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -94,7 +95,7 @@ public class FileActivity extends Activity implements AdapterView.OnItemClickLis
 	}
 
 
-	public String[] getFileList(String strPath) {
+	static public String[] getFileList(String strPath) {
 		File fileRoot = new File(strPath);
 		if( fileRoot.isDirectory() == false )
 			return null;
@@ -105,7 +106,7 @@ public class FileActivity extends Activity implements AdapterView.OnItemClickLis
 	}
 
 
-	public void fileList2Array(String[] fileList) {
+	static public void fileList2Array(String[] fileList) {
 		if( fileList == null )
 			return;
 
@@ -120,6 +121,14 @@ public class FileActivity extends Activity implements AdapterView.OnItemClickLis
 		}
 		ArrayAdapter adapter = (ArrayAdapter)mListFile.getAdapter();
 		adapter.notifyDataSetChanged();
+	}
+
+	static public void refreshList(){
+		if(mPath == null)
+			return;
+
+		String[] fileList = getFileList(mPath);
+		fileList2Array(fileList);
 	}
 
 	public static final int REQ_FILE_SELECT = 0;
@@ -143,8 +152,7 @@ public class FileActivity extends Activity implements AdapterView.OnItemClickLis
 
 		Manager.INSTANCE.uploadFile(path);
 
-		String[] fileList = getFileList(mPath);
-		fileList2Array(fileList);
+		refreshList();
 
         /*if(resultCode == RESULT_OK) {
 

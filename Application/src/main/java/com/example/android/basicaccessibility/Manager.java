@@ -37,6 +37,9 @@ import android.widget.Toast;
 import com.example.android.common.logger.Log;
 import com.example.android.packet.Packet_Sync;
 
+import org.w3c.dom.Text;
+
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.HashMap;
@@ -443,6 +446,15 @@ public enum Manager {
         t.time = time;
         t.text = new String(text);
 
+        for(TextInfo t2 : m_texts.get(group)) {
+            if(t.uploader == t2.uploader && t.time == t2.time)
+                return null;
+        }
+
+        if(group == EMERGENCY) {
+            Manager.INSTANCE.sendEmergencySMS(text);
+        }
+
         m_texts.get(group).add(t);
 
         return t;
@@ -642,36 +654,41 @@ public enum Manager {
 
         if(result) {
             m_curBSSID = bssid;
-            Thread t = new Thread(new Runnable() {
-                public void run() {
-                    while (!Thread.interrupted()) {
-                        try {
-                            DhcpInfo dhcp = m_wifiManager.getDhcpInfo();
-                            WifiInfo info = m_wifiManager.getConnectionInfo();
-                            if(info.getBSSID().compareTo(m_curBSSID) == 0 && dhcp.gateway != 0) {
-                                int serverIP = dhcp.gateway;
-                                String ipAddress = String.format(
-                                        "%d.%d.%d.%d",
-                                        (serverIP & 0xff),
-                                        (serverIP >> 8 & 0xff),
-                                        (serverIP >> 16 & 0xff),
-                                        (serverIP >> 24 & 0xff));
-
-                                Message msg = Message.obtain(m_initClientHandler, 0, 1, 0);
-                                msg.obj = ipAddress;
-                                m_initClientHandler.sendMessage(msg);
-                                break;
-                            }
-                            Thread.sleep(1000);
-                        } catch (Throwable t) {
-                        }
-                    }
-                }
-            });
-            t.start();
+            createClientThread();
         }
 
         return result;
+    }
+
+    void createClientThread(){
+
+        Thread t = new Thread(new Runnable() {
+            public void run() {
+                while (!Thread.interrupted()) {
+                    try {
+                        DhcpInfo dhcp = m_wifiManager.getDhcpInfo();
+                        WifiInfo info = m_wifiManager.getConnectionInfo();
+                        if(info.getBSSID().compareTo(m_curBSSID) == 0 && dhcp.gateway != 0) {
+                            int serverIP = dhcp.gateway;
+                            String ipAddress = String.format(
+                                    "%d.%d.%d.%d",
+                                    (serverIP & 0xff),
+                                    (serverIP >> 8 & 0xff),
+                                    (serverIP >> 16 & 0xff),
+                                    (serverIP >> 24 & 0xff));
+
+                            Message msg = Message.obtain(m_initClientHandler, 0, 1, 0);
+                            msg.obj = ipAddress;
+                            m_initClientHandler.sendMessage(msg);
+                            break;
+                        }
+                        Thread.sleep(1000);
+                    } catch (Throwable t) {
+                    }
+                }
+            }
+        });
+        t.start();
     }
 
     private Handler m_initClientHandler = new Handler() {
@@ -745,6 +762,11 @@ public enum Manager {
         String filename = null;
         while(st.hasMoreTokens())
             filename = st.nextToken();
+
+        String dir = getRealGroupPath(getCurGroupID()) + "/Pictures";
+        File file = new java.io.File(dir);
+        if( !file.exists() )
+            file.mkdirs();
 
         String newPath = getRealGroupPath(getCurGroupID()) + "/Pictures/" + filename;
         copyFile(path, newPath);
@@ -858,6 +880,9 @@ public enum Manager {
         PendingIntent sentIntent = PendingIntent.getBroadcast(m_context, 0, new Intent("SMS_SENT_ACTION"), 0);
         PendingIntent deliveredIntent = PendingIntent.getBroadcast(m_context, 0, new Intent("SMS_DELIVERED_ACTION"), 0);
 
+        if(smsNumber == null || smsText == null || sentIntent == null || deliveredIntent == null)
+            return;
+
         /**
          * SMS가 발송될때 실행
          * When the SMS massage has been sent
@@ -911,6 +936,8 @@ public enum Manager {
         }, new IntentFilter("SMS_DELIVERED_ACTION"));
 
         SmsManager mSmsManager = SmsManager.getDefault();
+        if(mSmsManager == null)
+            return;
         mSmsManager.sendTextMessage(smsNumber, null, smsText, sentIntent, deliveredIntent);
     }
 

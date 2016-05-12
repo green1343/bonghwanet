@@ -2,53 +2,67 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\asd\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="C:\Users\asd\.AndroidStudio1.5\AndroidProject\bonghwanet\Application\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-48387a17ab4e4de03512b0c8292ba4eddb7f3cd1.jar" />
-    </item>
-    <item
-        jar="C:\Users\asd\.AndroidStudio1.5\AndroidProject\bonghwanet\Application\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="3713f30726299231eddfb206043ebb72a2519b6f">
-        <dex dex="C:\Users\asd\.AndroidStudio1.5\AndroidProject\bonghwanet\Application\build\intermediates\pre-dexed\debug\classes-e3d8809082335ed7bc5732da8dca4ea68fd21a49.jar" />
-    </item>
-    <item
-        jar="C:\Users\asd\.AndroidStudio1.5\AndroidProject\bonghwanet\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.0\jars\classes.jar"
-        jumboMode="false"
+        jar="C:\bonghwanet\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
         sha1="1a57337a520bf40b9ad1e074cb780527dffa1aac">
-        <dex dex="C:\Users\asd\.AndroidStudio1.5\AndroidProject\bonghwanet\Application\build\intermediates\pre-dexed\debug\classes-d0e428d955568524c14f594bb20b4f54921c2eec.jar" />
+        <dex dex="C:\bonghwanet\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v13-23.1.0_775a4c487c77dd6a5754b72069e3dc47e0b19859\classes.dex" />
     </item>
     <item
-        jar="C:\Users\asd\.AndroidStudio1.5\AndroidProject\bonghwanet\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.0\jars\classes.jar"
-        jumboMode="false"
+        jar="C:\bonghwanet\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
         sha1="d96886efea7cc74fbb3abd0e3b51d5638fc57be0">
-        <dex dex="C:\Users\asd\.AndroidStudio1.5\AndroidProject\bonghwanet\Application\build\intermediates\pre-dexed\debug\classes-a99a92685bb1d59ff7a72b2eb78148a0b7a8fade.jar" />
+        <dex dex="C:\bonghwanet\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.1.0_4d6dfaa797658e9b22e4ed0b219aca56b9e6db51\classes.dex" />
     </item>
     <item
-        jar="C:\Users\asd\.AndroidStudio1.5\AndroidProject\bonghwanet\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.0\jars\libs\internal_impl-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="076c7d9e22cc325b8008ff799e0c06dfb8eefdf3">
-        <dex dex="C:\Users\asd\.AndroidStudio1.5\AndroidProject\bonghwanet\Application\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-bad05b2598794f6705d81d624b35847882c22594.jar" />
-    </item>
-    <item
-        jar="C:\Users\asd\.AndroidStudio1.5\AndroidProject\bonghwanet\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
-        jumboMode="false"
+        jar="C:\bonghwanet\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="true"
         revision="23.0.2"
         sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="C:\Users\asd\.AndroidStudio1.5\AndroidProject\bonghwanet\Application\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-f1544df4806b370b7af520e86fbe862a8dbda5b0.jar" />
+        <dex dex="C:\bonghwanet\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.0_cd3d4535e710905bda881cdb4f2c9af44a8cc132\classes.dex" />
     </item>
     <item
-        jar="C:\Users\asd\.AndroidStudio1.5\AndroidProject\bonghwanet\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
-        jumboMode="false"
+        jar="C:\bonghwanet\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6ecddc6c05c99affe5f0218560bbd213e3748c6e">
+        <dex dex="C:\bonghwanet\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_86b1e8bf0c7c14e15169d112e1d3a6c0a6017365\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\sheep\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="C:\bonghwanet\Application\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_003fefcfe453e45ac4c1ea726bed20a731eb7b07\classes.dex" />
+    </item>
+    <item
+        jar="C:\bonghwanet\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.2"
         sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="C:\Users\asd\.AndroidStudio1.5\AndroidProject\bonghwanet\Application\build\intermediates\pre-dexed\debug\classes-df0f947599bda9b8ff4d12779143935b7afbad78.jar" />
+        <dex dex="C:\bonghwanet\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.0_86fc248fe11d406399afd6abcea7455d4f239741\classes.dex" />
+    </item>
+    <item
+        jar="C:\bonghwanet\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="076c7d9e22cc325b8008ff799e0c06dfb8eefdf3">
+        <dex dex="C:\bonghwanet\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.0_948c514a3a90e2cdbf0e69ad640d9d708dd9a32a\classes.dex" />
+    </item>
+    <item
+        jar="C:\bonghwanet\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="941cbb9d9a5e92eee43bd16afd5763173df83d59">
+        <dex dex="C:\bonghwanet\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_4bd3654ddcd53acd4e19b8bdc0b4fda67c1f989a\classes.dex" />
+    </item>
+    <item
+        jar="C:\bonghwanet\Application\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3713f30726299231eddfb206043ebb72a2519b6f">
+        <dex dex="C:\bonghwanet\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-gridlayout-v7-23.1.0_ed8e636b3a52ac22cd8b8722184c610476c9d940\classes.dex" />
     </item>
 
 </items>

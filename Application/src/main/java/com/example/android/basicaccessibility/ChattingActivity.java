@@ -76,8 +76,6 @@ public class ChattingActivity extends Activity {
 							String gps = Manager.INSTANCE.getGPSAddress();
 							if(gps != null)
 								s += " / 주소 : " + gps;
-
-							Manager.INSTANCE.sendEmergencySMS(s);
 						}
 						else
 							s = text.getText().toString();
@@ -90,12 +88,14 @@ public class ChattingActivity extends Activity {
 
 						refreshList();
 
-						Packet_Share_Text p = new Packet_Share_Text();
-						p.group = Manager.INSTANCE.getCurGroupID();
-						p.uploader = info.uploader;
-						p.time = info.time;
-						p.text = info.text;
-						WiFiNetwork.INSTANCE.writeAll(p);
+						if(info != null) {
+							Packet_Share_Text p = new Packet_Share_Text();
+							p.group = Manager.INSTANCE.getCurGroupID();
+							p.uploader = info.uploader;
+							p.time = info.time;
+							p.text = info.text;
+							WiFiNetwork.INSTANCE.writeAll(p);
+						}
 
 						text.setText("");
 
