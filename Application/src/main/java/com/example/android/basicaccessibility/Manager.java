@@ -267,6 +267,8 @@ public enum Manager {
         m_groups.put(id, new GroupInfo(g));
         m_files.put(id, new HashMap<String, FileInfo>());
         m_texts.put(id, new LinkedList<TextInfo>());
+
+        writeUserData();
     }
 
     HashMap<Long, LinkedList<TextInfo>> getAllTexts(){return m_texts;}
@@ -297,6 +299,7 @@ public enum Manager {
 
     public void addUser(long group, long userID, UserInfo info){
         m_groups.get(group).members.put(userID, info);
+        writeUserData();
     }
 
     public long getMyNumber(){
@@ -374,6 +377,7 @@ public enum Manager {
 
         if(m_groups.containsKey(EMERGENCY) == false){
             GroupInfo g = new GroupInfo();
+            g.name = "Emergency";
             g.members.put(m_myNumber, m_myUserInfo);
             addNewGroup(EMERGENCY, g);
         }
@@ -525,6 +529,7 @@ public enum Manager {
         m_groups.put(id, g);
 
         checkDirectories();
+        writeUserData();
     }
 
     public String getRoot(){
@@ -710,7 +715,7 @@ public enum Manager {
     }
 
     public void onConnectEnd(){
-        if(m_curGroup == EMERGENCY){
+        /*if(m_curGroup == EMERGENCY){
             m_timerThread = new MyThread() {
                 int r = getRandomInt(10, 20);
                 public void run() {
@@ -732,7 +737,7 @@ public enum Manager {
                 }
             };
             m_timerThread.start();
-        }
+        }*/
     }
 
     public void setTimerZero(){
@@ -754,6 +759,8 @@ public enum Manager {
         String newPath = getRealGroupPath(getCurGroupID()) + "/" + filename;
         copyFile(path, newPath);
         sendSync(newPath);
+
+        writeUserData();
     }
 
     public void uploadPicture(String path){
@@ -771,6 +778,8 @@ public enum Manager {
         String newPath = getRealGroupPath(getCurGroupID()) + "/Pictures/" + filename;
         copyFile(path, newPath);
         sendSync(newPath);
+
+        writeUserData();
     }
 
     private void copyFile(String from , String to){
