@@ -763,6 +763,13 @@ public enum Manager {
         writeUserData();
     }
 
+    public void checkPictureDirectory(){
+        String dir = getRealGroupPath(getCurGroupID()) + "/Pictures";
+        File file = new java.io.File(dir);
+        if( !file.exists() )
+            file.mkdirs();
+    }
+
     public void uploadPicture(String path){
 
         StringTokenizer st = new StringTokenizer(path, "/");
@@ -770,13 +777,23 @@ public enum Manager {
         while(st.hasMoreTokens())
             filename = st.nextToken();
 
-        String dir = getRealGroupPath(getCurGroupID()) + "/Pictures";
-        File file = new java.io.File(dir);
-        if( !file.exists() )
-            file.mkdirs();
+        checkPictureDirectory();
 
         String newPath = getRealGroupPath(getCurGroupID()) + "/Pictures/" + filename;
         copyFile(path, newPath);
+        sendSync(newPath);
+
+        writeUserData();
+    }
+
+    public void uploadCamera(String path){
+
+        StringTokenizer st = new StringTokenizer(path, "/");
+        String filename = null;
+        while(st.hasMoreTokens())
+            filename = st.nextToken();
+
+        String newPath = getRealGroupPath(getCurGroupID()) + "/Pictures/" + filename;
         sendSync(newPath);
 
         writeUserData();

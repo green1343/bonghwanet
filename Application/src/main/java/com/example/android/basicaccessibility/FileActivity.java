@@ -167,11 +167,9 @@ public class FileActivity extends Activity implements AdapterView.OnItemClickLis
 	}
 
 	public String getPath(Uri uri) {
-		String[] projection = {MediaStore.Images.Media.DATA};
-		Cursor cursor = managedQuery(uri, projection, null, null, null);
-		startManagingCursor(cursor);
-		int columnIndex = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-		cursor.moveToFirst();
-		return cursor.getString(columnIndex);
+		Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+		cursor.moveToNext();
+		String path = cursor.getString( cursor.getColumnIndex( "_data" ) );
+		return path;
 	}
 }

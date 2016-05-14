@@ -5,8 +5,11 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.view.View;
 import android.view.ViewGroup;
@@ -104,20 +107,32 @@ public class GallaryActivity extends Activity {
 		public View getView(int position, View convertView, ViewGroup parent) {
 
 			ImageView imageView = new ImageView(context);
-			imageView.setLayoutParams(new GridView.LayoutParams(500, 500));
-			imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+			imageView.setLayoutParams(new GridView.LayoutParams(300, 300));
+			imageView.setScaleType(ImageView.ScaleType.FIT_XY);
 			imageView.setPadding(5, 5, 5, 5);
 
 			//imageView.setImageResource(posterID[position]);
-			imageView.setImageURI(Uri.parse(sysFiles[position].toString()));
+			BitmapFactory.Options options = new BitmapFactory.Options();
+			options.inSampleSize = 4;
+			Bitmap src = BitmapFactory.decodeFile(sysFiles[position].toString(), options);
+			imageView.setImageBitmap(src);
+
+			//imageView.setImageURI(Uri.parse(sysFiles[position].toString()));
 
 			final int pos = position;
 			imageView.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
 					View dialogView = (View) View.inflate(GallaryActivity.this, R.layout.dialog, null);
 					AlertDialog.Builder dlg = new AlertDialog.Builder(GallaryActivity.this);
+
 					ImageView ivPoster = (ImageView) dialogView.findViewById(R.id.ivPoster);
-					ivPoster.setImageURI(Uri.parse(sysFiles[pos].toString()));
+
+					BitmapFactory.Options options = new BitmapFactory.Options();
+					options.inSampleSize = 2;
+					Bitmap src = BitmapFactory.decodeFile(sysFiles[pos].toString(), options);
+					ivPoster.setImageBitmap(src);
+
+					//ivPoster.setImageURI(Uri.parse(sysFiles[pos].toString()));
 					//ivPoster.setImageResource(posterID[pos]);
 					dlg.setIcon(R.drawable.ic_launcher);
 					dlg.setView(dialogView);
@@ -131,7 +146,7 @@ public class GallaryActivity extends Activity {
 	}
 
 	public static final int REQ_FILE_SELECT = 0;
-	public static final int REQ_CAMERA_SELECT = 0;
+	public static final int REQ_CAMERA_SELECT = 1;
 
 	String cameraTempFilePath;
 
@@ -154,7 +169,8 @@ public class GallaryActivity extends Activity {
 		/*HashMap<Long, Manager.GroupInfo> groups = Manager.INSTANCE.getAllGroups();
 		Manager.GroupInfo g = groups.get(groups.keySet());
 		String str = new String(g.name);*/
-		cameraTempFilePath = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroupID())+"/"+getDateString()+".jpg";
+		Manager.INSTANCE.checkPictureDirectory();
+		cameraTempFilePath = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroupID())+"/Pictures/"+getDateString()+".jpg";
 		File imageFile = new File(cameraTempFilePath);
 		Uri imageFileUri = Uri.fromFile(imageFile);
 
@@ -170,7 +186,11 @@ public class GallaryActivity extends Activity {
 		if(data == null)
 			return;
 
-		Manager.INSTANCE.uploadPicture(getPath(data.getData()));
+		if(requestCode == REQ_FILE_SELECT)
+			Manager.INSTANCE.uploadPicture(getPath(data.getData()));
+		else if(requestCode == REQ_CAMERA_SELECT)
+			Manager.INSTANCE.uploadCamera(cameraTempFilePath);
+
 		refreshList();
 
         /*if(resultCode == RESULT_OK) {
@@ -186,11 +206,9 @@ public class GallaryActivity extends Activity {
 	}
 
 	public String getPath(Uri uri) {
-		String[] projection = {MediaStore.Images.Media.DATA};
-		Cursor cursor = managedQuery(uri, projection, null, null, null);
-		startManagingCursor(cursor);
-		int columnIndex = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-		cursor.moveToFirst();
-		return cursor.getString(columnIndex);
+		Cursor cursor = getContentResolver().query(uri, null, null, null, null );
+		cursor.moveToNext();
+		String path = cursor.getString( cursor.getColumnIndex( "_data" ) );
+		return path;
 	}
 }
