@@ -706,12 +706,16 @@ public enum Manager {
 
     MyThread m_timerThread = null;
 
-    public void connect(long group){
+    public String connect(long group){
 
         setCurGroup(group);
 
-        if(setClient() == false)
+        if(setClient() == false) {
             setServer();
+            return "Server";
+        }
+        else
+            return "Client";
     }
 
     public void onConnectEnd(){

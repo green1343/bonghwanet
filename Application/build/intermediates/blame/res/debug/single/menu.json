@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\kyung\\AndroidStudioProjects\\bonghwane\\Application\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "C:\\Users\\kyung\\AndroidStudioProjects\\bonghwane\\Application\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
         "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
         "source": "C:\\bonghwa\\Application\\src\\main\\res\\menu\\menu_main.xml"
     }

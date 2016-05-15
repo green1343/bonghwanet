@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class GroupHomeActivity extends Activity {
 
@@ -17,11 +20,29 @@ public class GroupHomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.grouphome);
 
+		findViewById(R.id.button8).setOnClickListener(onClickButton);
+
 		m_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_item);
 		m_list = (ListView) findViewById(R.id.listView);
 		m_list.setAdapter(m_adapter);
 		m_list.setOnItemClickListener(onClickListItem);
 	}
+
+	Button.OnClickListener onClickButton = new View.OnClickListener() {
+		public void onClick(View v) {
+
+			EditText text=(EditText)findViewById(R.id.editMessage);
+			switch (v.getId()) {
+				case R.id.button8:
+					String str1 = Manager.INSTANCE.connect(Manager.INSTANCE.getCurGroupID());
+					Toast toast1 = Toast.makeText(getApplicationContext(), "내상태:"+str1, Toast.LENGTH_LONG);
+					toast1.show();
+					break;
+				default:
+					break;
+			}
+		}
+	};
 
 	@Override
 	protected void onResume(){

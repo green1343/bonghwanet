@@ -2,5 +2,9 @@
     {
         "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\raw\\em.mp4",
         "source": "C:\\bonghwa\\Application\\src\\main\\res\\raw\\em.mp4"
+    },
+    {
+        "merged": "C:\\Users\\kyung\\AndroidStudioProjects\\bonghwane\\Application\\build\\intermediates\\res\\merged\\debug\\raw\\em.mp4",
+        "source": "C:\\Users\\kyung\\AndroidStudioProjects\\bonghwane\\Application\\src\\main\\res\\raw\\em.mp4"
     }
 ]
