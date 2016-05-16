@@ -46,6 +46,8 @@ public enum WiFiNetwork {
     Client m_client = null;
     HashMap<Integer, Pair<NetworkSpeaker, NetworkListener>> m_threads = new HashMap<>();
 
+    long m_serverID = 0;
+
     private Handler m_handler = new Handler() {
         public void handleMessage(Message msg) {
             Pair<Integer, Packet_Command> pair = (Pair)msg.obj;
@@ -103,6 +105,8 @@ public enum WiFiNetwork {
     }
     public boolean isClient(){ return !isServer(); }
 
+    public long getServerID(){return m_serverID;}
+
     public HashMap<Integer, Pair<NetworkSpeaker, NetworkListener>> getAllThreads(){
         return m_threads;
     }
@@ -125,6 +129,8 @@ public enum WiFiNetwork {
 
         m_server = null;
         m_client = null;
+
+        m_serverID = 0;
     }
 
     public void initServer(){
@@ -135,6 +141,8 @@ public enum WiFiNetwork {
             ServerSocket serverSocket = new ServerSocket(PORT);
             m_server = new Server(serverSocket);
             m_server.start();
+            m_serverID = Manager.INSTANCE.getMyNumber();
+            GroupHomeActivity.refreshList();
         } catch (IOException ex) {
             //System.err.println(ex);
         } finally { // dispose
@@ -218,6 +226,7 @@ public enum WiFiNetwork {
                     listener.start();
 
                     Packet_Grouplist p = new Packet_Grouplist();
+                    p.id = Manager.INSTANCE.getMyNumber();
                     p.groups = (HashMap<Long, Manager.GroupInfo>)Manager.INSTANCE.getAllGroups().clone();
                     WiFiNetwork.INSTANCE.write(p, m_index-1);
 
@@ -276,6 +285,7 @@ public enum WiFiNetwork {
                     listener.start();
 
                     Packet_Grouplist p = new Packet_Grouplist();
+                    p.id = Manager.INSTANCE.getMyNumber();
                     p.groups = (HashMap<Long, Manager.GroupInfo>)Manager.INSTANCE.getAllGroups().clone();
                     WiFiNetwork.INSTANCE.write(p, m_index - 1);
 
@@ -459,6 +469,12 @@ public enum WiFiNetwork {
                                 if(g != null)
                                     m.setJoinGroup(g);
                             }
+
+                            if(isClient()) {
+                                m_serverID = p.id;
+                                GroupHomeActivity.refreshList();
+                            }
+
                             break;
                         }
                         case PACKET.PACKET_SYNC: {

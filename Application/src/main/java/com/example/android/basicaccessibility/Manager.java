@@ -582,7 +582,7 @@ public enum Manager {
                 while (!Thread.interrupted()) {
                     try {
                         if(m_wifiApManager.getWifiApState() == 13) {
-                            Message msg = Message.obtain(m_initClientHandler, 0, 1, 0);
+                            Message msg = Message.obtain(m_initServerHandler, 0, 1, 0);
                             m_initServerHandler.sendMessage(msg);
                             break;
                         }

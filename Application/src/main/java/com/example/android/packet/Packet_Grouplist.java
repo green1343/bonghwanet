@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 public class Packet_Grouplist extends Packet_Command {
 
+    public long id;
     public HashMap<Long, Manager.GroupInfo> groups = new HashMap<>();
 
     public Packet_Grouplist(){
@@ -15,6 +16,8 @@ public class Packet_Grouplist extends Packet_Command {
     public Packet_Grouplist(byte[] buf)
     {
         super(buf);
+
+        id = unpackLong();
 
         int size1 = unpackInt();
         for(int i=0; i<size1; ++i){
@@ -51,6 +54,7 @@ public class Packet_Grouplist extends Packet_Command {
     {
         super.GetBytes(buf);
 
+        pack(id);
         pack(groups.size());
 
         for(Long id : groups.keySet()){

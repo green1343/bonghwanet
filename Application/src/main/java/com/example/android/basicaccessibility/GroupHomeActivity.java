@@ -58,8 +58,12 @@ public class GroupHomeActivity extends Activity {
 		m_adapter.clear();
 
 		Manager.GroupInfo g = Manager.INSTANCE.getCurGroup();
-		for(Long key : g.members.keySet())
-			m_adapter.add(Manager.INSTANCE.getUserName(key));
+		for(Long key : g.members.keySet()) {
+			String str = Manager.INSTANCE.getUserName(key);
+			if(WiFiNetwork.INSTANCE.getServerID() == key)
+				str += "(server)";
+			m_adapter.add(str);
+		}
 
 		m_adapter.notifyDataSetChanged();
 	}
