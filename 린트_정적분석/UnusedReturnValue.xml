@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WifiApManager.java</file>
+    <line>23</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.WifiApManager boolean setWifiApEnabled(android.net.wifi.WifiConfiguration config, boolean enabled)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method can be void</problem_class>
+    <hints />
+    <description>Return value of the method is never used</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>141</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler byte[] setInt(byte[] dest, int offset, int i)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method can be void</problem_class>
+    <hints />
+    <description>Return value of the method is never used</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogView.java</file>
+    <line>116</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.common.logger.LogView java.lang.StringBuilder appendIfNotNull(java.lang.StringBuilder source, java.lang.String addStr, java.lang.String delimiter)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method can be void</problem_class>
+    <hints />
+    <description>Return value of the method is never used</description>
+  </problem>
+</problems>
+

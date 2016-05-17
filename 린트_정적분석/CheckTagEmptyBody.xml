@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>56</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>57</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>58</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>59</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>60</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>61</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>62</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>63</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>64</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>65</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>66</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>67</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>68</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>69</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>70</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>71</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>72</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>73</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>74</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>75</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>76</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>77</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>78</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>XML tag has empty body</description>
+  </problem>
+</problems>
+

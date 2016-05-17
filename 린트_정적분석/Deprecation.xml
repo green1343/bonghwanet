@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergency_main.java</file>
+    <line>15</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergency_main" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'android.app.TabActivity' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergency_main.java</file>
+    <line>35</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Emergency.Emergency_main void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'getDrawable(int)' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergency_main.java</file>
+    <line>40</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Emergency.Emergency_main void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'getDrawable(int)' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/emergencytype_firstaid_cr.java</file>
+    <line>35</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Emergency.emergencytype_firstaid_cr void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'android.widget.Gallery' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/emergencytype_firstaid_cr.java</file>
+    <line>35</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Emergency.emergencytype_firstaid_cr void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'android.widget.Gallery' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/emergencytype_firstaid_cr.java</file>
+    <line>69</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Emergency.emergencytype_firstaid_cr.MyGalleryAdapter android.view.View getView(int position, android.view.View convertView, android.view.ViewGroup parent)" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'android.widget.Gallery' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupMain.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.GroupMain" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'android.app.TabActivity' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupMain.java</file>
+    <line>34</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.GroupMain void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'getDrawable(int)' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupMain.java</file>
+    <line>39</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.GroupMain void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'getDrawable(int)' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupMain.java</file>
+    <line>43</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.GroupMain void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'getDrawable(int)' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupMain.java</file>
+    <line>47</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.GroupMain void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'getDrawable(int)' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Main.java</file>
+    <line>37</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Main void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'getDrawable(int)' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Main.java</file>
+    <line>42</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Main void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'getDrawable(int)' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Main.java</file>
+    <line>46</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Main void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'getDrawable(int)' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Main.java</file>
+    <line>15</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Main" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'android.app.TabActivity' is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogFragment.java</file>
+    <line>79</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.common.logger.LogFragment android.view.View inflateViews()" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage</problem_class>
+    <description>'setTextAppearance(android.content.Context, int)' is deprecated</description>
+  </problem>
+</problems>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml</file>
+    <line>44</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">onClick handler is missing in the related activity</problem_class>
+    <description>Cannot resolve symbol 'sendSMS'</description>
+  </problem>
+</problems>
+

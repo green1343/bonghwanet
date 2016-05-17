@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupHomeActivity.java</file>
+    <line>15</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="field" FQNAME="com.example.android.basicaccessibility.GroupHomeActivity m_list" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/ChatListAdapter.java</file>
+    <line>18</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="field" FQNAME="com.example.android.basicaccessibility.ChatListAdapter m_activity" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GrouplistActivity.java</file>
+    <line>22</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="field" FQNAME="com.example.android.basicaccessibility.GrouplistActivity m_list" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+</problems>
+

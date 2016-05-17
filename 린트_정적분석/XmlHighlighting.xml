@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/sms_service.xml</file>
+    <line>2</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/sms_service.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">XML highlighting</problem_class>
+    <description>URI is not registered (Settings | Project Settings | Schemas and DTDs) #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/sms_service.xml</file>
+    <line>3</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/sms_service.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">XML highlighting</problem_class>
+    <description>URI is not registered (Settings | Project Settings | Schemas and DTDs) #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/file.xml</file>
+    <line>2</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/file.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">XML highlighting</problem_class>
+    <description>URI is not registered (Settings | Project Settings | Schemas and DTDs) #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/sms_show.xml</file>
+    <line>2</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/sms_show.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">XML highlighting</problem_class>
+    <description>URI is not registered (Settings | Project Settings | Schemas and DTDs) #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/sms_show.xml</file>
+    <line>3</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/sms_show.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">XML highlighting</problem_class>
+    <description>URI is not registered (Settings | Project Settings | Schemas and DTDs) #loc</description>
+  </problem>
+</problems>
+

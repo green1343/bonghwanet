@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/NewGrouplistActivity.java</file>
+    <line>104</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.NewGrouplistActivity void refreshList()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant String constructor call</problem_class>
+    <description>&lt;code&gt;new String(nameStr)&lt;/code&gt; is redundant #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>62</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.WiFiNetwork$4 void handleMessage(android.os.Message msg)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant String constructor call</problem_class>
+    <description>&lt;code&gt;new String()&lt;/code&gt; is redundant #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>81</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.WiFiNetwork$4$1 void onClick(android.content.DialogInterface dialog, int which)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant String constructor call</problem_class>
+    <description>&lt;code&gt;new String(p.userInfo.name)&lt;/code&gt; is redundant #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GrouplistActivity.java</file>
+    <line>63</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.GrouplistActivity void refreshList()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant String constructor call</problem_class>
+    <description>&lt;code&gt;new String(g.name)&lt;/code&gt; is redundant #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>99</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager.GroupInfo GroupInfo(com.example.android.basicaccessibility.Manager.GroupInfo g)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant String constructor call</problem_class>
+    <description>&lt;code&gt;new String(g.name)&lt;/code&gt; is redundant #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>130</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="field" FQNAME="com.example.android.basicaccessibility.Manager m_curBSSID" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant String constructor call</problem_class>
+    <description>&lt;code&gt;new String()&lt;/code&gt; is redundant #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>485</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager java.lang.String getUserName(long id)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant String constructor call</problem_class>
+    <description>&lt;code&gt;new String(DEFAULT_USERNAME)&lt;/code&gt; is redundant #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>328</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager void getFileList(java.util.HashMap&lt;java.lang.String,com.example.android.basicaccessibility.Manager.FileInfo&gt; arr, java.lang.String path)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant String constructor call</problem_class>
+    <description>&lt;code&gt;new String(path)&lt;/code&gt; is redundant #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>451</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager com.example.android.basicaccessibility.Manager.TextInfo addText(long group, long uploader, long time, java.lang.String text)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant String constructor call</problem_class>
+    <description>&lt;code&gt;new String(text)&lt;/code&gt; is redundant #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>389</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager void writeUserData()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant String constructor call</problem_class>
+    <description>&lt;code&gt;new String(&quot; &quot;)&lt;/code&gt; is redundant #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>93</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="field" FQNAME="com.example.android.basicaccessibility.Manager.GroupInfo name" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant String constructor call</problem_class>
+    <description>&lt;code&gt;new String()&lt;/code&gt; is redundant #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/Packet_Command.java</file>
+    <line>133</line>
+    <module>Application</module>
+    <package>com.example.android.packet</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.packet.Packet_Command java.lang.String unpackString()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant String constructor call</problem_class>
+    <description>&lt;code&gt;new String()&lt;/code&gt; is redundant #loc</description>
+  </problem>
+</problems>
+

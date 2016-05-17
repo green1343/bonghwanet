@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml</file>
+    <line>1</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">FrameLayout can be replaced with &lt;merge&gt; tag</problem_class>
+    <hints />
+    <description>&lt;html&gt;This &lt;code&gt;&amp;lt;FrameLayout&gt;&lt;/code&gt; can be replaced with a &lt;code&gt;&amp;lt;merge&gt;&lt;/code&gt; tag&lt;/html&gt;</description>
+  </problem>
+</problems>
+

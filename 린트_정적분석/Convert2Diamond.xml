@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/FileActivity.java</file>
+    <line>56</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.FileActivity void initListView()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Explicit type can be replaced with &lt;&gt;</problem_class>
+    <description>Explicit type argument String can be replaced with &lt;&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/FileActivity.java</file>
+    <line>57</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.FileActivity void initListView()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Explicit type can be replaced with &lt;&gt;</problem_class>
+    <description>Explicit type argument String can be replaced with &lt;&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/NewGrouplistActivity.java</file>
+    <line>33</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.NewGrouplistActivity void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Explicit type can be replaced with &lt;&gt;</problem_class>
+    <description>Explicit type argument String can be replaced with &lt;&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupHomeActivity.java</file>
+    <line>25</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.GroupHomeActivity void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Explicit type can be replaced with &lt;&gt;</problem_class>
+    <description>Explicit type argument String can be replaced with &lt;&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>180</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.WiFiNetwork void writeAll(com.example.android.packet.Packet_Command p)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Explicit type can be replaced with &lt;&gt;</problem_class>
+    <description>Explicit type argument Integer, Packet_Command can be replaced with &lt;&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>172</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.WiFiNetwork void write(com.example.android.packet.Packet_Command p, int index)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Explicit type can be replaced with &lt;&gt;</problem_class>
+    <description>Explicit type argument Integer, Packet_Command can be replaced with &lt;&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GrouplistActivity.java</file>
+    <line>33</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.GrouplistActivity void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Explicit type can be replaced with &lt;&gt;</problem_class>
+    <description>Explicit type argument String can be replaced with &lt;&gt;</description>
+  </problem>
+</problems>
+

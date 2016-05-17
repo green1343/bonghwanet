@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml</file>
+    <line>16</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#48155;&amp;#45716;&amp;#49324;&amp;#46988;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml</file>
+    <line>32</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#47928;&amp;#51088; &amp;#45236;&amp;#50857;&amp;#51012; &amp;#51077;&amp;#47141;&amp;#54616;&amp;#49464;&amp;#50836;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml</file>
+    <line>45</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;Send&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_abrasion.xml</file>
+    <line>20</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_abrasion.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#8251; &amp;#52272;&amp;#44284;&amp;#49345;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_abrasion.xml</file>
+    <line>29</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_abrasion.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;-&amp;#44545;&amp;#55180; &amp;#49552;&amp;#49345;&amp;#50640; &amp;#51032;&amp;#54644; &amp;#54588;&amp;#48512;&amp;#51032; &amp;#54364;&amp;#54588;&amp;#52789;&amp;#51060;&amp;#45208; &amp;#51652;&amp;#54588;&amp;#52789;&amp;#51032; &amp;#51068;&amp;#48512;&amp;#44032; &amp;#48279;&amp;#44200;&amp;#51256; &amp;#52636;&amp;#54792;&amp;#44284; &amp;#49340;&amp;#52636;&amp;#47932;&amp;#51060; &amp;#55128;&amp;#47084;&amp;#45208;&amp;#50724;&amp;#45716; &amp;#44221;&amp;#50864;&amp;#51060;&amp;#45796;.&lt;br/&gt;
+                           \n -&amp;#49552;&amp;#49345; &amp;#51649;&amp;#54980; &amp;#44648;&amp;#45143;&amp;#54620; &amp;#47932;&amp;#47196; &amp;#49345;&amp;#52376; &amp;#48512;&amp;#50948;&amp;#47484; &amp;#52649;&amp;#48516;&amp;#55176; &amp;#49464;&amp;#52377;&amp;#54616;&amp;#50668; &amp;#51060;&amp;#52264;&amp;#51201;&amp;#51064; &amp;#44048;&amp;#50684;&amp;#51012; &amp;#50696;&amp;#48169;&amp;#54620;&amp;#45796;.&lt;br/&gt;
+                           \n\n -&amp;#49548;&amp;#46021;&amp;#50529;&amp;#51012; &amp;#51060;&amp;#50857;&amp;#54644; &amp;#49345;&amp;#52376;&amp;#47484; &amp;#49548;&amp;#46021;&amp;#54616;&amp;#44256; &amp;#44148;&amp;#51312;&amp;#49884;&amp;#53416; &amp;#54980; &amp;#52636;&amp;#54792; &amp;#48143; &amp;#49340;&amp;#52636;&amp;#47932;&amp;#51012; &amp;#55137;&amp;#49688;&amp;#54624; &amp;#49688; &amp;#51080;&amp;#45716; &amp;#46300;&amp;#47112;&amp;#49905; &amp;#51228;&amp;#51116;&amp;#47484; &amp;#51060;&amp;#50857;&amp;#54616;&amp;#50668; &amp;#46300;&amp;#47112;&amp;#49905;&amp;#54620;&amp;#45796;.&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_surge.xml</file>
+    <line>24</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_surge.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#8251; &amp;#54644;&amp;#51068;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_surge.xml</file>
+    <line>31</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_surge.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;-&amp;#54253;&amp;#54413;&amp;#51060;&amp;#45208; &amp;#51648;&amp;#51652;, &amp;#54868;&amp;#49328;&amp;#54253;&amp;#48156; &amp;#46321;&amp;#50640; &amp;#51032;&amp;#54616;&amp;#50668; &amp;#48148;&amp;#45815;&amp;#47932;&amp;#51060; &amp;#48708;&amp;#51221;&amp;#49345;&amp;#51201;&amp;#51004;&amp;#47196; &amp;#45458;&amp;#50500;&amp;#51256; &amp;#50977;&amp;#51648;&amp;#47196; &amp;#45336;&amp;#52432; &amp;#46308;&amp;#50612;&amp;#50724;&amp;#45716; &amp;#54788;&amp;#49345;&amp;#51012; &amp;#47568;&amp;#54620;&amp;#45796;.&lt;br/&gt;
+                       \n\n &amp;#54665;&amp;#46041;&amp;#50836;&amp;#47161;&lt;br/&gt;
+                       \n -&amp;#54644;&amp;#50504;&amp;#44032;&amp;#50640; &amp;#51080;&amp;#51012; &amp;#46412; &amp;#44053;&amp;#54620; &amp;#51648;&amp;#51652;&amp;#46041;&amp;#51012; &amp;#45712;&amp;#44808;&amp;#51012; &amp;#44221;&amp;#50864;&amp;#45716; &amp;#44032;&amp;#44620;&amp;#50868; &amp;#48148;&amp;#45796;&amp;#50640;&amp;#49436; &amp;#51648;&amp;#51652;&amp;#51060; &amp;#48156;&amp;#49373;&amp;#54620; &amp;#44221;&amp;#50864;&amp;#51068; &amp;#49688; &amp;#51080;&amp;#51004;&amp;#48064;&amp;#47196;(&amp;#51060; &amp;#44221;&amp;#50864; 2~3&amp;#48516; &amp;#51060;&amp;#45236;&amp;#50640; &amp;#54644;&amp;#51068;&amp;#51060; &amp;#45236;&amp;#49845;&amp;#54624; &amp;#49688; &amp;#51080;&amp;#51020;) &amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068; &amp;#53945;&amp;#48372;&amp;#44032; &amp;#48156;&amp;#54952;&amp;#46104;&amp;#51648; &amp;#50506;&amp;#50520;&amp;#45908;&amp;#46972;&amp;#46020; &amp;#49888;&amp;#49549;&amp;#55176; &amp;#44256;&amp;#51648;&amp;#45824;&amp;#47196; &amp;#51060;&amp;#46041;&amp;#54616;&amp;#46020;&amp;#47197; &amp;#54633;&amp;#45768;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#49688;&amp;#49900;&amp;#51060; &amp;#44618;&amp;#51008; &amp;#47676; &amp;#48148;&amp;#45796;&amp;#50640;&amp;#49436;&amp;#45716; &amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068;&amp;#51012; &amp;#51204;&amp;#54784; &amp;#45712;&amp;#45188; &amp;#49688; &amp;#50630;&amp;#51004;&amp;#47728;, &amp;#54644;&amp;#50504; &amp;#48512;&amp;#44540;&amp;#50640;&amp;#49436; &amp;#53356;&amp;#44172; &amp;#51613;&amp;#54253;&amp;#46104;&amp;#48064;&amp;#47196; &amp;#47676; &amp;#48148;&amp;#45796;&amp;#50640; &amp;#51080;&amp;#45716; &amp;#44221;&amp;#50864; &amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068; &amp;#44221;&amp;#48372;&amp;#44032; &amp;#48156;&amp;#47161;&amp;#46104;&amp;#50632;&amp;#44144;&amp;#45208; &amp;#51060;&amp;#47484; &amp;#51064;&amp;#51648;&amp;#54616;&amp;#50688;&amp;#51012; &amp;#46412;&amp;#50640;&amp;#45716; &amp;#54637;&amp;#44396;&amp;#47196; &amp;#48373;&amp;#44480;&amp;#54616;&amp;#51648; &amp;#50506;&amp;#46020;&amp;#47197; &amp;#54633;&amp;#45768;&amp;#45796;.&lt;br/&gt;
+                       \n\n -&amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068;&amp;#51008; &amp;#51068;&amp;#48152;&amp;#51201;&amp;#51004;&amp;#47196; &amp;#50668;&amp;#47084;&amp;#48264; &amp;#46020;&amp;#45804;&amp;#54616;&amp;#45716;&amp;#45936; &amp;#51228;1&amp;#54028;&amp;#48372;&amp;#45796; 2,3&amp;#54028;&amp;#51032; &amp;#53356;&amp;#44592;&amp;#44032; &amp;#45908; &amp;#53360; &amp;#44221;&amp;#50864;&amp;#46020; &amp;#51080;&amp;#44256;, &amp;#54644;&amp;#47732;&amp;#51032; &amp;#51652;&amp;#46041;&amp;#51060; 10&amp;#49884;&amp;#44036; &amp;#51060;&amp;#49345; &amp;#51648;&amp;#49549;&amp;#46104;&amp;#44592;&amp;#46020; &amp;#54616;&amp;#48064;&amp;#47196; &amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068; &amp;#53945;&amp;#48372;&amp;#44032; &amp;#54644;&amp;#51228;&amp;#46112; &amp;#46412;&amp;#44620;&amp;#51648; &amp;#54644;&amp;#50504;&amp;#44032;&amp;#47196; &amp;#45236;&amp;#47140;&amp;#50724;&amp;#47732; &amp;#50504;&amp;#46121;&amp;#45768;&amp;#45796;.&lt;br/&gt;
+                       \n\n &amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068;&amp;#50640; &amp;#44288;&amp;#54620; &amp;#49345;&amp;#49885;&lt;br/&gt;
+                       \n -&amp;#51068;&amp;#48152;&amp;#51201;&amp;#51004;&amp;#47196; &amp;#51068;&amp;#48376; &amp;#49436;&amp;#54644;&amp;#50504;&amp;#51032; &amp;#51648;&amp;#51652;&amp;#45824;&amp;#50640;&amp;#49436; &amp;#44508;&amp;#47784; 7.0 &amp;#51060;&amp;#49345;&amp;#51032; &amp;#51648;&amp;#51652;&amp;#51060; &amp;#48372;&amp;#44256;&amp;#46104;&amp;#47732;, &amp;#50557; 1&amp;#49884;&amp;#44036;&amp;#50640;&amp;#49436; 1&amp;#49884;&amp;#44036; 30&amp;#48516; &amp;#54980; &amp;#46041;&amp;#54644;&amp;#50504;&amp;#50640; &amp;#51648;&amp;#51652; &amp;#54644;&amp;#51068;&amp;#51060; &amp;#46020;&amp;#45804;&amp;#54616;&amp;#44172; &amp;#46108;&amp;#45796;. &amp;#46020;&amp;#45804;&amp;#54616;&amp;#45716; &amp;#50689;&amp;#50669;&amp;#51008; &amp;#46041;&amp;#54644;&amp;#50504; &amp;#51204;&amp;#50669;&amp;#51060;&amp;#44256;, &amp;#46041;&amp;#54644;&amp;#50504;&amp;#50640; &amp;#45236;&amp;#49845;&amp;#54616;&amp;#45716; &amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068;&amp;#51032; &amp;#54028;&amp;#44256;&amp;#45716; &amp;#52572;&amp;#45824; 3&amp;#65374;4m &amp;#51221;&amp;#46020; &amp;#51060;&amp;#45796;. &amp;#51060;&amp;#47196; &amp;#51064;&amp;#54644; &amp;#54644;&amp;#50504;&amp;#44032; &amp;#51200;&amp;#51648;&amp;#45824;&amp;#45716; &amp;#52840;&amp;#49688;&amp;#46104;&amp;#44592; &amp;#49789;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#51068;&amp;#48152;&amp;#51201;&amp;#51004;&amp;#47196; &amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068;&amp;#51032; &amp;#52488;&amp;#46041;&amp;#51008; &amp;#47932;&amp;#51060; &amp;#48736;&amp;#51648;&amp;#45716; &amp;#44163;&amp;#51004;&amp;#47196; &amp;#49884;&amp;#51089;&amp;#46104;&amp;#50612; &amp;#54637; &amp;#48148;&amp;#45797;&amp;#51060; &amp;#46308;&amp;#50612; &amp;#45208;&amp;#44592;&amp;#46020; &amp;#54620;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068;&amp;#51008; &amp;#50668;&amp;#47084; &amp;#52264;&amp;#47168; &amp;#50676;&amp;#51012; &amp;#51648;&amp;#50612; &amp;#46020;&amp;#45804;&amp;#54616;&amp;#45716;&amp;#45936; &amp;#51228; 1&amp;#54028;&amp;#48372;&amp;#45796; 2, 3&amp;#54028;&amp;#51032; &amp;#53356;&amp;#44592;&amp;#44032; &amp;#45908; &amp;#53364; &amp;#49688;&amp;#46020; &amp;#51080;&amp;#44256;, &amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068;&amp;#50640; &amp;#51032;&amp;#54620; &amp;#54644;&amp;#47732;&amp;#51032; &amp;#51652;&amp;#46041;&amp;#51008; &amp;#44600;&amp;#44172; 10&amp;#49884;&amp;#44036; &amp;#51060;&amp;#49345; &amp;#51648;&amp;#49549;&amp;#46104;&amp;#44592;&amp;#46020; &amp;#54620;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068;&amp;#51032; &amp;#45236;&amp;#49845; &amp;#49549;&amp;#46020;&amp;#45716; &amp;#49324;&amp;#46988;&amp;#51032; &amp;#44144;&amp;#46041;&amp;#48372;&amp;#45796; &amp;#48736;&amp;#47476;&amp;#44256;, &amp;#44536; &amp;#55192;&amp;#51060; &amp;#50864;&amp;#49464;&amp;#54616;&amp;#50668; &amp;#50557; 30cm&amp;#51032; &amp;#51221;&amp;#46020;&amp;#51032; &amp;#54644;&amp;#51068; &amp;#49345;&amp;#54889;&amp;#50640;&amp;#49436; &amp;#49457;&amp;#51064;&amp;#51060; &amp;#44152;&amp;#51012; &amp;#49688; &amp;#50630;&amp;#44256;, &amp;#50557; 1m &amp;#51221;&amp;#46020;&amp;#51032; &amp;#54644;&amp;#51068;&amp;#51060;&amp;#46972;&amp;#47732; &amp;#47785;&amp;#51312;&amp;#44148;&amp;#47932;&amp;#51060; &amp;#54028;&amp;#44340;&amp;#46112; &amp;#49688; &amp;#51080;&amp;#51004;&amp;#47728;, &amp;#51060;&amp;#47196; &amp;#51064;&amp;#54644; &amp;#51064;&amp;#47749;&amp;#54588;&amp;#54644;&amp;#47484; &amp;#51068;&amp;#51004;&amp;#53420; &amp;#50864;&amp;#47140;&amp;#44032; &amp;#45458;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#54644;&amp;#50504;&amp;#44032;&amp;#51032; &amp;#49440;&amp;#48149;&amp;#51060;&amp;#45208; &amp;#45796;&amp;#47480; &amp;#47932;&amp;#44148;&amp;#46308;&amp;#51060; &amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068;&amp;#50640; &amp;#51032;&amp;#54644; &amp;#50977;&amp;#51648;&amp;#47196; &amp;#50868;&amp;#48152;&amp;#46104;&amp;#50612; &amp;#44032;&amp;#50725;&amp;#50640; &amp;#52649;&amp;#46028;&amp;#54616;&amp;#45716; &amp;#44221;&amp;#50864;&amp;#46020; &amp;#51080;&amp;#45796;. &amp;#51060;&amp;#47084;&amp;#54620; &amp;#47932;&amp;#52404;&amp;#46308;&amp;#51060; &amp;#50976;&amp;#47448; &amp;#53489;&amp;#53356; &amp;#46321;&amp;#50640; &amp;#52649;&amp;#46028;&amp;#54616;&amp;#50668; &amp;#54868;&amp;#51116;&amp;#47484; &amp;#51068;&amp;#51004;&amp;#53420; &amp;#49688;&amp;#46020; &amp;#51080;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068;&amp;#51008; &amp;#50696;&amp;#44256; &amp;#50630;&amp;#51060; &amp;#45236;&amp;#49845;&amp;#54620;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#51648;&amp;#51652;&amp;#54644;&amp;#51068;&amp;#51008; &amp;#48148;&amp;#45796;&amp;#47196; &amp;#53685;&amp;#54644; &amp;#51080;&amp;#45716; &amp;#54616;&amp;#52380;&amp;#51012; &amp;#46384;&amp;#46972; &amp;#50669;&amp;#49345;&amp;#54616;&amp;#44592;&amp;#46020; &amp;#54620;&amp;#45796;.&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_cr.xml</file>
+    <line>20</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_cr.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#8251; &amp;#49900;&amp;#54224;&amp;#49548;&amp;#49373;&amp;#49696;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_wound.xml</file>
+    <line>20</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_wound.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#8251; &amp;#44288;&amp;#53685;&amp;#49345;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_wound.xml</file>
+    <line>29</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_wound.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;-&amp;#49072;&amp;#51313;&amp;#54620; &amp;#47932;&amp;#51656;&amp;#51060;&amp;#45208; &amp;#52509;&amp;#49345;&amp;#50640; &amp;#51032;&amp;#54644; &amp;#46763;&amp;#47536; &amp;#49345;&amp;#52376;&amp;#47484; &amp;#47568;&amp;#54620;&amp;#45796;.&lt;br/&gt;
+                           \n -&amp;#46763;&amp;#50612;&amp;#51652; &amp;#54588;&amp;#48512; &amp;#51077;&amp;#44396;&amp;#44032; &amp;#51329;&amp;#50500;&amp;#46020; &amp;#45236;&amp;#48512; &amp;#44396;&amp;#51312;&amp;#47932;&amp;#51032; &amp;#49552;&amp;#49345; &amp;#51221;&amp;#46020;&amp;#47484; &amp;#54028;&amp;#50501;&amp;#54616;&amp;#44592; &amp;#55192;&amp;#46308;&amp;#44256; &amp;#51060;&amp;#47932;&amp;#51656;&amp;#51060; &amp;#51312;&amp;#51649; &amp;#44618;&amp;#51060; &amp;#52840;&amp;#48276;&amp;#54616;&amp;#44592; &amp;#46412;&amp;#47928;&amp;#50640; &amp;#44048;&amp;#50684;&amp;#51032; &amp;#50948;&amp;#54744;&amp;#51060; &amp;#45458;&amp;#45796;.&lt;br/&gt;
+                           \n\n -&amp;#49888;&amp;#52404;&amp;#51032; &amp;#50612;&amp;#45712; &amp;#44275;&amp;#51060;&amp;#46304; &amp;#44288;&amp;#53685;&amp;#49345;&amp;#51060; &amp;#51080;&amp;#45716; &amp;#44221;&amp;#50864; &amp;#51068;&amp;#45800; &amp;#51060;&amp;#47932;&amp;#51060; &amp;#48149;&amp;#54784; &amp;#51080;&amp;#45716; &amp;#49345;&amp;#53468;&amp;#46972;&amp;#47732; &amp;#51060;&amp;#47932;&amp;#51012; &amp;#51228;&amp;#44144;&amp;#54616;&amp;#51648; &amp;#50506;&amp;#44256; &amp;#52628;&amp;#44032;&amp;#51201;&amp;#51064; &amp;#49552;&amp;#49345;&amp;#51012; &amp;#50696;&amp;#48169;&amp;#54616;&amp;#44592; &amp;#50948;&amp;#54644; &amp;#52404;&amp;#50808;&amp;#50640; &amp;#45432;&amp;#52636;&amp;#46108; &amp;#48512;&amp;#48516;&amp;#51012; &amp;#44256;&amp;#51221;&amp;#54620;&amp;#45796;.&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>12</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;Server Change&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>35</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;Chatting&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>59</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;Users&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>73</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;New Files&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/file.xml</file>
+    <line>22</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/file.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;Upload&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml</file>
+    <line>38</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;type here...&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml</file>
+    <line>48</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;SEND&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/gallery.xml</file>
+    <line>9</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/gallery.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#49324;&amp;#51652;&amp;#52628;&amp;#44032;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/gallery.xml</file>
+    <line>29</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/gallery.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#52852;&amp;#47700;&amp;#46972;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>12</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;Create Group&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>62</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;Create&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>75</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;Selete Group&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>88</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;Emergency&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_earthquake.xml</file>
+    <line>24</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_earthquake.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#8251; &amp;#51648;&amp;#51652;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_earthquake.xml</file>
+    <line>31</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_earthquake.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;-&amp;#51648;&amp;#44396;&amp;#45236;&amp;#48512;&amp;#51032; &amp;#54876;&amp;#46041;&amp;#44284; &amp;#54032;&amp;#44396;&amp;#51312; &amp;#50868;&amp;#46041;&amp;#51004;&amp;#47196; &amp;#51064;&amp;#54644; &amp;#51648;&amp;#44396;&amp;#45236;&amp;#48512;, &amp;#53945;&amp;#55176; &amp;#51648;&amp;#44033;&amp;#50640;&amp;#49436; &amp;#51109;&amp;#49884;&amp;#44036; &amp;#52629;&amp;#51201;&amp;#46108; &amp;#50640;&amp;#45320;&amp;#51648;&amp;#44032; &amp;#49692;&amp;#44036;&amp;#51201;&amp;#51004;&amp;#47196; &amp;#48169;&amp;#52636;&amp;#46104;&amp;#47732;&amp;#49436; &amp;#44536; &amp;#50640;&amp;#45320;&amp;#51648;&amp;#51032; &amp;#51068;&amp;#48512;&amp;#44032; &amp;#51648;&amp;#51652;&amp;#54028;&amp;#51032; &amp;#54805;&amp;#53468;&amp;#47196; &amp;#49324;&amp;#48169;&amp;#51004;&amp;#47196; &amp;#51204;&amp;#54028;&amp;#46104;&amp;#50612; &amp;#51648;&amp;#54364;&amp;#47732;&amp;#44620;&amp;#51648; &amp;#46020;&amp;#45804;&amp;#54616;&amp;#50668; &amp;#51648;&amp;#48152;&amp;#51060; &amp;#55124;&amp;#46308;&amp;#47532;&amp;#45716; &amp;#51088;&amp;#50672;&amp;#54788;&amp;#49345;&amp;#51060;&amp;#45796;.&lt;br/&gt;
+                       \n &amp;#54665;&amp;#46041;&amp;#50836;&amp;#47161;&lt;br/&gt;
+                       \n -&amp;#51648;&amp;#51652; &amp;#48156;&amp;#49373;&amp;#49884; &amp;#53356;&amp;#44172; &amp;#55124;&amp;#46308;&amp;#47532;&amp;#45716; &amp;#49884;&amp;#44036;&amp;#51008; &amp;#44600;&amp;#50612;&amp;#50556; 1~2&amp;#48516;&amp;#51060;&amp;#48064;&amp;#47196; &amp;#51060; &amp;#49884;&amp;#44036;&amp;#46041;&amp;#50504; &amp;#53580;&amp;#51060;&amp;#48660; &amp;#46321;&amp;#51032; &amp;#48145;&amp;#51004;&amp;#47196; &amp;#46308;&amp;#50612;&amp;#44032; &amp;#47800;&amp;#51012; &amp;#54588;&amp;#54616;&amp;#44256; &amp;#53580;&amp;#51060;&amp;#48660; &amp;#46321;&amp;#51060; &amp;#50630;&amp;#51012; &amp;#46412;&amp;#45716; &amp;#48169;&amp;#49437; &amp;#46321;&amp;#51004;&amp;#47196; &amp;#47672;&amp;#47532;&amp;#47484; &amp;#48372;&amp;#54840;&amp;#54633;&amp;#45768;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#47928;&amp;#51012; &amp;#50676;&amp;#50612;&amp;#49436; &amp;#52636;&amp;#44396;&amp;#47484; &amp;#54869;&amp;#48372;&amp;#54616;&amp;#44256; &amp;#44032;&amp;#49828;/&amp;#51204;&amp;#44592; &amp;#46321;&amp;#51012; &amp;#52264;&amp;#45800;&amp;#54633;&amp;#45768;&amp;#45796;.&lt;br/&gt;
+                       \n\n -&amp;#54868;&amp;#51116;&amp;#44032; &amp;#45228;&amp;#51012; &amp;#46412; &amp;#52840;&amp;#52265;&amp;#54616;&amp;#44256; &amp;#48736;&amp;#47476;&amp;#44172; &amp;#48520;&amp;#51012; &amp;#44732;&amp;#50556; &amp;#54633;&amp;#45768;&amp;#45796;. &amp;#48520;&amp;#51012; &amp;#51312;&amp;#44592;&amp;#50640; &amp;#51652;&amp;#54868;&amp;#54624; &amp;#49688; &amp;#51080;&amp;#45716; &amp;#44592;&amp;#54924;&amp;#45716; 3&amp;#48264;&amp;#51004;&amp;#47196; &amp;#53356;&amp;#44172; &amp;#55124;&amp;#46308;&amp;#47532;&amp;#44592; &amp;#51204;, &amp;#53360; &amp;#55124;&amp;#46308;&amp;#47548;&amp;#51060; &amp;#47688;&amp;#52632; &amp;#51649;&amp;#54980;, &amp;#48156;&amp;#54868;&amp;#46108; &amp;#51649;&amp;#54980; &amp;#54868;&amp;#51116;&amp;#51032; &amp;#44508;&amp;#47784;&amp;#44032; &amp;#51089;&amp;#51012; &amp;#46412;&amp;#51077;&amp;#45768;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#51648;&amp;#51652; &amp;#48156;&amp;#49373; &amp;#46412;&amp;#45716; &amp;#50976;&amp;#47532;&amp;#52285;&amp;#51060;&amp;#45208; &amp;#44036;&amp;#54032; &amp;#46321;&amp;#51060; &amp;#46504;&amp;#50612;&amp;#51256; &amp;#45824;&amp;#45800;&amp;#55176; &amp;#50948;&amp;#54744;&amp;#54616;&amp;#48064;&amp;#47196; &amp;#49436;&amp;#46168;&amp;#47084;&amp;#49436; &amp;#48150;&amp;#51004;&amp;#47196; &amp;#46832;&amp;#50612;&amp;#45208;&amp;#44032;&amp;#47732; &amp;#50504;&amp;#46121;&amp;#45768;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#51648;&amp;#51652;&amp;#51060;&amp;#45208; &amp;#54868;&amp;#51116;&amp;#44032; &amp;#48156;&amp;#49373;&amp;#54624; &amp;#46412;&amp;#45716; &amp;#50648;&amp;#47532;&amp;#48288;&amp;#51060;&amp;#53552;&amp;#47484; &amp;#49324;&amp;#50857;&amp;#54616;&amp;#51648; &amp;#47568;&amp;#50500;&amp;#50556; &amp;#54616;&amp;#44256; &amp;#53440;&amp;#44256; &amp;#51080;&amp;#51012; &amp;#46412;&amp;#45716; &amp;#47784;&amp;#46304; &amp;#48260;&amp;#53948;&amp;#51012; &amp;#45580;&amp;#47084; &amp;#49888;&amp;#49549;&amp;#54616;&amp;#44172; &amp;#45236;&amp;#47536; &amp;#54980; &amp;#45824;&amp;#54588;&amp;#54633;&amp;#45768;&amp;#45796;.&lt;br/&gt;
+                       \n - &amp;#53360; &amp;#51652;&amp;#46041;&amp;#51060; &amp;#47688;&amp;#52632; &amp;#54980; &amp;#44277;&amp;#53552;&amp;#45208; &amp;#44277;&amp;#50896; &amp;#46321; &amp;#45331;&amp;#51008; &amp;#44277;&amp;#44036;&amp;#51004;&amp;#47196; &amp;#45824;&amp;#54588;&amp;#54633;&amp;#45768;&amp;#45796;. &amp;#46608;&amp;#54620; &amp;#48660;&amp;#47197;&amp;#45812;, &amp;#51088;&amp;#46041;&amp;#54032;&amp;#47588;&amp;#44592; &amp;#46321; &amp;#44256;&amp;#51221;&amp;#46104;&amp;#51648; &amp;#50506;&amp;#51008; &amp;#47932;&amp;#44148; &amp;#46321;&amp;#51008; &amp;#45336;&amp;#50612;&amp;#51656; &amp;#50864;&amp;#47140;&amp;#44032; &amp;#51080;&amp;#51004;&amp;#48064;&amp;#47196; &amp;#44032;&amp;#44620;&amp;#51060; &amp;#44032;&amp;#49436;&amp;#45716; &amp;#50504;&amp;#46121;&amp;#45768;&amp;#45796;.&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>12</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;Select Group&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_war.xml</file>
+    <line>24</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_war.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#8251; &amp;#51204;&amp;#51137;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_war.xml</file>
+    <line>31</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_war.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;-&amp;#44397;&amp;#44032;&amp;#50752; &amp;#44397;&amp;#44032;, &amp;#46608;&amp;#45716; &amp;#44368;&amp;#51204;(&amp;#20132;&amp;#25136;) &amp;#45800;&amp;#52404; &amp;#49324;&amp;#51060;&amp;#50640; &amp;#47924;&amp;#47141;&amp;#51012; &amp;#49324;&amp;#50857;&amp;#54616;&amp;#50668; &amp;#49912;&amp;#50880;&amp;#51012; &amp;#47568;&amp;#54616;&amp;#45716; &amp;#44163;&amp;#51077;&amp;#45768;&amp;#45796;.&lt;br/&gt;
+                       \n\n &amp;#54665;&amp;#46041;&amp;#50836;&amp;#47161;&lt;br/&gt;
+                       \n -&amp;#45824;&amp;#54588;&amp;#49548; &amp;#50948;&amp;#52824;&amp;#54869;&amp;#51064;&amp;#54616;&amp;#44592;(&amp;#51648;&amp;#54616;&amp;#52384;&amp;#50669;, &amp;#51648;&amp;#54616;&amp;#51452;&amp;#52264;&amp;#51109;, &amp;#45824;&amp;#54805;&amp;#44148;&amp;#47932; &amp;#51648;&amp;#54616;&amp;#49892; &amp;#46321; &amp;#45824;&amp;#54588;&amp;#49548; &amp;#54364;&amp;#51648;&amp;#54032;&amp;#51060; &amp;#48512;&amp;#52265;&amp;#46104;&amp;#50612; &amp;#51080;&amp;#45716; &amp;#51648;&amp;#54616;&amp;#49884;&amp;#49444;)&lt;br/&gt;
+                       \n\n -&amp;#51204;&amp;#49884; &amp;#54596;&amp;#50836;&amp;#54620; &amp;#47932;&amp;#51088; &amp;#51456;&amp;#48708;&amp;#54616;&amp;#44592;(&amp;#48708;&amp;#49345;&amp;#49885;&amp;#47049;,&amp;#48708;&amp;#49345;&amp;#50557;,&amp;#47004;&amp;#53556; &amp;#46321;).&lt;br/&gt;
+                       \n\n -&amp;#48169;&amp;#46021;&amp;#47732; &amp;#52265;&amp;#50857;&amp;#50836;&amp;#47161; &amp;#49689;&amp;#45804;&amp;#54616;&amp;#44592;(&amp;#54868;&amp;#49373;&amp;#48169; &amp;#51204; &amp;#49345;&amp;#54889;&amp;#50640; &amp;#45824;&amp;#48708;&amp;#54616;&amp;#44592; &amp;#50948;&amp;#54644;)&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_typhoon.xml</file>
+    <line>24</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_typhoon.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#8251; &amp;#53468;&amp;#54413;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_typhoon.xml</file>
+    <line>31</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_typhoon.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;-&amp;#53468;&amp;#54413;&amp;#51008; &amp;#48513;&amp;#53468;&amp;#54217;&amp;#50577; &amp;#45224;&amp;#49436;&amp;#54644;&amp;#49345;&amp;#50640;&amp;#49436; &amp;#48156;&amp;#49373;&amp;#54616;&amp;#45716; &amp;#50676;&amp;#45824;&amp;#49457; &amp;#51200;&amp;#44592;&amp;#50517; &amp;#51473;&amp;#50640;&amp;#49436; &amp;#51473;&amp;#49900; &amp;#52572;&amp;#45824;&amp;#54413;&amp;#49549;&amp;#51060; 1&amp;#52488;&amp;#45817; 17m &amp;#51060;&amp;#49345;&amp;#51032; &amp;#54253;&amp;#54413;&amp;#50864;&amp;#47484; &amp;#46041;&amp;#48152;&amp;#54616;&amp;#44256; &amp;#51080;&amp;#45716; &amp;#44592;&amp;#49345;&amp;#54788;&amp;#49345;&amp;#51012; &amp;#47568;&amp;#54633;&amp;#45768;&amp;#45796;.&lt;br/&gt;
+                       \n &amp;#54665;&amp;#46041;&amp;#50836;&amp;#47161;&lt;br/&gt;
+                       \n &amp;#46020;&amp;#49884;&amp;#51648;&amp;#50669;&lt;br/&gt;
+                       \n -&amp;#44148;&amp;#47932;&amp;#51032; &amp;#44036;&amp;#54032; &amp;#48143; &amp;#50948;&amp;#54744;&amp;#49884;&amp;#49444;&amp;#47932; &amp;#51452;&amp;#48320;&amp;#51004;&amp;#47196; &amp;#44152;&amp;#50612;&amp;#44032;&amp;#44144;&amp;#45208; &amp;#51217;&amp;#44540;&amp;#54616;&amp;#51648; &amp;#47577;&amp;#49884;&amp;#45796;.&lt;br/&gt;
+                       \n\n -&amp;#51665; &amp;#50504;&amp;#54030;&amp;#51032; &amp;#51204;&amp;#44592;&amp;#49688;&amp;#47532;&amp;#47484; &amp;#54616;&amp;#51648; &amp;#47577;&amp;#49884;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#50500;&amp;#54028;&amp;#53944; &amp;#46321; &amp;#44256;&amp;#52789;&amp;#44148;&amp;#47932; &amp;#50725;&amp;#49345;, &amp;#51648;&amp;#54616;&amp;#49892;&amp;#44284; &amp;#54616;&amp;#49688;&amp;#46020; &amp;#47592;&amp;#54848;&amp;#50640; &amp;#51217;&amp;#44540;&amp;#54616;&amp;#51648; &amp;#47577;&amp;#49884;&amp;#45796;.&lt;br/&gt;
+                       \n\n -&amp;#44256;&amp;#52789;&amp;#50500;&amp;#54028;&amp;#53944; &amp;#46321; &amp;#45824;&amp;#54805;&amp;#12685;&amp;#44256;&amp;#52789;&amp;#44148;&amp;#47932;&amp;#50640; &amp;#44144;&amp;#51452;&amp;#54616;&amp;#44256; &amp;#44228;&amp;#49888; &amp;#51452;&amp;#48124;&amp;#51008; &amp;#50976;&amp;#47532;&amp;#52285;&amp;#51060; &amp;#54028;&amp;#49552;&amp;#46104;&amp;#45716; &amp;#44163;&amp;#51012; &amp;#48169;&amp;#51648;&amp;#54616;&amp;#46020;&amp;#47197; &amp;#51222;&amp;#51008; &amp;#49888;&amp;#47928;&amp;#51648;, &amp;#53580;&amp;#51060;&amp;#54532; &amp;#46321;&amp;#51012; &amp;#52285;&amp;#47928;&amp;#50640; &amp;#48537;&amp;#51060;&amp;#44256; &amp;#52285;&amp;#47928; &amp;#44032;&amp;#44620;&amp;#51060; &amp;#51217;&amp;#44540;&amp;#54616;&amp;#51648; &amp;#47577;&amp;#49884;&amp;#45796;.&lt;br/&gt;
+                       \n\n -&amp;#47784;&amp;#47000;&amp;#51452;&amp;#47672;&amp;#45768; &amp;#46321;&amp;#51012; &amp;#51060;&amp;#50857;&amp;#54616;&amp;#50668; &amp;#47932;&amp;#51060; &amp;#45336;&amp;#52432;&amp;#49436; &amp;#55120;&amp;#47476;&amp;#45716; &amp;#44163;&amp;#51012; &amp;#47561;&amp;#51021;&amp;#49884;&amp;#45796;.&lt;br/&gt;
+                       \n\n &amp;#45453;&amp;#52492;&amp;#51648;&amp;#50669;&lt;br/&gt;
+                       \n -&amp;#49328;&amp;#49324;&amp;#53468;&amp;#44032; &amp;#51068;&amp;#50612;&amp;#45216; &amp;#49688; &amp;#51080;&amp;#45716; &amp;#48708;&amp;#53448;&amp;#47732; &amp;#44540;&amp;#52376;&amp;#50640; &amp;#51217;&amp;#44540;&amp;#54616;&amp;#51648; &amp;#47577;&amp;#49884;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#45796;&amp;#47532;&amp;#45716; &amp;#50504;&amp;#51204;&amp;#54620;&amp;#51648; &amp;#54869;&amp;#51064;&amp;#54620; &amp;#54980;&amp;#50640; &amp;#51060;&amp;#50857;&amp;#54633;&amp;#49884;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#51452;&amp;#53469;&amp;#51452;&amp;#48320;&amp;#51032; &amp;#49328;&amp;#49324;&amp;#53468; &amp;#50948;&amp;#54744;&amp;#51060; &amp;#51080;&amp;#51004;&amp;#47732; &amp;#48120;&amp;#47532; &amp;#45824;&amp;#54588;&amp;#54633;&amp;#49884;&amp;#45796;.&lt;br/&gt;
+                       \n &amp;#8251; &amp;#49328;&amp;#49324;&amp;#53468;&amp;#51032; &amp;#51669;&amp;#54980;&lt;br/&gt;
+                       \n -&amp;#44221;&amp;#49324;&amp;#47732;&amp;#50640;&amp;#49436; &amp;#44049;&amp;#51088;&amp;#44592; &amp;#47566;&amp;#51008; &amp;#50577;&amp;#51032; &amp;#47932;&amp;#51060; &amp;#49368;&amp;#49567;&amp;#51012; &amp;#46412;&lt;br/&gt;
+                       \n -&amp;#54217;&amp;#49548; &amp;#51096; &amp;#45208;&amp;#50724;&amp;#45912; &amp;#49368;&amp;#47932;&amp;#51060;&amp;#45208; &amp;#51648;&amp;#54616;&amp;#49688;&amp;#44032; &amp;#44049;&amp;#51088;&amp;#44592; &amp;#47688;&amp;#52636; &amp;#46412;&lt;br/&gt;
+                       \n -&amp;#44049;&amp;#51088;&amp;#44592; &amp;#49328;&amp;#54728;&amp;#47532;&amp;#51032; &amp;#51068;&amp;#48512;&amp;#44032; &amp;#44552;&amp;#51060; &amp;#44032;&amp;#44144;&amp;#45208; &amp;#45236;&amp;#47140;&amp;#50505;&amp;#51012; &amp;#46412;&lt;br/&gt;
+                       \n -&amp;#48148;&amp;#46988;&amp;#51060; &amp;#48520;&amp;#51648; &amp;#50506;&amp;#45716;&amp;#45936;&amp;#46020; &amp;#45208;&amp;#47924;&amp;#44032; &amp;#55124;&amp;#46308;&amp;#47532;&amp;#44144;&amp;#45208; &amp;#45336;&amp;#50612;&amp;#51648;&amp;#45716; &amp;#46412;, &amp;#49328;&amp;#50872;&amp;#47548;&amp;#51060;&amp;#45208; &amp;#46405;&amp;#50872;&amp;#47548;&amp;#51060; &amp;#46308;&amp;#47540; &amp;#46412;&lt;br/&gt;
+                       \n\n &amp;#54644;&amp;#50504;&amp;#51648;&amp;#50669;&lt;br/&gt;
+                       \n -&amp;#48148;&amp;#45815;&amp;#44032;&amp;#51032; &amp;#51200;&amp;#51648;&amp;#45824; &amp;#51452;&amp;#48124;&amp;#51008; &amp;#50504;&amp;#51204;&amp;#54620; &amp;#44275;&amp;#51004;&amp;#47196; &amp;#45824;&amp;#54588;&amp;#54633;&amp;#49884;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#54644;&amp;#50504;&amp;#44032;&amp;#51032; &amp;#50948;&amp;#54744;&amp;#54620; &amp;#48708;&amp;#53448;&amp;#47732;&amp;#50640; &amp;#51217;&amp;#44540;&amp;#54616;&amp;#51648; &amp;#47577;&amp;#49884;&amp;#45796;.&lt;br/&gt;
+                       \n-&amp;#49440;&amp;#48149;&amp;#51012; &amp;#45800;&amp;#45800;&amp;#55176; &amp;#47926;&amp;#50612;&amp;#46160;&amp;#49884;&amp;#44256; &amp;#50612;&amp;#47581;&amp;#12685;&amp;#50612;&amp;#44396; &amp;#46321;&amp;#51012; &amp;#50504;&amp;#51204;&amp;#54620; &amp;#44275;&amp;#51004;&amp;#47196; &amp;#50734;&amp;#44609;&amp;#49884;&amp;#45796;.&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_laceration.xml</file>
+    <line>20</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_laceration.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#8251; &amp;#50676;&amp;#49345;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_laceration.xml</file>
+    <line>29</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_laceration.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;-&amp;#54588;&amp;#48512;&amp;#51032; &amp;#51652;&amp;#54588;&amp;#52789;&amp;#51012; &amp;#54252;&amp;#54632;&amp;#54616;&amp;#50668; &amp;#52258;&amp;#50612;&amp;#51652; &amp;#49345;&amp;#52376;&amp;#47484; &amp;#47568;&amp;#54620;&amp;#45796;.&lt;br/&gt;
+                           \n -&amp;#44648;&amp;#45143;&amp;#54620; &amp;#44144;&amp;#51592;&amp;#45208; &amp;#49688;&amp;#44148;&amp;#51012; &amp;#51060;&amp;#50857;&amp;#54644; &amp;#49345;&amp;#52376;&amp;#48512;&amp;#50948;&amp;#47484; &amp;#51649;&amp;#51217; &amp;#50517;&amp;#48149;&amp;#54616;&amp;#44256; &amp;#49900;&amp;#51109;&amp;#48372;&amp;#45796; &amp;#45458;&amp;#44172; &amp;#50976;&amp;#51648;&amp;#54620;&amp;#45796;. &amp;#51076;&amp;#51032;&amp;#47196; &amp;#51648;&amp;#54792;&amp;#51228; &amp;#46321; &amp;#51060;&amp;#47932;&amp;#51012; &amp;#49345;&amp;#52376;&amp;#50640; &amp;#48148;&amp;#47476;&amp;#45716; &amp;#44163;&amp;#51008; &amp;#54588;&amp;#54644;&amp;#50556; &amp;#54620;&amp;#45796;.&lt;br/&gt;
+                           \n -&amp;#52636;&amp;#54792;&amp;#51060; &amp;#48120;&amp;#48120;&amp;#54616;&amp;#44144;&amp;#45208; &amp;#50630;&amp;#45716; &amp;#44221;&amp;#50864;&amp;#50640;&amp;#45716; &amp;#44648;&amp;#45143;&amp;#54620; &amp;#47932;&amp;#47196; &amp;#49464;&amp;#52377;&amp;#54616;&amp;#50668; &amp;#44048;&amp;#50684;&amp;#51012; &amp;#50696;&amp;#48169;&amp;#54620;&amp;#45796;.&lt;br/&gt;
+                           \n\n -&amp;#46160;&amp;#54588;&amp;#51032; &amp;#44221;&amp;#50864; &amp;#49440;&amp;#53469;&amp;#51201;&amp;#51064; &amp;#44221;&amp;#50864; &amp;#49345;&amp;#52376; &amp;#51340;&amp;#50864;&amp;#51032; &amp;#47672;&amp;#47532;&amp;#52852;&amp;#46973;&amp;#51012; &amp;#45817;&amp;#44200; &amp;#44256;&amp;#51221;&amp;#54632;&amp;#51004;&amp;#47196;&amp;#50024; &amp;#48393;&amp;#54633;&amp;#44284; &amp;#46041;&amp;#51068;&amp;#54620; &amp;#54952;&amp;#44284;&amp;#47484; &amp;#48372;&amp;#51068; &amp;#49688; &amp;#51080;&amp;#45796;.&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_volcano.xml</file>
+    <line>24</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_volcano.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#8251; &amp;#54868;&amp;#49328;&amp;#54253;&amp;#48156;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_volcano.xml</file>
+    <line>31</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_volcano.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;-&amp;#54868;&amp;#50640;&amp;#49436; &amp;#45824;&amp;#44592;&amp;#45208; &amp;#51648;&amp;#54364;&amp;#47732;&amp;#51004;&amp;#47196; &amp;#44256;&amp;#52404;, &amp;#50976;&amp;#52404;&amp;#50752; &amp;#44592;&amp;#52404; &amp;#54805;&amp;#53468;&amp;#51032; &amp;#47932;&amp;#51656;&amp;#51060; &amp;#48516;&amp;#52636;&amp;#46104;&amp;#45716; &amp;#44284;&amp;#51221;&amp;#51012; &amp;#47568;&amp;#54633;&amp;#45768;&amp;#45796;.&lt;br/&gt;
+                       \n &amp;#54665;&amp;#46041;&amp;#50836;&amp;#47161;&lt;br/&gt;
+                       \n -&amp;#47564;&amp;#49457;&amp;#44592;&amp;#44288;&amp;#51648;&amp;#50684;&amp;#51060;&amp;#45208; &amp;#54224;&amp;#44592;&amp;#51333;, &amp;#52380;&amp;#49885;&amp;#51068; &amp;#44221;&amp;#50864;&amp;#45716; &amp;#49892;&amp;#45236;&amp;#50640; &amp;#47672;&amp;#47924;&amp;#47476;&amp;#44256;, &amp;#48520;&amp;#54596;&amp;#50836;&amp;#54616;&amp;#44172; &amp;#54868;&amp;#49328;&amp;#51116;&amp;#50640; &amp;#45432;&amp;#52636;&amp;#46104;&amp;#51648; &amp;#50506;&amp;#46020;&amp;#47197; &amp;#54620;&amp;#45796;.&lt;br/&gt;
+                       \n\n -&amp;#47928;&amp;#51060;&amp;#45208; &amp;#52285;&amp;#47928;&amp;#51012; &amp;#45803;&amp;#44256;, &amp;#47932;&amp;#51012; &amp;#47931;&amp;#55180; &amp;#49688;&amp;#44148;&amp;#51012; &amp;#47928;&amp;#51032; &amp;#48712;&amp;#53960;&amp;#51060;&amp;#45208; &amp;#54872;&amp;#44592;&amp;#44396;&amp;#50640; &amp;#46164;&amp;#45796;.&lt;br/&gt;
+                       \n -&amp;#49892;&amp;#50808;&amp;#50640; &amp;#51080;&amp;#51012; &amp;#44221;&amp;#50864;, &amp;#54588;&amp;#45212; &amp;#49884;&amp;#49444;(&amp;#52264;&amp;#45208; &amp;#44148;&amp;#47932; &amp;#46321;)&amp;#51012; &amp;#52286;&amp;#45716;&amp;#45796;.&lt;br/&gt;
+                       \n\n -&amp;#44033;&amp;#47561;&amp;#50640; &amp;#49552;&amp;#49345;&amp;#51032; &amp;#50948;&amp;#54744;&amp;#51060; &amp;#51080;&amp;#51004;&amp;#48064;&amp;#47196; &amp;#53080;&amp;#53469;&amp;#53944;&amp;#47116;&amp;#51592;(contact lens)&amp;#47484; &amp;#52265;&amp;#50857;&amp;#54616;&amp;#51648; &amp;#50506;&amp;#45716;&amp;#45796;.&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml</file>
+    <line>18</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#51648;&amp;#51652;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml</file>
+    <line>25</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#54644;&amp;#51068;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml</file>
+    <line>32</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#53468;&amp;#54413;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml</file>
+    <line>39</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#54868;&amp;#49328;&amp;#54253;&amp;#48156;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml</file>
+    <line>46</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#51204;&amp;#51137;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml</file>
+    <line>53</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#51025;&amp;#44553;&amp;#51312;&amp;#52824;&amp;#50836;&amp;#47161;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/list_item_chatting.xml</file>
+    <line>43</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/list_item_chatting.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#49324;&amp;#50857;&amp;#51088;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/list_item_chatting.xml</file>
+    <line>54</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/list_item_chatting.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#45824;&amp;#54868;&amp;#45236;&amp;#50857;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_amputation.xml</file>
+    <line>20</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_amputation.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#8251; &amp;#49552;&amp;#44032;&amp;#46973; &amp;#51208;&amp;#45800;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_amputation.xml</file>
+    <line>29</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_amputation.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;-&amp;#52636;&amp;#54792; &amp;#48512;&amp;#50948;&amp;#47484; &amp;#45572;&amp;#47476;&amp;#44256; &amp;#49900;&amp;#51109;&amp;#48372;&amp;#45796; &amp;#45458;&amp;#51060; &amp;#46308;&amp;#50612;&amp;#51452;&amp;#45716; &amp;#44163;&amp;#51004;&amp;#47196;&amp;#46020; &amp;#54952;&amp;#44284;&amp;#51201;&amp;#51064; &amp;#51648;&amp;#54792;&amp;#51060; &amp;#46112; &amp;#49688; &amp;#51080;&amp;#45796;.(&amp;#51648;&amp;#54792;&amp;#51228; &amp;#46321;&amp;#51008; &amp;#49324;&amp;#50857; X)&lt;br/&gt;
+                           \n\n -&amp;#51208;&amp;#45800;&amp;#46108; &amp;#49552;&amp;#44032;&amp;#46973;&amp;#51012; &amp;#52286;&amp;#50500; &amp;#44648;&amp;#45143;&amp;#54620; &amp;#44144;&amp;#51592;&amp;#45208; &amp;#49552;&amp;#49688;&amp;#44148; &amp;#46321;&amp;#51004;&amp;#47196; &amp;#49916; &amp;#46244; &amp;#48708;&amp;#45776; &amp;#51452;&amp;#47672;&amp;#45768;&amp;#50640; &amp;#45347;&amp;#50612; &amp;#48128;&amp;#48393;&amp;#54616;&amp;#44256; &amp;#51060;&amp;#47484; &amp;#45796;&amp;#49884; &amp;#50620;&amp;#51020;&amp;#51060; &amp;#52292;&amp;#50892;&amp;#51652; &amp;#48708;&amp;#45776; &amp;#48393;&amp;#51648;&amp;#50640; &amp;#45347;&amp;#50612; &amp;#48372;&amp;#44288;&amp;#54616;&amp;#46020;&amp;#47197; &amp;#54620;&amp;#45796;.(&amp;#51208;&amp;#45800;&amp;#46108; &amp;#49688;&amp;#51648;&amp;#47484; &amp;#51649;&amp;#51217; &amp;#50620;&amp;#51020;&amp;#50640; &amp;#45812;&amp;#44536;&amp;#45716; &amp;#44163;&amp;#51008; &amp;#54588;&amp;#54644;&amp;#50556; &amp;#54620;&amp;#45796;.)&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml</file>
+    <line>18</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#49900;&amp;#54224;&amp;#49548;&amp;#49373;&amp;#49696;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml</file>
+    <line>25</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#44264;&amp;#51208;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml</file>
+    <line>32</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#52272;&amp;#44284;&amp;#49345;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml</file>
+    <line>39</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#50676;&amp;#49345;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml</file>
+    <line>46</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#44288;&amp;#53685;&amp;#49345;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml</file>
+    <line>53</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#49552;&amp;#44032;&amp;#46973;&amp;#51208;&amp;#45800;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/show_sms.xml</file>
+    <line>19</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/show_sms.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#48156;&amp;#49888;&amp;#51088;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/show_sms.xml</file>
+    <line>37</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/show_sms.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#49688;&amp;#49888; &amp;#49884;&amp;#44033;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/show_sms.xml</file>
+    <line>55</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/show_sms.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>&lt;html&gt;[I18N] Hardcoded string &quot;&amp;#49688;&amp;#49888; &amp;#45236;&amp;#50857;&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource&lt;/html&gt;</description>
+  </problem>
+</problems>
+

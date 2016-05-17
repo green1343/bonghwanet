@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/list_item_chatting.xml</file>
+    <line>42</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/list_item_chatting.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Nested layout weights</problem_class>
+    <hints />
+    <description>&lt;html&gt;Nested weights are bad for performance&lt;/html&gt;</description>
+  </problem>
+</problems>
+

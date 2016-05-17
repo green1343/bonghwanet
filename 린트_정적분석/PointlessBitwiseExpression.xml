@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler byte[] shortToByte(short shortVar)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless bitwise expression</problem_class>
+    <description>&lt;code&gt;shortVar&gt;&gt;0&lt;/code&gt; can be replaced with 'shortVar' #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>22</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler byte[] intToByte(int intVar)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless bitwise expression</problem_class>
+    <description>&lt;code&gt;intVar&gt;&gt;0&lt;/code&gt; can be replaced with 'intVar' #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>44</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler byte[] longToByte(long longVar)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless bitwise expression</problem_class>
+    <description>&lt;code&gt;longVar&gt;&gt;0&lt;/code&gt; can be replaced with 'longVar' #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>34</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler byte[] intToByte2(int intVar)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless bitwise expression</problem_class>
+    <description>&lt;code&gt;intVar&gt;&gt;0&lt;/code&gt; can be replaced with 'intVar' #loc</description>
+  </problem>
+</problems>
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/FileActivity.java</file>
+    <line>171</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.FileActivity java.lang.String getPath(android.net.Uri uri)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;cursor.moveToNext()&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/FileActivity.java</file>
+    <line>33</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.FileActivity void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Dereference of &lt;code&gt;fileList&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupMain.java</file>
+    <line>51</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.GroupMain void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;getActionBar().setDisplayHomeAsUpEnabled(true)&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/NewGrouplistActivity.java</file>
+    <line>103</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.NewGrouplistActivity void refreshList()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Argument &lt;code&gt;idStr&lt;/code&gt; might be null</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GallaryActivity.java</file>
+    <line>210</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.GallaryActivity java.lang.String getPath(android.net.Uri uri)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;cursor.moveToNext()&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>501</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager void checkDirectories()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Argument &lt;code&gt;dir&lt;/code&gt; might be null</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>490</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager java.lang.String getUserName(long id)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Condition &lt;code&gt;cursor != null&lt;/code&gt; is always &lt;code&gt;true&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>639</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager boolean setClient()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Argument &lt;code&gt;idStr&lt;/code&gt; might be null</description>
+  </problem>
+</problems>
+

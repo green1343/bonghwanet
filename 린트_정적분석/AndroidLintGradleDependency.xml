@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/build.gradle</file>
+    <line>18</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/build.gradle" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete Gradle Dependency</problem_class>
+    <hints />
+    <description>&lt;html&gt;A newer version of com.android.support:support-v4 than 23.1.0 is available: 24.0.0-alpha1&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/build.gradle</file>
+    <line>19</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/build.gradle" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete Gradle Dependency</problem_class>
+    <hints />
+    <description>&lt;html&gt;A newer version of com.android.support:gridlayout-v7 than 23.1.0 is available: 24.0.0-alpha1&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/build.gradle</file>
+    <line>20</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/build.gradle" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete Gradle Dependency</problem_class>
+    <hints />
+    <description>&lt;html&gt;A newer version of com.android.support:cardview-v7 than 23.1.0 is available: 24.0.0-alpha1&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/build.gradle</file>
+    <line>21</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/build.gradle" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete Gradle Dependency</problem_class>
+    <hints />
+    <description>&lt;html&gt;A newer version of com.android.support:support-v13 than 23.1.0 is available: 24.0.0-alpha1&lt;/html&gt;</description>
+  </problem>
+</problems>
+

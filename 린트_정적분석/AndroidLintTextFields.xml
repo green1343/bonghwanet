@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml</file>
+    <line>34</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing inputType or hint</problem_class>
+    <hints />
+    <description>&lt;html&gt;This text field does not specify an &lt;code&gt;inputType&lt;/code&gt; or a &lt;code&gt;hint&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>35</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing inputType or hint</problem_class>
+    <hints />
+    <description>&lt;html&gt;This text field does not specify an &lt;code&gt;inputType&lt;/code&gt; or a &lt;code&gt;hint&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+</problems>
+
