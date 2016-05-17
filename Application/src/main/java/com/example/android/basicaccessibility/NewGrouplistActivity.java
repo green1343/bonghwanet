@@ -169,7 +169,7 @@ public class NewGrouplistActivity extends Activity {
 			});
 			d.show();
 
-			//Toast.makeText(getApplicationContext(), m_adapter.getItem(arg2), Toast.LENGTH_SHORT).show();
+			//Toast.makeText(getApplicationContext(), m_userlistAdapter.getItem(arg2), Toast.LENGTH_SHORT).show();
 		}
 	};
 }

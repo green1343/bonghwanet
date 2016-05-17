@@ -329,6 +329,7 @@ containing a value of this type.
         public static final int center=0x7f0a0005;
         public static final int center_horizontal=0x7f0a0006;
         public static final int center_vertical=0x7f0a0007;
+        public static final int chatting=0x7f0a002d;
         public static final int clip_horizontal=0x7f0a0008;
         public static final int clip_vertical=0x7f0a0009;
         public static final int editGroupname=0x7f0a002b;
@@ -344,7 +345,6 @@ containing a value of this type.
         public static final int left=0x7f0a000e;
         public static final int listFile=0x7f0a0024;
         public static final int listView=0x7f0a0012;
-        public static final int listView2=0x7f0a002d;
         public static final int originNum=0x7f0a0038;
         public static final int originText=0x7f0a003a;
         public static final int right=0x7f0a000f;
@@ -359,12 +359,12 @@ containing a value of this type.
         public static final int textView2=0x7f0a002e;
         public static final int textView3=0x7f0a0030;
         public static final int textView4=0x7f0a002a;
-        public static final int textView5=0x7f0a002f;
         public static final int textView6=0x7f0a001f;
         public static final int textView7=0x7f0a001d;
         public static final int textView8=0x7f0a0020;
         public static final int textView9=0x7f0a001e;
         public static final int top=0x7f0a0011;
+        public static final int userlist=0x7f0a002f;
         public static final int vertical=0x7f0a0001;
         public static final int vi_content=0x7f0a0037;
         public static final int vi_image=0x7f0a0035;

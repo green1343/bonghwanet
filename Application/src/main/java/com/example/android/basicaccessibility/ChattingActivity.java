@@ -52,12 +52,14 @@ public class ChattingActivity extends Activity {
 		// TODO : 효율성
 		m_adapter.arr.clear();
 		for(Manager.TextInfo info : Manager.INSTANCE.getText()){
-			//m_adapter.add("" + Manager.INSTANCE.getUserName(info.uploader) + " : " + info.text);
+			//m_userlistAdapter.add("" + Manager.INSTANCE.getUserName(info.uploader) + " : " + info.text);
 			m_adapter.arr.add(info);
 		}
 
 		m_adapter.notifyDataSetChanged();
 		m_list.setSelection(100);
+
+		GroupHomeActivity.refreshList();
 
 		Manager.INSTANCE.setTimerZero();
 	}

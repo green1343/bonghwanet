@@ -97,6 +97,7 @@ int id buttonUpload 0x7f0a0025
 int id center 0x7f0a0005
 int id center_horizontal 0x7f0a0006
 int id center_vertical 0x7f0a0007
+int id chatting 0x7f0a002d
 int id clip_horizontal 0x7f0a0008
 int id clip_vertical 0x7f0a0009
 int id editGroupname 0x7f0a002b
@@ -112,7 +113,6 @@ int id ivPoster 0x7f0a0015
 int id left 0x7f0a000e
 int id listFile 0x7f0a0024
 int id listView 0x7f0a0012
-int id listView2 0x7f0a002d
 int id originNum 0x7f0a0038
 int id originText 0x7f0a003a
 int id right 0x7f0a000f
@@ -127,12 +127,12 @@ int id textView 0x7f0a002c
 int id textView2 0x7f0a002e
 int id textView3 0x7f0a0030
 int id textView4 0x7f0a002a
-int id textView5 0x7f0a002f
 int id textView6 0x7f0a001f
 int id textView7 0x7f0a001d
 int id textView8 0x7f0a0020
 int id textView9 0x7f0a001e
 int id top 0x7f0a0011
+int id userlist 0x7f0a002f
 int id vertical 0x7f0a0001
 int id vi_content 0x7f0a0037
 int id vi_image 0x7f0a0035

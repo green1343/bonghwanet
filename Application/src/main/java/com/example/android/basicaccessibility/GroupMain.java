@@ -11,6 +11,12 @@ import android.widget.Toast;
 
 public class GroupMain extends TabActivity {
 
+    static public TabHost m_tabHost;
+
+    static public void setTab(int index){
+        m_tabHost.setCurrentTab(index);
+    }
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -21,7 +27,7 @@ public class GroupMain extends TabActivity {
 
         Resources res = getResources();
         // Resource object to get Drawables
-        TabHost tabHost = getTabHost();
+        m_tabHost = getTabHost();
         // The activity TabHost
         TabHost.TabSpec spec;
         // Resusable TabSpec for each tab
@@ -30,23 +36,23 @@ public class GroupMain extends TabActivity {
         // Create an Intent to launch an Activity for the tab (to be reused)
         intent = new Intent().setClass(this, GroupHomeActivity.class);
         // Initialize a TabSpec for each tab and add it to the TabHost
-        spec = tabHost.newTabSpec("main").setIndicator("Main",
+        spec = m_tabHost.newTabSpec("main").setIndicator("Main",
                 res.getDrawable(R.drawable.ic_tab)).setContent(intent);
-        tabHost.addTab(spec);
+        m_tabHost.addTab(spec);
         // Do the same for the other tabs
         intent = new Intent().setClass(this, ChattingActivity.class);
-        spec = tabHost.newTabSpec("chat").setIndicator("Chat",
+        spec = m_tabHost.newTabSpec("chat").setIndicator("Chat",
                 res.getDrawable(R.drawable.ic_tab)).setContent(intent);
-        tabHost.addTab(spec);
+        m_tabHost.addTab(spec);
         intent = new Intent().setClass(this, GallaryActivity.class);
-        spec = tabHost.newTabSpec("gallery").setIndicator("Gallery",
+        spec = m_tabHost.newTabSpec("gallery").setIndicator("Gallery",
                 res.getDrawable(R.drawable.ic_tab)).setContent(intent);
-        tabHost.addTab(spec);
+        m_tabHost.addTab(spec);
         intent = new Intent().setClass(this, FileActivity.class);
-        spec = tabHost.newTabSpec("file").setIndicator("File",
+        spec = m_tabHost.newTabSpec("file").setIndicator("File",
                 res.getDrawable(R.drawable.ic_tab)).setContent(intent);
-        tabHost.addTab(spec);
-        tabHost.setCurrentTab(0);
+        m_tabHost.addTab(spec);
+        m_tabHost.setCurrentTab(0);
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
