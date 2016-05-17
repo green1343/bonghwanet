@@ -377,7 +377,16 @@ public enum WiFiNetwork {
                     m_outStream.flush();
                 }
 
-                m_outStream.close();
+                // TODO : 수정
+                buf[0] = -1;
+                buf[1] = -1;
+                buf[2] = -1;
+                buf[3] = -1;
+                buf[4] = -1;
+                m_outStream.write(buf, 0, 5);
+                m_outStream.flush();
+
+                //m_outStream.close();
 
                 bis.close();
                 fis.close();
@@ -526,7 +535,7 @@ public enum WiFiNetwork {
                             }
 
                             // TODO : 전송 완료 확인
-                            Manager.INSTANCE.getAllFiles().get(p.group).putAll(p.files);
+                            files.putAll(p.files);
 
                             break;
                         }
@@ -551,6 +560,15 @@ public enum WiFiNetwork {
                                 while ((len = m_inStream.read(buf)) > 0) {
                                     bos.write(buf, 0, len);
                                     bos.flush();
+
+                                    if(5 <= len && len<BUFFERSIZE){
+                                        if(buf[len-1] == -1 &&
+                                                buf[len-2] == -1 &&
+                                                buf[len-3] == -1 &&
+                                                buf[len-4] == -1 &&
+                                                buf[len-5] == -1)
+                                            break;
+                                    }
                                 }
                                 bos.close();
                                 fos.close();

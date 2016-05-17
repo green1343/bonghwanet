@@ -169,7 +169,6 @@ public class GallaryActivity extends Activity {
 		/*HashMap<Long, Manager.GroupInfo> groups = Manager.INSTANCE.getAllGroups();
 		Manager.GroupInfo g = groups.get(groups.keySet());
 		String str = new String(g.name);*/
-		Manager.INSTANCE.checkPictureDirectory();
 		cameraTempFilePath = Manager.INSTANCE.getRealGroupPath(Manager.INSTANCE.getCurGroupID())+"/Pictures/"+getDateString()+".jpg";
 		File imageFile = new File(cameraTempFilePath);
 		Uri imageFileUri = Uri.fromFile(imageFile);

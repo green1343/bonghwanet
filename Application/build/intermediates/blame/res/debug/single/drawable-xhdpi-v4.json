@@ -1,23 +1,11 @@
 [
     {
-        "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
-        "source": "C:\\bonghwa\\Application\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
         "source": "C:\\bonghwanet\\Application\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_action_discard.png",
         "source": "C:\\bonghwanet\\Application\\src\\main\\res\\drawable-xhdpi\\ic_action_discard.png"
-    },
-    {
-        "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_action_discard.png",
-        "source": "C:\\bonghwa\\Application\\src\\main\\res\\drawable-xhdpi\\ic_action_discard.png"
-    },
-    {
-        "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_action_info.png",
-        "source": "C:\\bonghwa\\Application\\src\\main\\res\\drawable-xhdpi\\ic_action_info.png"
     },
     {
         "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_action_info.png",

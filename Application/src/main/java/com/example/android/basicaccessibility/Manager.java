@@ -373,6 +373,8 @@ public enum Manager {
             g.members.put(m_myNumber, m_myUserInfo);
             addNewGroup(EMERGENCY, g);
         }
+
+        checkDirectories();
     }
 
     public void writeUserData()
@@ -491,12 +493,17 @@ public enum Manager {
             for(Long id : m_groups.keySet()) {
                 String dir = getRealGroupPath(id);
                 java.io.File file = new java.io.File(dir);
-                if (!file.exists())  // 원하는 경로에 폴더가 있는지 확인
+                if (!file.exists())
                     file.mkdirs();
 
-                HashMap<String, FileInfo> arr = new HashMap<>();
+                dir += "/Pictures";
+                file = new java.io.File(dir);
+                if (!file.exists())
+                    file.mkdirs();
+
+                /*HashMap<String, FileInfo> arr = new HashMap<>();
                 arr.put(getGroupPath(id),  new FileInfo(true, file.lastModified()));
-                m_files.put(id, arr);
+                m_files.put(id, arr);*/
             }
         }
     }
@@ -757,21 +764,12 @@ public enum Manager {
         addNewFile(filename);
     }
 
-    public void checkPictureDirectory(){
-        String dir = getRealGroupPath(getCurGroupID()) + "/Pictures";
-        File file = new java.io.File(dir);
-        if( !file.exists() )
-            file.mkdirs();
-    }
-
     public void uploadPicture(String path){
 
         StringTokenizer st = new StringTokenizer(path, "/");
         String filename = null;
         while(st.hasMoreTokens())
             filename = st.nextToken();
-
-        checkPictureDirectory();
 
         String newPath = getRealGroupPath(getCurGroupID()) + "/Pictures/" + filename;
         copyFile(path, newPath);
