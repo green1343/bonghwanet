@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/drawable-hdpi/ic_tab.xml</file>
+    <line>2</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/drawable-hdpi/ic_tab.xml" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused XML schema declaration</problem_class>
+    <description>Namespace declaration is never used</description>
+  </problem>
+</problems>
+

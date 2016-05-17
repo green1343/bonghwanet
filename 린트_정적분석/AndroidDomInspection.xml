@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/tests/AndroidManifest.xml</file>
+    <line>37</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/tests/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'com.example.android.basicaccessibility'</description>
+  </problem>
+</problems>
+

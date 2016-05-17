@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>72</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler short byteToShort(byte[] buffer, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>10</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler byte[] shortToByte(short shortVar)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>58</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler byte[] doubleToByte(double doubleVar)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>83</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler int byte1ToInt(byte[] b, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>20</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler byte[] intToByte(int intVar)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>42</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler byte[] longToByte(long longVar)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>103</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler long byteToLong(byte[] buffer, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>99</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler long byteToLong(byte[] buffer)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>69</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler short byteToShort(byte[] buffer)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>110</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler double byteToDouble(byte[] buffer, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>114</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler double byteToDouble(byte[] buffer)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>86</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler int byte2ToInt(byte[] buffer, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>32</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler byte[] intToByte2(int intVar)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>80</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler int byte1ToInt(byte b)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>89</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler int byteToInt(byte[] buffer)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>92</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.LittleEndianByteHandler int byteToInt(byte[] buffer, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>135</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler byte[] setShort(byte[] dest, int offset, short s)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>52</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler byte[] longToByte(long l)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>144</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler byte[] setInt(byte[] dest, int offset, int i)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>124</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler double byteToDouble(byte[] buffer, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>100</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler int byteToInt(byte[] src, int offset, int len)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>83</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler short byteToShort(byte[] src, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>14</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler byte[] boolToByte(boolean b)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>23</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler byte[] shortToByte(short s)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>32</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler byte[] intToByte(int i)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>128</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler double byteToDouble(byte[] src)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>117</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler long byteToLong(byte[] src)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>155</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler byte[] setLong(byte[] dest, int offset, long l)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>43</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler byte[] intToByte2(int i)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>107</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler int byteToInt(byte[] src)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>93</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler int byteToInt(byte[] src, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>113</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler long byteToLong(byte[] src, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>86</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler short byteToShort(byte[] src)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>68</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler byte[] doubleToByte(double d)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>97</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler int byte2ToInt(byte[] src, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>76</line>
+    <module>Application</module>
+    <package>com.example.android.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.needclass.BigEndianByteHandler boolean byteToBool(byte[] src, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'static' method declared 'final'</problem_class>
+    <description>'static' method declared &lt;code&gt;final&lt;/code&gt; #loc</description>
+  </problem>
+</problems>
+

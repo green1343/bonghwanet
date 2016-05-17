@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/drawable-hdpi/emergency.png</file>
+    <line>0</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/drawable-hdpi/emergency.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+    <hints />
+    <description>&lt;html&gt;The following unrelated icon files have identical contents: emergency.png, emergency_1.png&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/drawable-hdpi/emergency_1.png</file>
+    <line>0</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/drawable-hdpi/emergency_1.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Duplicated icons under different names</problem_class>
+    <hints />
+    <description>&lt;html&gt;The following unrelated icon files have identical contents: emergency.png, emergency_1.png&lt;/html&gt;</description>
+  </problem>
+</problems>
+

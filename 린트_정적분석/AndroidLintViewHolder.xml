@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GallaryActivity.java</file>
+    <line>125</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GallaryActivity.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">View Holder Candidates</problem_class>
+    <hints />
+    <description>&lt;html&gt;Unconditional layout inflation from view adapter: Should use View Holder pattern (use recycled view passed into this method as the second parameter) for smoother scrolling&lt;/html&gt;</description>
+  </problem>
+</problems>
+

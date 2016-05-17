@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_cr.xml</file>
+    <line>29</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_cr.xml" />
+    <problem_class severity="WARNING" attribute_key="DEPRECATED_ATTRIBUTES">Deprecated API usage in XML</problem_class>
+    <description>'android.widget.Gallery' is deprecated</description>
+  </problem>
+</problems>
+

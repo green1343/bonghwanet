@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/FileActivity.java</file>
+    <line>77</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.FileActivity java.lang.String getAbsolutePath(java.lang.String strFolder)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">String comparison using '==', instead of 'equals()'</problem_class>
+    <description>String values are compared using &lt;code&gt;==&lt;/code&gt;, not 'equals()' #loc</description>
+  </problem>
+</problems>
+

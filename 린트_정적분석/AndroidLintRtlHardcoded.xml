@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>14</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;end&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;right&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>24</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>26</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentLeft&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentStart&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>38</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentLeft&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentStart&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>40</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>62</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>64</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentLeft&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentStart&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>76</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>78</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentLeft&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentStart&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/file.xml</file>
+    <line>25</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/file.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentLeft&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentStart&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml</file>
+    <line>40</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentLeft&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentStart&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml</file>
+    <line>42</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_toLeftOf&lt;/code&gt;; already defining &lt;code&gt;layout_toStartOf&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml</file>
+    <line>50</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;end&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;right&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml</file>
+    <line>52</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/gallery.xml</file>
+    <line>11</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/gallery.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;end&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;right&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/gallery.xml</file>
+    <line>13</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/gallery.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/gallery.xml</file>
+    <line>31</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/gallery.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;end&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;right&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/gallery.xml</file>
+    <line>33</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/gallery.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_toLeftOf&lt;/code&gt;; already defining &lt;code&gt;layout_toStartOf&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>15</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentLeft&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentStart&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>17</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>28</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentLeft&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentStart&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>30</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>41</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_toLeftOf&lt;/code&gt;; already defining &lt;code&gt;layout_toStartOf&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>52</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>54</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentLeft&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentStart&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>66</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>78</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>80</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentLeft&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentStart&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>15</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentLeft&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentStart&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>17</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>28</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentLeft&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentStart&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>30</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 23&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml</file>
+    <line>20</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;start&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;left&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml</file>
+    <line>27</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;end&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;right&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml</file>
+    <line>34</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;start&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;left&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml</file>
+    <line>41</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;end&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;right&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml</file>
+    <line>48</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;start&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;left&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml</file>
+    <line>55</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;end&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;right&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/list_item_chatting.xml</file>
+    <line>20</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/list_item_chatting.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;start&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;left&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/list_item_chatting.xml</file>
+    <line>33</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/list_item_chatting.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Consider replacing &lt;code&gt;android:layout_marginLeft&lt;/code&gt; with &lt;code&gt;android:layout_marginStart=&quot;5dp&quot;&lt;/code&gt; to better support right-to-left layouts&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml</file>
+    <line>20</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;start&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;left&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml</file>
+    <line>27</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;end&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;right&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml</file>
+    <line>34</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;start&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;left&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml</file>
+    <line>41</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;end&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;right&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml</file>
+    <line>48</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;start&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;left&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml</file>
+    <line>55</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &quot;&lt;code&gt;end&lt;/code&gt;&quot; instead of &quot;&lt;code&gt;right&lt;/code&gt;&quot; to ensure correct behavior in right-to-left locales&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/show_sms.xml</file>
+    <line>25</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/show_sms.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Consider replacing &lt;code&gt;android:layout_marginLeft&lt;/code&gt; with &lt;code&gt;android:layout_marginStart=&quot;20dp&quot;&lt;/code&gt; to better support right-to-left layouts&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/show_sms.xml</file>
+    <line>43</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/show_sms.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Consider replacing &lt;code&gt;android:layout_marginLeft&lt;/code&gt; with &lt;code&gt;android:layout_marginStart=&quot;20dp&quot;&lt;/code&gt; to better support right-to-left layouts&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/show_sms.xml</file>
+    <line>61</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/show_sms.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Consider replacing &lt;code&gt;android:layout_marginLeft&lt;/code&gt; with &lt;code&gt;android:layout_marginStart=&quot;20dp&quot;&lt;/code&gt; to better support right-to-left layouts&lt;/html&gt;</description>
+  </problem>
+</problems>
+

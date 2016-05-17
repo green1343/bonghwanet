@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/sms_service.xml</file>
+    <line>2</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/sms_service.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/sms_service.xml</file>
+    <line>47</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/sms_service.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/file.xml</file>
+    <line>2</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/file.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/file.xml</file>
+    <line>18</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/file.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/sms_show.xml</file>
+    <line>2</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/sms_show.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/sms_show.xml</file>
+    <line>64</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/sms_show.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+</problems>
+

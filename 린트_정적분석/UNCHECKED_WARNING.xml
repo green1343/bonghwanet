@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>221</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.WiFiNetwork.Server void run()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unchecked warning</problem_class>
+    <description>Unchecked cast: 'java.lang.Object' to 'java.util.HashMap&lt;java.lang.Long,com.example.android.basicaccessibility.Manager.GroupInfo&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>279</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.WiFiNetwork.Client void run()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unchecked warning</problem_class>
+    <description>Unchecked cast: 'java.lang.Object' to 'java.util.HashMap&lt;java.lang.Long,com.example.android.basicaccessibility.Manager.GroupInfo&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>51</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.WiFiNetwork$1 void handleMessage(android.os.Message msg)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unchecked warning</problem_class>
+    <description>Unchecked assignment: 'android.util.Pair' to 'android.util.Pair&lt;java.lang.Integer,com.example.android.packet.Packet_Command&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>100</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager.GroupInfo GroupInfo(com.example.android.basicaccessibility.Manager.GroupInfo g)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unchecked warning</problem_class>
+    <description>Unchecked cast: 'java.lang.Object' to 'java.util.HashMap&lt;java.lang.Long,com.example.android.basicaccessibility.Manager.UserInfo&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>101</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager.GroupInfo GroupInfo(com.example.android.basicaccessibility.Manager.GroupInfo g)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unchecked warning</problem_class>
+    <description>Unchecked cast: 'java.lang.Object' to 'java.util.HashMap&lt;java.lang.String,com.example.android.basicaccessibility.Manager.FileInfo&gt;'</description>
+  </problem>
+</problems>
+

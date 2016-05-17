@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/list_item_chatting.xml</file>
+    <line>8</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/list_item_chatting.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>&lt;html&gt;Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance&lt;/html&gt;</description>
+  </problem>
+</problems>
+

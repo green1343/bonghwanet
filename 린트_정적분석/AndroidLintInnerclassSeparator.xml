@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>64</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergency_main&quot; with &quot;.Emergency$Emergency_main&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>65</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergencytype&quot; with &quot;.Emergency$Emergencytype&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>66</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergency_Battery&quot; with &quot;.Emergency$Emergency_Battery&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>67</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergencytype_firstaid&quot; with &quot;.Emergency$Emergencytype_firstaid&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>68</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergencytype_firstaid_fracture&quot; with &quot;.Emergency$Emergencytype_firstaid_fracture&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>69</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergencytype_firstaid_abrasion&quot; with &quot;.Emergency$Emergencytype_firstaid_abrasion&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>70</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergencytype_firstaid_laceration&quot; with &quot;.Emergency$Emergencytype_firstaid_laceration&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>71</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.emergencytype_firstaid_cr&quot; with &quot;.Emergency$emergencytype_firstaid_cr&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>72</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergencytype_firstaid_wound&quot; with &quot;.Emergency$Emergencytype_firstaid_wound&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>73</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergencytype_firstaid_amputation&quot; with &quot;.Emergency$Emergencytype_firstaid_amputation&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>74</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergencytype_earthquake&quot; with &quot;.Emergency$Emergencytype_earthquake&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>75</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergencytype_surge&quot; with &quot;.Emergency$Emergencytype_surge&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>76</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergencytype_typhoon&quot; with &quot;.Emergency$Emergencytype_typhoon&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>77</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergencytype_volcano&quot; with &quot;.Emergency$Emergencytype_volcano&quot;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>78</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inner classes should use $ rather than .</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use '$' instead of '.' for inner classes (or use only lowercase letters in package names); replace &quot;.Emergency.Emergencytype_war&quot; with &quot;.Emergency$Emergencytype_war&quot;&lt;/html&gt;</description>
+  </problem>
+</problems>
+

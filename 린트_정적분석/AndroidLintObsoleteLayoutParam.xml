@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_abrasion.xml</file>
+    <line>22</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_abrasion.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_row&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_abrasion.xml</file>
+    <line>23</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_abrasion.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_column&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_abrasion.xml</file>
+    <line>33</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_abrasion.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_row&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_abrasion.xml</file>
+    <line>34</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_abrasion.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_column&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_cr.xml</file>
+    <line>22</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_cr.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_row&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_cr.xml</file>
+    <line>23</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_cr.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_column&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_wound.xml</file>
+    <line>22</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_wound.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_row&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_wound.xml</file>
+    <line>23</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_wound.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_column&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_wound.xml</file>
+    <line>33</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_wound.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_row&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_wound.xml</file>
+    <line>34</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_wound.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_column&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>23</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_below&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>24</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>25</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>26</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentLeft&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>27</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>37</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentTop&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>38</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentLeft&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>39</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>40</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>41</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>49</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_below&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>61</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_below&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>62</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>63</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>64</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentLeft&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>65</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>75</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_below&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>76</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>77</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>78</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentLeft&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>79</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>87</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_below&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>14</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentTop&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>15</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentLeft&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>16</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>17</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>18</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>27</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentTop&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>28</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentLeft&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>29</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>30</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>31</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>40</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_below&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>41</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_toLeftOf&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>42</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_toStartOf&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>51</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_below&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>52</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>53</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>54</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentLeft&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>55</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>65</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_below&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>66</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>67</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>77</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_below&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>78</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>79</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>80</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentLeft&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>81</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>97</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_below&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>14</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentTop&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>15</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentLeft&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>16</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>17</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>18</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>27</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentTop&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>28</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentLeft&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>29</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>30</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>31</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml</file>
+    <line>39</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/newgrouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;GridLayout&lt;/code&gt;: &lt;code&gt;layout_below&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_laceration.xml</file>
+    <line>22</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_laceration.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_row&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_laceration.xml</file>
+    <line>23</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_laceration.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_column&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_laceration.xml</file>
+    <line>34</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_laceration.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_row&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_laceration.xml</file>
+    <line>35</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_laceration.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_column&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_amputation.xml</file>
+    <line>22</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_amputation.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_row&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_amputation.xml</file>
+    <line>23</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_amputation.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_column&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_amputation.xml</file>
+    <line>32</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_amputation.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_row&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_amputation.xml</file>
+    <line>33</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_amputation.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_column&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+</problems>
+

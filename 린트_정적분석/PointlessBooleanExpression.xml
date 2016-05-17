@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/FileActivity.java</file>
+    <line>100</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.FileActivity java.lang.String[] getFileList(java.lang.String strPath)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless boolean expression</problem_class>
+    <description>&lt;code&gt;fileRoot.isDirectory() == false&lt;/code&gt; can be simplified to '!fileRoot.isDirectory()' #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/FileActivity.java</file>
+    <line>90</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.FileActivity boolean isSdCard()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless boolean expression</problem_class>
+    <description>&lt;code&gt;ext.equals(Environment.MEDIA_MOUNTED) == false&lt;/code&gt; can be simplified to '!ext.equals(Environment.MEDIA_MOUNTED)' #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/FileActivity.java</file>
+    <line>28</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.FileActivity void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless boolean expression</problem_class>
+    <description>&lt;code&gt;isSdCard() == false&lt;/code&gt; can be simplified to '!isSdCard()' #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/NewGrouplistActivity.java</file>
+    <line>103</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.NewGrouplistActivity void refreshList()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless boolean expression</problem_class>
+    <description>&lt;code&gt;groups.containsKey(Long.valueOf(idStr)) == false&lt;/code&gt; can be simplified to '!groups.containsKey(Long.valueOf(idStr))' #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>483</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.WiFiNetwork.NetworkListener void run()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless boolean expression</problem_class>
+    <description>&lt;code&gt;files.containsKey(key) == false&lt;/code&gt; can be simplified to '!files.containsKey(key)' #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>264</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager void addNewGroup(long id, com.example.android.basicaccessibility.Manager.GroupInfo g)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless boolean expression</problem_class>
+    <description>&lt;code&gt;g.members.containsKey(m_myNumber) == false&lt;/code&gt; can be simplified to '!g.members.containsKey(m_myNumber)' #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>378</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager void readUserData()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless boolean expression</problem_class>
+    <description>&lt;code&gt;m_groups.containsKey(EMERGENCY) == false&lt;/code&gt; can be simplified to '!m_groups.containsKey(EMERGENCY)' #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>323</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager void getFileList(java.util.HashMap&lt;java.lang.String,com.example.android.basicaccessibility.Manager.FileInfo&gt; arr, java.lang.String path)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless boolean expression</problem_class>
+    <description>&lt;code&gt;fileRoot.isDirectory() == false&lt;/code&gt; can be simplified to '!fileRoot.isDirectory()' #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>713</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.basicaccessibility.Manager java.lang.String connect(long group)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless boolean expression</problem_class>
+    <description>&lt;code&gt;setClient() == false&lt;/code&gt; can be simplified to '!setClient()' #loc</description>
+  </problem>
+</problems>
+
