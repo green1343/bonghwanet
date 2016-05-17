@@ -1,6 +1,5 @@
 package com.example.android.basicaccessibility;
 
-import android.Manifest;
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -8,9 +7,12 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.location.Criteria;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.net.DhcpInfo;
 import android.net.Uri;
 import android.net.wifi.ScanResult;
@@ -22,22 +24,12 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.ContactsContract;
-import android.support.v4.content.ContextCompat;
 import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
-import android.location.Address;
-import android.location.Geocoder;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.view.View;
 import android.widget.Toast;
-
 
 import com.example.android.common.logger.Log;
 import com.example.android.packet.Packet_Sync;
-
-import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -762,9 +754,7 @@ public enum Manager {
 
         String newPath = getRealGroupPath(getCurGroupID()) + "/" + filename;
         copyFile(path, newPath);
-        sendSync(newPath);
-
-        writeUserData();
+        addNewFile(filename);
     }
 
     public void checkPictureDirectory(){
@@ -785,9 +775,7 @@ public enum Manager {
 
         String newPath = getRealGroupPath(getCurGroupID()) + "/Pictures/" + filename;
         copyFile(path, newPath);
-        sendSync(newPath);
-
-        writeUserData();
+        addNewFile("Pictures/" + filename);
     }
 
     public void uploadCamera(String path){
@@ -797,10 +785,7 @@ public enum Manager {
         while(st.hasMoreTokens())
             filename = st.nextToken();
 
-        String newPath = getRealGroupPath(getCurGroupID()) + "/Pictures/" + filename;
-        sendSync(newPath);
-
-        writeUserData();
+        addNewFile("Pictures/" + filename);
     }
 
     private void copyFile(String from , String to){
@@ -819,14 +804,17 @@ public enum Manager {
         }
     }
 
-    public void sendSync(String file){
+    public void addNewFile(String file){
+        java.io.File ioFile = new java.io.File(getRealGroupPath(m_curGroup) + "/" + file);
+        m_files.get(m_curGroup).put(getGroupPath(m_curGroup) + "/" + file, new FileInfo(false, ioFile.lastModified()));
+
+        writeUserData();
+
         Packet_Sync p = new Packet_Sync();
         p.group = getCurGroupID();
-        java.io.File ioFile = new java.io.File(getRoot() + "/" + file);
-        p.files.put(file, new FileInfo(false, ioFile.lastModified()));
+        p.files.put(getGroupPath(m_curGroup) + "/" + file, new FileInfo(false, ioFile.lastModified()));
         WiFiNetwork.INSTANCE.writeAll(p);
     }
-
 
     LocationManager m_locManager = null;
     Location m_location = null;

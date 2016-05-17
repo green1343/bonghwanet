@@ -18,7 +18,6 @@ import com.example.android.packet.Packet_Sync;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -97,6 +96,14 @@ public enum WiFiNetwork {
     private Handler m_refreshChatting = new Handler() {
         public void handleMessage(Message msg) {
             ChattingActivity.refreshList();
+            GroupHomeActivity.refreshList();
+        }
+    };
+
+    private Handler m_refreshFile = new Handler() {
+        public void handleMessage(Message msg) {
+            GallaryActivity.refreshList();
+            FileActivity.refreshList();
         }
     };
 
@@ -351,16 +358,19 @@ public enum WiFiNetwork {
         void writeFile(String filename)
         {
             try {
-                File f = new File(filename);
-                FileInputStream fis = new FileInputStream(f);
+                String path = Manager.INSTANCE.getRoot() + "/" + filename;
+                FileInputStream fis = new FileInputStream(path);
                 BufferedInputStream bis = new BufferedInputStream(fis);
 
                 int len;
                 byte[] buf = new byte[BUFFERSIZE];
                 while ((len = bis.read(buf)) != -1) {
                     m_outStream.write(buf, 0, len);
+                    m_outStream.flush();
                 }
 
+                buf[0] = -1;
+                m_outStream.write(buf, 0, 1);
                 m_outStream.flush();
             }
             catch (IOException ex) {
@@ -520,21 +530,22 @@ public enum WiFiNetwork {
                         case PACKET.PACKET_SHARE_FILE_REQUEST_OK: {
                             Packet_Share_File_Request_OK p = new Packet_Share_File_Request_OK(stream);
                             try {
-                                File f = new File(p.filename);
-                                FileOutputStream fos = new FileOutputStream(f);
+                                String path = Manager.INSTANCE.getRoot() + "/" + p.filename;
+                                FileOutputStream fos = new FileOutputStream(path);
                                 BufferedOutputStream bos = new BufferedOutputStream(fos);
 
                                 // 바이트 데이터를 전송받으면서 기록
                                 int len;
                                 byte[] buf = new byte[BUFFERSIZE];
                                 while ((len = m_inStream.read(buf)) != -1) {
+                                    if(len <= 1 && buf[0] == -1)
+                                        break;
                                     bos.write(buf, 0, len);
+                                    bos.flush();
                                 }
 
-                                bos.flush();
-
-                                GallaryActivity.refreshList();
-                                FileActivity.refreshList();
+                                Message msg = Message.obtain(m_refreshFile, 0 , 1 , 0);
+                                m_refreshFile.sendMessage(msg);
                             }
                             catch(IOException e){
                             }
