@@ -39,8 +39,6 @@ public class GroupHomeActivity extends Activity {
 		// 키보드 숨기기
 		InputMethodManager immhide = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
 		immhide.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
-
-		refreshList();
 	}
 
 	Button.OnClickListener onClickButton = new View.OnClickListener() {

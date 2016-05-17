@@ -107,6 +107,12 @@ public enum WiFiNetwork {
         }
     };
 
+    private Handler m_refreshHome = new Handler() {
+        public void handleMessage(Message msg) {
+            GroupHomeActivity.refreshList();
+        }
+    };
+
     public boolean isServer(){
         return m_server != null;
     }
@@ -149,7 +155,9 @@ public enum WiFiNetwork {
             m_server = new Server(serverSocket);
             m_server.start();
             m_serverID = Manager.INSTANCE.getMyNumber();
-            GroupHomeActivity.refreshList();
+
+            Message msg = Message.obtain(m_refreshHome, 0 , 1 , 0);
+            m_refreshHome.sendMessage(msg);
         } catch (IOException ex) {
             //System.err.println(ex);
         } finally { // dispose
@@ -369,9 +377,10 @@ public enum WiFiNetwork {
                     m_outStream.flush();
                 }
 
-                buf[0] = -1;
-                m_outStream.write(buf, 0, 1);
-                m_outStream.flush();
+                m_outStream.close();
+
+                bis.close();
+                fis.close();
             }
             catch (IOException ex) {
                 //System.err.println(ex);
@@ -451,7 +460,8 @@ public enum WiFiNetwork {
                             if(p.userID == Manager.INSTANCE.getMyNumber())
                                 Manager.INSTANCE.joinGranted(p.group);
 
-                            GroupHomeActivity.refreshList();
+                            Message msg = Message.obtain(m_refreshHome, 0 , 1 , 0);
+                            m_refreshHome.sendMessage(msg);
 
                             break;
                         }
@@ -482,7 +492,8 @@ public enum WiFiNetwork {
 
                             if(isClient()) {
                                 m_serverID = p.id;
-                                GroupHomeActivity.refreshList();
+                                Message msg = Message.obtain(m_refreshHome, 0 , 1 , 0);
+                                m_refreshHome.sendMessage(msg);
                             }
 
                             break;
@@ -537,12 +548,12 @@ public enum WiFiNetwork {
                                 // 바이트 데이터를 전송받으면서 기록
                                 int len;
                                 byte[] buf = new byte[BUFFERSIZE];
-                                while ((len = m_inStream.read(buf)) != -1) {
-                                    if(len <= 1 && buf[0] == -1)
-                                        break;
+                                while ((len = m_inStream.read(buf)) > 0) {
                                     bos.write(buf, 0, len);
                                     bos.flush();
                                 }
+                                bos.close();
+                                fos.close();
 
                                 Message msg = Message.obtain(m_refreshFile, 0 , 1 , 0);
                                 m_refreshFile.sendMessage(msg);
