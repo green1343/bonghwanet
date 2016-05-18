@@ -647,7 +647,7 @@ public enum Manager {
             }
         }
 
-        if(ssid == null)
+        if(ssid == null || bssid.compareTo(m_curBSSID) == 0)
             return false;
 
         m_configuration.SSID = "\"" + ssid + "\"";
