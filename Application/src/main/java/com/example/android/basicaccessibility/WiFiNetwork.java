@@ -469,6 +469,8 @@ public enum WiFiNetwork {
                             Packet_New_User p = new Packet_New_User(stream);
                             if(p.userID == Manager.INSTANCE.getMyNumber())
                                 Manager.INSTANCE.joinGranted(p.group);
+                            else
+                                Manager.INSTANCE.addUser(p.group, p.userID, p.userInfo);
 
                             Message msg = Message.obtain(m_refreshHome, 0 , 1 , 0);
                             m_refreshHome.sendMessage(msg);
