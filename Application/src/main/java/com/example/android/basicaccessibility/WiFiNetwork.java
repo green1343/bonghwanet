@@ -487,6 +487,7 @@ public enum WiFiNetwork {
                                     Manager.GroupInfo g2 = p.groups.get(id);
 
                                     g1.merge(g2);
+                                    m.getAllGroups().put(id, g1);
 
                                     // send sync
                                     Packet_Sync reply = new Packet_Sync();
