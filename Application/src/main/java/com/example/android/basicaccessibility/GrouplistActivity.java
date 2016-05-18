@@ -90,7 +90,7 @@ public class GrouplistActivity extends Activity {
 					break;
 
 				case R.id.buttonEmergency:
-					Manager.INSTANCE.connect(Manager.EMERGENCY);
+					Manager.INSTANCE.connect(Manager.EMERGENCY, false);
 
 					Intent intent = new Intent(getApplicationContext(), Emergency_main.class);
 					startActivity(intent);
@@ -110,7 +110,7 @@ public class GrouplistActivity extends Activity {
 
 			StringTokenizer t = new StringTokenizer(m_adapter.getItem(arg2), "\t");
 			t.nextToken();
-			Manager.INSTANCE.connect(Long.valueOf(t.nextToken()));
+			Manager.INSTANCE.connect(Long.valueOf(t.nextToken()), false);
 
 			Intent intent = new Intent(getApplicationContext(), GroupMain.class);
 			startActivity(intent);

@@ -47,7 +47,7 @@ public class GroupHomeActivity extends Activity {
 			EditText text=(EditText)findViewById(R.id.editMessage);
 			switch (v.getId()) {
 				case R.id.button8:
-					String str1 = Manager.INSTANCE.connect(Manager.INSTANCE.getCurGroupID());
+					String str1 = Manager.INSTANCE.connect(Manager.INSTANCE.getCurGroupID(), true);
 					Toast toast1 = Toast.makeText(getApplicationContext(), "내상태:"+str1, Toast.LENGTH_LONG);
 					toast1.show();
 					break;

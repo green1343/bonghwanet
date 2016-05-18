@@ -127,7 +127,7 @@ public class NewGrouplistActivity extends Activity {
 			d.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Manager.INSTANCE.setCurGroup((Long) Manager.INSTANCE.getTempObject());
-					if (Manager.INSTANCE.setClient()) {
+					if (Manager.INSTANCE.setClient(false)) {
 
 						Manager.INSTANCE.setWatingJoin(true);
 

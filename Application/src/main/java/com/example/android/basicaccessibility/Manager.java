@@ -601,7 +601,7 @@ public enum Manager {
         }
     };
 
-    public boolean setClient(){
+    public boolean setClient(boolean change){
 
         m_wifiManager.startScan();
         List<ScanResult> results = m_wifiManager.getScanResults();
@@ -647,7 +647,7 @@ public enum Manager {
             }
         }
 
-        if(ssid == null || bssid.compareTo(m_curBSSID) == 0)
+        if(ssid == null || (change && bssid.compareTo(m_curBSSID) == 0))
             return false;
 
         m_configuration.SSID = "\"" + ssid + "\"";
@@ -705,11 +705,11 @@ public enum Manager {
 
     MyThread m_timerThread = null;
 
-    public String connect(long group){
+    public String connect(long group, boolean change){
 
         setCurGroup(group);
 
-        if(setClient() == false) {
+        if(setClient(change) == false) {
             setServer();
             return "Server";
         }

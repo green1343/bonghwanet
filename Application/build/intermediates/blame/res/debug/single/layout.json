@@ -4,20 +4,20 @@
         "source": "C:\\bonghwanet\\Application\\src\\main\\res\\layout\\file.xml"
     },
     {
-        "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\emergency_main.xml",
-        "source": "C:\\bonghwanet\\Application\\src\\main\\res\\layout\\emergency_main.xml"
-    },
-    {
-        "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\emergencytype_firstaid_fracture.xml",
-        "source": "C:\\bonghwanet\\Application\\src\\main\\res\\layout\\emergencytype_firstaid_fracture.xml"
+        "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\emergencytype_firstaid_laceration.xml",
+        "source": "C:\\bonghwanet\\Application\\src\\main\\res\\layout\\emergencytype_firstaid_laceration.xml"
     },
     {
         "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\list_item.xml",
         "source": "C:\\bonghwanet\\Application\\src\\main\\res\\layout\\list_item.xml"
     },
     {
-        "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\emergencytype_firstaid_laceration.xml",
-        "source": "C:\\bonghwanet\\Application\\src\\main\\res\\layout\\emergencytype_firstaid_laceration.xml"
+        "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\emergencytype_firstaid_fracture.xml",
+        "source": "C:\\bonghwanet\\Application\\src\\main\\res\\layout\\emergencytype_firstaid_fracture.xml"
+    },
+    {
+        "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\emergency_main.xml",
+        "source": "C:\\bonghwanet\\Application\\src\\main\\res\\layout\\emergency_main.xml"
     },
     {
         "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\sms_service.xml",
