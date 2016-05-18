@@ -27,6 +27,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.StringTokenizer;
 
 /**
  * Created by 초록 on 2015-10-05.
@@ -573,6 +574,13 @@ public enum WiFiNetwork {
                                 bos.close();
                                 fos.close();
 
+                                StringTokenizer st = new StringTokenizer(p.filename, "/");
+                                String filename = null;
+                                while(st.hasMoreTokens())
+                                    filename = st.nextToken();
+
+                                Manager.INSTANCE.addNewFile(filename);
+
                                 Message msg = Message.obtain(m_refreshFile, 0 , 1 , 0);
                                 m_refreshFile.sendMessage(msg);
                             }
@@ -587,6 +595,10 @@ public enum WiFiNetwork {
 
                             Message msg = Message.obtain(m_refreshChatting, 0 , 1 , 0);
                             m_refreshChatting.sendMessage(msg);
+
+                            if(isServer()){
+                                writeAll(p);
+                            }
 
                             break;
                         }
