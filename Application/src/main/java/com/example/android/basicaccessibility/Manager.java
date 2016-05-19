@@ -31,7 +31,6 @@ import android.widget.Toast;
 import com.example.android.common.logger.Log;
 import com.example.android.packet.Packet_Sync;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.HashMap;
@@ -116,6 +115,7 @@ public enum Manager {
 
     Context m_context;
     long m_myNumber = 1033245828L;
+    //long m_myNumber = 1071343228L;
     UserInfo m_myUserInfo = new UserInfo();
     long m_curGroup = 106423876801L; // TODO : delete
 
@@ -567,7 +567,8 @@ public enum Manager {
         else {
             ssid = RESERVED_SSID;
             ssid += "_";
-            ssid += String.valueOf(m_curGroup);
+            //ssid += String.valueOf(m_curGroup);
+            ssid += String.valueOf(m_myNumber);
             ssid += "_";
             ssid += m_groups.get(m_curGroup).name;
         }
@@ -601,6 +602,7 @@ public enum Manager {
         }
     };
 
+    boolean _setClientStart = false;
     boolean _setClientEnd = false;
     boolean _setClientResult = false;
     boolean _setClientChange = false;
@@ -609,6 +611,8 @@ public enum Manager {
 
         m_wifiManager.startScan();
 
+        _setClientStart = true;
+        _setClientEnd = false;
         IntentFilter filter = new IntentFilter();
         filter.addAction(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
         m_context.registerReceiver(wifiReceiver, filter);
@@ -617,7 +621,7 @@ public enum Manager {
     private BroadcastReceiver wifiReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (intent.getAction().equals(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION)) {
+            if (intent.getAction().equals(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION) && _setClientStart) {
                 List<ScanResult> results = m_wifiManager.getScanResults();
                 if(results == null) {
                     _setClientResult = false;
@@ -651,8 +655,9 @@ public enum Manager {
                             if (nameStr == null)
                                 continue;
 
-                            long group = Long.valueOf(idStr);
-                            if (group == m_curGroup) {
+                            // TODO : 수정
+                            /*long group = Long.valueOf(idStr);
+                            if (group == m_curGroup)*/ {
                                 ssid = r.SSID;
                                 bssid = r.BSSID;
 
@@ -680,8 +685,10 @@ public enum Manager {
                     createClientThread();
                 }
 
-                _setClientResult = result;
+                _setClientStart = false;
                 _setClientEnd = true;
+                _setClientResult = result;
+                _setClientChange = false;
             }
         }
     };
