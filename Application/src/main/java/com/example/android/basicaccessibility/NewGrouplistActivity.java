@@ -127,38 +127,36 @@ public class NewGrouplistActivity extends Activity {
 			d.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
 					Manager.INSTANCE.setCurGroup((Long) Manager.INSTANCE.getTempObject());
-					if (Manager.INSTANCE.setClient(false)) {
+					Manager.INSTANCE.setClient();
+					Manager.INSTANCE.setWatingJoin(true);
 
-						Manager.INSTANCE.setWatingJoin(true);
+					Thread myThread = new Thread(new Runnable() {
+						public void run() {
+							int cnt = 0;
+							while (!Thread.interrupted()) {
+								try {
+									if (Manager.INSTANCE.getJoinGroup() != null) {
+										Packet_Join_Request p = new Packet_Join_Request();
+										p.group = Manager.INSTANCE.getCurGroupID();
+										p.userID = Manager.INSTANCE.getMyNumber();
+										p.userInfo = Manager.INSTANCE.getMyUserInfo();
+										WiFiNetwork.INSTANCE.writeAll(p);
 
-						Thread myThread = new Thread(new Runnable() {
-							public void run() {
-								int cnt = 0;
-								while (!Thread.interrupted()) {
-									try {
-										if (Manager.INSTANCE.getJoinGroup() != null) {
-											Packet_Join_Request p = new Packet_Join_Request();
-											p.group = Manager.INSTANCE.getCurGroupID();
-											p.userID = Manager.INSTANCE.getMyNumber();
-											p.userInfo = Manager.INSTANCE.getMyUserInfo();
-											WiFiNetwork.INSTANCE.writeAll(p);
-
-											break;
-										}
-										Thread.sleep(1000);
-
-										++cnt;
-										if(cnt > 20)
-											break;
-
-									} catch (Throwable t) {
+										break;
 									}
+									Thread.sleep(1000);
+
+									++cnt;
+									if(cnt > 20)
+										break;
+
+								} catch (Throwable t) {
 								}
 							}
-						});
+						}
+					});
 
-						myThread.start();
-					}
+					myThread.start();
 				}
 			});
 			d.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {

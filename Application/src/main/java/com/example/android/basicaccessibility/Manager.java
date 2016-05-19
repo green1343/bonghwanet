@@ -601,68 +601,90 @@ public enum Manager {
         }
     };
 
-    public boolean setClient(boolean change){
+    boolean _setClientEnd = false;
+    boolean _setClientResult = false;
+    boolean _setClientChange = false;
+
+    public void setClient(){
 
         m_wifiManager.startScan();
-        List<ScanResult> results = m_wifiManager.getScanResults();
-        if(results == null)
-            return false;
 
-        String ssid = null;
-        String bssid = null;
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
+        m_context.registerReceiver(wifiReceiver, filter);
+    }
 
-        if(m_curGroup == EMERGENCY) {
-            for (ScanResult r : results) {
-                if (r.SSID.startsWith(EMERGENCY_SSID)) {
-                    ssid = r.SSID;
-                    bssid = r.BSSID;
-
-                    if(bssid.compareTo(m_curBSSID) != 0)
-                        break;
+    private BroadcastReceiver wifiReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent.getAction().equals(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION)) {
+                List<ScanResult> results = m_wifiManager.getScanResults();
+                if(results == null) {
+                    _setClientResult = false;
+                    _setClientEnd = true;
+                    return;
                 }
-            }
-        }
-        else {
-            for (ScanResult r : results) {
-                if (r.SSID.startsWith(RESERVED_SSID)) {
-                    StringTokenizer t = new StringTokenizer(r.SSID, "_");
-                    String idStr = null;
-                    String nameStr = null;
-                    if (t.hasMoreTokens()) t.nextToken();
-                    if (t.hasMoreTokens()) idStr = t.nextToken();
-                    if (t.hasMoreTokens()) nameStr = t.nextToken();
+                String ssid = null;
+                String bssid = null;
 
-                    if (nameStr == null)
-                        continue;
+                if(m_curGroup == EMERGENCY) {
+                    for (ScanResult r : results) {
+                        if (r.SSID.startsWith(EMERGENCY_SSID)) {
+                            ssid = r.SSID;
+                            bssid = r.BSSID;
 
-                    long group = Long.valueOf(idStr);
-                    if (group == m_curGroup) {
-                        ssid = r.SSID;
-                        bssid = r.BSSID;
-
-                        if(bssid.compareTo(m_curBSSID) != 0)
-                            break;
+                            if(bssid.compareTo(m_curBSSID) != 0)
+                                break;
+                        }
                     }
                 }
+                else {
+                    for (ScanResult r : results) {
+                        if (r.SSID.startsWith(RESERVED_SSID)) {
+                            StringTokenizer t = new StringTokenizer(r.SSID, "_");
+                            String idStr = null;
+                            String nameStr = null;
+                            if (t.hasMoreTokens()) t.nextToken();
+                            if (t.hasMoreTokens()) idStr = t.nextToken();
+                            if (t.hasMoreTokens()) nameStr = t.nextToken();
+
+                            if (nameStr == null)
+                                continue;
+
+                            long group = Long.valueOf(idStr);
+                            if (group == m_curGroup) {
+                                ssid = r.SSID;
+                                bssid = r.BSSID;
+
+                                if(bssid.compareTo(m_curBSSID) != 0)
+                                    break;
+                            }
+                        }
+                    }
+                }
+
+                if(ssid == null || (_setClientChange && bssid.compareTo(m_curBSSID) == 0)) {
+                    _setClientResult = false;
+                    _setClientEnd = true;
+                    return;
+                }
+
+                m_configuration.SSID = "\"" + ssid + "\"";
+                m_configuration.BSSID = bssid;
+
+                int id = m_wifiManager.addNetwork(m_configuration);
+                boolean result = m_wifiManager.enableNetwork(id, true);
+
+                if(result) {
+                    m_curBSSID = bssid;
+                    createClientThread();
+                }
+
+                _setClientResult = result;
+                _setClientEnd = true;
             }
         }
-
-        if(ssid == null || (change && bssid.compareTo(m_curBSSID) == 0))
-            return false;
-
-        m_configuration.SSID = "\"" + ssid + "\"";
-        m_configuration.BSSID = bssid;
-
-        int id = m_wifiManager.addNetwork(m_configuration);
-        boolean result = m_wifiManager.enableNetwork(id, true);
-
-        if(result) {
-            m_curBSSID = bssid;
-            createClientThread();
-        }
-
-        return result;
-    }
+    };
 
     void createClientThread(){
 
@@ -705,17 +727,50 @@ public enum Manager {
 
     MyThread m_timerThread = null;
 
-    public String connect(long group, boolean change){
+    public void connect(long group, boolean change){
 
         setCurGroup(group);
 
-        if(setClient(change) == false) {
-            setServer();
-            return "Server";
-        }
-        else
-            return "Client";
+        _setClientChange = change;
+
+        setClient();
+
+        MyThread m_connectThread = new MyThread() {
+            public void run() {
+                while (!Thread.interrupted() && running) {
+                    try {
+                        if(_setClientEnd){
+                            if(_setClientResult == false) {
+                                setServer();
+                                Message msg = Message.obtain(m_toastHandler, 0, 1, 0);
+                                msg.obj = "Server";
+                                m_toastHandler.sendMessage(msg);
+                            }
+                            else {
+                                Message msg = Message.obtain(m_toastHandler, 0, 1, 0);
+                                msg.obj = "Client";
+                                m_toastHandler.sendMessage(msg);
+                            }
+
+                            break;
+                        }
+                        Thread.sleep(300);
+                    } catch (Throwable t) {
+                        break;
+                    }
+                }
+            }
+        };
+        m_connectThread.start();
     }
+
+    private Handler m_toastHandler = new Handler() {
+        public void handleMessage(Message msg) {
+            String message = (String)msg.obj;
+            Toast toast1 = Toast.makeText(m_context, message, Toast.LENGTH_LONG);
+            toast1.show();
+        }
+    };
 
     public void onConnectEnd(){
         /*if(m_curGroup == EMERGENCY){
