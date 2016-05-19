@@ -239,6 +239,7 @@ public enum WiFiNetwork {
                     NetworkListener listener = new NetworkListener(m_index, socket.getInputStream());
                     m_threads.put(m_index, new Pair<>(speaker, listener));
                     ++m_index;
+                    speaker.start();
                     listener.start();
 
                     Packet_Grouplist p = new Packet_Grouplist();
@@ -251,7 +252,7 @@ public enum WiFiNetwork {
                 }
 
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                     break;
@@ -298,6 +299,7 @@ public enum WiFiNetwork {
                     listener = new NetworkListener(m_index, clientSocket.getInputStream());
                     m_threads.put(m_index, new Pair<>(speaker, listener));
                     ++m_index;
+                    speaker.start();
                     listener.start();
 
                     Packet_Grouplist p = new Packet_Grouplist();
@@ -354,6 +356,7 @@ public enum WiFiNetwork {
 
             try {
                 m_outStream.write(b, 0, p.place);
+                //m_outStream.write(b, 0, BUFFERSIZE);
                 m_outStream.flush();
                 if(p.getCommand() == PACKET.PACKET_SHARE_FILE_REQUEST_OK){
                     writeFile(((Packet_Share_File_Request_OK)p).filename);
@@ -445,170 +448,184 @@ public enum WiFiNetwork {
                 try {
                     byte stream[] = new byte[BUFFERSIZE];
                     int result = m_inStream.read(stream);
-                    if(result == -1){
+                    if (result == -1) {
                         killThread(m_index);
-                        if(isClient())
+                        if (isClient())
                             Manager.INSTANCE.createClientThread();
                         break;
                     }
 
-                    Packet_Command cmd = new Packet_Command(stream); // new
+                    while (true) {
+                        Packet_Command cmd = new Packet_Command(stream); // new
+                        int len = 0;
 
-                    switch (cmd.getCommand())
-                    {
-                        case PACKET.PACKET_JOIN_REQUEST: {
-                            Packet_Join_Request p = new Packet_Join_Request(stream);
+                        switch (cmd.getCommand()) {
+                            case PACKET.PACKET_JOIN_REQUEST: {
+                                Packet_Join_Request p = new Packet_Join_Request(stream);
 
-                            Message msg = Message.obtain(m_joinHandler, 0 , 1 , 0);
-                            msg.obj = p;
-                            m_joinHandler.sendMessage(msg);
+                                Message msg = Message.obtain(m_joinHandler, 0, 1, 0);
+                                msg.obj = p;
+                                m_joinHandler.sendMessage(msg);
 
-                            break;
-                        }
-                        case PACKET.PACKET_NEW_USER: {
-                            Packet_New_User p = new Packet_New_User(stream);
-                            if(p.userID == Manager.INSTANCE.getMyNumber())
-                                Manager.INSTANCE.joinGranted(p.group);
-                            else
-                                Manager.INSTANCE.addUser(p.group, p.userID, p.userInfo);
-
-                            Message msg = Message.obtain(m_refreshHome, 0 , 1 , 0);
-                            m_refreshHome.sendMessage(msg);
-
-                            break;
-                        }
-                        case PACKET.PACKET_GROUPLIST: {
-                            Manager m = Manager.INSTANCE;
-
-                            Packet_Grouplist p = new Packet_Grouplist(stream);
-                            for(Long id : m.getAllGroups().keySet()){
-                                if(p.groups.containsKey(id)) {
-                                    Manager.GroupInfo g1 = m.getAllGroups().get(id);
-                                    Manager.GroupInfo g2 = p.groups.get(id);
-
-                                    g1.merge(g2);
-                                    m.getAllGroups().put(id, g1);
-
-                                    // send sync
-                                    Packet_Sync reply = new Packet_Sync();
-                                    reply.group = id;
-                                    reply.files.putAll(Manager.INSTANCE.getAllFiles().get(id));
-                                    write(reply, m_index);
-                                }
-                            }
-
-                            if(m.isWatingJoin()){
-                                Manager.GroupInfo g = p.groups.get(m.getCurGroupID());
-                                if(g != null)
-                                    m.setJoinGroup(g);
-                            }
-
-                            if(isClient()) {
-                                m_serverID = p.id;
-                                Message msg = Message.obtain(m_refreshHome, 0 , 1 , 0);
-                                m_refreshHome.sendMessage(msg);
-                            }
-
-                            break;
-                        }
-                        case PACKET.PACKET_SYNC: {
-
-                            Packet_Sync p = new Packet_Sync(stream);
-
-                            LinkedList<Manager.TextInfo> texts = Manager.INSTANCE.getAllTexts().get(p.group);
-                            for(Manager.TextInfo t : texts) {
-                                Packet_Share_Text reply = new Packet_Share_Text();
-                                reply.group = p.group;
-                                reply.text = t.text;
-                                reply.time = t.time;
-                                reply.uploader = t.uploader;
-                                write(reply, m_index);
-                            }
-
-                            HashMap<String, Manager.FileInfo> files = Manager.INSTANCE.getAllFiles().get(p.group);
-                            if(files == null)
+                                len = p.place;
                                 break;
-
-                            for(String key : p.files.keySet()){
-                                if(files.containsKey(key) == false){
-                                    Packet_Share_File_Request reply = new Packet_Share_File_Request();
-                                    reply.group = p.group;
-                                    reply.filename = key;
-                                    write(reply, m_index);
-                                }
                             }
+                            case PACKET.PACKET_NEW_USER: {
+                                Packet_New_User p = new Packet_New_User(stream);
+                                if (p.userID == Manager.INSTANCE.getMyNumber())
+                                    Manager.INSTANCE.joinGranted(p.group);
+                                else
+                                    Manager.INSTANCE.addUser(p.group, p.userID, p.userInfo);
 
-                            // TODO : 전송 완료 확인
-                            files.putAll(p.files);
+                                Message msg = Message.obtain(m_refreshHome, 0, 1, 0);
+                                m_refreshHome.sendMessage(msg);
 
-                            break;
-                        }
-                        case PACKET.PACKET_SHARE_FILE_REQUEST:{
-                            Packet_Share_File_Request p = new Packet_Share_File_Request(stream);
-                            Packet_Share_File_Request_OK reply = new Packet_Share_File_Request_OK();
-                            reply.group = p.group;
-                            reply.filename = p.filename;
-                            write(reply, m_index);
-                            break;
-                        }
-                        case PACKET.PACKET_SHARE_FILE_REQUEST_OK: {
-                            Packet_Share_File_Request_OK p = new Packet_Share_File_Request_OK(stream);
-                            try {
-                                String path = Manager.INSTANCE.getRoot() + "/" + p.filename;
-                                FileOutputStream fos = new FileOutputStream(path);
-                                BufferedOutputStream bos = new BufferedOutputStream(fos);
+                                len = p.place;
+                                break;
+                            }
+                            case PACKET.PACKET_GROUPLIST: {
+                                Manager m = Manager.INSTANCE;
 
-                                // 바이트 데이터를 전송받으면서 기록
-                                int len;
-                                byte[] buf = new byte[BUFFERSIZE];
-                                while ((len = m_inStream.read(buf)) > 0) {
-                                    bos.write(buf, 0, len);
-                                    bos.flush();
+                                Packet_Grouplist p = new Packet_Grouplist(stream);
+                                for (Long id : m.getAllGroups().keySet()) {
+                                    if (p.groups.containsKey(id)) {
+                                        Manager.GroupInfo g1 = m.getAllGroups().get(id);
+                                        Manager.GroupInfo g2 = p.groups.get(id);
 
-                                    if(5 <= len && len<BUFFERSIZE){
-                                        if(buf[len-1] == -1 &&
-                                                buf[len-2] == -1 &&
-                                                buf[len-3] == -1 &&
-                                                buf[len-4] == -1 &&
-                                                buf[len-5] == -1)
-                                            break;
+                                        g1.merge(g2);
+                                        m.getAllGroups().put(id, g1);
+
+                                        // send sync
+                                        Packet_Sync reply = new Packet_Sync();
+                                        reply.group = id;
+                                        reply.files.putAll(Manager.INSTANCE.getAllFiles().get(id));
+                                        write(reply, m_index);
                                     }
                                 }
-                                bos.close();
-                                fos.close();
 
-                                StringTokenizer st = new StringTokenizer(p.filename, "/");
-                                String filename = null;
-                                while(st.hasMoreTokens())
-                                    filename = st.nextToken();
+                                if (m.isWatingJoin()) {
+                                    Manager.GroupInfo g = p.groups.get(m.getCurGroupID());
+                                    if (g != null)
+                                        m.setJoinGroup(g);
+                                }
 
-                                Manager.INSTANCE.addNewFile(filename);
+                                if (isClient()) {
+                                    m_serverID = p.id;
+                                    Message msg = Message.obtain(m_refreshHome, 0, 1, 0);
+                                    m_refreshHome.sendMessage(msg);
+                                }
 
-                                Message msg = Message.obtain(m_refreshFile, 0 , 1 , 0);
-                                m_refreshFile.sendMessage(msg);
+                                len = p.place;
+                                break;
                             }
-                            catch(IOException e){
+                            case PACKET.PACKET_SYNC: {
+
+                                Packet_Sync p = new Packet_Sync(stream);
+
+                                LinkedList<Manager.TextInfo> texts = Manager.INSTANCE.getAllTexts().get(p.group);
+                                for (Manager.TextInfo t : texts) {
+                                    Packet_Share_Text reply = new Packet_Share_Text();
+                                    reply.group = p.group;
+                                    reply.text = t.text;
+                                    reply.time = t.time;
+                                    reply.uploader = t.uploader;
+                                    write(reply, m_index);
+                                }
+
+                                HashMap<String, Manager.FileInfo> files = Manager.INSTANCE.getAllFiles().get(p.group);
+                                if (files == null)
+                                    break;
+
+                                for (String key : p.files.keySet()) {
+                                    if (files.containsKey(key) == false) {
+                                        Packet_Share_File_Request reply = new Packet_Share_File_Request();
+                                        reply.group = p.group;
+                                        reply.filename = key;
+                                        write(reply, m_index);
+                                    }
+                                }
+
+                                // TODO : 전송 완료 확인
+                                files.putAll(p.files);
+
+                                len = p.place;
+                                break;
                             }
-                            
-                            break;
+                            case PACKET.PACKET_SHARE_FILE_REQUEST: {
+                                Packet_Share_File_Request p = new Packet_Share_File_Request(stream);
+                                Packet_Share_File_Request_OK reply = new Packet_Share_File_Request_OK();
+                                reply.group = p.group;
+                                reply.filename = p.filename;
+                                write(reply, m_index);
+                                len = p.place;
+                                break;
+                            }
+                            case PACKET.PACKET_SHARE_FILE_REQUEST_OK: {
+                                Packet_Share_File_Request_OK p = new Packet_Share_File_Request_OK(stream);
+                                try {
+                                    String path = Manager.INSTANCE.getRoot() + "/" + p.filename;
+                                    FileOutputStream fos = new FileOutputStream(path);
+                                    BufferedOutputStream bos = new BufferedOutputStream(fos);
+
+                                    // 바이트 데이터를 전송받으면서 기록
+                                    int len2;
+                                    byte[] buf = new byte[BUFFERSIZE];
+                                    while ((len2 = m_inStream.read(buf)) > 0) {
+                                        bos.write(buf, 0, len2);
+                                        bos.flush();
+
+                                        if (5 <= len2 && len2 < BUFFERSIZE) {
+                                            if (buf[len2 - 1] == -1 &&
+                                                    buf[len2 - 2] == -1 &&
+                                                    buf[len2 - 3] == -1 &&
+                                                    buf[len2 - 4] == -1 &&
+                                                    buf[len2 - 5] == -1)
+                                                break;
+                                        }
+                                    }
+                                    bos.close();
+                                    fos.close();
+
+                                    StringTokenizer st = new StringTokenizer(p.filename, "/");
+                                    String filename = null;
+                                    while (st.hasMoreTokens())
+                                        filename = st.nextToken();
+
+                                    Manager.INSTANCE.addNewFile(filename);
+
+                                    Message msg = Message.obtain(m_refreshFile, 0, 1, 0);
+                                    m_refreshFile.sendMessage(msg);
+                                } catch (IOException e) {
+                                }
+
+                                len = p.place;
+                                break;
+                            }
+                            case PACKET.PACKET_SHARE_TEXT: {
+                                Packet_Share_Text p = new Packet_Share_Text(stream);
+                                Manager.INSTANCE.addText(p.group, p.uploader, p.time, p.text);
+
+                                Message msg = Message.obtain(m_refreshChatting, 0, 1, 0);
+                                m_refreshChatting.sendMessage(msg);
+
+                                if (isServer()) {
+                                    writeAll(p);
+                                }
+
+                                len = p.place;
+                                break;
+                            }
+                            default:
+                                break;
                         }
-                        case PACKET.PACKET_SHARE_TEXT: {
-                            Packet_Share_Text p = new Packet_Share_Text(stream);
-                            Manager.INSTANCE.addText(p.group, p.uploader, p.time, p.text);
 
-                            Message msg = Message.obtain(m_refreshChatting, 0 , 1 , 0);
-                            m_refreshChatting.sendMessage(msg);
-
-                            if(isServer()){
-                                writeAll(p);
-                            }
-
-                            break;
-                        }
-                        default:
+                        if(len > 0)
+                            System.arraycopy(stream, len, stream, 0, BUFFERSIZE-len);
+                        else
                             break;
                     }
-                } catch (IOException ex) {
+
+                }catch(IOException ex){
                     //System.err.println(ex);
                 }
 

@@ -4,20 +4,20 @@
         "source": "C:\\bonghwa\\Application\\src\\main\\res\\layout\\newgrouplist.xml"
     },
     {
-        "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\emergency_main.xml",
-        "source": "C:\\bonghwa\\Application\\src\\main\\res\\layout\\emergency_main.xml"
-    },
-    {
         "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\emergencytype_war.xml",
         "source": "C:\\bonghwa\\Application\\src\\main\\res\\layout\\emergencytype_war.xml"
     },
     {
-        "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\list_item.xml",
-        "source": "C:\\bonghwanet\\Application\\src\\main\\res\\layout\\list_item.xml"
+        "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\emergency_main.xml",
+        "source": "C:\\bonghwa\\Application\\src\\main\\res\\layout\\emergency_main.xml"
     },
     {
         "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\emergency_main.xml",
         "source": "C:\\bonghwanet\\Application\\src\\main\\res\\layout\\emergency_main.xml"
+    },
+    {
+        "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\list_item.xml",
+        "source": "C:\\bonghwanet\\Application\\src\\main\\res\\layout\\list_item.xml"
     },
     {
         "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
@@ -32,20 +32,20 @@
         "source": "C:\\bonghwa\\Application\\src\\main\\res\\layout\\emergencytype_firstaid_laceration.xml"
     },
     {
-        "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\gallery.xml",
-        "source": "C:\\bonghwanet\\Application\\src\\main\\res\\layout\\gallery.xml"
-    },
-    {
         "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\emergencytype_surge.xml",
         "source": "C:\\bonghwa\\Application\\src\\main\\res\\layout\\emergencytype_surge.xml"
     },
     {
-        "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\chatting.xml",
-        "source": "C:\\bonghwa\\Application\\src\\main\\res\\layout\\chatting.xml"
+        "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\gallery.xml",
+        "source": "C:\\bonghwanet\\Application\\src\\main\\res\\layout\\gallery.xml"
     },
     {
         "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\gallery.xml",
         "source": "C:\\bonghwa\\Application\\src\\main\\res\\layout\\gallery.xml"
+    },
+    {
+        "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\chatting.xml",
+        "source": "C:\\bonghwa\\Application\\src\\main\\res\\layout\\chatting.xml"
     },
     {
         "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\emergencytype.xml",

@@ -37,6 +37,7 @@ public class Packet_Command {
     public void GetBytes(byte[] buf)
     {
         this.buf = buf;
+        place = 0;
         pack(m_command);
     }
 

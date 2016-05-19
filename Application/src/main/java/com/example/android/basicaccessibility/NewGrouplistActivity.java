@@ -92,9 +92,11 @@ public class NewGrouplistActivity extends Activity {
 			if(r.SSID.startsWith(m.RESERVED_SSID)){
 				StringTokenizer t = new StringTokenizer(r.SSID, "_");
 				String idStr = null;
+				String indexStr = null;
 				String nameStr = null;
 				if(t.hasMoreTokens()) t.nextToken();
 				if(t.hasMoreTokens()) idStr = t.nextToken();
+				if(t.hasMoreTokens()) indexStr = t.nextToken();
 				if(t.hasMoreTokens()) nameStr = t.nextToken();
 
 				if(nameStr == null)
