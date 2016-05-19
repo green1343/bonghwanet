@@ -190,6 +190,7 @@ public enum WiFiNetwork {
         m_threads.remove(index);
     }
 
+
     public synchronized void write(Packet_Command p, int index)
     {
         Message msg = Message.obtain(m_handler, 0 , 1 , 0);
