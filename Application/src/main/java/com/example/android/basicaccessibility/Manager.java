@@ -114,8 +114,8 @@ public enum Manager {
     }
 
     Context m_context;
-    long m_myNumber = 1033245828L;
-    //long m_myNumber = 1071343228L;
+    //long m_myNumber = 1033245828L;
+    long m_myNumber = 1071343228L;
     UserInfo m_myUserInfo = new UserInfo();
     long m_curGroup = 106423876801L; // TODO : delete
 
@@ -559,16 +559,23 @@ public enum Manager {
             return null;
     }
 
+    int _setServerIndex = 0;
+
     public void setServer(){
         String ssid;
 
-        if(m_curGroup == EMERGENCY)
+        if(m_curGroup == EMERGENCY) {
             ssid = EMERGENCY_SSID;
+            ssid += "_";
+            ssid += String.valueOf(_setServerIndex);
+        }
         else {
             ssid = RESERVED_SSID;
             ssid += "_";
-            //ssid += String.valueOf(m_curGroup);
-            ssid += String.valueOf(m_myNumber);
+            ssid += String.valueOf(m_curGroup);
+            //ssid += String.valueOf(m_myNumber);
+            ssid += "_";
+            ssid += String.valueOf(_setServerIndex);
             ssid += "_";
             ssid += m_groups.get(m_curGroup).name;
         }
@@ -613,6 +620,8 @@ public enum Manager {
 
         _setClientStart = true;
         _setClientEnd = false;
+        _setServerIndex = 0;
+
         IntentFilter filter = new IntentFilter();
         filter.addAction(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
         m_context.registerReceiver(wifiReceiver, filter);
@@ -636,6 +645,7 @@ public enum Manager {
                         if (r.SSID.startsWith(EMERGENCY_SSID)) {
                             ssid = r.SSID;
                             bssid = r.BSSID;
+                            ++_setServerIndex;
 
                             if(bssid.compareTo(m_curBSSID) != 0)
                                 break;
@@ -647,19 +657,25 @@ public enum Manager {
                         if (r.SSID.startsWith(RESERVED_SSID)) {
                             StringTokenizer t = new StringTokenizer(r.SSID, "_");
                             String idStr = null;
+                            String indexStr = null;
                             String nameStr = null;
                             if (t.hasMoreTokens()) t.nextToken();
                             if (t.hasMoreTokens()) idStr = t.nextToken();
+                            if (t.hasMoreTokens()) indexStr = t.nextToken();
                             if (t.hasMoreTokens()) nameStr = t.nextToken();
 
                             if (nameStr == null)
                                 continue;
 
                             // TODO : 수정
-                            /*long group = Long.valueOf(idStr);
-                            if (group == m_curGroup)*/ {
+                            long group = Long.valueOf(idStr);
+                            if (group == m_curGroup) {
                                 ssid = r.SSID;
                                 bssid = r.BSSID;
+
+                                int index = Integer.valueOf(indexStr) + 1;
+                                if(index > _setServerIndex)
+                                    _setServerIndex = index;
 
                                 if(bssid.compareTo(m_curBSSID) != 0)
                                     break;
@@ -732,6 +748,10 @@ public enum Manager {
         }
     };
 
+    public boolean isClientConnected(){
+        return _setClientResult;
+    }
+
     MyThread m_timerThread = null;
 
     public void connect(long group, boolean change){
@@ -747,7 +767,7 @@ public enum Manager {
                 while (!Thread.interrupted() && running) {
                     try {
                         if(_setClientEnd){
-                            if(_setClientResult == false) {
+                            if(isClientConnected() == false) {
                                 setServer();
                                 Message msg = Message.obtain(m_toastHandler, 0, 1, 0);
                                 msg.obj = "Server";
