@@ -27,6 +27,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Random;
 import java.util.StringTokenizer;
 
 /**
@@ -36,6 +37,7 @@ public enum WiFiNetwork {
     INSTANCE;
 
     String SERVERADDRESS = "192.168.43.1";
+    final int FILEPORT = 11001;
     final int PORT = 11000;
     final int TIMEOUT = 10000;
     final int BUFFERSIZE = 1024;
@@ -335,6 +337,174 @@ public enum WiFiNetwork {
         }
     }
 
+    public class FileServer extends Thread{
+
+        private ServerSocket m_server;
+        private String m_filename = new String();
+        private boolean m_bWrite = false;
+
+        public FileServer(ServerSocket server, String filename, boolean write)
+        {
+            m_server = server;
+            m_filename = filename;
+            m_bWrite = write;
+        }
+
+        /*****************************************************
+         *		Main loop
+         ******************************************************/
+
+        @Override
+        public void run() {
+            while (!Thread.interrupted()) {
+                try {
+                    Socket socket = m_server.accept();
+
+                    OutputStream outStream = socket.getOutputStream();
+                    InputStream inStream = socket.getInputStream();
+                    if (m_bWrite) {
+                        String path = Manager.INSTANCE.getRoot() + "/" + m_filename;
+                        FileInputStream fis = new FileInputStream(path);
+                        BufferedInputStream bis = new BufferedInputStream(fis);
+
+                        int len;
+                        byte[] buf = new byte[BUFFERSIZE];
+                        while ((len = bis.read(buf)) != -1) {
+                            outStream.write(buf, 0, len);
+                            outStream.flush();
+                        }
+
+                        outStream.close();
+
+                        bis.close();
+                        fis.close();
+                    }
+                    else{
+                        String path = Manager.INSTANCE.getRoot() + "/" + m_filename;
+                        FileOutputStream fos = new FileOutputStream(path);
+                        BufferedOutputStream bos = new BufferedOutputStream(fos);
+
+                        // 바이트 데이터를 전송받으면서 기록
+                        int len;
+                        byte[] buf = new byte[BUFFERSIZE];
+                        while ((len = inStream.read(buf)) != -1) {
+                            bos.write(buf, 0, len);
+                            bos.flush();
+                        }
+
+                        bos.close();
+                        fos.close();
+
+                        StringTokenizer st = new StringTokenizer(m_filename, "/");
+                        String filename = null;
+                        while (st.hasMoreTokens())
+                            filename = st.nextToken();
+
+                        if(m_filename.contains("Pictures/"))
+                            Manager.INSTANCE.addNewFile("Pictures/" + filename);
+                        else
+                            Manager.INSTANCE.addNewFile(filename);
+
+                        Message msg = Message.obtain(m_refreshFile, 0, 1, 0);
+                        m_refreshFile.sendMessage(msg);
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                break;
+            }
+        }
+    }
+
+    public class FileClient extends Thread{
+
+        Socket clientSocket;
+        String m_filename = new String();
+        boolean m_bWrite = false;
+        int m_port = 0;
+
+        public FileClient(String filename, int port, boolean write)
+        {
+            m_filename = filename;
+            m_port = port;
+            m_bWrite = write;
+        }
+
+        /*****************************************************
+         *		Main loop
+         ******************************************************/
+
+        @Override
+        public void run()
+        {
+            while(!Thread.interrupted())
+            {
+                boolean result = true;
+
+                try {
+                    clientSocket = new Socket(SERVERADDRESS, m_port);
+                    OutputStream outStream = clientSocket.getOutputStream();
+                    InputStream inStream = clientSocket.getInputStream();
+                    if (m_bWrite) {
+                        String path = Manager.INSTANCE.getRoot() + "/" + m_filename;
+                        FileInputStream fis = new FileInputStream(path);
+                        BufferedInputStream bis = new BufferedInputStream(fis);
+
+                        int len;
+                        byte[] buf = new byte[BUFFERSIZE];
+                        while ((len = bis.read(buf)) != -1) {
+                            outStream.write(buf, 0, len);
+                            outStream.flush();
+                        }
+
+                        outStream.close();
+
+                        bis.close();
+                        fis.close();
+                    }
+                    else{
+                        String path = Manager.INSTANCE.getRoot() + "/" + m_filename;
+                        FileOutputStream fos = new FileOutputStream(path);
+                        BufferedOutputStream bos = new BufferedOutputStream(fos);
+
+                        // 바이트 데이터를 전송받으면서 기록
+                        int len;
+                        byte[] buf = new byte[BUFFERSIZE];
+                        while ((len = inStream.read(buf)) != -1) {
+                            bos.write(buf, 0, len);
+                            bos.flush();
+                        }
+
+                        bos.close();
+                        fos.close();
+
+                        StringTokenizer st = new StringTokenizer(m_filename, "/");
+                        String filename = null;
+                        while (st.hasMoreTokens())
+                            filename = st.nextToken();
+
+                        if(m_filename.contains("Pictures/"))
+                            Manager.INSTANCE.addNewFile("Pictures/" + filename);
+                        else
+                            Manager.INSTANCE.addNewFile(filename);
+
+                        Message msg = Message.obtain(m_refreshFile, 0, 1, 0);
+                        m_refreshFile.sendMessage(msg);
+                    }
+
+                } catch(IOException e){
+                    result = false;
+                }
+
+                if(result)
+                    break;
+
+            }
+        }
+    }
+
     public class NetworkSpeaker extends Thread{
 
         int m_index;
@@ -359,9 +529,6 @@ public enum WiFiNetwork {
                 m_outStream.write(b, 0, p.place);
                 //m_outStream.write(b, 0, BUFFERSIZE);
                 m_outStream.flush();
-                if(p.getCommand() == PACKET.PACKET_SHARE_FILE_REQUEST_OK){
-                    writeFile(((Packet_Share_File_Request_OK)p).filename);
-                }
             }
             catch (IOException ex) {
                 //System.err.println(ex);
@@ -370,7 +537,21 @@ public enum WiFiNetwork {
 
         void writeFile(String filename)
         {
-            try {
+            try {/*
+                if (isServer()) {
+                    ServerSocket socket = new ServerSocket(FILEPORT);
+                    FileServer server = new FileServer(socket, filename, true);
+                    server.start();
+                }
+                else{
+                    FileClient client = new FileClient(filename, true);
+                    client.start();
+                }*/
+            }
+            catch(Exception e){
+            }
+
+            /*try {
                 String path = Manager.INSTANCE.getRoot() + "/" + filename;
                 FileInputStream fis = new FileInputStream(path);
                 BufferedInputStream bis = new BufferedInputStream(fis);
@@ -398,6 +579,7 @@ public enum WiFiNetwork {
             catch (IOException ex) {
                 //System.err.println(ex);
             }
+            */
         }
 
         @Override
@@ -541,7 +723,14 @@ public enum WiFiNetwork {
                                         Packet_Share_File_Request reply = new Packet_Share_File_Request();
                                         reply.group = p.group;
                                         reply.filename = key;
+                                        reply.port = Manager.INSTANCE.getRandomInt(8000, PORT-1);
                                         write(reply, m_index);
+
+                                        if (isServer()) {
+                                            ServerSocket socket = new ServerSocket(reply.port);
+                                            FileServer server = new FileServer(socket, reply.filename, false);
+                                            server.start();
+                                        }
                                     }
                                 }
 
@@ -556,13 +745,30 @@ public enum WiFiNetwork {
                                 Packet_Share_File_Request_OK reply = new Packet_Share_File_Request_OK();
                                 reply.group = p.group;
                                 reply.filename = p.filename;
+                                reply.port = p.port;
                                 write(reply, m_index);
+
+                                if (isServer()) {
+                                    ServerSocket socket = new ServerSocket(p.port);
+                                    FileServer server = new FileServer(socket, p.filename, true);
+                                    server.start();
+                                }
+                                else{
+                                    FileClient client = new FileClient(p.filename, p.port, true);
+                                    client.start();
+                                }
+
                                 len = p.place;
                                 break;
                             }
                             case PACKET.PACKET_SHARE_FILE_REQUEST_OK: {
                                 Packet_Share_File_Request_OK p = new Packet_Share_File_Request_OK(stream);
                                 try {
+                                    if(isClient()){
+                                        FileClient client = new FileClient(p.filename, p.port, false);
+                                        client.start();
+                                    }
+                                    /*
                                     String path = Manager.INSTANCE.getRoot() + "/" + p.filename;
                                     FileOutputStream fos = new FileOutputStream(path);
                                     BufferedOutputStream bos = new BufferedOutputStream(fos);
@@ -604,8 +810,9 @@ public enum WiFiNetwork {
                                         Manager.INSTANCE.addNewFile(filename);
 
                                     Message msg = Message.obtain(m_refreshFile, 0, 1, 0);
-                                    m_refreshFile.sendMessage(msg);
-                                } catch (IOException e) {
+                                    m_refreshFile.sendMessage(msg);*/
+
+                                } catch (Exception e) {
                                 }
 
                                 len = p.place;
