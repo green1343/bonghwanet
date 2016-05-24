@@ -383,12 +383,11 @@ public enum WiFiNetwork {
                 }
 
                 // TODO : 수정
-                buf[0] = -1;
-                buf[1] = -1;
-                buf[2] = -1;
-                buf[3] = -1;
-                buf[4] = -1;
-                m_outStream.write(buf, 0, 5);
+                byte[] junk = new byte[BUFFERSIZE];
+                for(int i=0; i<3; ++i)
+                    junk[i] = -1;
+
+                m_outStream.write(buf, 0, 3);
                 m_outStream.flush();
 
                 //m_outStream.close();
@@ -572,18 +571,25 @@ public enum WiFiNetwork {
                                     int len2;
                                     byte[] buf = new byte[BUFFERSIZE];
                                     while ((len2 = m_inStream.read(buf)) > 0) {
+
+                                        boolean last = false;
+                                        if (3 <= len2 && len2 < BUFFERSIZE) {
+                                            if (buf[len2 - 1] == -1 &&
+                                                    buf[len2 - 2] == -1 &&
+                                                    buf[len2 - 3] == -1)
+                                                last = true;
+                                        }
+
+                                        if(last)
+                                            len2 -= 3;
+
                                         bos.write(buf, 0, len2);
                                         bos.flush();
 
-                                        if (5 <= len2 && len2 < BUFFERSIZE) {
-                                            if (buf[len2 - 1] == -1 &&
-                                                    buf[len2 - 2] == -1 &&
-                                                    buf[len2 - 3] == -1 &&
-                                                    buf[len2 - 4] == -1 &&
-                                                    buf[len2 - 5] == -1)
-                                                break;
-                                        }
+                                        if(last)
+                                            break;
                                     }
+
                                     bos.close();
                                     fos.close();
 
@@ -592,7 +598,10 @@ public enum WiFiNetwork {
                                     while (st.hasMoreTokens())
                                         filename = st.nextToken();
 
-                                    Manager.INSTANCE.addNewFile(filename);
+                                    if(p.filename.contains("Pictures/"))
+                                        Manager.INSTANCE.addNewFile("Pictures/" + filename);
+                                    else
+                                        Manager.INSTANCE.addNewFile(filename);
 
                                     Message msg = Message.obtain(m_refreshFile, 0, 1, 0);
                                     m_refreshFile.sendMessage(msg);

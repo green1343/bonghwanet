@@ -9,7 +9,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +22,6 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import java.lang.String;
 
 public class GallaryActivity extends Activity {
 
@@ -62,6 +60,13 @@ public class GallaryActivity extends Activity {
 			}
 		}
 	};
+
+	@Override
+	protected void onResume(){
+		super.onResume();
+
+		refreshList();
+	}
 
 	public static void refreshList(){
 		if(m_adapter == null)
