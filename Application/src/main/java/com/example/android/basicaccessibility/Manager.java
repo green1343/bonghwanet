@@ -114,8 +114,8 @@ public enum Manager {
     }
 
     Context m_context;
-    //long m_myNumber = 1033245828L;
-    long m_myNumber = 1071343228L;
+    long m_myNumber = 1033245828L;
+    //long m_myNumber = 1071343228L;
     UserInfo m_myUserInfo = new UserInfo();
     long m_curGroup = 106423876801L; // TODO : delete
 
@@ -643,9 +643,18 @@ public enum Manager {
                 if(m_curGroup == EMERGENCY) {
                     for (ScanResult r : results) {
                         if (r.SSID.startsWith(EMERGENCY_SSID)) {
+                            StringTokenizer t = new StringTokenizer(r.SSID, "_");
+                            String indexStr = null;
+                            if (t.hasMoreTokens()) t.nextToken();
+                            if (t.hasMoreTokens()) indexStr = t.nextToken();
+
                             ssid = r.SSID;
                             bssid = r.BSSID;
-                            ++_setServerIndex;
+
+                            int index = Integer.valueOf(indexStr) + 1;
+                            if(index > _setServerIndex)
+                                _setServerIndex = index;
+
 
                             if(bssid.compareTo(m_curBSSID) != 0)
                                 break;
@@ -755,6 +764,14 @@ public enum Manager {
     MyThread m_timerThread = null;
 
     public void connect(long group, boolean change){
+
+        if (!m_wifiManager.isWifiEnabled())
+            m_wifiManager.setWifiEnabled(true);
+
+        if(group != m_curGroup || WiFiNetwork.INSTANCE.isServer()) {
+            _setServerIndex = 0;
+            m_curBSSID = new String("");
+        }
 
         setCurGroup(group);
 
@@ -1034,7 +1051,7 @@ public enum Manager {
         }, new IntentFilter("SMS_DELIVERED_ACTION"));
 
         SmsManager mSmsManager = SmsManager.getDefault();
-        if(mSmsManager == null)
+        if(smsNumber == null || smsText == null || sentIntent == null || deliveredIntent == null || mSmsManager == null)
             return;
         mSmsManager.sendTextMessage(smsNumber, null, smsText, sentIntent, deliveredIntent);
     }

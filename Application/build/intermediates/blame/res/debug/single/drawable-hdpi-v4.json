@@ -20,12 +20,12 @@
         "source": "C:\\bonghwa\\Application\\src\\main\\res\\drawable-hdpi\\profile.png"
     },
     {
-        "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\chat.png",
-        "source": "C:\\bonghwa\\Application\\src\\main\\res\\drawable-hdpi\\chat.png"
-    },
-    {
         "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\back.jpg",
         "source": "C:\\bonghwanet\\Application\\src\\main\\res\\drawable-hdpi\\back.jpg"
+    },
+    {
+        "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\chat.png",
+        "source": "C:\\bonghwa\\Application\\src\\main\\res\\drawable-hdpi\\chat.png"
     },
     {
         "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\battery.png",
@@ -36,12 +36,12 @@
         "source": "C:\\bonghwa\\Application\\src\\main\\res\\drawable-hdpi\\cr_5.png"
     },
     {
-        "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\back.jpg",
-        "source": "C:\\bonghwa\\Application\\src\\main\\res\\drawable-hdpi\\back.jpg"
-    },
-    {
         "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\cr_6.png",
         "source": "C:\\bonghwanet\\Application\\src\\main\\res\\drawable-hdpi\\cr_6.png"
+    },
+    {
+        "merged": "C:\\bonghwa\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\back.jpg",
+        "source": "C:\\bonghwa\\Application\\src\\main\\res\\drawable-hdpi\\back.jpg"
     },
     {
         "merged": "C:\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_action_discard.png",
