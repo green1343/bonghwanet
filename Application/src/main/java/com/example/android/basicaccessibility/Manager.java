@@ -114,8 +114,8 @@ public enum Manager {
     }
 
     Context m_context;
-    long m_myNumber = 1033245828L;
-    //long m_myNumber = 1071343228L;
+    //long m_myNumber = 1033245828L;
+    long m_myNumber = 1071343228L;
     UserInfo m_myUserInfo = new UserInfo();
     long m_curGroup = 106423876801L; // TODO : delete
 
@@ -1053,7 +1053,10 @@ public enum Manager {
         SmsManager mSmsManager = SmsManager.getDefault();
         if(smsNumber == null || smsText == null || sentIntent == null || deliveredIntent == null || mSmsManager == null)
             return;
-        mSmsManager.sendTextMessage(smsNumber, null, smsText, sentIntent, deliveredIntent);
+
+        try {
+            mSmsManager.sendTextMessage(smsNumber, null, smsText, sentIntent, deliveredIntent);
+        }catch(Exception e){}
     }
 
     public void sendEmergencySMS(String text){
