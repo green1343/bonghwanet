@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#a4a97c">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="※ 지진"
+                android:id="@+id/textView7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="-지구내부의 활동과 판구조 운동으로 인해 지구내부, 특히 지각에서 장시간 축적된 에너지가 순간적으로 방출되면서 그 에너지의 일부가 지진파의 형태로 사방으로 전파되어 지표면까지 도달하여 지반이 흔들리는 자연현상이다.
+                       \n 행동요령
+                       \n -지진 발생시 크게 흔들리는 시간은 길어야 1~2분이므로 이 시간동안 테이블 등의 밑으로 들어가 몸을 피하고 테이블 등이 없을 때는 방석 등으로 머리를 보호합니다.
+                       \n -문을 열어서 출구를 확보하고 가스/전기 등을 차단합니다.
+                       \n\n -화재가 났을 때 침착하고 빠르게 불을 꺼야 합니다. 불을 조기에 진화할 수 있는 기회는 3번으로 크게 흔들리기 전, 큰 흔들림이 멈춘 직후, 발화된 직후 화재의 규모가 작을 때입니다.
+                       \n -지진 발생 때는 유리창이나 간판 등이 떨어져 대단히 위험하므로 서둘러서 밖으로 뛰어나가면 안됩니다.
+                       \n -지진이나 화재가 발생할 때는 엘리베이터를 사용하지 말아야 하고 타고 있을 때는 모든 버튼을 눌러 신속하게 내린 후 대피합니다.
+                       \n - 큰 진동이 멈춘 후 공터나 공원 등 넓은 공간으로 대피합니다. 또한 블록담, 자동판매기 등 고정되지 않은 물건 등은 넘어질 우려가 있으므로 가까이 가서는 안됩니다."
+                android:id="@+id/textView9" />
+        </LinearLayout>
+    </ScrollView>
+
+</GridLayout>

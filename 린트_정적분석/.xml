@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergency_main.java</file>
+    <line>16</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergency_main" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_laceration.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_laceration" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_war.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_war" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_volcano.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_volcano" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergency_Battery.java</file>
+    <line>14</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergency_Battery" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_wound.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_wound" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_amputation.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_amputation" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_surge.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_surge" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_fracture.java</file>
+    <line>15</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_fracture" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/emergencytype_firstaid_cr.java</file>
+    <line>28</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.emergencytype_firstaid_cr" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_typhoon.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_typhoon" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_abrasion.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_abrasion" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_earthquake.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_earthquake" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/ChattingActivity.java</file>
+    <line>16</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.ChattingActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/FileActivity.java</file>
+    <line>16</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.FileActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/SettingsActivity.java</file>
+    <line>7</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.SettingsActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupMain.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.GroupMain" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Main.java</file>
+    <line>15</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Main" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/NewGrouplistActivity.java</file>
+    <line>21</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.NewGrouplistActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupHomeActivity.java</file>
+    <line>13</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.GroupHomeActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>35</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.bonghwa.Network" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GallaryActivity.java</file>
+    <line>28</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.GallaryActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GrouplistActivity.java</file>
+    <line>20</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.GrouplistActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>56</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.bonghwa.Manager" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogView.java</file>
+    <line>31</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.common.logger.LogView LogView(android.content.Context context, android.util.AttributeSet attrs)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Constructor is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogView.java</file>
+    <line>35</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.common.logger.LogView LogView(android.content.Context context, android.util.AttributeSet attrs, int defStyle)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Constructor is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogView.java</file>
+    <line>27</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.common.logger.LogView LogView(android.content.Context context)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Constructor has one usage but it is not reachable from entry points.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogFragment.java</file>
+    <line>54</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.common.logger.LogFragment LogFragment()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Constructor is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergency_main.java</file>
+    <line>16</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergency_main" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_laceration.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_laceration" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_war.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_war" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_volcano.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_volcano" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergency_Battery.java</file>
+    <line>14</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergency_Battery" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_wound.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_wound" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_amputation.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_amputation" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_surge.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_surge" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_fracture.java</file>
+    <line>15</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_fracture" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/emergencytype_firstaid_cr.java</file>
+    <line>28</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.emergencytype_firstaid_cr" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_typhoon.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_typhoon" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_abrasion.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_firstaid_abrasion" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_earthquake.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Emergency.Emergencytype_earthquake" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/ChattingActivity.java</file>
+    <line>16</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.ChattingActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/FileActivity.java</file>
+    <line>16</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.FileActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/SettingsActivity.java</file>
+    <line>7</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.SettingsActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupMain.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.GroupMain" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Main.java</file>
+    <line>15</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.Main" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/NewGrouplistActivity.java</file>
+    <line>21</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.NewGrouplistActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupHomeActivity.java</file>
+    <line>13</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.GroupHomeActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>35</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.bonghwa.Network" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GallaryActivity.java</file>
+    <line>28</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.GallaryActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GrouplistActivity.java</file>
+    <line>20</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.basicaccessibility.GrouplistActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>56</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.bonghwa.Manager" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+</problems>
+

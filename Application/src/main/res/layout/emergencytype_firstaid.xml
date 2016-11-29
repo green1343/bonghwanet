@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:background="@drawable/emergency_1">
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:text="심폐소생술"
+            android:id="@+id/button2"
+            android:layout_gravity="left|top" />
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:text="골절"
+            android:id="@+id/button3"
+            android:layout_gravity="right|top" />
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:text="찰과상"
+            android:id="@+id/button4"
+            android:layout_gravity="left|center_vertical" />
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:text="열상"
+            android:id="@+id/button5"
+            android:layout_gravity="right|center_vertical" />
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:text="관통상"
+            android:id="@+id/button6"
+            android:layout_gravity="left|bottom" />
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:text="손가락절단"
+            android:id="@+id/button7"
+            android:layout_gravity="right|bottom" />
+    </FrameLayout>
+</GridLayout>

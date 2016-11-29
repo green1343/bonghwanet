@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#a4a97c">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="※ 해일"
+                android:id="@+id/textView7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="-폭풍이나 지진, 화산폭발 등에 의하여 바닷물이 비정상적으로 높아져 육지로 넘쳐 들어오는 현상을 말한다.
+                       \n\n 행동요령
+                       \n -해안가에 있을 때 강한 지진동을 느꼈을 경우는 가까운 바다에서 지진이 발생한 경우일 수 있으므로(이 경우 2~3분 이내에 해일이 내습할 수 있음) 지진해일 특보가 발효되지 않았더라도 신속히 고지대로 이동하도록 합니다.
+                       \n -수심이 깊은 먼 바다에서는 지진해일을 전혀 느낄 수 없으며, 해안 부근에서 크게 증폭되므로 먼 바다에 있는 경우 지진해일 경보가 발령되었거나 이를 인지하였을 때에는 항구로 복귀하지 않도록 합니다.
+                       \n\n -지진해일은 일반적으로 여러번 도달하는데 제1파보다 2,3파의 크기가 더 큰 경우도 있고, 해면의 진동이 10시간 이상 지속되기도 하므로 지진해일 특보가 해제될 때까지 해안가로 내려오면 안됩니다.
+                       \n\n 지진해일에 관한 상식
+                       \n -일반적으로 일본 서해안의 지진대에서 규모 7.0 이상의 지진이 보고되면, 약 1시간에서 1시간 30분 후 동해안에 지진 해일이 도달하게 된다. 도달하는 영역은 동해안 전역이고, 동해안에 내습하는 지진해일의 파고는 최대 3～4m 정도 이다. 이로 인해 해안가 저지대는 침수되기 쉽다.
+                       \n -일반적으로 지진해일의 초동은 물이 빠지는 것으로 시작되어 항 바닥이 들어 나기도 한다.
+                       \n -지진해일은 여러 차례 열을 지어 도달하는데 제 1파보다 2, 3파의 크기가 더 클 수도 있고, 지진해일에 의한 해면의 진동은 길게 10시간 이상 지속되기도 한다.
+                       \n -지진해일의 내습 속도는 사람의 거동보다 빠르고, 그 힘이 우세하여 약 30cm의 정도의 해일 상황에서 성인이 걸을 수 없고, 약 1m 정도의 해일이라면 목조건물이 파괴될 수 있으며, 이로 인해 인명피해를 일으킬 우려가 높다.
+                       \n -해안가의 선박이나 다른 물건들이 지진해일에 의해 육지로 운반되어 가옥에 충돌하는 경우도 있다. 이러한 물체들이 유류 탱크 등에 충돌하여 화재를 일으킬 수도 있다.
+                       \n -지진해일은 예고 없이 내습한다.
+                       \n -지진해일은 바다로 통해 있는 하천을 따라 역상하기도 한다."
+                android:id="@+id/textView9" />
+        </LinearLayout>
+    </ScrollView>
+
+</GridLayout>

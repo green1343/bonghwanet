@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml</file>
+    <line>18</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing labelFor attribute</problem_class>
+    <hints />
+    <description>&lt;html&gt;No label views point to this text field with an &lt;code&gt;android:labelFor=&quot;@+id/@+id/smsNumber&quot;&lt;/code&gt; attribute&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml</file>
+    <line>34</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/sms_service.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing labelFor attribute</problem_class>
+    <hints />
+    <description>&lt;html&gt;No label views point to this text field with an &lt;code&gt;android:labelFor=&quot;@+id/@+id/smsText&quot;&lt;/code&gt; attribute&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>35</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing labelFor attribute</problem_class>
+    <hints />
+    <description>&lt;html&gt;No label views point to this text field with an &lt;code&gt;android:labelFor=&quot;@+id/@+id/editGroupname&quot;&lt;/code&gt; attribute&lt;/html&gt;</description>
+  </problem>
+</problems>
+

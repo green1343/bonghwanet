@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#a4a97c">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="※ 태풍"
+                android:id="@+id/textView7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="-태풍은 북태평양 남서해상에서 발생하는 열대성 저기압 중에서 중심 최대풍속이 1초당 17m 이상의 폭풍우를 동반하고 있는 기상현상을 말합니다.
+                       \n 행동요령
+                       \n 도시지역
+                       \n -건물의 간판 및 위험시설물 주변으로 걸어가거나 접근하지 맙시다.
+                       \n\n -집 안팎의 전기수리를 하지 맙시다.
+                       \n -아파트 등 고층건물 옥상, 지하실과 하수도 맨홀에 접근하지 맙시다.
+                       \n\n -고층아파트 등 대형ㆍ고층건물에 거주하고 계신 주민은 유리창이 파손되는 것을 방지하도록 젖은 신문지, 테이프 등을 창문에 붙이고 창문 가까이 접근하지 맙시다.
+                       \n\n -모래주머니 등을 이용하여 물이 넘쳐서 흐르는 것을 막읍시다.
+                       \n\n 농촌지역
+                       \n -산사태가 일어날 수 있는 비탈면 근처에 접근하지 맙시다.
+                       \n -다리는 안전한지 확인한 후에 이용합시다.
+                       \n -주택주변의 산사태 위험이 있으면 미리 대피합시다.
+                       \n ※ 산사태의 징후
+                       \n -경사면에서 갑자기 많은 양의 물이 샘솟을 때
+                       \n -평소 잘 나오던 샘물이나 지하수가 갑자기 멈출 때
+                       \n -갑자기 산허리의 일부가 금이 가거나 내려앉을 때
+                       \n -바람이 불지 않는데도 나무가 흔들리거나 넘어지는 때, 산울림이나 땅울림이 들릴 때
+                       \n\n 해안지역
+                       \n -바닷가의 저지대 주민은 안전한 곳으로 대피합시다.
+                       \n -해안가의 위험한 비탈면에 접근하지 맙시다.
+                       \n-선박을 단단히 묶어두시고 어망ㆍ어구 등을 안전한 곳으로 옮깁시다."
+                android:id="@+id/textView9" />
+        </LinearLayout>
+    </ScrollView>
+
+</GridLayout>

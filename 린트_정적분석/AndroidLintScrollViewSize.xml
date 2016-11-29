@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_surge.xml</file>
+    <line>18</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_surge.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ScrollView size validation</problem_class>
+    <hints />
+    <description>&lt;html&gt;This LinearLayout should use &lt;code&gt;android:layout_height=&quot;wrap_content&quot;&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_earthquake.xml</file>
+    <line>18</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_earthquake.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ScrollView size validation</problem_class>
+    <hints />
+    <description>&lt;html&gt;This LinearLayout should use &lt;code&gt;android:layout_height=&quot;wrap_content&quot;&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_war.xml</file>
+    <line>18</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_war.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ScrollView size validation</problem_class>
+    <hints />
+    <description>&lt;html&gt;This LinearLayout should use &lt;code&gt;android:layout_height=&quot;wrap_content&quot;&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_typhoon.xml</file>
+    <line>18</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_typhoon.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ScrollView size validation</problem_class>
+    <hints />
+    <description>&lt;html&gt;This LinearLayout should use &lt;code&gt;android:layout_height=&quot;wrap_content&quot;&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_volcano.xml</file>
+    <line>18</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_volcano.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ScrollView size validation</problem_class>
+    <hints />
+    <description>&lt;html&gt;This LinearLayout should use &lt;code&gt;android:layout_height=&quot;wrap_content&quot;&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+</problems>
+

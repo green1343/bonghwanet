@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>503</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.bonghwa.Manager void checkDirectories()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Result of method call ignored</problem_class>
+    <description>Result of &lt;code&gt;File.mkdirs()&lt;/code&gt; is ignored #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>774</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.bonghwa.Manager void checkPictureDirectory()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Result of method call ignored</problem_class>
+    <description>Result of &lt;code&gt;File.mkdirs()&lt;/code&gt; is ignored #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>165</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.bonghwa.Manager void init(android.content.Context context)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Result of method call ignored</problem_class>
+    <description>Result of &lt;code&gt;File.mkdirs()&lt;/code&gt; is ignored #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>171</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.bonghwa.Manager void init(android.content.Context context)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Result of method call ignored</problem_class>
+    <description>Result of &lt;code&gt;File.mkdirs()&lt;/code&gt; is ignored #loc</description>
+  </problem>
+</problems>
+

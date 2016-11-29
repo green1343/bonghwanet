@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/Packet_Command.java</file>
+    <line>58</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.packet</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.bonghwa.packet.Packet_Command void pack(int value)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless arithmetic expression</problem_class>
+    <description>&lt;code&gt;place + 0&lt;/code&gt; can be replaced with 'place' #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/Packet_Command.java</file>
+    <line>50</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.packet</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.bonghwa.packet.Packet_Command void pack(short value)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless arithmetic expression</problem_class>
+    <description>&lt;code&gt;place + 0&lt;/code&gt; can be replaced with 'place' #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/Packet_Command.java</file>
+    <line>70</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.packet</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.bonghwa.packet.Packet_Command void pack(long value)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless arithmetic expression</problem_class>
+    <description>&lt;code&gt;place + 0&lt;/code&gt; can be replaced with 'place' #loc</description>
+  </problem>
+</problems>
+

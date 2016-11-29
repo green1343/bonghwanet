@@ -1,0 +1,1439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/.google/packaging.yaml</file>
+    <line>12</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/.google/packaging.yaml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'github'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/tests/AndroidManifest.xml</file>
+    <line>19</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/tests/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'basicaccessibility'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/tests/AndroidManifest.xml</file>
+    <line>37</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/tests/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'basicaccessibility'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/tests/AndroidManifest.xml</file>
+    <line>38</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/tests/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'basicaccessibility'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergency_main.java</file>
+    <line>29</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergency_main.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Resusable'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_laceration.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_laceration.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_laceration.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_laceration.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_war.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_war.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_volcano.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_volcano.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_wound.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_wound.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_wound.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_wound.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_amputation.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_amputation.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_amputation.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_amputation.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_surge.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_surge.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_fracture.java</file>
+    <line>15</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_fracture.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_fracture.java</file>
+    <line>15</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_fracture.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/emergencytype_firstaid_cr.java</file>
+    <line>28</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/emergencytype_firstaid_cr.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/emergencytype_firstaid_cr.java</file>
+    <line>28</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/emergencytype_firstaid_cr.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_typhoon.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_typhoon.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_abrasion.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_abrasion.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_abrasion.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_firstaid_abrasion.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_earthquake.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility.Emergency</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Emergency/Emergencytype_earthquake.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/ChattingActivity.java</file>
+    <line>20</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/ChattingActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'listitem'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/ChattingActivity.java</file>
+    <line>36</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/ChattingActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'immhide'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupMain.java</file>
+    <line>27</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GroupMain.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Resusable'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Main.java</file>
+    <line>30</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Main.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Resusable'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Main.java</file>
+    <line>36</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Main.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'grouplist'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Main.java</file>
+    <line>36</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Main.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grouplist'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/NewGrouplistActivity.java</file>
+    <line>21</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/NewGrouplistActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grouplist'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>38</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'SERVERADDRESS'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>41</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'BUFFERSIZE'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>220</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grouplist'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>278</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grouplist'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>315</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'outstream'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>395</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'instream'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>441</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grouplist'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GallaryActivity.java</file>
+    <line>162</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GallaryActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Hmmss'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GallaryActivity.java</file>
+    <line>163</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GallaryActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'bonghwa'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GallaryActivity.java</file>
+    <line>28</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GallaryActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Gallary'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/ChatListAdapter.java</file>
+    <line>51</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/ChatListAdapter.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Tag를'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GrouplistActivity.java</file>
+    <line>44</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GrouplistActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'immhide'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GrouplistActivity.java</file>
+    <line>80</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GrouplistActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'immhide'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GrouplistActivity.java</file>
+    <line>108</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GrouplistActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'immhide'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GrouplistActivity.java</file>
+    <line>20</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/GrouplistActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grouplist'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>59</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'SSID'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>60</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'MYNAME'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>62</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'emergencybhn'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>62</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'SSID'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>130</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'BSSID'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>132</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'dafsglokvogzsuiwhbejfgr'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>147</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Wating'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>195</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'TKIP'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>196</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'CCMP'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>197</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Mgmt'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>198</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'TKIP'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>199</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'CCMP'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>206</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Mgmt'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>211</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'CCMP'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>239</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Wating'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>243</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Wating'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>564</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'ssid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>612</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'ssid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>613</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'bssid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>674</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'dhcp'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>809</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'newfos'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>810</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'readcount'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>897</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'addr'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>899</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'null값'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>900</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'addr'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>917</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'SMS가'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>949</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'SMS가'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'type을'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'byte로'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>18</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'type을'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>18</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'byte로'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>30</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'type을'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>30</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'byte로'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>40</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'type을'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>40</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'byte로'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>56</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'type을'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>56</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'byte로'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>21</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'type을'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>21</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'byte로'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>30</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'type을'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>30</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'byte로'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>41</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'type을'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>41</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'byte로'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>50</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'type을'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>50</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'byte로'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>66</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'type을'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>66</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'byte로'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/Packet_Grouplist.java</file>
+    <line>11</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.packet</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/Packet_Grouplist.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grouplist'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/Packet_Grouplist.java</file>
+    <line>15</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.packet</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/Packet_Grouplist.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grouplist'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/Packet_Grouplist.java</file>
+    <line>7</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.packet</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/Packet_Grouplist.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grouplist'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/Packet_Command.java</file>
+    <line>84</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.packet</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/Packet_Command.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'bytearr'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/PACKET.java</file>
+    <line>8</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.packet</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/packet/PACKET.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'GROUPLIST'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogWrapper.java</file>
+    <line>22</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogWrapper.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'DDMS'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogWrapper.java</file>
+    <line>60</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogWrapper.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'exeption'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogFragment.java</file>
+    <line>46</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogFragment.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'fraggment'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/Log.java</file>
+    <line>28</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/Log.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'interop'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/values/strings.xml</file>
+    <line>28</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/values/strings.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'jetpack'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/values/strings.xml</file>
+    <line>28</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/values/strings.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Jetpack'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/values/base-strings.xml</file>
+    <line>19</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/values/base-strings.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'bonghwanet'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>23</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Groupname'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>61</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Groupname'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml</file>
+    <line>75</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouphome.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Groupname'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml</file>
+    <line>28</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Chat를'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml</file>
+    <line>28</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/chatting.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'chat와'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>38</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Groupname'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>51</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Groupname'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>75</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Selete'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml</file>
+    <line>77</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/grouplist.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Groupname'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_fracture.xml</file>
+    <line>18</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/layout/emergencytype_firstaid_fracture.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'videoview'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/res/menu/menu_main.xml</file>
+    <line>3</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/res/menu/menu_main.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'basicaccessibility'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>18</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'basicaccessibility'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>56</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grouplist'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>57</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grouplist'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>62</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Gallary'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>65</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>67</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>67</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>68</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>68</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>69</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>69</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>70</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>70</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>71</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>71</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>72</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>72</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>73</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>73</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'firstaid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>74</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>75</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>76</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>77</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml</file>
+    <line>78</line>
+    <module>Application</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Emergencytype'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/README.md</file>
+    <line>14</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/README.md" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'speach'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>235</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'licensors'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>239</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Licensors'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>241</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Licensors'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>243</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Licensors'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>246</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'licensors'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>247</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'creativecommons'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>247</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'licensors'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>252</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'licensor's'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>264</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'creativecommons'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>292</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'synched'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>299</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'creativecommons'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>299</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'compatiblelicenses'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>304</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Generis'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>312</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'WIPO'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>352</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Generis'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>368</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'sublicensable'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>441</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'waivable'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>514</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Generis'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>516</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Generis'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>525</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Generis'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>526</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Generis'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>637</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'creativecommons'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/LICENSE</file>
+    <line>646</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'creativecommons'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/packaging.yaml</file>
+    <line>12</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/packaging.yaml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'github'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/packaging.yaml</file>
+    <line>12</line>
+    <module>bonghwanet-master</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/packaging.yaml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'googlesamples'</description>
+  </problem>
+</problems>
+

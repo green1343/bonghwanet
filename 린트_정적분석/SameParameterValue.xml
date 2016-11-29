@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/MyThread.java</file>
+    <line>12</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.bonghwa.needclass.MyThread void setData(int data)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="data 0" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;data&lt;/code&gt;' is always '&lt;code&gt;0&lt;/code&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WifiApManager.java</file>
+    <line>24</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.bonghwa.needclass.WifiApManager boolean setWifiApEnabled(android.net.wifi.WifiConfiguration config, boolean enabled)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="enabled true" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;enabled&lt;/code&gt;' is always '&lt;code&gt;true&lt;/code&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>909</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.bonghwa.Manager void sendSMS(java.lang.String smsNumber, java.lang.String smsText)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="smsNumber &quot;00000000000&quot;" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;smsNumber&lt;/code&gt;' is always '&lt;code&gt;&quot;00000000000&quot;&lt;/code&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>72</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.bonghwa.needclass.LittleEndianByteHandler short byteToShort(byte[] buffer, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="offset 0" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;offset&lt;/code&gt;' is always '&lt;code&gt;0&lt;/code&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>124</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.bonghwa.needclass.BigEndianByteHandler double byteToDouble(byte[] buffer, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="offset 0" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;offset&lt;/code&gt;' is always '&lt;code&gt;0&lt;/code&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>83</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.bonghwa.needclass.BigEndianByteHandler short byteToShort(byte[] src, int offset)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="offset 0" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;offset&lt;/code&gt;' is always '&lt;code&gt;0&lt;/code&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/Log.java</file>
+    <line>135</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.common.logger.Log void i(java.lang.String tag, java.lang.String msg, java.lang.Throwable tr)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="tr null" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;tr&lt;/code&gt;' is always '&lt;code&gt;null&lt;/code&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/Log.java</file>
+    <line>190</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.common.logger.Log void e(java.lang.String tag, java.lang.String msg, java.lang.Throwable tr)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="tr null" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;tr&lt;/code&gt;' is always '&lt;code&gt;null&lt;/code&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/Log.java</file>
+    <line>90</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.common.logger.Log void v(java.lang.String tag, java.lang.String msg, java.lang.Throwable tr)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="tr null" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;tr&lt;/code&gt;' is always '&lt;code&gt;null&lt;/code&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/Log.java</file>
+    <line>113</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.common.logger.Log void d(java.lang.String tag, java.lang.String msg, java.lang.Throwable tr)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="tr null" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;tr&lt;/code&gt;' is always '&lt;code&gt;null&lt;/code&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/Log.java</file>
+    <line>200</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.common.logger.Log void e(java.lang.String tag, java.lang.String msg)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="tag &quot;getAddress&quot;" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;tag&lt;/code&gt;' is always '&lt;code&gt;&quot;getAddress&quot;&lt;/code&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/Log.java</file>
+    <line>200</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.common.logger.Log void e(java.lang.String tag, java.lang.String msg)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="msg &quot;주소 데이터 얻기 실패&quot;" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;msg&lt;/code&gt;' is always '&lt;code&gt;&quot;주소 데이터 얻기 실패&quot;&lt;/code&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/Log.java</file>
+    <line>123</line>
+    <module>Application</module>
+    <package>com.example.android.common.logger</package>
+    <entry_point TYPE="method" FQNAME="com.example.android.common.logger.Log void d(java.lang.String tag, java.lang.String msg)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="tag &quot;Main&quot;" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;tag&lt;/code&gt;' is always '&lt;code&gt;&quot;Main&quot;&lt;/code&gt;'</description>
+  </problem>
+</problems>
+

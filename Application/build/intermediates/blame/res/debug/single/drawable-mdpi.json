@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\kyung\\Desktop\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_launcher.png",
+        "source": "C:\\Users\\kyung\\Desktop\\bonghwanet\\Application\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\kyung\\Desktop\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_action_info.png",
+        "source": "C:\\Users\\kyung\\Desktop\\bonghwanet\\Application\\src\\main\\res\\drawable-mdpi\\ic_action_info.png"
+    },
+    {
+        "merged": "C:\\Users\\kyung\\Desktop\\bonghwanet\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_action_discard.png",
+        "source": "C:\\Users\\kyung\\Desktop\\bonghwanet\\Application\\src\\main\\res\\drawable-mdpi\\ic_action_discard.png"
+    }
+]

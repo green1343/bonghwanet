@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/MyThread.java</file>
+    <line>3</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.bonghwa.needclass.MyThread" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WiFiNetwork.java</file>
+    <line>32</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.bonghwa.Network" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/WifiApManager.java</file>
+    <line>9</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.bonghwa.needclass.WifiApManager" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/basicaccessibility/Manager.java</file>
+    <line>53</line>
+    <module>Application</module>
+    <package>com.example.android.basicaccessibility</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.bonghwa.Manager" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/Tuple.java</file>
+    <line>3</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.bonghwa.needclass.Tuple" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/LittleEndianByteHandler.java</file>
+    <line>3</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.bonghwa.needclass.LittleEndianByteHandler" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java</file>
+    <line>3</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/BigEndianByteHandler.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/needclass/Tuple4.java</file>
+    <line>3</line>
+    <module>Application</module>
+    <package>com.example.android.bonghwa.needclass</package>
+    <entry_point TYPE="class" FQNAME="com.example.android.bonghwa.needclass.Tuple4" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+</problems>
+
