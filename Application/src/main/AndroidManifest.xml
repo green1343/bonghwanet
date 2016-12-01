@@ -76,6 +76,7 @@
         <activity android:name=".Emergency.Emergencytype_typhoon"></activity>
         <activity android:name=".Emergency.Emergencytype_volcano"></activity>
         <activity android:name=".Emergency.Emergencytype_war"></activity>
+        <activity android:name=".ChattingHistory"></activity>
     </application>
 
 </manifest>

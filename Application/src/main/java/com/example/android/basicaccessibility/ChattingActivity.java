@@ -1,6 +1,7 @@
 package com.example.android.basicaccessibility;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.example.android.basicaccessibility.Emergency.Emergencytype_earthquake;
 import com.example.android.bonghwa.Device;
 import com.example.android.bonghwa.GroupInfo.ChatMsg;
 import com.example.android.bonghwa.Manager;
@@ -22,7 +24,6 @@ public class ChattingActivity extends Activity {
 	private static ListView m_list;
 	public static ChatListAdapter m_adapter = null;
 	public static ArrayList<ChatMsg> m_listitem = null;
-	final DBHelper dbHelper = new DBHelper(getApplicationContext(), "chat.db", null, 1);
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class ChattingActivity extends Activity {
 		setContentView(R.layout.chatting);
 
 		findViewById(R.id.buttonSend).setOnClickListener(onClickButton);
+		findViewById(R.id.button_in).setOnClickListener(onClickButton);
 
 		m_adapter = new ChatListAdapter(this);
 		m_list = (ListView) findViewById(R.id.listView);
@@ -91,6 +93,7 @@ public class ChattingActivity extends Activity {
 								System.currentTimeMillis(),
 								s);
 						//DB 추가
+						final DBHelper dbHelper = new DBHelper(getApplicationContext(), "chat.db", null, 1);
 						dbHelper.insert(Manager.INSTANCE.getCurGroupID(),s,Manager.INSTANCE.getMyNumber());
 
 						refreshList();
@@ -106,6 +109,11 @@ public class ChattingActivity extends Activity {
 
 						text.setText("");
 
+						break;
+
+					case R.id.button_in:
+						Intent intent = new Intent(getApplicationContext(), ChattingHistory.class);
+						startActivity(intent);
 						break;
 				}
 			}
