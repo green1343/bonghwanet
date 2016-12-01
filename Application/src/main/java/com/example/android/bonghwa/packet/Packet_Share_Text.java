@@ -1,17 +1,17 @@
 package com.example.android.bonghwa.packet;
 
-public class Packet_Share_Text extends Packet_Command
+public class PacketShareText extends PacketCommand
 {
     public long group;
     public long uploader;
     public long time;
     public String text;
 
-    public Packet_Share_Text(){
+    public PacketShareText(){
         setCommand((short) PACKET.PACKET_SHARE_TEXT);
     }
 
-    public Packet_Share_Text(byte[] buf){
+    public PacketShareText(byte[] buf){
 
         super(buf);
 
@@ -21,9 +21,9 @@ public class Packet_Share_Text extends Packet_Command
         text = unpackString();
     }
 
-    public void GetBytes(byte[] buf){
+    public void getBytes(byte[] buf){
 
-        super.GetBytes(buf);
+        super.getBytes(buf);
 
         pack(group);
         pack(uploader);

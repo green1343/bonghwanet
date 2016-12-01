@@ -7,16 +7,16 @@ import com.example.android.bonghwa.GroupInfo.User;
 
 import java.util.HashMap;
 
-public class Packet_Grouplist extends Packet_Command {
+public class PacketGrouplist extends PacketCommand {
 
     public long id;
     public HashMap<Long, Group> groups = new HashMap<>();
 
-    public Packet_Grouplist(){
+    public PacketGrouplist(){
         setCommand((short) PACKET.PACKET_GROUPLIST);
     }
 
-    public Packet_Grouplist(byte[] buf)
+    public PacketGrouplist(byte[] buf)
     {
         super(buf);
 
@@ -56,9 +56,9 @@ public class Packet_Grouplist extends Packet_Command {
         }
     }
 
-    public void GetBytes(byte[] buf)
+    public void getBytes(byte[] buf)
     {
-        super.GetBytes(buf);
+        super.getBytes(buf);
 
         pack(id);
         pack(groups.size());

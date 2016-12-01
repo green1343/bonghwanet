@@ -17,7 +17,7 @@ import com.example.android.bonghwa.GroupInfo.Group;
 import com.example.android.bonghwa.Manager;
 import com.example.android.bonghwa.needclass.MyThread;
 import com.example.android.bonghwa.Network;
-import com.example.android.bonghwa.packet.Packet_Join_Request;
+import com.example.android.bonghwa.packet.PacketJoinRequest;
 
 import java.util.HashMap;
 import java.util.List;
@@ -25,23 +25,23 @@ import java.util.StringTokenizer;
 
 public class NewGrouplistActivity extends Activity {
 
-	ArrayAdapter<String> m_adapter;
-	ListView m_list;
+	ArrayAdapter<String> mobileAdapter;
+	ListView mobileList;
 
-	MyThread m_refreshThread = null;
+	MyThread mobileRefreshThread = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.newgrouplist);
 
-		m_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_item);
-		m_list = (ListView) findViewById(R.id.listView);
-		m_list.setAdapter(m_adapter);
-		m_list.setOnItemClickListener(onClickListItem);
+		mobileAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_item);
+		mobileList = (ListView) findViewById(R.id.listView);
+		mobileList.setAdapter(mobileAdapter);
+		mobileList.setOnItemClickListener(onClickListItem);
 	}
 
-	private Handler m_refreshHandler = new Handler() {
+	private Handler mobileRefreshHandler = new Handler() {
 		public void handleMessage(Message msg) {
 			refreshList();
 		}
@@ -52,13 +52,13 @@ public class NewGrouplistActivity extends Activity {
 		super.onResume();
 		refreshList();
 
-		m_refreshThread = new MyThread() {
+		mobileRefreshThread = new MyThread() {
 
 			public void run() {
 				while (!Thread.interrupted() && running) {
 					try {
-						Message msg = Message.obtain(m_refreshHandler, 0 , 1 , 0);
-						m_refreshHandler.sendMessage(msg);
+						Message msg = Message.obtain(mobileRefreshHandler, 0 , 1 , 0);
+						mobileRefreshHandler.sendMessage(msg);
 						Thread.sleep(3000);
 					} catch (Throwable t) {
 					}
@@ -66,23 +66,23 @@ public class NewGrouplistActivity extends Activity {
 			}
 		};
 
-		m_refreshThread.start();
+		mobileRefreshThread.start();
 	}
 
 	@Override
 	protected void onPause(){
 		super.onPause();
 
-		m_refreshThread.interrupt();
-		m_refreshThread.running = false;
-		m_refreshThread = null;
+		mobileRefreshThread.interrupt();
+		mobileRefreshThread.running = false;
+		mobileRefreshThread = null;
 	}
 
 	public void refreshList(){
 
 		// TODO: 중복 제거
 
-		m_adapter.clear();
+		mobileAdapter.clear();
 
 		Device d = Device.INSTANCE;
 		HashMap<Long, Group> groups = Manager.INSTANCE.getAllGroups();
@@ -111,13 +111,13 @@ public class NewGrouplistActivity extends Activity {
 					String str = new String(nameStr);
 					str += "\t\t";
 					str += idStr;
-					m_adapter.add(str);
+					mobileAdapter.add(str);
 					break;
 				}
 			}
 		}
 
-		m_adapter.notifyDataSetChanged();
+		mobileAdapter.notifyDataSetChanged();
 	}
 
 	private AdapterView.OnItemClickListener onClickListItem = new AdapterView.OnItemClickListener() {
@@ -125,7 +125,7 @@ public class NewGrouplistActivity extends Activity {
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 
-			StringTokenizer t = new StringTokenizer(m_adapter.getItem(arg2), "\t");
+			StringTokenizer t = new StringTokenizer(mobileAdapter.getItem(arg2), "\t");
 			t.nextToken();
 			Manager.INSTANCE.setTempObject(Long.valueOf(t.nextToken()));
 
@@ -143,7 +143,7 @@ public class NewGrouplistActivity extends Activity {
 							while (!Thread.interrupted()) {
 								try {
 									if (Manager.INSTANCE.getJoinGroup() != null) {
-										Packet_Join_Request p = new Packet_Join_Request();
+										PacketJoinRequest p = new PacketJoinRequest();
 										p.group = Manager.INSTANCE.getCurGroupID();
 										p.userID = Manager.INSTANCE.getMyNumber();
 										p.userInfo = Manager.INSTANCE.getMyUserInfo();

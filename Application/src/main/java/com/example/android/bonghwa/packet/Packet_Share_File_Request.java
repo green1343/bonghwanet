@@ -1,16 +1,16 @@
 package com.example.android.bonghwa.packet;
 
-public class Packet_Share_File_Request extends Packet_Command
+public class PacketShareFileRequest extends PacketCommand
 {
     public long group;
     public String filename;
     public int port;
 
-    public Packet_Share_File_Request(){
+    public PacketShareFileRequest(){
         setCommand((short) PACKET.PACKET_SHARE_FILE_REQUEST);
     }
 
-    public Packet_Share_File_Request(byte[] buf){
+    public PacketShareFileRequest(byte[] buf){
 
         super(buf);
 
@@ -19,9 +19,9 @@ public class Packet_Share_File_Request extends Packet_Command
         port = unpackInt();
     }
 
-    public void GetBytes(byte[] buf){
+    public void getBytes(byte[] buf){
 
-        super.GetBytes(buf);
+        super.getBytes(buf);
 
         pack(group);
         pack(filename);

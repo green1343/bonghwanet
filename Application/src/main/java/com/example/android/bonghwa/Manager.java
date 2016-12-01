@@ -34,7 +34,7 @@ import com.example.android.bonghwa.GroupInfo.GroupFile;
 import com.example.android.bonghwa.GroupInfo.User;
 import com.example.android.bonghwa.needclass.MyThread;
 import com.example.android.common.logger.Log;
-import com.example.android.bonghwa.packet.Packet_Sync;
+import com.example.android.bonghwa.packet.PacketSync;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -52,28 +52,28 @@ import java.util.StringTokenizer;
 public enum Manager {
     INSTANCE;
 
-    Context m_context;
-    //long m_myNumber = 1033245828L;
-    long m_myNumber = 1071343228L;
-    User m_myUser = new User();
-    long m_curGroup = 106423876801L; // TODO : delete
+    Context mobileContext;
+    //long mobileMyNumber = 1033245828L;
+    long mobileMyNumber = 1071343228L;
+    User mobileMyUser = new User();
+    long mobileCurGroup = 106423876801L; // TODO : delete
 
 
-    HashMap<Long, Group> m_groups = new HashMap<>(); // id, name
+    HashMap<Long, Group> mobileGroups = new HashMap<>(); // id, name
 //    HashMap<Long, HashMap<String, GroupFile>> files = new HashMap<>(); // id, files
 //    HashMap<Long, LinkedList<ChatMsg>> texts = new HashMap<>();
 
-    Object m_tempObject;
+    Object mobileTempObject;
 
-    Random m_random = new Random();
+    Random mobileRandom = new Random();
 
     // join
-    boolean m_bWatingJoin = false;
-    Group m_joinGroup = null;
+    boolean mobileBooleanWatingJoin = false;
+    Group mobileJoinGroup = null;
 
     public void init(Context context)
     {
-        m_context = context;
+        mobileContext = context;
 
         //writeUserData();
         readUserData();
@@ -86,8 +86,8 @@ public enum Manager {
             if( !file.exists() )  // 원하는 경로에 폴더가 있는지 확인
                 file.mkdirs();
 
-            for(Long id : m_groups.keySet()){
-                String dir = root + "/" + id + "_" + m_groups.get(id);
+            for(Long id : mobileGroups.keySet()){
+                String dir = root + "/" + id + "_" + mobileGroups.get(id);
                 file = new java.io.File(dir);
                 if( !file.exists() )  // 원하는 경로에 폴더가 있는지 확인
                     file.mkdirs();
@@ -96,90 +96,90 @@ public enum Manager {
 
         TelephonyManager telManager = (TelephonyManager)context.getSystemService(context.TELEPHONY_SERVICE);
         if(telManager.getLine1Number() != null)
-            m_myNumber = Long.valueOf(telManager.getLine1Number());
+            mobileMyNumber = Long.valueOf(telManager.getLine1Number());
     }
 
     public Context getContext(){
-        return m_context;
+        return mobileContext;
     }
 
     public Object getTempObject(){
-        return m_tempObject;
+        return mobileTempObject;
     }
 
     public void setTempObject(Object obj){
-        m_tempObject = obj;
+        mobileTempObject = obj;
     }
 
     public boolean isWatingJoin(){
-        return m_bWatingJoin;
+        return mobileBooleanWatingJoin;
     }
 
     public void setWatingJoin(boolean b){
-        m_bWatingJoin = b;
+        mobileBooleanWatingJoin = b;
     }
 
     public void setJoinGroup(Group g) {
-        m_joinGroup = new Group(g);
+        mobileJoinGroup = new Group(g);
         setWatingJoin(false);
     }
     
     public Group getJoinGroup(){
-        return m_joinGroup;
+        return mobileJoinGroup;
     }
 
 
     public void joinGranted(long id){
-        addNewGroup(m_joinGroup);
-        m_joinGroup = null;
+        addNewGroup(mobileJoinGroup);
+        mobileJoinGroup = null;
     }
 
     public void addNewGroup(Group g){
 
-        if(g.members.containsKey(m_myNumber) == false)
-            g.members.put(m_myNumber, m_myUser);
+        if(g.members.containsKey(mobileMyNumber) == false)
+            g.members.put(mobileMyNumber, mobileMyUser);
 
-        m_groups.put(g.id, new Group(g));
+        mobileGroups.put(g.id, new Group(g));
 
         writeUserData();
     }
 
     LinkedList<ChatMsg> getText(long group){
-        return m_groups.get(group).texts;
+        return mobileGroups.get(group).texts;
     }
 
     public List<ChatMsg> getText(){
-        return m_groups.get(m_curGroup).texts;
+        return mobileGroups.get(mobileCurGroup).texts;
     }
 
     public void setCurGroup(long group){
-        m_curGroup = group;
+        mobileCurGroup = group;
     }
 
     public long getCurGroupID(){
-        return m_curGroup;
+        return mobileCurGroup;
     }
 
     public Group getCurGroup(){
-        return m_groups.get(m_curGroup);
+        return mobileGroups.get(mobileCurGroup);
     }
 
     public Group getGroup(long id){
-        return m_groups.get(id);
+        return mobileGroups.get(id);
     }
 
     public void addUser(long group, long userID, User info){
-        m_groups.get(group).members.put(userID, info);
+        mobileGroups.get(group).members.put(userID, info);
         writeUserData();
     }
 
     public long getMyNumber(){
-        return m_myNumber;
+        return mobileMyNumber;
     }
 
     public User getMyUserInfo(){
         User u = new User();
-        u.name = m_myUser.name;
+        u.name = mobileMyUser.name;
         return u;
     }
 
@@ -204,10 +204,10 @@ public enum Manager {
         FileInputStream stream;
 
         try {
-            stream = m_context.openFileInput("config.txt");
+            stream = mobileContext.openFileInput("config.txt");
             Scanner s = new Scanner(stream);
 
-            m_groups.clear();
+            mobileGroups.clear();
             int size1 = s.nextInt();
             for(int i=0; i<size1; ++i) {
                 Group g = new Group();
@@ -240,11 +240,11 @@ public enum Manager {
             e.printStackTrace();
         }
 
-        if(m_groups.containsKey(Device.EMERGENCY) == false){
+        if(mobileGroups.containsKey(Device.EMERGENCY) == false){
             Group g = new Group();
             g.id = Device.EMERGENCY;
             g.name = "Emergency";
-            g.members.put(m_myNumber, m_myUser);
+            g.members.put(mobileMyNumber, mobileMyUser);
             addNewGroup(g);
         }
 
@@ -257,11 +257,11 @@ public enum Manager {
         String s = new String(" ");
 
         try {
-            outputStream = m_context.openFileOutput("config.txt", Context.MODE_PRIVATE);
-            outputStream.write(Integer.toString(m_groups.size()).getBytes());
+            outputStream = mobileContext.openFileOutput("config.txt", Context.MODE_PRIVATE);
+            outputStream.write(Integer.toString(mobileGroups.size()).getBytes());
             outputStream.write(s.getBytes());
-            for(Long id : m_groups.keySet()){
-                Group g = m_groups.get(id);
+            for(Long id : mobileGroups.keySet()){
+                Group g = mobileGroups.get(id);
                 outputStream.write(Long.toString(id).getBytes());
                 outputStream.write(s.getBytes());
                 outputStream.write(g.name.getBytes());
@@ -297,7 +297,7 @@ public enum Manager {
     }
 
     public HashMap<Long, Group> getAllGroups(){
-        return m_groups;
+        return mobileGroups;
     }
 
     public ChatMsg addText(long group, long uploader, long time, String text){
@@ -306,7 +306,7 @@ public enum Manager {
         t.time = time;
         t.text = new String(text);
 
-        for(ChatMsg t2 : m_groups.get(group).texts) {
+        for(ChatMsg t2 : mobileGroups.get(group).texts) {
             if(t.uploader == t2.uploader && t.time == t2.time)
                 return null;
         }
@@ -315,14 +315,14 @@ public enum Manager {
             Manager.INSTANCE.sendEmergencySMS(text);
         }
 
-        m_groups.get(group).texts.add(t);
+        mobileGroups.get(group).texts.add(t);
 
         return t;
     }
 
     public String getUserName(long id){
 
-        if(id == m_myNumber)
+        if(id == mobileMyNumber)
             return Device.DEFAULT_MYNAME;
 
         if(getCurGroup().members.get(id) != null) {
@@ -332,7 +332,7 @@ public enum Manager {
         }
 
         // 주소록
-        ContentResolver cr = m_context.getContentResolver();
+        ContentResolver cr = mobileContext.getContentResolver();
         Uri uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode("0" + id));
         Cursor cursor = cr.query(uri, new String[]{ContactsContract.PhoneLookup.DISPLAY_NAME}, null, null, null);
         if (cursor == null)
@@ -352,7 +352,7 @@ public enum Manager {
     public void checkDirectories(){
         String storage = Environment.getExternalStorageState();
         if ( storage.equals(Environment.MEDIA_MOUNTED)) {
-            for(Long id : m_groups.keySet()) {
+            for(Long id : mobileGroups.keySet()) {
                 String dir = getRealGroupPath(id);
                 java.io.File file = new java.io.File(dir);
                 if (!file.exists())
@@ -372,37 +372,37 @@ public enum Manager {
 
     public void createGroup(String name){
         long max = 0;
-        for(Long id : m_groups.keySet()){
-            if(id / 100 == m_myNumber){
+        for(Long id : mobileGroups.keySet()){
+            if(id / 100 == mobileMyNumber){
                 long index = id % 100;
                 if(index > max)
                     max = index;
             }
         }
 
-        long id = (m_myNumber * 100) + max + 1;
+        long id = (mobileMyNumber * 100) + max + 1;
         Group g = new Group();
         g.name = name;
         User u = new User();
         g.id = id;
-        u.name = m_myUser.name;
-        g.members.put(m_myNumber, u);
+        u.name = mobileMyUser.name;
+        g.members.put(mobileMyNumber, u);
         addNewGroup(g);
-        m_groups.put(id, g);
+        mobileGroups.put(id, g);
 
         checkDirectories();
         writeUserData();
     }
 
     public String getRoot(){
-        return Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + m_context.getString(R.string.app_name);
+        return Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + mobileContext.getString(R.string.app_name);
     }
 
     public String getRealGroupPath(long id){
-        if(m_groups.containsKey(id)){
+        if(mobileGroups.containsKey(id)){
             String storage = Environment.getExternalStorageState();
             if ( storage.equals(Environment.MEDIA_MOUNTED))
-                return getRoot() + "/" + m_groups.get(id).name + "_" + id;
+                return getRoot() + "/" + mobileGroups.get(id).name + "_" + id;
             else
                 return null;
         }
@@ -411,10 +411,10 @@ public enum Manager {
     }
 
     public String getGroupPath(long id){
-        if(m_groups.containsKey(id)){
+        if(mobileGroups.containsKey(id)){
             String storage = Environment.getExternalStorageState();
             if ( storage.equals(Environment.MEDIA_MOUNTED))
-                return "" + m_groups.get(id).name + "_" + id;
+                return "" + mobileGroups.get(id).name + "_" + id;
             else
                 return null;
         }
@@ -423,7 +423,7 @@ public enum Manager {
     }
 
     public synchronized int getRandomInt(int s, int e){
-        return m_random.nextInt(e - s) + s;
+        return mobileRandom.nextInt(e - s) + s;
     }
 
     public void uploadFile(String path){
@@ -477,37 +477,37 @@ public enum Manager {
     }
 
     public void addNewFile(String file){
-        java.io.File ioFile = new java.io.File(getRealGroupPath(m_curGroup) + "/" + file);
-        String path = getGroupPath(m_curGroup) + "/" + file;
-        m_groups.get(m_curGroup).files.put(path, new GroupFile(path, false, ioFile.lastModified()));
+        java.io.File ioFile = new java.io.File(getRealGroupPath(mobileCurGroup) + "/" + file);
+        String path = getGroupPath(mobileCurGroup) + "/" + file;
+        mobileGroups.get(mobileCurGroup).files.put(path, new GroupFile(path, false, ioFile.lastModified()));
 
         writeUserData();
 
-        Packet_Sync p = new Packet_Sync();
+        PacketSync p = new PacketSync();
         p.group = getCurGroupID();
         p.files.put(path, new GroupFile(path, false, ioFile.lastModified()));
         Network.INSTANCE.writeAll(p);
     }
 
-    LocationManager m_locManager = null;
-    Location m_location = null;
+    LocationManager mobileLocManager = null;
+    Location mobileLocation = null;
 
     public void setupGPS(){
 
         // Acquire a reference to the system Location Manager
-        m_locManager = (LocationManager) m_context.getSystemService(Context.LOCATION_SERVICE);
+        mobileLocManager = (LocationManager) mobileContext.getSystemService(Context.LOCATION_SERVICE);
 
         // GPS 프로바이더 사용가능여부
-        boolean isGPSEnabled = m_locManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        boolean isGPSEnabled = mobileLocManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
         // 네트워크 프로바이더 사용가능여부
-        boolean isNetworkEnabled = m_locManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        boolean isNetworkEnabled = mobileLocManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
         Log.d("Main", "isGPSEnabled="+ isGPSEnabled);
         Log.d("Main", "isNetworkEnabled="+ isNetworkEnabled);
 
         LocationListener locationListener = new LocationListener() {
             public void onLocationChanged(Location location) {
-                m_location = location;
+                mobileLocation = location;
             }
 
             public void onStatusChanged(String provider, int status, Bundle extras) {
@@ -521,25 +521,25 @@ public enum Manager {
         };
 
         // Register the listener with the Location Manager to receive location updates
-        m_locManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-        m_locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+        mobileLocManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+        mobileLocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
     }
 
     /**
      * 위도와 경도 기반으로 주소를 리턴하는 메서드
      */
     public String getGPSAddress() {      //gps_주소찾기.
-        if(m_location == null)
+        if(mobileLocation == null)
             return null;
 
         String address = null;
 
-        double lat = m_location.getLatitude();
-        double lng = m_location.getLongitude();
+        double lat = mobileLocation.getLatitude();
+        double lng = mobileLocation.getLongitude();
 
 
         //위치정보를 활용하기 위한 구글 API 객체
-        Geocoder geocoder = new Geocoder(m_context, Locale.getDefault());     //에러시, 여기확인
+        Geocoder geocoder = new Geocoder(mobileContext, Locale.getDefault());     //에러시, 여기확인
 
         //주소 목록을 담기 위한 HashMap
         List<Address> list = null;
@@ -568,8 +568,8 @@ public enum Manager {
     }
 
     public void sendSMS(String smsNumber, String smsText){
-        PendingIntent sentIntent = PendingIntent.getBroadcast(m_context, 0, new Intent("SMS_SENT_ACTION"), 0);
-        PendingIntent deliveredIntent = PendingIntent.getBroadcast(m_context, 0, new Intent("SMS_DELIVERED_ACTION"), 0);
+        PendingIntent sentIntent = PendingIntent.getBroadcast(mobileContext, 0, new Intent("SMS_SENT_ACTION"), 0);
+        PendingIntent deliveredIntent = PendingIntent.getBroadcast(mobileContext, 0, new Intent("SMS_DELIVERED_ACTION"), 0);
 
         if(smsNumber == null || smsText == null || sentIntent == null || deliveredIntent == null)
             return;
@@ -578,29 +578,29 @@ public enum Manager {
          * SMS가 발송될때 실행
          * When the SMS massage has been sent
          */
-        m_context.registerReceiver(new BroadcastReceiver() {
+        mobileContext.registerReceiver(new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
                 switch(getResultCode()){
                     case Activity.RESULT_OK:
                         // 전송 성공
-                        Toast.makeText(m_context, "전송 완료", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mobileContext, "전송 완료", Toast.LENGTH_SHORT).show();
                         break;
                     case SmsManager.RESULT_ERROR_GENERIC_FAILURE:
                         // 전송 실패
-                        Toast.makeText(m_context, "전송 실패", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mobileContext, "전송 실패", Toast.LENGTH_SHORT).show();
                         break;
                     case SmsManager.RESULT_ERROR_NO_SERVICE:
                         // 서비스 지역 아님
-                        Toast.makeText(m_context, "서비스 지역이 아닙니다", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mobileContext, "서비스 지역이 아닙니다", Toast.LENGTH_SHORT).show();
                         break;
                     case SmsManager.RESULT_ERROR_RADIO_OFF:
                         // 무선 꺼짐
-                        Toast.makeText(m_context, "무선(Radio)가 꺼져있습니다", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mobileContext, "무선(Radio)가 꺼져있습니다", Toast.LENGTH_SHORT).show();
                         break;
                     case SmsManager.RESULT_ERROR_NULL_PDU:
                         // PDU 실패
-                        Toast.makeText(m_context, "PDU Null", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mobileContext, "PDU Null", Toast.LENGTH_SHORT).show();
                         break;
                 }
             }
@@ -610,17 +610,17 @@ public enum Manager {
          * SMS가 도착했을때 실행
          * When the SMS massage has been delivered
          */
-        m_context.registerReceiver(new BroadcastReceiver() {
+        mobileContext.registerReceiver(new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
                 switch (getResultCode()){
                     case Activity.RESULT_OK:
                         // 도착 완료
-                        Toast.makeText(m_context, "SMS 도착 완료", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mobileContext, "SMS 도착 완료", Toast.LENGTH_SHORT).show();
                         break;
                     case Activity.RESULT_CANCELED:
                         // 도착 안됨
-                        Toast.makeText(m_context, "SMS 도착 실패", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mobileContext, "SMS 도착 실패", Toast.LENGTH_SHORT).show();
                         break;
                 }
             }

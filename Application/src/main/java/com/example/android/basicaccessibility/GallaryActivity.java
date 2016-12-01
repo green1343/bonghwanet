@@ -27,23 +27,23 @@ import java.util.Locale;
 
 public class GallaryActivity extends Activity {
 
-	GridView m_gv = null;
-	static MyGridAdapter m_adapter = null;
+	GridView mobileGridView = null;
+	static MyGridAdapter mobileAdapter = null;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.gallery);
 		setTitle("갤러리 사진");
 
-		m_gv = (GridView) findViewById(R.id.gridView1);
-		m_adapter = new MyGridAdapter(this);
-		m_gv.setAdapter(m_adapter);
+		mobileGridView = (GridView) findViewById(R.id.gridView1);
+		mobileAdapter = new MyGridAdapter(this);
+		mobileGridView.setAdapter(mobileAdapter);
 
 		findViewById(R.id.buttonCreate1).setOnClickListener(onClickButton);
 		findViewById(R.id.buttonCreate2).setOnClickListener(onClickButton);
 
-		m_adapter.notifyDataSetChanged();
-		m_gv.setAdapter(m_adapter);
+		mobileAdapter.notifyDataSetChanged();
+		mobileGridView.setAdapter(mobileAdapter);
 	}
 
 	Button.OnClickListener onClickButton = new View.OnClickListener() {
@@ -71,10 +71,10 @@ public class GallaryActivity extends Activity {
 	}
 
 	public static void refreshList(){
-		if(m_adapter == null)
+		if(mobileAdapter == null)
 			return;
 
-		m_adapter.refreshList();
+		mobileAdapter.refreshList();
 	}
 
 	public class MyGridAdapter extends BaseAdapter {

@@ -48,38 +48,38 @@ import android.widget.ScrollView;
  */
 public class LogFragment extends Fragment {
 
-    private LogView mLogView;
-    private ScrollView mScrollView;
+    private LogView mobileLogView;
+    private ScrollView mobileScrollView;
 
     public LogFragment() {}
 
     public View inflateViews() {
-        mScrollView = new ScrollView(getActivity());
+        mobileScrollView = new ScrollView(getActivity());
         ViewGroup.LayoutParams scrollParams = new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT);
-        mScrollView.setLayoutParams(scrollParams);
+        mobileScrollView.setLayoutParams(scrollParams);
 
-        mLogView = new LogView(getActivity());
+        mobileLogView = new LogView(getActivity());
         ViewGroup.LayoutParams logParams = new ViewGroup.LayoutParams(scrollParams);
         logParams.height = ViewGroup.LayoutParams.WRAP_CONTENT;
-        mLogView.setLayoutParams(logParams);
-        mLogView.setClickable(true);
-        mLogView.setFocusable(true);
-        mLogView.setTypeface(Typeface.MONOSPACE);
+        mobileLogView.setLayoutParams(logParams);
+        mobileLogView.setClickable(true);
+        mobileLogView.setFocusable(true);
+        mobileLogView.setTypeface(Typeface.MONOSPACE);
 
         // Want to set padding as 16 dips, setPadding takes pixels.  Hooray math!
         int paddingDips = 16;
         double scale = getResources().getDisplayMetrics().density;
         int paddingPixels = (int) ((paddingDips * (scale)) + .5);
-        mLogView.setPadding(paddingPixels, paddingPixels, paddingPixels, paddingPixels);
-        mLogView.setCompoundDrawablePadding(paddingPixels);
+        mobileLogView.setPadding(paddingPixels, paddingPixels, paddingPixels, paddingPixels);
+        mobileLogView.setCompoundDrawablePadding(paddingPixels);
 
-        mLogView.setGravity(Gravity.BOTTOM);
-        mLogView.setTextAppearance(getActivity(), android.R.style.TextAppearance_Holo_Medium);
+        mobileLogView.setGravity(Gravity.BOTTOM);
+        mobileLogView.setTextAppearance(getActivity(), android.R.style.TextAppearance_Holo_Medium);
 
-        mScrollView.addView(mLogView);
-        return mScrollView;
+        mobileScrollView.addView(mobileLogView);
+        return mobileScrollView;
     }
 
     @Override
@@ -88,7 +88,7 @@ public class LogFragment extends Fragment {
 
         View result = inflateViews();
 
-        mLogView.addTextChangedListener(new TextWatcher() {
+        mobileLogView.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
@@ -97,13 +97,13 @@ public class LogFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-                mScrollView.fullScroll(ScrollView.FOCUS_DOWN);
+                mobileScrollView.fullScroll(ScrollView.FOCUS_DOWN);
             }
         });
         return result;
     }
 
     public LogView getLogView() {
-        return mLogView;
+        return mobileLogView;
     }
 }

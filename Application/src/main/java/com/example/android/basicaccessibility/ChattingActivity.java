@@ -15,15 +15,15 @@ import com.example.android.bonghwa.Device;
 import com.example.android.bonghwa.GroupInfo.ChatMsg;
 import com.example.android.bonghwa.Manager;
 import com.example.android.bonghwa.Network;
-import com.example.android.bonghwa.packet.Packet_Share_Text;
+import com.example.android.bonghwa.packet.PacketShareText;
 
 import java.util.ArrayList;
 
 public class ChattingActivity extends Activity {
 
-	private static ListView m_list;
-	public static ChatListAdapter m_adapter = null;
-	public static ArrayList<ChatMsg> m_listitem = null;
+	private static ListView mobileList;
+	public static ChatListAdapter mobileAdapter = null;
+	public static ArrayList<ChatMsg> mobileListitem = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +33,11 @@ public class ChattingActivity extends Activity {
 		findViewById(R.id.buttonSend).setOnClickListener(onClickButton);
 		findViewById(R.id.button_in).setOnClickListener(onClickButton);
 
-		m_adapter = new ChatListAdapter(this);
-		m_list = (ListView) findViewById(R.id.listView);
-		m_list.setAdapter(m_adapter);
-		m_list.setOnItemClickListener(onClickListItem);
-		m_list.requestFocusFromTouch();
+		mobileAdapter = new ChatListAdapter(this);
+		mobileList = (ListView) findViewById(R.id.listView);
+		mobileList.setAdapter(mobileAdapter);
+		mobileList.setOnItemClickListener(onClickListItem);
+		mobileList.requestFocusFromTouch();
 
 		// 키보드 숨기기
 		InputMethodManager immhide = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
@@ -53,18 +53,18 @@ public class ChattingActivity extends Activity {
 
 	public static void refreshList(){
 
-		if(m_adapter == null)
+		if(mobileAdapter == null)
 			return;
 
 		// TODO : 효율성
-		m_adapter.arr.clear();
+		mobileAdapter.arr.clear();
 		for(ChatMsg info : Manager.INSTANCE.getText()){
 			//m_userlistAdapter.add("" + Manager.INSTANCE.getUserName(info.uploader) + " : " + info.text);
-			m_adapter.arr.add(info);
+			mobileAdapter.arr.add(info);
 		}
 
-		m_adapter.notifyDataSetChanged();
-		m_list.setSelection(100);
+		mobileAdapter.notifyDataSetChanged();
+		mobileList.setSelection(100);
 
 		Device.INSTANCE.setTimerZero();
 	}
@@ -99,7 +99,7 @@ public class ChattingActivity extends Activity {
 						refreshList();
 
 						if(info != null) {
-							Packet_Share_Text p = new Packet_Share_Text();
+							PacketShareText p = new PacketShareText();
 							p.group = Manager.INSTANCE.getCurGroupID();
 							p.uploader = info.uploader;
 							p.time = info.time;

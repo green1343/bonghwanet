@@ -35,20 +35,20 @@ public class Log {
     public static final int ASSERT = android.util.Log.ASSERT;
 
     // Stores the beginning of the LogNode topology.
-    private static LogNode mLogNode;
+    private static LogNode mobileLogNode;
 
     /**
      * Returns the next LogNode in the linked list.
      */
     public static LogNode getLogNode() {
-        return mLogNode;
+        return mobileLogNode;
     }
 
     /**
      * Sets the LogNode data will be sent to.
      */
     public static void setLogNode(LogNode node) {
-        mLogNode = node;
+        mobileLogNode = node;
     }
 
     /**
@@ -62,8 +62,8 @@ public class Log {
      *           to extract and print useful information.
      */
     public static void println(int priority, String tag, String msg, Throwable tr) {
-        if (mLogNode != null) {
-            mLogNode.println(priority, tag, msg, tr);
+        if (mobileLogNode != null) {
+            mobileLogNode.println(priority, tag, msg, tr);
         }
     }
 

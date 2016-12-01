@@ -9,5 +9,7 @@ public class ChatMsg {
     public long time;
     public String text;
 
-    public ChatMsg(){}
+    public ChatMsg(){
+
+    }
 }

@@ -18,11 +18,11 @@ import com.example.android.bonghwa.Network;
 
 public class GroupHomeActivity extends Activity {
 
-	private ListView m_userlist;
-	public static ArrayAdapter<String> m_userlistAdapter = null;
+	private ListView mobileUserlist;
+	public static ArrayAdapter<String> mobileUserlistAdapter = null;
 
-	private static ListView m_chatting;
-	public static ArrayAdapter<String> m_chattingAdapter = null;
+	private static ListView mobileChatting;
+	public static ArrayAdapter<String> mobileChattingAdapter = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,15 +31,15 @@ public class GroupHomeActivity extends Activity {
 
 		findViewById(R.id.button8).setOnClickListener(onClickButton);
 
-		m_userlistAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_item);
-		m_userlist = (ListView) findViewById(R.id.userlist);
-		m_userlist.setAdapter(m_userlistAdapter);
-		//m_userlist.setOnItemClickListener(onClickListItem);
+		mobileUserlistAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_item);
+		mobileUserlist = (ListView) findViewById(R.id.userlist);
+		mobileUserlist.setAdapter(mobileUserlistAdapter);
+		//mobileUserlist.setOnItemClickListener(onClickListItem);
 
-		m_chattingAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_item);
-		m_chatting = (ListView) findViewById(R.id.chatting);
-		m_chatting.setAdapter(m_chattingAdapter);
-		m_chatting.setOnItemClickListener(onClickListItem);
+		mobileChattingAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_item);
+		mobileChatting = (ListView) findViewById(R.id.chatting);
+		mobileChatting.setAdapter(mobileChattingAdapter);
+		mobileChatting.setOnItemClickListener(onClickListItem);
 
 		// 키보드 숨기기
 		InputMethodManager immhide = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
@@ -71,29 +71,29 @@ public class GroupHomeActivity extends Activity {
 	}
 
 	public static void refreshList(){
-		if(m_userlistAdapter == null)
+		if(mobileUserlistAdapter == null)
 			return;
 
-		m_userlistAdapter.clear();
+		mobileUserlistAdapter.clear();
 
 		Group g = Manager.INSTANCE.getCurGroup();
 		for(Long key : g.members.keySet()) {
 			String str = Manager.INSTANCE.getUserName(key);
 			if(Network.INSTANCE.getServerID() == key)
 				str += "(server)";
-			m_userlistAdapter.add(str);
+			mobileUserlistAdapter.add(str);
 		}
 
-		m_userlistAdapter.notifyDataSetChanged();
+		mobileUserlistAdapter.notifyDataSetChanged();
 
 		// TODO : 효율성
-		m_chattingAdapter.clear();
+		mobileChattingAdapter.clear();
 		for(ChatMsg info : Manager.INSTANCE.getText()){
-			m_chattingAdapter.add("" + Manager.INSTANCE.getUserName(info.uploader) + " : " + info.text);
+			mobileChattingAdapter.add("" + Manager.INSTANCE.getUserName(info.uploader) + " : " + info.text);
 		}
 
-		m_chattingAdapter.notifyDataSetChanged();
-		m_chatting.setSelection(100);
+		mobileChattingAdapter.notifyDataSetChanged();
+		mobileChatting.setSelection(100);
 	}
 
 

@@ -17,12 +17,12 @@ import com.example.android.bonghwa.Manager;
 import java.util.ArrayList;
 
 public class ChatListAdapter extends BaseAdapter{
-    private LayoutInflater mInflater;
-    private Activity m_activity;
+    private LayoutInflater mobileInflater;
+    private Activity mobileActivity;
     public ArrayList<ChatMsg> arr = new ArrayList<>();
     public ChatListAdapter(Activity act) {
-        this.m_activity = act;
-        mInflater = (LayoutInflater)m_activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        this.mobileActivity = act;
+        mobileInflater = (LayoutInflater)mobileActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
     @Override
     public int getCount() {
@@ -40,7 +40,7 @@ public class ChatListAdapter extends BaseAdapter{
         if(convertView == null){
             int res = 0;
             res = R.layout.list_item_chatting;
-            convertView = mInflater.inflate(res, parent, false);
+            convertView = mobileInflater.inflate(res, parent, false);
         }
         ImageView imView = (ImageView)convertView.findViewById(R.id.vi_image);
         TextView title = (TextView)convertView.findViewById(R.id.vi_title);

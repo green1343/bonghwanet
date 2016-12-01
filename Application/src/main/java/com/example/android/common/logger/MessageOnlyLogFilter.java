@@ -22,7 +22,7 @@ package com.example.android.common.logger;
  */
 public class MessageOnlyLogFilter implements LogNode {
 
-    LogNode mNext;
+    LogNode mobileNext;
 
     /**
      * Takes the "next" LogNode as a parameter, to simplify chaining.
@@ -30,7 +30,7 @@ public class MessageOnlyLogFilter implements LogNode {
      * @param next The next LogNode in the pipeline.
      */
     public MessageOnlyLogFilter(LogNode next) {
-        mNext = next;
+        mobileNext = next;
     }
 
     public MessageOnlyLogFilter() {
@@ -38,7 +38,7 @@ public class MessageOnlyLogFilter implements LogNode {
 
     @Override
     public void println(int priority, String tag, String msg, Throwable tr) {
-        if (mNext != null) {
+        if (mobileNext != null) {
             getNext().println(Log.NONE, null, msg, null);
         }
     }
@@ -47,14 +47,14 @@ public class MessageOnlyLogFilter implements LogNode {
      * Returns the next LogNode in the chain.
      */
     public LogNode getNext() {
-        return mNext;
+        return mobileNext;
     }
 
     /**
      * Sets the LogNode data will be sent to..
      */
     public void setNext(LogNode node) {
-        mNext = node;
+        mobileNext = node;
     }
 
 }

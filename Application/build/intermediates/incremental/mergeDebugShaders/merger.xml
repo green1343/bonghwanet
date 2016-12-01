@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\kyung\Desktop\bonghwanet\Application\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\kyung\Desktop\bonghwanet\Application\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\kyung\Desktop\bonghwanet_2\Application\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\kyung\Desktop\bonghwanet_2\Application\src\debug\shaders"/></dataSet></merger>

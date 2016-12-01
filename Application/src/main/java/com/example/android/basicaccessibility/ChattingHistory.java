@@ -14,7 +14,7 @@ import com.example.android.bonghwa.Device;
 import com.example.android.bonghwa.GroupInfo.ChatMsg;
 import com.example.android.bonghwa.Manager;
 import com.example.android.bonghwa.Network;
-import com.example.android.bonghwa.packet.Packet_Share_Text;
+import com.example.android.bonghwa.packet.PacketShareText;
 
 import java.util.ArrayList;
 

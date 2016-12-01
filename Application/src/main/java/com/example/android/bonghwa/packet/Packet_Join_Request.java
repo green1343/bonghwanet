@@ -3,17 +3,17 @@ package com.example.android.bonghwa.packet;
 import com.example.android.bonghwa.GroupInfo.User;
 import com.example.android.bonghwa.Manager;
 
-public class Packet_Join_Request extends Packet_Command
+public class PacketJoinRequest extends PacketCommand
 {
     public long group;
     public long userID;
     public User userInfo = new User();
 
-    public Packet_Join_Request(){
+    public PacketJoinRequest(){
         setCommand((short) PACKET.PACKET_JOIN_REQUEST);
     }
 
-    public Packet_Join_Request(byte[] buf){
+    public PacketJoinRequest(byte[] buf){
 
         super(buf);
 
@@ -22,9 +22,9 @@ public class Packet_Join_Request extends Packet_Command
         userInfo.name = unpackString();
     }
 
-    public void GetBytes(byte[] buf){
+    public void getBytes(byte[] buf){
 
-        super.GetBytes(buf);
+        super.getBytes(buf);
 
         pack(group);
         pack(userID);

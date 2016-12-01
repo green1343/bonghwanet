@@ -15,14 +15,14 @@ import com.example.android.bonghwa.GroupInfo.Group;
 import com.example.android.bonghwa.GroupInfo.GroupFile;
 import com.example.android.bonghwa.GroupInfo.User;
 import com.example.android.bonghwa.packet.PACKET;
-import com.example.android.bonghwa.packet.Packet_Command;
-import com.example.android.bonghwa.packet.Packet_Grouplist;
-import com.example.android.bonghwa.packet.Packet_Join_Request;
-import com.example.android.bonghwa.packet.Packet_New_User;
-import com.example.android.bonghwa.packet.Packet_Share_File_Request;
-import com.example.android.bonghwa.packet.Packet_Share_File_Request_OK;
-import com.example.android.bonghwa.packet.Packet_Share_Text;
-import com.example.android.bonghwa.packet.Packet_Sync;
+import com.example.android.bonghwa.packet.PacketCommand;
+import com.example.android.bonghwa.packet.PacketGrouplist;
+import com.example.android.bonghwa.packet.PacketJoinRequest;
+import com.example.android.bonghwa.packet.PacketNewUser;
+import com.example.android.bonghwa.packet.PacketShareFileRequest;
+import com.example.android.bonghwa.packet.PacketShareFileRequestOK;
+import com.example.android.bonghwa.packet.PacketShareText;
+import com.example.android.bonghwa.packet.PacketSync;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -48,28 +48,28 @@ public enum Network {
     public static final int TIMEOUT = 10000;
     public static final int BUFFERSIZE = 1024;
 
-    int m_index = 0;
+    int mobileIndex = 0;
 
-    Server m_server = null;
-    Client m_client = null;
-    HashMap<Integer, Pair<NetworkSpeaker, NetworkListener>> m_threads = new HashMap<>();
+    Server mobileServer = null;
+    Client mobileClient = null;
+    HashMap<Integer, Pair<NetworkSpeaker, NetworkListener>> mobileThreads = new HashMap<>();
 
-    long m_serverID = 0;
+    long mobileServerID = 0;
 
-    private Handler m_handler = new Handler() {
+    private Handler mobileHandler = new Handler() {
         public void handleMessage(Message msg) {
             try {
-                Pair<Integer, Packet_Command> pair = (Pair) msg.obj;
-                m_threads.get(pair.first).first.write(pair.second);
+                Pair<Integer, PacketCommand> pair = (Pair) msg.obj;
+                mobileThreads.get(pair.first).first.write(pair.second);
             }
             catch(Exception e){}
         }
     };
 
-    private Handler m_joinHandler = new Handler() {
+    private Handler mobileJoinHandler = new Handler() {
         public void handleMessage(Message msg) {
 
-            Packet_Join_Request p = (Packet_Join_Request)msg.obj;
+            PacketJoinRequest p = (PacketJoinRequest)msg.obj;
             Manager.INSTANCE.setTempObject(p);
 
             String message = new String();
@@ -80,7 +80,7 @@ public enum Network {
             d.setMessage(message);
             d.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-                    Packet_Join_Request p = (Packet_Join_Request)Manager.INSTANCE.getTempObject();
+                    PacketJoinRequest p = (PacketJoinRequest)Manager.INSTANCE.getTempObject();
 
                     User u = new User();
                     u.name = p.userInfo.name;
@@ -88,7 +88,7 @@ public enum Network {
 
                     GroupHomeActivity.refreshList();
 
-                    Packet_New_User reply = new Packet_New_User();
+                    PacketNewUser reply = new PacketNewUser();
                     reply.group = p.group;
                     reply.userID = p.userID;
                     reply.userInfo.name = new String(p.userInfo.name);
@@ -105,57 +105,57 @@ public enum Network {
         }
     };
 
-    private Handler m_refreshChatting = new Handler() {
+    private Handler mobileRefreshChatting = new Handler() {
         public void handleMessage(Message msg) {
             ChattingActivity.refreshList();
             GroupHomeActivity.refreshList();
         }
     };
 
-    private Handler m_refreshFile = new Handler() {
+    private Handler mobileRefreshFile = new Handler() {
         public void handleMessage(Message msg) {
             GallaryActivity.refreshList();
             FileActivity.refreshList();
         }
     };
 
-    private Handler m_refreshHome = new Handler() {
+    private Handler mobileRefreshHome = new Handler() {
         public void handleMessage(Message msg) {
             GroupHomeActivity.refreshList();
         }
     };
 
     public boolean isServer(){
-        return m_server != null;
+        return mobileServer != null;
     }
     public boolean isClient(){ return !isServer(); }
 
-    public long getServerID(){return m_serverID;}
+    public long getServerID(){return mobileServerID;}
 
     public HashMap<Integer, Pair<NetworkSpeaker, NetworkListener>> getAllThreads(){
-        return m_threads;
+        return mobileThreads;
     }
 
     private void clearAll(){
 
-        m_index = 0;
+        mobileIndex = 0;
 
-        if(m_server != null)
-            m_server.setKill();
-        if(m_client != null)
-            m_client.setKill();
+        if(mobileServer != null)
+            mobileServer.setKill();
+        if(mobileClient != null)
+            mobileClient.setKill();
 
-        for(Pair<NetworkSpeaker, NetworkListener> p : m_threads.values()){
+        for(Pair<NetworkSpeaker, NetworkListener> p : mobileThreads.values()){
             p.first.setKill();
             p.second.setKill();
         }
 
-        m_threads.clear();
+        mobileThreads.clear();
 
-        m_server = null;
-        m_client = null;
+        mobileServer = null;
+        mobileClient = null;
 
-        m_serverID = 0;
+        mobileServerID = 0;
     }
 
     public void initServer(int port){
@@ -165,18 +165,18 @@ public enum Network {
         try {
             PORT = port;
             ServerSocket serverSocket = new ServerSocket(port);
-            m_server = new Server(serverSocket);
-            m_server.start();
-            m_serverID = Manager.INSTANCE.getMyNumber();
+            mobileServer = new Server(serverSocket);
+            mobileServer.start();
+            mobileServerID = Manager.INSTANCE.getMyNumber();
 
-            Message msg = Message.obtain(m_refreshHome, 0 , 1 , 0);
-            m_refreshHome.sendMessage(msg);
+            Message msg = Message.obtain(mobileRefreshHome, 0 , 1 , 0);
+            mobileRefreshHome.sendMessage(msg);
         } catch (IOException ex) {
             //System.err.println(ex);
         } finally { // dispose
-            /*if (m_serverSocket != null) {
+            /*if (mobileServerSocket != null) {
                 try {
-                    m_serverSocket.close();
+                    mobileServerSocket.close();
                 } catch (IOException ex) {
                     // ignore
                 }
@@ -189,53 +189,53 @@ public enum Network {
 
         SERVERADDRESS = serverAddress;
         PORT = port;
-        m_client = new Client();
-        m_client.start();
+        mobileClient = new Client();
+        mobileClient.start();
     }
 
     public synchronized void killThread(int index){
 
-        if(m_threads.get(index) == null)
+        if(mobileThreads.get(index) == null)
             return;
 
-        m_threads.get(index).first.setKill();
-        m_threads.get(index).second.setKill();
-        m_threads.remove(index);
+        mobileThreads.get(index).first.setKill();
+        mobileThreads.get(index).second.setKill();
+        mobileThreads.remove(index);
     }
 
 
-    public synchronized void write(Packet_Command p, int index)
+    public synchronized void write(PacketCommand p, int index)
     {
-        Message msg = Message.obtain(m_handler, 0 , 1 , 0);
-        msg.obj = new Pair<Integer, Packet_Command>(index, p);
-        m_handler.sendMessage(msg);
+        Message msg = Message.obtain(mobileHandler, 0 , 1 , 0);
+        msg.obj = new Pair<Integer, PacketCommand>(index, p);
+        mobileHandler.sendMessage(msg);
     }
 
-    public synchronized void writeAll(Packet_Command p)
+    public synchronized void writeAll(PacketCommand p)
     {
-        for(Integer index : m_threads.keySet()){
-            Message msg = Message.obtain(m_handler, 0 , 1 , 0);
-            msg.obj = new Pair<Integer, Packet_Command>(index, p);
-            m_handler.sendMessage(msg);
+        for(Integer index : mobileThreads.keySet()){
+            Message msg = Message.obtain(mobileHandler, 0 , 1 , 0);
+            msg.obj = new Pair<Integer, PacketCommand>(index, p);
+            mobileHandler.sendMessage(msg);
         }
     }
 
     void destroy()
     {
-        /*if(m_clientListener != null && m_clientListener.isAlive())
-            m_clientListener.interrupt();
-        m_clientListener.setKill();
-        m_clientListener = null;*/
+        /*if(mobileClientListener != null && mobileClientListener.isAlive())
+            mobileClientListener.interrupt();
+        mobileClientListener.setKill();
+        mobileClientListener = null;*/
     }
 
     public class Server extends Thread{
 
-        private ServerSocket m_server;
-        private boolean m_kill = false;
+        private ServerSocket mobileServer;
+        private boolean mobileKill = false;
 
         public Server(ServerSocket server)
         {
-            m_server = server;
+            mobileServer = server;
         }
 
         /*****************************************************
@@ -248,18 +248,18 @@ public enum Network {
             while(!Thread.interrupted())
             {
                 try {
-                    Socket socket = m_server.accept();
-                    NetworkSpeaker speaker = new NetworkSpeaker(m_index, socket.getOutputStream());
-                    NetworkListener listener = new NetworkListener(m_index, socket.getInputStream());
-                    m_threads.put(m_index, new Pair<>(speaker, listener));
-                    ++m_index;
+                    Socket socket = mobileServer.accept();
+                    NetworkSpeaker speaker = new NetworkSpeaker(mobileIndex, socket.getOutputStream());
+                    NetworkListener listener = new NetworkListener(mobileIndex, socket.getInputStream());
+                    mobileThreads.put(mobileIndex, new Pair<>(speaker, listener));
+                    ++mobileIndex;
                     speaker.start();
                     listener.start();
 
-                    Packet_Grouplist p = new Packet_Grouplist();
+                    PacketGrouplist p = new PacketGrouplist();
                     p.id = Manager.INSTANCE.getMyNumber();
                     p.groups = (HashMap<Long, Group>)Manager.INSTANCE.getAllGroups().clone();
-                    Network.INSTANCE.write(p, m_index-1);
+                    Network.INSTANCE.write(p, mobileIndex-1);
 
                 } catch(IOException e){
                     e.printStackTrace();
@@ -272,7 +272,7 @@ public enum Network {
                     break;
                 }
 
-                if(m_kill)
+                if(mobileKill)
                     break;
 
             }	// End of while() loop
@@ -283,13 +283,13 @@ public enum Network {
         }	// End of run()
 
         void setKill(){
-            m_kill = true;
+            mobileKill = true;
         }
     }
 
     public class Client extends Thread{
 
-        private boolean m_kill = false;
+        private boolean mobileKill = false;
         Socket clientSocket;
         NetworkSpeaker speaker;
         NetworkListener listener;
@@ -309,17 +309,17 @@ public enum Network {
             {
                 try {
                     clientSocket = new Socket(SERVERADDRESS, PORT);
-                    speaker = new NetworkSpeaker(m_index, clientSocket.getOutputStream());
-                    listener = new NetworkListener(m_index, clientSocket.getInputStream());
-                    m_threads.put(m_index, new Pair<>(speaker, listener));
-                    ++m_index;
+                    speaker = new NetworkSpeaker(mobileIndex, clientSocket.getOutputStream());
+                    listener = new NetworkListener(mobileIndex, clientSocket.getInputStream());
+                    mobileThreads.put(mobileIndex, new Pair<>(speaker, listener));
+                    ++mobileIndex;
                     speaker.start();
                     listener.start();
 
-                    Packet_Grouplist p = new Packet_Grouplist();
+                    PacketGrouplist p = new PacketGrouplist();
                     p.id = Manager.INSTANCE.getMyNumber();
                     p.groups = (HashMap<Long, Group>)Manager.INSTANCE.getAllGroups().clone();
-                    Network.INSTANCE.write(p, m_index - 1);
+                    Network.INSTANCE.write(p, mobileIndex - 1);
 
                     break;
 
@@ -333,7 +333,7 @@ public enum Network {
                     break;
                 }
 
-                if(m_kill)
+                if(mobileKill)
                     break;
 
             }	// End of while() loop
@@ -344,21 +344,21 @@ public enum Network {
         }	// End of run()
 
         void setKill(){
-            m_kill = true;
+            mobileKill = true;
         }
     }
 
     public class FileServer extends Thread{
 
-        private ServerSocket m_server;
-        private String m_filename = new String();
-        private boolean m_bWrite = false;
+        private ServerSocket mobileServer;
+        private String mobileFilename = new String();
+        private boolean mobileBooleanWrite = false;
 
         public FileServer(ServerSocket server, String filename, boolean write)
         {
-            m_server = server;
-            m_filename = filename;
-            m_bWrite = write;
+            mobileServer = server;
+            mobileFilename = filename;
+            mobileBooleanWrite = write;
         }
 
         /*****************************************************
@@ -369,12 +369,12 @@ public enum Network {
         public void run() {
             while (!Thread.interrupted()) {
                 try {
-                    Socket socket = m_server.accept();
+                    Socket socket = mobileServer.accept();
 
                     OutputStream outStream = socket.getOutputStream();
                     InputStream inStream = socket.getInputStream();
-                    if (m_bWrite) {
-                        String path = Manager.INSTANCE.getRoot() + "/" + m_filename;
+                    if (mobileBooleanWrite) {
+                        String path = Manager.INSTANCE.getRoot() + "/" + mobileFilename;
                         FileInputStream fis = new FileInputStream(path);
                         BufferedInputStream bis = new BufferedInputStream(fis);
 
@@ -391,7 +391,7 @@ public enum Network {
                         fis.close();
                     }
                     else{
-                        String path = Manager.INSTANCE.getRoot() + "/" + m_filename;
+                        String path = Manager.INSTANCE.getRoot() + "/" + mobileFilename;
                         FileOutputStream fos = new FileOutputStream(path);
                         BufferedOutputStream bos = new BufferedOutputStream(fos);
 
@@ -406,18 +406,18 @@ public enum Network {
                         bos.close();
                         fos.close();
 
-                        StringTokenizer st = new StringTokenizer(m_filename, "/");
+                        StringTokenizer st = new StringTokenizer(mobileFilename, "/");
                         String filename = null;
                         while (st.hasMoreTokens())
                             filename = st.nextToken();
 
-                        if(m_filename.contains("Pictures/"))
+                        if(mobileFilename.contains("Pictures/"))
                             Manager.INSTANCE.addNewFile("Pictures/" + filename);
                         else
                             Manager.INSTANCE.addNewFile(filename);
 
-                        Message msg = Message.obtain(m_refreshFile, 0, 1, 0);
-                        m_refreshFile.sendMessage(msg);
+                        Message msg = Message.obtain(mobileRefreshFile, 0, 1, 0);
+                        mobileRefreshFile.sendMessage(msg);
                     }
 
                 } catch (IOException e) {
@@ -432,15 +432,15 @@ public enum Network {
     public class FileClient extends Thread{
 
         Socket clientSocket;
-        String m_filename = new String();
-        boolean m_bWrite = false;
-        int m_port = 0;
+        String mobileFilename = new String();
+        boolean mobileBooleanWrite = false;
+        int mobilePort = 0;
 
         public FileClient(String filename, int port, boolean write)
         {
-            m_filename = filename;
-            m_port = port;
-            m_bWrite = write;
+            mobileFilename = filename;
+            mobilePort = port;
+            mobileBooleanWrite = write;
         }
 
         /*****************************************************
@@ -455,11 +455,11 @@ public enum Network {
                 boolean result = true;
 
                 try {
-                    clientSocket = new Socket(SERVERADDRESS, m_port);
+                    clientSocket = new Socket(SERVERADDRESS, mobilePort);
                     OutputStream outStream = clientSocket.getOutputStream();
                     InputStream inStream = clientSocket.getInputStream();
-                    if (m_bWrite) {
-                        String path = Manager.INSTANCE.getRoot() + "/" + m_filename;
+                    if (mobileBooleanWrite) {
+                        String path = Manager.INSTANCE.getRoot() + "/" + mobileFilename;
                         FileInputStream fis = new FileInputStream(path);
                         BufferedInputStream bis = new BufferedInputStream(fis);
 
@@ -476,7 +476,7 @@ public enum Network {
                         fis.close();
                     }
                     else{
-                        String path = Manager.INSTANCE.getRoot() + "/" + m_filename;
+                        String path = Manager.INSTANCE.getRoot() + "/" + mobileFilename;
                         FileOutputStream fos = new FileOutputStream(path);
                         BufferedOutputStream bos = new BufferedOutputStream(fos);
 
@@ -491,18 +491,18 @@ public enum Network {
                         bos.close();
                         fos.close();
 
-                        StringTokenizer st = new StringTokenizer(m_filename, "/");
+                        StringTokenizer st = new StringTokenizer(mobileFilename, "/");
                         String filename = null;
                         while (st.hasMoreTokens())
                             filename = st.nextToken();
 
-                        if(m_filename.contains("Pictures/"))
+                        if(mobileFilename.contains("Pictures/"))
                             Manager.INSTANCE.addNewFile("Pictures/" + filename);
                         else
                             Manager.INSTANCE.addNewFile(filename);
 
-                        Message msg = Message.obtain(m_refreshFile, 0, 1, 0);
-                        m_refreshFile.sendMessage(msg);
+                        Message msg = Message.obtain(mobileRefreshFile, 0, 1, 0);
+                        mobileRefreshFile.sendMessage(msg);
                     }
 
                 } catch(IOException e){
@@ -518,28 +518,28 @@ public enum Network {
 
     public class NetworkSpeaker extends Thread{
 
-        int m_index;
-        OutputStream m_outStream;
-        boolean m_kill = false;
+        int mobileIndex;
+        OutputStream mobileOutStream;
+        boolean mobileKill = false;
 
         public NetworkSpeaker(int index, OutputStream outstream)
         {
-            m_index = index;
-            m_outStream = outstream;
+            mobileIndex = index;
+            mobileOutStream = outstream;
         }
 
-        public void write(Packet_Command p)
+        public void write(PacketCommand p)
         {
-            if(m_outStream == null || p.getCommand() == 0)
+            if(mobileOutStream == null || p.getCommand() == 0)
                 return;
 
             byte[] b = new byte[BUFFERSIZE];
-            p.GetBytes(b);
+            p.getBytes(b);
 
             try {
-                m_outStream.write(b, 0, p.place);
-                //m_outStream.write(b, 0, BUFFERSIZE);
-                m_outStream.flush();
+                mobileOutStream.write(b, 0, p.place);
+                //mobileOutStream.write(b, 0, BUFFERSIZE);
+                mobileOutStream.flush();
             }
             catch (IOException ex) {
                 //System.err.println(ex);
@@ -570,8 +570,8 @@ public enum Network {
                 int len;
                 byte[] buf = new byte[BUFFERSIZE];
                 while ((len = bis.read(buf)) != -1) {
-                    m_outStream.write(buf, 0, len);
-                    m_outStream.flush();
+                    mobileOutStream.write(buf, 0, len);
+                    mobileOutStream.flush();
                 }
 
                 // TODO : 수정
@@ -579,10 +579,10 @@ public enum Network {
                 for(int i=0; i<3; ++i)
                     junk[i] = -1;
 
-                m_outStream.write(buf, 0, 3);
-                m_outStream.flush();
+                mobileOutStream.write(buf, 0, 3);
+                mobileOutStream.flush();
 
-                //m_outStream.close();
+                //mobileOutStream.close();
 
                 bis.close();
                 fis.close();
@@ -605,7 +605,7 @@ public enum Network {
                     break;
                 }
 
-                if(m_kill)
+                if(mobileKill)
                     break;
 
             }	// End of while() loop
@@ -616,21 +616,21 @@ public enum Network {
         }	// End of run()
 
         void setKill(){
-            m_kill = true;
+            mobileKill = true;
         }
     }
 
     // TODO : 파일전송 멀티스레드
     public class NetworkListener extends Thread{
 
-        int m_index;
-        InputStream m_inStream;
-        boolean m_kill = false;
+        int mobileIndex;
+        InputStream mobileInStream;
+        boolean mobileKill = false;
 
         public NetworkListener(int index, InputStream instream)
         {
-            m_index = index;
-            m_inStream = instream;
+            mobileIndex = index;
+            mobileInStream = instream;
         }
 
         @Override
@@ -640,38 +640,38 @@ public enum Network {
             {
                 try {
                     byte stream[] = new byte[BUFFERSIZE];
-                    int result = m_inStream.read(stream);
+                    int result = mobileInStream.read(stream);
                     if (result == -1) {
-                        killThread(m_index);
+                        killThread(mobileIndex);
                         if (isClient())
                             Device.INSTANCE.createClientThread();
                         break;
                     }
 
                     while (true) {
-                        Packet_Command cmd = new Packet_Command(stream); // new
+                        PacketCommand cmd = new PacketCommand(stream); // new
                         int len = 0;
 
                         switch (cmd.getCommand()) {
                             case PACKET.PACKET_JOIN_REQUEST: {
-                                Packet_Join_Request p = new Packet_Join_Request(stream);
+                                PacketJoinRequest p = new PacketJoinRequest(stream);
 
-                                Message msg = Message.obtain(m_joinHandler, 0, 1, 0);
+                                Message msg = Message.obtain(mobileJoinHandler, 0, 1, 0);
                                 msg.obj = p;
-                                m_joinHandler.sendMessage(msg);
+                                mobileJoinHandler.sendMessage(msg);
 
                                 len = p.place;
                                 break;
                             }
                             case PACKET.PACKET_NEW_USER: {
-                                Packet_New_User p = new Packet_New_User(stream);
+                                PacketNewUser p = new PacketNewUser(stream);
                                 if (p.userID == Manager.INSTANCE.getMyNumber())
                                     Manager.INSTANCE.joinGranted(p.group);
                                 else
                                     Manager.INSTANCE.addUser(p.group, p.userID, p.userInfo);
 
-                                Message msg = Message.obtain(m_refreshHome, 0, 1, 0);
-                                m_refreshHome.sendMessage(msg);
+                                Message msg = Message.obtain(mobileRefreshHome, 0, 1, 0);
+                                mobileRefreshHome.sendMessage(msg);
 
                                 len = p.place;
                                 break;
@@ -679,7 +679,7 @@ public enum Network {
                             case PACKET.PACKET_GROUPLIST: {
                                 Manager m = Manager.INSTANCE;
 
-                                Packet_Grouplist p = new Packet_Grouplist(stream);
+                                PacketGrouplist p = new PacketGrouplist(stream);
                                 for (Long id : m.getAllGroups().keySet()) {
                                     if (p.groups.containsKey(id)) {
                                         Group g1 = m.getAllGroups().get(id);
@@ -689,10 +689,10 @@ public enum Network {
                                         m.getAllGroups().put(id, g1);
 
                                         // send sync
-                                        Packet_Sync reply = new Packet_Sync();
+                                        PacketSync reply = new PacketSync();
                                         reply.group = id;
                                         reply.files.putAll(Manager.INSTANCE.getGroup(id).files);
-                                        write(reply, m_index);
+                                        write(reply, mobileIndex);
                                     }
                                 }
 
@@ -703,9 +703,9 @@ public enum Network {
                                 }
 
                                 if (isClient()) {
-                                    m_serverID = p.id;
-                                    Message msg = Message.obtain(m_refreshHome, 0, 1, 0);
-                                    m_refreshHome.sendMessage(msg);
+                                    mobileServerID = p.id;
+                                    Message msg = Message.obtain(mobileRefreshHome, 0, 1, 0);
+                                    mobileRefreshHome.sendMessage(msg);
                                 }
 
                                 len = p.place;
@@ -713,16 +713,16 @@ public enum Network {
                             }
                             case PACKET.PACKET_SYNC: {
 
-                                Packet_Sync p = new Packet_Sync(stream);
+                                PacketSync p = new PacketSync(stream);
 
                                 LinkedList<ChatMsg> texts = Manager.INSTANCE.getText(p.group);
                                 for (ChatMsg t : texts) {
-                                    Packet_Share_Text reply = new Packet_Share_Text();
+                                    PacketShareText reply = new PacketShareText();
                                     reply.group = p.group;
                                     reply.text = t.text;
                                     reply.time = t.time;
                                     reply.uploader = t.uploader;
-                                    write(reply, m_index);
+                                    write(reply, mobileIndex);
                                 }
 
                                 HashMap<String, GroupFile> files = Manager.INSTANCE.getGroup(p.group).files;
@@ -731,11 +731,11 @@ public enum Network {
 
                                 for (String key : p.files.keySet()) {
                                     if (files.containsKey(key) == false) {
-                                        Packet_Share_File_Request reply = new Packet_Share_File_Request();
+                                        PacketShareFileRequest reply = new PacketShareFileRequest();
                                         reply.group = p.group;
                                         reply.filename = key;
                                         reply.port = Manager.INSTANCE.getRandomInt(2000, 15000);
-                                        write(reply, m_index);
+                                        write(reply, mobileIndex);
 
                                         if (isServer()) {
                                             ServerSocket socket = new ServerSocket(reply.port);
@@ -752,12 +752,12 @@ public enum Network {
                                 break;
                             }
                             case PACKET.PACKET_SHARE_FILE_REQUEST: {
-                                Packet_Share_File_Request p = new Packet_Share_File_Request(stream);
-                                Packet_Share_File_Request_OK reply = new Packet_Share_File_Request_OK();
+                                PacketShareFileRequest p = new PacketShareFileRequest(stream);
+                                PacketShareFileRequestOK reply = new PacketShareFileRequestOK();
                                 reply.group = p.group;
                                 reply.filename = p.filename;
                                 reply.port = p.port;
-                                write(reply, m_index);
+                                write(reply, mobileIndex);
 
                                 if (isServer()) {
                                     ServerSocket socket = new ServerSocket(p.port);
@@ -773,7 +773,7 @@ public enum Network {
                                 break;
                             }
                             case PACKET.PACKET_SHARE_FILE_REQUEST_OK: {
-                                Packet_Share_File_Request_OK p = new Packet_Share_File_Request_OK(stream);
+                                PacketShareFileRequestOK p = new PacketShareFileRequestOK(stream);
                                 try {
                                     if(isClient()){
                                         FileClient client = new FileClient(p.filename, p.port, false);
@@ -787,7 +787,7 @@ public enum Network {
                                     // 바이트 데이터를 전송받으면서 기록
                                     int len2;
                                     byte[] buf = new byte[BUFFERSIZE];
-                                    while ((len2 = m_inStream.read(buf)) > 0) {
+                                    while ((len2 = mobileInStream.read(buf)) > 0) {
 
                                         boolean last = false;
                                         if (3 <= len2 && len2 < BUFFERSIZE) {
@@ -820,8 +820,8 @@ public enum Network {
                                     else
                                         Manager.INSTANCE.addNewFile(filename);
 
-                                    Message msg = Message.obtain(m_refreshFile, 0, 1, 0);
-                                    m_refreshFile.sendMessage(msg);*/
+                                    Message msg = Message.obtain(mobileRefreshFile, 0, 1, 0);
+                                    mobileRefreshFile.sendMessage(msg);*/
 
                                 } catch (Exception e) {
                                 }
@@ -830,11 +830,11 @@ public enum Network {
                                 break;
                             }
                             case PACKET.PACKET_SHARE_TEXT: {
-                                Packet_Share_Text p = new Packet_Share_Text(stream);
+                                PacketShareText p = new PacketShareText(stream);
                                 Manager.INSTANCE.addText(p.group, p.uploader, p.time, p.text);
 
-                                Message msg = Message.obtain(m_refreshChatting, 0, 1, 0);
-                                m_refreshChatting.sendMessage(msg);
+                                Message msg = Message.obtain(mobileRefreshChatting, 0, 1, 0);
+                                mobileRefreshChatting.sendMessage(msg);
 
                                 if (isServer()) {
                                     writeAll(p);
@@ -857,7 +857,7 @@ public enum Network {
                     //System.err.println(ex);
                 }
 
-                if(m_kill)
+                if(mobileKill)
                     break;
 
             }	// End of while() loop
@@ -868,7 +868,7 @@ public enum Network {
         }	// End of run()
 
         void setKill(){
-            m_kill = true;
+            mobileKill = true;
         }
     }
 

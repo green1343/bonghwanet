@@ -22,8 +22,8 @@ import java.util.StringTokenizer;
 
 public class GrouplistActivity extends Activity {
 
-	private ListView m_list;
-	public static ArrayAdapter<String> m_adapter;
+	private ListView mobileList;
+	public static ArrayAdapter<String> mobileAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +33,12 @@ public class GrouplistActivity extends Activity {
 		findViewById(R.id.buttonCreate).setOnClickListener(onClickButton);
 		findViewById(R.id.buttonEmergency).setOnClickListener(onClickButton);
 
-		m_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_item);
-		m_list = (ListView) findViewById(R.id.listView);
-		m_list.setAdapter(m_adapter);
-		m_list.setOnItemClickListener(onClickListItem);
+		mobileAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_item);
+		mobileList = (ListView) findViewById(R.id.listView);
+		mobileList.setAdapter(mobileAdapter);
+		mobileList.setOnItemClickListener(onClickListItem);
 
-		m_list.requestFocus();
+		mobileList.requestFocus();
 
 		//InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 		//imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
@@ -56,7 +56,7 @@ public class GrouplistActivity extends Activity {
 	}
 
 	private void refreshList(){
-		m_adapter.clear();
+		mobileAdapter.clear();
 		HashMap<Long, Group> groups = Manager.INSTANCE.getAllGroups();
 		for(Long id : groups.keySet()) {
 			if(id == Device.EMERGENCY)
@@ -66,15 +66,15 @@ public class GrouplistActivity extends Activity {
 			String str = new String(g.name);
 			str += "\t\t";
 			str += id;
-			m_adapter.add(str);
+			mobileAdapter.add(str);
 		}
-		m_adapter.sort(new Comparator<String>() {
+		mobileAdapter.sort(new Comparator<String>() {
 			@Override
 			public int compare(String lhs, String rhs) {
 				return lhs.compareTo(rhs);
 			}
 		});
-		m_adapter.notifyDataSetChanged();
+		mobileAdapter.notifyDataSetChanged();
 	}
 
 	Button.OnClickListener onClickButton = new View.OnClickListener() {
@@ -111,7 +111,7 @@ public class GrouplistActivity extends Activity {
 			InputMethodManager immhide = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
 			immhide.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
 
-			StringTokenizer t = new StringTokenizer(m_adapter.getItem(arg2), "\t");
+			StringTokenizer t = new StringTokenizer(mobileAdapter.getItem(arg2), "\t");
 			t.nextToken();
 			Device.INSTANCE.connect(Long.valueOf(t.nextToken()), false);
 

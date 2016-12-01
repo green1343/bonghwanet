@@ -24,20 +24,20 @@ import android.util.Log;
 public class LogWrapper implements LogNode {
 
     // For piping:  The next node to receive Log data after this one has done its work.
-    private LogNode mNext;
+    private LogNode mobileNext;
 
     /**
      * Returns the next LogNode in the linked list.
      */
     public LogNode getNext() {
-        return mNext;
+        return mobileNext;
     }
 
     /**
      * Sets the LogNode data will be sent to..
      */
     public void setNext(LogNode node) {
-        mNext = node;
+        mobileNext = node;
     }
 
     /**
@@ -68,8 +68,8 @@ public class LogWrapper implements LogNode {
         Log.println(priority, tag, useMsg);
 
         // If this isn't the last node in the chain, move things along.
-        if (mNext != null) {
-            mNext.println(priority, tag, msg, tr);
+        if (mobileNext != null) {
+            mobileNext.println(priority, tag, msg, tr);
         }
     }
 }

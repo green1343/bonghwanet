@@ -5,16 +5,16 @@ import com.example.android.bonghwa.Manager;
 
 import java.util.HashMap;
 
-public class Packet_Sync extends Packet_Command {
+public class PacketSync extends PacketCommand {
 
     public long group;
     public HashMap<String, GroupFile> files = new HashMap<>();
 
-    public Packet_Sync(){
+    public PacketSync(){
         setCommand((short) PACKET.PACKET_SYNC);
     }
 
-    public Packet_Sync(byte[] buf)
+    public PacketSync(byte[] buf)
     {
         super(buf);
 
@@ -30,9 +30,9 @@ public class Packet_Sync extends Packet_Command {
         }
     }
 
-    public void GetBytes(byte[] buf)
+    public void getBytes(byte[] buf)
     {
-        super.GetBytes(buf);
+        super.getBytes(buf);
 
         pack(group);
         pack(files.size());

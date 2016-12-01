@@ -26,7 +26,7 @@ import java.util.StringTokenizer;
 public enum Device {
     INSTANCE;
 
-    Context m_context;
+    Context mobileContext;
 
     public final static String RESERVED_SSID = "bhn";
     public final static String DEFAULT_MYNAME = "Me";
@@ -34,21 +34,21 @@ public enum Device {
 
     public final static long EMERGENCY = -1;
 
-    String m_networkPass = "dafsglokvogzsuiwhbejfgr";
+    String mobileNetworkPass = "dafsglokvogzsuiwhbejfgr";
 
-    String m_curBSSID = new String();
+    String mobileCurBSSID = new String();
 
-    WifiConfiguration m_configuration;
-    WifiApManager m_wifiApManager;
-    WifiManager m_wifiManager;
+    WifiConfiguration mobileConfiguration;
+    WifiApManager mobileWifiApManager;
+    WifiManager mobileWifiManager;
 
     public WifiManager getWifiManager(){
-        return m_wifiManager;
+        return mobileWifiManager;
     }
 
     public void init(Context context)
     {
-        m_context = context;
+        mobileContext = context;
 
         WifiConfiguration conf = new WifiConfiguration();
 
@@ -64,7 +64,7 @@ public enum Device {
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
 
         // wep
-        /*conf.preSharedKey = "\"" + m_networkPass + "\"";
+        /*conf.preSharedKey = "\"" + mobileNetworkPass + "\"";
         conf.status = WifiConfiguration.Status.ENABLED;
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
@@ -73,7 +73,7 @@ public enum Device {
         conf.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
         conf.allowedProtocols.set(WifiConfiguration.Protocol.RSN);*/
 
-        //conf.wepKeys[0] = "\"" + m_networkPass + "\"";
+        //conf.wepKeys[0] = "\"" + mobileNetworkPass + "\"";
         //conf.wepTxKeyIndex = 0;
 
         // wpa
@@ -86,16 +86,16 @@ public enum Device {
 
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
         conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
-        conf.wepKeys[0] = m_networkPass;
+        conf.wepKeys[0] = mobileNetworkPass;
         conf.wepTxKeyIndex = 0;*/
 
-        m_configuration = conf;
+        mobileConfiguration = conf;
 
-        m_wifiApManager = new WifiApManager(m_context);
-        m_wifiManager = (WifiManager)m_context.getSystemService(Context.WIFI_SERVICE);
+        mobileWifiApManager = new WifiApManager(mobileContext);
+        mobileWifiManager = (WifiManager)mobileContext.getSystemService(Context.WIFI_SERVICE);
 
-        if (!m_wifiManager.isWifiEnabled())
-            m_wifiManager.setWifiEnabled(true);
+        if (!mobileWifiManager.isWifiEnabled())
+            mobileWifiManager.setWifiEnabled(true);
     }
 
 
@@ -122,17 +122,17 @@ public enum Device {
         ssid += "_";
         ssid += String.valueOf(_setServerPort);
 
-        m_configuration.SSID = ssid;
+        mobileConfiguration.SSID = ssid;
 
-        m_wifiApManager.setWifiApEnabled(m_configuration, true);
+        mobileWifiApManager.setWifiApEnabled(mobileConfiguration, true);
 
         Thread t = new Thread(new Runnable() {
             public void run() {
                 while (!Thread.interrupted()) {
                     try {
-                        if(m_wifiApManager.getWifiApState() == 13) {
-                            Message msg = Message.obtain(m_initServerHandler, 0, 1, 0);
-                            m_initServerHandler.sendMessage(msg);
+                        if(mobileWifiApManager.getWifiApState() == 13) {
+                            Message msg = Message.obtain(mobileInitServerHandler, 0, 1, 0);
+                            mobileInitServerHandler.sendMessage(msg);
                             break;
                         }
                         Thread.sleep(1000);
@@ -144,7 +144,7 @@ public enum Device {
         t.start();
     }
 
-    private Handler m_initServerHandler = new Handler() {
+    private Handler mobileInitServerHandler = new Handler() {
         public void handleMessage(Message msg) {
             Network.INSTANCE.initServer(_setServerPort);
             onConnectEnd();
@@ -158,7 +158,7 @@ public enum Device {
 
     public void setClient(){
 
-        m_wifiManager.startScan();
+        mobileWifiManager.startScan();
 
         _setClientStart = true;
         _setClientEnd = false;
@@ -166,14 +166,14 @@ public enum Device {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
-        m_context.registerReceiver(wifiReceiver, filter);
+        mobileContext.registerReceiver(wifiReceiver, filter);
     }
 
     private BroadcastReceiver wifiReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent.getAction().equals(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION) && _setClientStart) {
-                List<ScanResult> results = m_wifiManager.getScanResults();
+                List<ScanResult> results = mobileWifiManager.getScanResults();
                 if(results == null) {
                     _setClientResult = false;
                     _setClientEnd = true;
@@ -201,7 +201,7 @@ public enum Device {
 
                             _setServerPort = Integer.valueOf(portStr);
 
-                            if(bssid.compareTo(m_curBSSID) != 0)
+                            if(bssid.compareTo(mobileCurBSSID) != 0)
                                 break;
                         }
                     }
@@ -235,14 +235,14 @@ public enum Device {
 
                                 _setServerPort = Integer.valueOf(portStr);
 
-                                if(bssid.compareTo(m_curBSSID) != 0)
+                                if(bssid.compareTo(mobileCurBSSID) != 0)
                                     break;
                             }
                         }
                     }
                 }
 
-                if(ssid == null || (_setClientChange && bssid.compareTo(m_curBSSID) == 0)) {
+                if(ssid == null || (_setClientChange && bssid.compareTo(mobileCurBSSID) == 0)) {
                     _setClientStart = false;
                     _setClientEnd = true;
                     _setClientResult = false;
@@ -250,14 +250,14 @@ public enum Device {
                     return;
                 }
 
-                m_configuration.SSID = "\"" + ssid + "\"";
-                m_configuration.BSSID = bssid;
+                mobileConfiguration.SSID = "\"" + ssid + "\"";
+                mobileConfiguration.BSSID = bssid;
 
-                int id = m_wifiManager.addNetwork(m_configuration);
-                boolean result = m_wifiManager.enableNetwork(id, true);
+                int id = mobileWifiManager.addNetwork(mobileConfiguration);
+                boolean result = mobileWifiManager.enableNetwork(id, true);
 
                 if(result) {
-                    m_curBSSID = bssid;
+                    mobileCurBSSID = bssid;
                     createClientThread();
                 }
 
@@ -275,9 +275,9 @@ public enum Device {
             public void run() {
                 while (!Thread.interrupted()) {
                     try {
-                        DhcpInfo dhcp = m_wifiManager.getDhcpInfo();
-                        WifiInfo info = m_wifiManager.getConnectionInfo();
-                        if(info.getBSSID().compareTo(m_curBSSID) == 0 && dhcp.gateway != 0) {
+                        DhcpInfo dhcp = mobileWifiManager.getDhcpInfo();
+                        WifiInfo info = mobileWifiManager.getConnectionInfo();
+                        if(info.getBSSID().compareTo(mobileCurBSSID) == 0 && dhcp.gateway != 0) {
                             int serverIP = dhcp.gateway;
                             String ipAddress = String.format(
                                     "%d.%d.%d.%d",
@@ -286,9 +286,9 @@ public enum Device {
                                     (serverIP >> 16 & 0xff),
                                     (serverIP >> 24 & 0xff));
 
-                            Message msg = Message.obtain(m_initClientHandler, 0, 1, 0);
+                            Message msg = Message.obtain(mobileInitClientHandler, 0, 1, 0);
                             msg.obj = ipAddress;
-                            m_initClientHandler.sendMessage(msg);
+                            mobileInitClientHandler.sendMessage(msg);
                             break;
                         }
                         Thread.sleep(1000);
@@ -300,7 +300,7 @@ public enum Device {
         t.start();
     }
 
-    private Handler m_initClientHandler = new Handler() {
+    private Handler mobileInitClientHandler = new Handler() {
         public void handleMessage(Message msg) {
             String ipAddress = (String)msg.obj;
             Network.INSTANCE.initClient(ipAddress, _setServerPort);
@@ -312,16 +312,16 @@ public enum Device {
         return _setClientResult;
     }
 
-    MyThread m_timerThread = null;
+    MyThread mobileTimerThread = null;
 
     public void connect(long group, boolean change){
 
-        if (!m_wifiManager.isWifiEnabled())
-            m_wifiManager.setWifiEnabled(true);
+        if (!mobileWifiManager.isWifiEnabled())
+            mobileWifiManager.setWifiEnabled(true);
 
         if(group != Manager.INSTANCE.getCurGroupID() || Network.INSTANCE.isServer()) {
             _setServerIndex = 0;
-            m_curBSSID = new String("");
+            mobileCurBSSID = new String("");
         }
 
         Manager.INSTANCE.setCurGroup(group);
@@ -330,21 +330,21 @@ public enum Device {
 
         setClient();
 
-        MyThread m_connectThread = new MyThread() {
+        MyThread mobileConnectThread = new MyThread() {
             public void run() {
                 while (!interrupted() && running) {
                     try {
                         if(_setClientEnd){
                             if(isClientConnected() == false) {
                                 setServer();
-                                Message msg = Message.obtain(m_toastHandler, 0, 1, 0);
+                                Message msg = Message.obtain(mobileToastHandler, 0, 1, 0);
                                 msg.obj = "Server";
-                                m_toastHandler.sendMessage(msg);
+                                mobileToastHandler.sendMessage(msg);
                             }
                             else {
-                                Message msg = Message.obtain(m_toastHandler, 0, 1, 0);
+                                Message msg = Message.obtain(mobileToastHandler, 0, 1, 0);
                                 msg.obj = "Client";
-                                m_toastHandler.sendMessage(msg);
+                                mobileToastHandler.sendMessage(msg);
                             }
 
                             break;
@@ -356,20 +356,20 @@ public enum Device {
                 }
             }
         };
-        m_connectThread.start();
+        mobileConnectThread.start();
     }
 
-    private Handler m_toastHandler = new Handler() {
+    private Handler mobileToastHandler = new Handler() {
         public void handleMessage(Message msg) {
             String message = (String)msg.obj;
-            Toast toast1 = Toast.makeText(m_context, message, Toast.LENGTH_LONG);
+            Toast toast1 = Toast.makeText(mobileContext, message, Toast.LENGTH_LONG);
             toast1.show();
         }
     };
 
     public void onConnectEnd(){
-        /*if(m_curGroup == EMERGENCY){
-            m_timerThread = new MyThread() {
+        /*if(mobileCurGroup == EMERGENCY){
+            mobileTimerThread = new MyThread() {
                 int r = getRandomInt(10, 20);
                 public void run() {
                     while (!Thread.interrupted() && running) {
@@ -381,7 +381,7 @@ public enum Device {
 
                             setData(getData() + 1);
                             if(getData() > r) {
-                                connect(m_curGroup);
+                                connect(mobileCurGroup);
                                 break;
                             }
                         } catch (Throwable t) {
@@ -389,13 +389,13 @@ public enum Device {
                     }
                 }
             };
-            m_timerThread.start();
+            mobileTimerThread.start();
         }*/
     }
 
     public void setTimerZero(){
-        if(m_timerThread != null)
-            m_timerThread.setData(0);
+        if(mobileTimerThread != null)
+            mobileTimerThread.setData(0);
     }
 
 }
